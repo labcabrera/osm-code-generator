@@ -19,16 +19,13 @@ import lombok.extern.slf4j.Slf4j;
 public class TypeReader {
 
 	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo storedProcedureInfo) {
-
 		storedProcedureInfo.setTypes(new ArrayList<>());
-
 		for (StoredProcedureParameterInfo i : storedProcedureInfo.getParameters()) {
-
 			switch (i.getDataType()) {
 			case "OBJECT":
 				String typeName = i.getTypeName();
 				if (!isTypeDefined(storedProcedureInfo, typeName)) {
-					TypeInfo typeInfo = read(connection, typeName);
+					TypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
 					storedProcedureInfo.getTypes().add(typeInfo);
 				}
 				break;
@@ -40,7 +37,8 @@ public class TypeReader {
 		}
 	}
 
-	public TypeInfo read(@NonNull Connection connection, @NonNull String typeName) {
+	public TypeInfo read(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
+		@NonNull String typeName) {
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select").append("\n");
@@ -66,7 +64,12 @@ public class TypeReader {
 				TypeColumnInfo columnInfo = new TypeColumnInfo();
 				columnInfo.setIndex(rs.getInt("attr_no"));
 				columnInfo.setName(rs.getString("attr_name"));
+				columnInfo.setTypeName(rs.getString("attr_type_name"));
+				columnInfo.setPrecision(rs.getInt("precision"));
+				columnInfo.setLength(rs.getInt("length"));
+				columnInfo.setScale(rs.getInt("scale"));
 				result.getColumns().add(columnInfo);
+				resolveType(connection, storedProcedureInfo, columnInfo);
 			}
 			ps.close();
 			return result;
@@ -78,6 +81,23 @@ public class TypeReader {
 
 	private boolean isTypeDefined(StoredProcedureInfo storedProcedureInfo, String typeName) {
 		return storedProcedureInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName)).count() > 0;
+	}
+
+	private void resolveType(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
+		TypeColumnInfo columnInfo) {
+
+		String typeName = columnInfo.getTypeName();
+		switch (typeName) {
+		case "VARCHAR2":
+		case "NUMBER":
+		case "DATE":
+			break;
+		default:
+			if (!isTypeDefined(storedProcedureInfo, typeName)) {
+				TypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
+				storedProcedureInfo.getTypes().add(typeInfo);
+			}
+		}
 
 	}
 

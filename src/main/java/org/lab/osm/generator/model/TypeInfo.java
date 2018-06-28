@@ -13,4 +13,6 @@ public class TypeInfo {
 
 	private List<TypeColumnInfo> columns;
 
+	private String javaPackage;
+	private String javaClassName;
 }

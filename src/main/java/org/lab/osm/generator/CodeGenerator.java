@@ -8,34 +8,32 @@ import java.util.List;
 import java.util.Properties;
 
 import org.lab.osm.generator.exception.OsmExportException;
+import org.lab.osm.generator.exception.OsmGeneratorException;
+import org.lab.osm.generator.java.JavaClassTypeAdapter;
 import org.lab.osm.generator.model.StoredProcedureInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
 import org.lab.osm.generator.reader.StoredProcedureReader;
 import org.lab.osm.generator.reader.TypeReader;
+import org.lab.osm.generator.writer.JavaClassTypeWriter;
 import org.lab.osm.generator.writer.StoredProcedureInfoWriter;
 
 import lombok.extern.slf4j.Slf4j;
 import oracle.jdbc.OracleDriver;
 
 @Slf4j
-public class CodeGeneratorApplication {
+public class CodeGenerator {
 
-	public static void main(String[] args) {
+	// TODO encapsulate parameters into data structure
+	public void execute(String jdbcUrl, String user, String password, String objectName, String procedureName,
+		String javaPackage, String folder) {
 
-		// TODO
-		new CodeGeneratorApplication().execute( //@formatter:off
-			"jdbc:oracle:thin:@vles044273-011:1521:OBRDVL",
-			"MPD_LD",
-			"MPD_LD",
-			"DL_GNL_PAR",
-			"F_GET"); //@formatter:on
-	}
-
-	private void usage() {
-
-	}
-
-	public void execute(String jdbcUrl, String user, String password, String objectName, String procedureName) {
+		StoredProcedureReader storedProcedureReader = new StoredProcedureReader();
+		StoredProcedureParameterReader paramReader = new StoredProcedureParameterReader();
+		StoredProcedureInfoWriter writer = new StoredProcedureInfoWriter();
+		TypeReader typeReader = new TypeReader();
+		JavaClassTypeWriter classWriter = new JavaClassTypeWriter();
+		JavaClassTypeAdapter classTypeAdapter = new JavaClassTypeAdapter();
 		try {
 			Properties connectionProps = new Properties();
 			connectionProps.put("user", user);
@@ -45,11 +43,6 @@ public class CodeGeneratorApplication {
 
 			try (Connection connection = DriverManager.getConnection(jdbcUrl, connectionProps)) {
 				log.debug("Connected");
-
-				StoredProcedureReader storedProcedureReader = new StoredProcedureReader();
-				StoredProcedureParameterReader paramReader = new StoredProcedureParameterReader();
-				StoredProcedureInfoWriter writer = new StoredProcedureInfoWriter();
-				TypeReader typeReader = new TypeReader();
 
 				List<StoredProcedureInfo> procedures = storedProcedureReader.read(connection, objectName, procedureName,
 					user);
@@ -66,19 +59,30 @@ public class CodeGeneratorApplication {
 				}
 
 				for (StoredProcedureInfo i : procedures) {
-					File parent = new File("build/generated");
+					File parent = new File(folder);
 					if (!parent.exists() && !parent.mkdirs()) {
 						throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
 					}
+
+					// json
 					File jsonFile = new File(parent, i.getObjectName() + "." + i.getProcedureName() + ".json");
-					FileOutputStream out = new FileOutputStream(jsonFile);
-					writer.write(i, out);
+					try (FileOutputStream out = new FileOutputStream(jsonFile)) {
+						writer.write(i, out);
+					}
+
+					// java classes
+					for (TypeInfo typeInfo : i.getTypes()) {
+						classTypeAdapter.execute(i, typeInfo, javaPackage);
+						File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
+						try (FileOutputStream out = new FileOutputStream(javaFile)) {
+							classWriter.write(typeInfo, out);
+						}
+					}
 				}
 			}
 		}
 		catch (Exception ex) {
-			ex.printStackTrace();
-			usage();
+			throw new OsmGeneratorException(ex);
 		}
 
 	}
