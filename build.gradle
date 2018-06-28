@@ -1,0 +1,53 @@
+buildscript {
+  ext {
+    springVersion          = '5.0.7.RELEASE'
+    oracleDriverVersion    = '11.2.0.4.0-atlassian-hosted'
+    commonsLang3Version    = '3.7'
+    reflectionsVersion     = '0.9.11'
+    slf4jVersion           = '1.7.25'
+    lombokVersion          = '1.16.22'
+    useProxy = true	
+  }
+  repositories {
+    mavenLocal()
+    if(useProxy) {
+      maven { url "$System.env.MVN_PROXY" }
+    } else {
+      mavenCentral()
+      maven { url "http://repo.spring.io/plugins-release/" }
+    }
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+group = 'org.lab.osm'
+version = version
+sourceCompatibility = 1.8
+
+repositories {
+  if(useProxy) {
+    mavenLocal()
+    maven { url "$System.env.MVN_PROXY" }
+  } else {
+    mavenCentral()
+    maven { url "http://repo.spring.io/plugins-release/" }
+  }
+}
+
+dependencies {
+  compile("org.springframework:spring-context:${springVersion}")
+  compile("org.springframework:spring-jdbc:${springVersion}")
+  compile("org.apache.commons:commons-lang3:${commonsLang3Version}")
+  compile("org.reflections:reflections:${reflectionsVersion}")
+  compile("com.oracle:ojdbc6:${oracleDriverVersion}")
+  compile("org.slf4j:slf4j-api:${slf4jVersion}")
+  compile("ch.qos.logback:logback-classic:1.2.3")
+  compile("com.fasterxml.jackson.core:jackson-databind:2.9.6")
+
+  compileOnly("org.projectlombok:lombok:${lombokVersion}")
+
+  testCompile("org.springframework:spring-test:${springVersion}")
+}
