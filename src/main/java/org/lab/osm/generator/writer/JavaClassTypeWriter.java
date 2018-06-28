@@ -44,7 +44,7 @@ public class JavaClassTypeWriter {
 		for (TypeColumnInfo i : typeInfo.getColumns()) {
 
 			writer.write("\t@OracleField(\"");
-			writer.write(typeInfo.getTypeName());
+			writer.write(i.getName());
 			writer.write("\")");
 			writer.write("\n");
 

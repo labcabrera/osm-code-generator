@@ -39,6 +39,9 @@ public class JavaClassTypeAdapter {
 			javaInfo.setJavaType("Date");
 			javaInfo.setJavaPackage("java.util");
 			break;
+		case "NUMBER":
+			resolveNumberType(storedProcedureInfo, i, javaInfo);
+			break;
 		default:
 			resolveJavaType(storedProcedureInfo, i, javaInfo);
 			break;
@@ -52,6 +55,13 @@ public class JavaClassTypeAdapter {
 
 		javaInfo.setJavaType("Object");
 		javaInfo.setJavaPackage("java.lang");
+	}
+
+	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, TypeColumnInfo columnInfo,
+		JavaTypeColumnInfo javaInfo) {
+		// TODO check int / long / BigDecial using number precision/scale
+		javaInfo.setJavaType("BigDecimal");
+		javaInfo.setJavaPackage("java.math");
 	}
 
 }
