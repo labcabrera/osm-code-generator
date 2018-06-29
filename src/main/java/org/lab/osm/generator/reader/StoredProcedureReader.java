@@ -47,22 +47,20 @@ public class StoredProcedureReader {
 		String query = sb.toString();
 		log.debug("Query:\n{}", query);
 
-		PreparedStatement ps = connection.prepareStatement(query);
-		ResultSet rs = ps.executeQuery();
-		List<StoredProcedureInfo> results = new ArrayList<>();
-
-		while (rs.next()) {
-			StoredProcedureInfo item = new StoredProcedureInfo();
-			item.setObjectId(rs.getLong("object_id"));
-			item.setObjectName(rs.getString("object_name"));
-			item.setProcedureName(rs.getString("procedure_name"));
-			item.setOwner(rs.getString("owner"));
-			item.setOverload(rs.getInt("overload"));
-			results.add(item);
+		try (PreparedStatement ps = connection.prepareStatement(query)) {
+			ResultSet rs = ps.executeQuery();
+			List<StoredProcedureInfo> results = new ArrayList<>();
+			while (rs.next()) {
+				StoredProcedureInfo item = new StoredProcedureInfo();
+				item.setObjectId(rs.getLong("object_id"));
+				item.setObjectName(rs.getString("object_name"));
+				item.setProcedureName(rs.getString("procedure_name"));
+				item.setOwner(rs.getString("owner"));
+				item.setOverload(rs.getInt("overload"));
+				results.add(item);
+			}
+			return results;
 		}
-
-		ps.close();
-		return results;
 	}
 
 }

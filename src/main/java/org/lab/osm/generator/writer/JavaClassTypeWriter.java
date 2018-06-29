@@ -35,8 +35,13 @@ public class JavaClassTypeWriter {
 		}
 	}
 
-	private void writeDependencies(TypeInfo typeInfo, Writer writer) {
-		// TODO
+	private void writeDependencies(TypeInfo typeInfo, Writer writer) throws IOException {
+		if (!typeInfo.getDependencies().isEmpty()) {
+			for (String dependency : typeInfo.getDependencies()) {
+				writer.write("import " + dependency + ";\n");
+			}
+			writer.write("\n");
+		}
 	}
 
 	private void writeFields(TypeInfo typeInfo, Writer writer) throws IOException {

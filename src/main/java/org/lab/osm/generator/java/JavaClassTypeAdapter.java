@@ -18,19 +18,19 @@ public class JavaClassTypeAdapter {
 	public void execute(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo, String javaPackage) {
 		typeInfo.setJavaClassName(classNameNormalizer.apply(typeInfo.getTypeName()));
 		typeInfo.setJavaPackage(javaPackage);
-		for (TypeColumnInfo i : typeInfo.getColumns()) {
-			execute(storedProcedureInfo, i);
+		for (TypeColumnInfo columnInfo : typeInfo.getColumns()) {
+			execute(storedProcedureInfo, typeInfo, columnInfo);
 		}
 	}
 
-	public void execute(StoredProcedureInfo storedProcedureInfo, TypeColumnInfo i) {
+	public void execute(StoredProcedureInfo spInfo, TypeInfo typeInfo, TypeColumnInfo columnInfo) {
 		// TODO
 		JavaTypeColumnInfo javaInfo = new JavaTypeColumnInfo();
 
 		javaInfo.setIsOracleType(true);
-		javaInfo.setNormalizedName(fieldNameNormalizer.apply(i.getName()));
+		javaInfo.setNormalizedName(fieldNameNormalizer.apply(columnInfo.getName()));
 
-		switch (i.getTypeName()) {
+		switch (columnInfo.getTypeName()) {
 		case "VARCHAR2":
 			javaInfo.setJavaType("String");
 			javaInfo.setJavaPackage("java.lang");
@@ -38,30 +38,31 @@ public class JavaClassTypeAdapter {
 		case "DATE":
 			javaInfo.setJavaType("Date");
 			javaInfo.setJavaPackage("java.util");
+			typeInfo.addDependency("java.util.Date");
 			break;
 		case "NUMBER":
-			resolveNumberType(storedProcedureInfo, i, javaInfo);
+			resolveNumberType(spInfo, typeInfo, columnInfo, javaInfo);
 			break;
 		default:
-			resolveJavaType(storedProcedureInfo, i, javaInfo);
+			resolveJavaType(spInfo, typeInfo, columnInfo, javaInfo);
 			break;
 		}
 
-		i.setJavaInfo(javaInfo);
+		columnInfo.setJavaInfo(javaInfo);
 	}
 
-	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, TypeColumnInfo columnInfo,
+	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo, TypeColumnInfo columnInfo,
 		JavaTypeColumnInfo javaInfo) {
-
 		javaInfo.setJavaType("Object");
 		javaInfo.setJavaPackage("java.lang");
 	}
 
-	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, TypeColumnInfo columnInfo,
-		JavaTypeColumnInfo javaInfo) {
+	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo,
+		TypeColumnInfo columnInfo, JavaTypeColumnInfo javaInfo) {
 		// TODO check int / long / BigDecial using number precision/scale
 		javaInfo.setJavaType("BigDecimal");
 		javaInfo.setJavaPackage("java.math");
+		typeInfo.addDependency("java.math.BigDecimal");
 	}
 
 }

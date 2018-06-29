@@ -35,6 +35,7 @@ public class CodeGenerator {
 		String user = request.getUser();
 		String javaPackage = request.getJavaPackage();
 		String folder = request.getFolder();
+		Boolean cleanFolder = request.getCleanTargetFolder();
 		try {
 			try (Connection connection = openConnection(request)) {
 				List<StoredProcedureInfo> procedures = storedProcedureReader.read(connection, objectName, procedureName,
@@ -46,7 +47,7 @@ public class CodeGenerator {
 				}
 				procedures.forEach(x -> paramReader.read(connection, x));
 				procedures.forEach(x -> typeReader.read(connection, x));
-				procedures.forEach(x -> export(x, javaPackage, folder));
+				procedures.forEach(x -> export(x, javaPackage, folder, cleanFolder));
 			}
 		}
 		catch (Exception ex) {
@@ -55,7 +56,7 @@ public class CodeGenerator {
 
 	}
 
-	private void export(StoredProcedureInfo i, String javaPackage, String folder) {
+	private void export(StoredProcedureInfo spInfo, String javaPackage, String folder, Boolean cleanFolder) {
 		try {
 			StoredProcedureInfoWriter jsonWriter = new StoredProcedureInfoWriter();
 			JavaClassTypeAdapter classTypeAdapter = new JavaClassTypeAdapter();
@@ -64,14 +65,21 @@ public class CodeGenerator {
 			if (!parent.exists() && !parent.mkdirs()) {
 				throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
 			}
+			if (cleanFolder != null && cleanFolder) {
+				for (File file : parent.listFiles()) {
+					file.delete();
+				}
+			}
+			// Type adapter
+			spInfo.getTypes().stream().forEach(x -> classTypeAdapter.execute(spInfo, x, javaPackage));
 			// Json model
-			File jsonFile = new File(parent, i.getObjectName() + "." + i.getProcedureName() + ".json");
+			File jsonFile = new File(parent, spInfo.getObjectName() + "." + spInfo.getProcedureName() + ".json");
 			try (FileOutputStream out = new FileOutputStream(jsonFile)) {
-				jsonWriter.write(i, out);
+				jsonWriter.write(spInfo, out);
 			}
 			// Java classes
-			for (TypeInfo typeInfo : i.getTypes()) {
-				classTypeAdapter.execute(i, typeInfo, javaPackage);
+			for (TypeInfo typeInfo : spInfo.getTypes()) {
+				classTypeAdapter.execute(spInfo, typeInfo, javaPackage);
 				File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
 				try (FileOutputStream out = new FileOutputStream(javaFile)) {
 					classWriter.write(typeInfo, out);

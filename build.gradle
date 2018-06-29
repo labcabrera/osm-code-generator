@@ -6,12 +6,12 @@ buildscript {
     reflectionsVersion     = '0.9.11'
     slf4jVersion           = '1.7.25'
     lombokVersion          = '1.16.22'
-    useProxy = true	
+    mvnProxy = "http://nexus:8080/nexus/content/groups/public/"
   }
   repositories {
-    mavenLocal()
-    if(useProxy) {
-      maven { url "$System.env.MVN_PROXY" }
+    if(mvnProxy != null) {
+      mavenLocal()
+      maven { url mvnProxy }
     } else {
       mavenCentral()
       maven { url "http://repo.spring.io/plugins-release/" }
@@ -28,9 +28,9 @@ version = version
 sourceCompatibility = 1.8
 
 repositories {
-  if(useProxy) {
+  if(mvnProxy != null) {
     mavenLocal()
-    maven { url "$System.env.MVN_PROXY" }
+    maven { url mvnProxy }
   } else {
     mavenCentral()
     maven { url "http://repo.spring.io/plugins-release/" }
@@ -41,6 +41,7 @@ dependencies {
   compile("org.springframework:spring-context:${springVersion}")
   compile("org.springframework:spring-jdbc:${springVersion}")
   compile("org.apache.commons:commons-lang3:${commonsLang3Version}")
+  compile("commons-io:commons-io:2.6")
   compile("org.reflections:reflections:${reflectionsVersion}")
   compile("com.oracle:ojdbc6:${oracleDriverVersion}")
   compile("org.slf4j:slf4j-api:${slf4jVersion}")
@@ -49,5 +50,7 @@ dependencies {
 
   compileOnly("org.projectlombok:lombok:${lombokVersion}")
 
+  testCompile("org.lab.osm:osm-connector:0.0.1-SNAPSHOT")
+  testCompile("junit:junit:4.12")
   testCompile("org.springframework:spring-test:${springVersion}")
 }

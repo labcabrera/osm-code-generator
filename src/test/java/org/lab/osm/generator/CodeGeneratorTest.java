@@ -1,36 +1,40 @@
 package org.lab.osm.generator;
 
-//TODO junit
+import org.junit.Ignore;
+import org.junit.Test;
+import org.lab.osm.generator.model.CodeGenerationRequest;
+
 public class CodeGeneratorTest {
 
-	public static void main(String[] args) {
+	private CodeGenerator codeGenerator = new CodeGenerator();
 
-//		new CodeGenerator().execute( //@formatter:off
-//			"jdbc:oracle:thin:@vles044273-011:1521:OBRDVL",
-//			"MPD_LD",
-//			"MPD_LD",
-//			"DL_GNL_PAR",
-//			"F_GET",
-//			"org.lab.samples.osm",
-//			"build/generated/gnl_par"); //@formatter:on
+	@Ignore
+	@Test
+	public void testParticipantSearch() {
+		CodeGenerationRequest request = new CodeGenerationRequest();
+		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
+		request.setUser("MPD_LD");
+		request.setPassword("MPD_LD");
+		request.setObjectName("MPG_K_EX_SINIESTRO_ACCIDENTE");
+		request.setProcedureName("PR_PROCESA_PETICION");
+		request.setJavaPackage("org.lab.samples.osm.participant");
+		request.setFolder("src/test/java/org/lab/samples/osm/participant");
+		request.setCleanTargetFolder(true);
+		codeGenerator.execute(request);
+	}
 
-		new CodeGenerator().execute( //@formatter:off
-			"jdbc:oracle:thin:@vles044273-011:1521:OBRDVL",
-			"MPD_LD",
-			"MPD_LD",
-			"MPG_K_EX_SINIESTRO_ACCIDENTE",
-			"PR_PROCESA_PETICION",
-			"org.lab.samples.osm",
-			"build/generated/siniestro"); //@formatter:on
-
-//		new CodeGenerator().execute( //@formatter:off
-//			"jdbc:oracle:thin:@vles044273-011:1521:OBRDVL",
-//			"MPD_LD",
-//			"MPD_LD",
-//			"MPG_K_EX_SINIESTRO_ACC_WRP",
-//			"P_PROCESA_PETICION",
-//			"org.lab.samples.osm",
-//			"build/generated/siniestro"); //@formatter:on
+	@Test
+	public void testClaim() {
+		CodeGenerationRequest request = new CodeGenerationRequest();
+		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
+		request.setUser("MPD_LD");
+		request.setPassword("MPD_LD");
+		request.setObjectName("MPG_K_EX_SINIESTRO_ACCIDENTE");
+		request.setProcedureName("PR_PROCESA_PETICION");
+		request.setJavaPackage("org.lab.samples.osm.claim");
+		request.setFolder("src/test/java/org/lab/samples/osm/claim");
+		request.setCleanTargetFolder(true);
+		codeGenerator.execute(request);
 	}
 
 }

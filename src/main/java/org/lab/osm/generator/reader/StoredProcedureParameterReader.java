@@ -47,8 +47,7 @@ public class StoredProcedureParameterReader {
 		String query = sb.toString();
 		log.debug("Query:\n{}", query);
 
-		try {
-			PreparedStatement ps = connection.prepareStatement(query);
+		try (PreparedStatement ps = connection.prepareStatement(query)) {
 			ResultSet rs = ps.executeQuery();
 			List<StoredProcedureParameterInfo> params = new ArrayList<>();
 			while (rs.next()) {
@@ -60,7 +59,6 @@ public class StoredProcedureParameterReader {
 				paramInfo.setArgumentName(rs.getString("argument_name"));
 				params.add(paramInfo);
 			}
-			ps.close();
 			storedProcedureInfo.setParameters(params);
 		}
 		catch (SQLException ex) {

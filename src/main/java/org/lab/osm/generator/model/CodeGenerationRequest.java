@@ -17,4 +17,6 @@ public class CodeGenerationRequest {
 	private String javaPackage;
 	private String folder;
 
+	private Boolean cleanTargetFolder;
+
 }

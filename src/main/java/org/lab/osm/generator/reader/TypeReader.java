@@ -55,10 +55,9 @@ public class TypeReader {
 
 		TypeInfo result = new TypeInfo();
 		result.setTypeName(typeName);
-		result.setColumns(new ArrayList<>());
+		result.getColumns().clear();
 
-		try {
-			PreparedStatement ps = connection.prepareStatement(query);
+		try (PreparedStatement ps = connection.prepareStatement(query)) {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				TypeColumnInfo columnInfo = new TypeColumnInfo();
@@ -71,7 +70,6 @@ public class TypeReader {
 				result.getColumns().add(columnInfo);
 				resolveType(connection, storedProcedureInfo, columnInfo);
 			}
-			ps.close();
 			return result;
 		}
 		catch (SQLException ex) {
@@ -85,7 +83,6 @@ public class TypeReader {
 
 	private void resolveType(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
 		TypeColumnInfo columnInfo) {
-
 		String typeName = columnInfo.getTypeName();
 		switch (typeName) {
 		case "VARCHAR2":
@@ -98,7 +95,6 @@ public class TypeReader {
 				storedProcedureInfo.getTypes().add(typeInfo);
 			}
 		}
-
 	}
 
 }
