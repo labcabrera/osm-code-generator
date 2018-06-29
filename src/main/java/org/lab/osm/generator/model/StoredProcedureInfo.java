@@ -16,19 +16,12 @@ public class StoredProcedureInfo {
 	private String procedureName;
 	private String owner;
 	private int overload;
+	private boolean isFunction;
 
 	private List<StoredProcedureParameterInfo> parameters;
 
 	private List<OracleTypeInfo> types;
 
-	private JavaExecutorInfo javaExecutorInfo;
-
-	@Getter
-	@Setter
-	@ToString
-	public static class JavaExecutorInfo {
-		private String javaPackage;
-		private String javaType;
-	}
+	private JavaTypeInfo javaExecutorInfo;
 
 }

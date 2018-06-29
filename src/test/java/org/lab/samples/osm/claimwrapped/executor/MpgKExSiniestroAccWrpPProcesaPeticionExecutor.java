@@ -8,12 +8,6 @@ import org.lab.osm.connector.annotation.OracleStoredProcedure;
 import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
 import org.lab.samples.osm.claimwrapped.model.OSinAccOutS;
-/**
- *
- * Generated at 2018-06-29T13:23:51.997Z
- *
- * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
- */
 //@formatter:off
 @OracleStoredProcedure(
 	name = "MPG_K_EX_SINIESTRO_ACC_WRP.P_PROCESA_PETICION",

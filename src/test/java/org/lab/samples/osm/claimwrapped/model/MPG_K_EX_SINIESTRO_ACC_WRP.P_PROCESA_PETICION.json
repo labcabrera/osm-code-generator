@@ -1604,7 +1604,9 @@
     }
   } ],
   "javaExecutorInfo" : {
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.executor",
-    "javaType" : "MpgKExSiniestroAccWrpPProcesaPeticionExecutor"
-  }
+    "name" : "MpgKExSiniestroAccWrpPProcesaPeticionExecutor",
+    "typePackage" : "org.lab.samples.osm.claimwrapped.executor",
+    "dependencies" : [ ]
+  },
+  "function" : false
 }

@@ -11,8 +11,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.lab.osm.generator.exception.OsmExportException;
+import org.lab.osm.generator.model.CodeGenerationOptions;
+import org.lab.osm.generator.model.JavaTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
-import org.lab.osm.generator.model.StoredProcedureInfo.JavaExecutorInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
 
@@ -21,11 +22,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JavaExecutorCodeWriter {
 
-	public void write(StoredProcedureInfo spInfo, OutputStream out) {
+	public void write(StoredProcedureInfo spInfo, OutputStream out, CodeGenerationOptions options) {
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
-			JavaExecutorInfo executorInfo = spInfo.getJavaExecutorInfo();
+			JavaTypeInfo executorInfo = spInfo.getJavaExecutorInfo();
 
-			writer.write("package " + executorInfo.getJavaPackage() + ";\n");
+			writer.write("package " + executorInfo.getTypePackage() + ";\n");
 			writer.write("\n");
 
 			writer.write("import java.sql.Types;\n");
@@ -36,14 +37,16 @@ public class JavaExecutorCodeWriter {
 			writer.write("import org.lab.osm.connector.handler.StoredProcedureExecutor;\n");
 			writer.write("\n");
 			writeDependencies(spInfo, writer);
-			writer.write("/**\n");
-			writer.write(" *\n");
-			writer.write(" * Generated at " + Instant.now() + "\n");
-			writer.write(" *\n");
-			writer.write(" * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)\n");
-			writer.write(" */\n");
+			if (options.getGenerateComments() != null && options.getGenerateComments()) {
+				writer.write("/**\n");
+				writer.write(" *\n");
+				writer.write(" * Generated at " + Instant.now() + "\n");
+				writer.write(" *\n");
+				writer.write(" * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)\n");
+				writer.write(" */\n");
+			}
 			writeStoredProcedureAnnotation(spInfo, writer);
-			writer.write("public interface " + executorInfo.getJavaType() + " extends StoredProcedureExecutor {\n");
+			writer.write("public interface " + executorInfo.getName() + " extends StoredProcedureExecutor {\n");
 			writer.write("\n");
 			writer.write("}\n");
 			writer.flush();
@@ -77,7 +80,7 @@ public class JavaExecutorCodeWriter {
 		writer.write("//@formatter:off\n");
 		writer.write("@OracleStoredProcedure(\n");
 		writer.write("\tname = \"" + procedureName + "\",\n");
-		writer.write("\tisFunction = false,\n");
+		writer.write("\tisFunction = " + spInfo.isFunction() + ",\n");
 		writer.write("\tparameters = {\n");
 
 		Iterator<StoredProcedureParameterInfo> iterator = spInfo.getParameters().iterator();

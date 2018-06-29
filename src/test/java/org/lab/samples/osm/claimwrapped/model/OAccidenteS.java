@@ -7,12 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- *
- * Generated at 2018-06-29T13:23:51.996Z
- *
- * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
- */
 @OracleStruct("O_ACCIDENTE_S")
 @Getter
 @Setter

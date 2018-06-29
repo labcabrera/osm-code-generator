@@ -87,7 +87,9 @@
     }
   } ],
   "javaExecutorInfo" : {
-    "javaPackage" : "org.lab.samples.osm.participant.executor",
-    "javaType" : "DlGnlParFUpdExecutor"
-  }
+    "name" : "DlGnlParFUpdExecutor",
+    "typePackage" : "org.lab.samples.osm.participant.executor",
+    "dependencies" : [ ]
+  },
+  "function" : true
 }

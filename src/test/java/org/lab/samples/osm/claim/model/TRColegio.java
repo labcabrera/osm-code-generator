@@ -7,12 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- *
- * Generated at 2018-06-29T13:23:51.683Z
- *
- * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
- */
 @OracleStruct("T_R_COLEGIO")
 @Getter
 @Setter

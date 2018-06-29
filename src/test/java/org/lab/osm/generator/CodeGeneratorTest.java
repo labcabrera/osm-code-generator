@@ -23,6 +23,7 @@ public class CodeGeneratorTest {
 		request.getOptions().setEntityPackage("org.lab.samples.osm.participant.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
+		request.getOptions().setGenerateComments(false);
 		codeGenerator.execute(request);
 	}
 
@@ -41,6 +42,7 @@ public class CodeGeneratorTest {
 		request.getOptions().setEntityPackage("org.lab.samples.osm.participant.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
+		request.getOptions().setGenerateComments(false);
 		codeGenerator.execute(request);
 	}
 
@@ -59,6 +61,7 @@ public class CodeGeneratorTest {
 		request.getOptions().setEntityPackage("org.lab.samples.osm.claim.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.claim.executor");
 		request.getOptions().setCleanTargetFolders(true);
+		request.getOptions().setGenerateComments(false);
 		codeGenerator.execute(request);
 	}
 
@@ -77,6 +80,7 @@ public class CodeGeneratorTest {
 		request.getOptions().setEntityPackage("org.lab.samples.osm.claimwrapped.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.claimwrapped.executor");
 		request.getOptions().setCleanTargetFolders(true);
+		request.getOptions().setGenerateComments(false);
 		codeGenerator.execute(request);
 	}
 

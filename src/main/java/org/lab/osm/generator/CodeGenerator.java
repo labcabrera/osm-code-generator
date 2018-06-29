@@ -95,7 +95,7 @@ public class CodeGenerator {
 		for (OracleTypeInfo typeInfo : spInfo.getTypes()) {
 			File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");
 			try (FileOutputStream out = new FileOutputStream(javaFile)) {
-				classWriter.write(typeInfo, out);
+				classWriter.write(typeInfo, out, options);
 			}
 		}
 	}
@@ -104,9 +104,9 @@ public class CodeGenerator {
 		JavaExecutorCodeWriter executorCodeWriter = new JavaExecutorCodeWriter();
 		File parent = resolveFolder(options.getExecutorBaseFolder(), options.getExecutorPackage(),
 			options.getCleanTargetFolders());
-		File executorInterface = new File(parent, spInfo.getJavaExecutorInfo().getJavaType() + ".java");
+		File executorInterface = new File(parent, spInfo.getJavaExecutorInfo().getName() + ".java");
 		try (FileOutputStream out = new FileOutputStream(executorInterface)) {
-			executorCodeWriter.write(spInfo, out);
+			executorCodeWriter.write(spInfo, out, options);
 		}
 	}
 

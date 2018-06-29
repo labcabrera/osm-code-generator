@@ -1579,7 +1579,9 @@
     }
   } ],
   "javaExecutorInfo" : {
-    "javaPackage" : "org.lab.samples.osm.claim.executor",
-    "javaType" : "MpgKExSiniestroAccidentePrProcesaPeticionExecutor"
-  }
+    "name" : "MpgKExSiniestroAccidentePrProcesaPeticionExecutor",
+    "typePackage" : "org.lab.samples.osm.claim.executor",
+    "dependencies" : [ ]
+  },
+  "function" : false
 }

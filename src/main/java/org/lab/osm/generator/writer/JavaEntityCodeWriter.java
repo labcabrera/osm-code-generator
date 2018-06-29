@@ -8,12 +8,13 @@ import java.io.Writer;
 import java.time.Instant;
 
 import org.lab.osm.generator.exception.OsmExportException;
+import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
 
 public class JavaEntityCodeWriter {
 
-	public void write(OracleTypeInfo typeInfo, OutputStream out) {
+	public void write(OracleTypeInfo typeInfo, OutputStream out, CodeGenerationOptions options) {
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
 			writer.write("package " + typeInfo.getJavaTypeInfo().getTypePackage() + ";\n");
 			writer.write("\n");
@@ -25,12 +26,14 @@ public class JavaEntityCodeWriter {
 			writer.write("import lombok.ToString;\n");
 			writer.write("\n");
 			writeDependencies(typeInfo, writer);
-			writer.write("/**\n");
-			writer.write(" *\n");
-			writer.write(" * Generated at " + Instant.now() + "\n");
-			writer.write(" *\n");
-			writer.write(" * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)\n");
-			writer.write(" */\n");
+			if (options.getGenerateComments() != null && options.getGenerateComments()) {
+				writer.write("/**\n");
+				writer.write(" *\n");
+				writer.write(" * Generated at " + Instant.now() + "\n");
+				writer.write(" *\n");
+				writer.write(" * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)\n");
+				writer.write(" */\n");
+			}
 			writer.write("@OracleStruct(\"" + typeInfo.getTypeName() + "\")\n");
 			writer.write("@Getter\n");
 			writer.write("@Setter\n");

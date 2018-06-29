@@ -8,16 +8,10 @@ import org.lab.osm.connector.annotation.OracleStoredProcedure;
 import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
 import org.lab.samples.osm.participant.model.OAmdGnlParS;
-/**
- *
- * Generated at 2018-06-29T13:23:51.278Z
- *
- * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
- */
 //@formatter:off
 @OracleStoredProcedure(
 	name = "DL_GNL_PAR.F_GET",
-	isFunction = false,
+	isFunction = true,
 	parameters = {
 		@OracleParameter(
 			name = "null",

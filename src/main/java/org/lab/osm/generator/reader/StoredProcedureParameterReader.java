@@ -58,6 +58,10 @@ public class StoredProcedureParameterReader {
 				paramInfo.setTypeName(rs.getString("type_name"));
 				paramInfo.setArgumentName(rs.getString("argument_name"));
 				params.add(paramInfo);
+
+				if (paramInfo.getArgumentName() == null) {
+					storedProcedureInfo.setFunction(true);
+				}
 			}
 			storedProcedureInfo.setParameters(params);
 		}

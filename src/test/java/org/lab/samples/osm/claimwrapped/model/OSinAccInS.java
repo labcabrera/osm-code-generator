@@ -9,12 +9,6 @@ import lombok.ToString;
 
 import java.util.Date;
 
-/**
- *
- * Generated at 2018-06-29T13:23:51.996Z
- *
- * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
- */
 @OracleStruct("O_SIN_ACC_IN_S")
 @Getter
 @Setter

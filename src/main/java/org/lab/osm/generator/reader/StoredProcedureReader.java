@@ -57,6 +57,7 @@ public class StoredProcedureReader {
 				item.setProcedureName(rs.getString("procedure_name"));
 				item.setOwner(rs.getString("owner"));
 				item.setOverload(rs.getInt("overload"));
+				item.setFunction(false);
 				results.add(item);
 			}
 			return results;
