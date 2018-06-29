@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * Generated at 2018-06-29T10:31:35.265Z
+ * Generated at 2018-06-29T11:12:40.353Z
  *
  * @author osm-code-generator
  */

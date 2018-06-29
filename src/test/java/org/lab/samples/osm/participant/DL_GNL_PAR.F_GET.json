@@ -68,5 +68,9 @@
       }
     } ],
     "dependencies" : [ "java.math.BigDecimal" ]
-  } ]
+  } ],
+  "javaExecutorInfo" : {
+    "javaPackage" : "org.lab.samples.osm.participant",
+    "javaType" : "DlGnlParFGetExecutor"
+  }
 }

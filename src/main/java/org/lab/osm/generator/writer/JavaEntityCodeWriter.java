@@ -11,7 +11,7 @@ import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.TypeColumnInfo;
 import org.lab.osm.generator.model.TypeInfo;
 
-public class JavaClassTypeWriter {
+public class JavaEntityCodeWriter {
 
 	public void write(TypeInfo typeInfo, OutputStream out) {
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
@@ -56,10 +56,9 @@ public class JavaClassTypeWriter {
 	}
 
 	private void writeFields(TypeInfo typeInfo, Writer writer) throws IOException {
-		// TODO
 		for (TypeColumnInfo i : typeInfo.getColumns()) {
-
 			switch (i.getTypeName()) {
+			// TODO
 			case "VARCHAR2":
 			case "NUMBER":
 			case "DATE":
@@ -71,7 +70,6 @@ public class JavaClassTypeWriter {
 			default:
 				break;
 			}
-
 			writer.write("\tprivate ");
 			writer.write(i.getJavaInfo().getJavaType());
 			writer.write(" ");

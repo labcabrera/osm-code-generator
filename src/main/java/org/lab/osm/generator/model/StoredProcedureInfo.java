@@ -21,4 +21,14 @@ public class StoredProcedureInfo {
 
 	private List<TypeInfo> types;
 
+	private JavaExecutorInfo javaExecutorInfo;
+
+	@Getter
+	@Setter
+	@ToString
+	public static class JavaExecutorInfo {
+		private String javaPackage;
+		private String javaType;
+	}
+
 }
