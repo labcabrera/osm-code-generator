@@ -10,9 +10,9 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 import org.lab.samples.osm.claimwrapped.model.OSinAccOutS;
 /**
  *
- * Generated at 2018-06-29T13:10:18.037Z
+ * Generated at 2018-06-29T13:23:51.997Z
  *
- * @author osm-code-generator
+ * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
  */
 //@formatter:off
 @OracleStoredProcedure(

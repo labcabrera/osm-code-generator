@@ -9,9 +9,9 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
 /**
  *
- * Generated at 2018-06-29T13:10:17.741Z
+ * Generated at 2018-06-29T13:23:51.684Z
  *
- * @author osm-code-generator
+ * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
  */
 //@formatter:off
 @OracleStoredProcedure(

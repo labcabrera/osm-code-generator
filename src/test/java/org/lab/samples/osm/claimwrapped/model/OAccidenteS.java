@@ -9,9 +9,9 @@ import lombok.ToString;
 
 /**
  *
- * Generated at 2018-06-29T13:10:18.036Z
+ * Generated at 2018-06-29T13:23:51.996Z
  *
- * @author osm-code-generator
+ * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)
  */
 @OracleStruct("O_ACCIDENTE_S")
 @Getter

@@ -1,0 +1,37 @@
+= Oracle Struct Metadata Code Generator
+
+== Introducción
+
+Esta libreróa permite la generación de código utilizado para la invocación de procedimientos
+almacenados de Oracle a través de la librería
+https://github.com/labcabrera/osm-connector[osm-connector].
+
+La librería consultará la meta-información de Oracle y generará los tipos y las interfaces
+necesarias para la invocación de un determinado procedimiento almacenado.
+
+== Utilización
+
+Para generar el código deberemos tener conectividad a la base de datos de Oracle.
+
+Después simplemente tendremos que invocar a la clase `CodeGenerator` pasando la información de
+nuestro procedimiento almacenado utilizando la clase `CodeGenerationRequest` con la siguiente
+estructura:
+
+[source,json]
+----
+{
+  "jdbcUrl" : "jdbc:oracle:thin:@some-host:1521:schema",
+  "user" : "DB_USER",
+  "password" : "DB_PASSWORD",
+  "objectName" : "MY_OBJET_NAME",
+  "procedureName" : "SOME_PROCEDURE",
+  "options" : {
+    "entityPackage" : "org.lab.samples.osm.participant.model",
+    "entityBaseFolder" : "./src/test/java",
+    "executorPackage" : "org.lab.samples.osm.participant.executor",
+    "executorBaseFolder" : "./src/test/java",
+    "cleanTargetFolders" : false
+  }
+}
+----
+

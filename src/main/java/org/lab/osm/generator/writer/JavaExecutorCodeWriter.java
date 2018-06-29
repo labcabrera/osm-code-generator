@@ -40,7 +40,7 @@ public class JavaExecutorCodeWriter {
 			writer.write(" *\n");
 			writer.write(" * Generated at " + Instant.now() + "\n");
 			writer.write(" *\n");
-			writer.write(" * @author osm-code-generator\n");
+			writer.write(" * @author osm-code-generator (https://github.com/labcabrera/osm-code-generator)\n");
 			writer.write(" */\n");
 			writeStoredProcedureAnnotation(spInfo, writer);
 			writer.write("public interface " + executorInfo.getJavaType() + " extends StoredProcedureExecutor {\n");
