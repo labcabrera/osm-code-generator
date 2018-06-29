@@ -9,7 +9,9 @@ import java.util.Properties;
 
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.exception.OsmGeneratorException;
+import org.lab.osm.generator.exception.OsmModelReadException;
 import org.lab.osm.generator.java.JavaClassTypeAdapter;
+import org.lab.osm.generator.model.CodeGenerationRequest;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
@@ -24,26 +26,17 @@ import oracle.jdbc.OracleDriver;
 @Slf4j
 public class CodeGenerator {
 
-	// TODO encapsulate parameters into data structure
-	public void execute(String jdbcUrl, String user, String password, String objectName, String procedureName,
-		String javaPackage, String folder) {
-
+	public void execute(CodeGenerationRequest request) {
 		StoredProcedureReader storedProcedureReader = new StoredProcedureReader();
 		StoredProcedureParameterReader paramReader = new StoredProcedureParameterReader();
-		StoredProcedureInfoWriter writer = new StoredProcedureInfoWriter();
 		TypeReader typeReader = new TypeReader();
-		JavaClassTypeWriter classWriter = new JavaClassTypeWriter();
-		JavaClassTypeAdapter classTypeAdapter = new JavaClassTypeAdapter();
+		String objectName = request.getObjectName();
+		String procedureName = request.getProcedureName();
+		String user = request.getUser();
+		String javaPackage = request.getJavaPackage();
+		String folder = request.getFolder();
 		try {
-			Properties connectionProps = new Properties();
-			connectionProps.put("user", user);
-			connectionProps.put("password", password);
-
-			Class.forName(OracleDriver.class.getName()).newInstance();
-
-			try (Connection connection = DriverManager.getConnection(jdbcUrl, connectionProps)) {
-				log.debug("Connected");
-
+			try (Connection connection = openConnection(request)) {
 				List<StoredProcedureInfo> procedures = storedProcedureReader.read(connection, objectName, procedureName,
 					user);
 
@@ -51,40 +44,56 @@ public class CodeGenerator {
 					procedures.stream().forEach(sp -> log.debug(sp.toString()));
 					log.debug("Readed {} procedures", procedures.size());
 				}
-
 				procedures.forEach(x -> paramReader.read(connection, x));
-
-				for (StoredProcedureInfo i : procedures) {
-					typeReader.read(connection, i);
-				}
-
-				for (StoredProcedureInfo i : procedures) {
-					File parent = new File(folder);
-					if (!parent.exists() && !parent.mkdirs()) {
-						throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
-					}
-
-					// json
-					File jsonFile = new File(parent, i.getObjectName() + "." + i.getProcedureName() + ".json");
-					try (FileOutputStream out = new FileOutputStream(jsonFile)) {
-						writer.write(i, out);
-					}
-
-					// java classes
-					for (TypeInfo typeInfo : i.getTypes()) {
-						classTypeAdapter.execute(i, typeInfo, javaPackage);
-						File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
-						try (FileOutputStream out = new FileOutputStream(javaFile)) {
-							classWriter.write(typeInfo, out);
-						}
-					}
-				}
+				procedures.forEach(x -> typeReader.read(connection, x));
+				procedures.forEach(x -> export(x, javaPackage, folder));
 			}
 		}
 		catch (Exception ex) {
 			throw new OsmGeneratorException(ex);
 		}
 
+	}
+
+	private void export(StoredProcedureInfo i, String javaPackage, String folder) {
+		try {
+			StoredProcedureInfoWriter jsonWriter = new StoredProcedureInfoWriter();
+			JavaClassTypeAdapter classTypeAdapter = new JavaClassTypeAdapter();
+			JavaClassTypeWriter classWriter = new JavaClassTypeWriter();
+			File parent = new File(folder);
+			if (!parent.exists() && !parent.mkdirs()) {
+				throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
+			}
+			// Json model
+			File jsonFile = new File(parent, i.getObjectName() + "." + i.getProcedureName() + ".json");
+			try (FileOutputStream out = new FileOutputStream(jsonFile)) {
+				jsonWriter.write(i, out);
+			}
+			// Java classes
+			for (TypeInfo typeInfo : i.getTypes()) {
+				classTypeAdapter.execute(i, typeInfo, javaPackage);
+				File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
+				try (FileOutputStream out = new FileOutputStream(javaFile)) {
+					classWriter.write(typeInfo, out);
+				}
+			}
+		}
+		catch (Exception ex) {
+			throw new OsmExportException(ex);
+		}
+	}
+
+	private Connection openConnection(CodeGenerationRequest request) {
+		try {
+			Properties connectionProps = new Properties();
+			connectionProps.put("user", request.getUser());
+			connectionProps.put("password", request.getPassword());
+			Class.forName(OracleDriver.class.getName()).newInstance();
+			return DriverManager.getConnection(request.getJdbcUrl(), connectionProps);
+		}
+		catch (Exception ex) {
+			throw new OsmModelReadException("Cant open connection " + request.getJdbcUrl(), ex);
+		}
 	}
 
 }
