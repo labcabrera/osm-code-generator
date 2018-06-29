@@ -25,9 +25,6 @@ import org.lab.osm.generator.writer.JavaEntityCodeWriter;
 import org.lab.osm.generator.writer.JavaExecutorCodeWriter;
 import org.lab.osm.generator.writer.StoredProcedureInfoWriter;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-
 import lombok.extern.slf4j.Slf4j;
 import oracle.jdbc.OracleDriver;
 
@@ -35,17 +32,6 @@ import oracle.jdbc.OracleDriver;
 public class CodeGenerator {
 
 	public void execute(CodeGenerationRequest request) {
-
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.enable(SerializationFeature.INDENT_OUTPUT);
-		try {
-			mapper.writeValue(System.out, request);
-		}
-		catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 		StoredProcedureReader storedProcedureReader = new StoredProcedureReader();
 		StoredProcedureParameterReader paramReader = new StoredProcedureParameterReader();
 		TypeReader typeReader = new TypeReader();
