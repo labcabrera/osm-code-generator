@@ -11,20 +11,14 @@ import lombok.Setter;
 public class OracleTypeInfo {
 
 	private String typeName;
-	private String javaPackage;
-	private String javaClassName;
+
 	private final List<TypeColumnInfo> columns;
-	private final List<String> dependencies;
+
+	private JavaTypeInfo javaTypeInfo;
 
 	public OracleTypeInfo() {
 		columns = new ArrayList<>();
-		dependencies = new ArrayList<>();
-	}
-
-	public void addDependency(String dependency) {
-		if (dependencies.stream().filter(x -> dependency.equals(x)).count() == 0) {
-			dependencies.add(dependency);
-		}
+		javaTypeInfo = new JavaTypeInfo();
 	}
 
 }

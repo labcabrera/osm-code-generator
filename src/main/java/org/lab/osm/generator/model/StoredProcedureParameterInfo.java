@@ -17,4 +17,6 @@ public class StoredProcedureParameterInfo {
 	private String dataType;
 	private String typeName;
 
+	private JavaTypeInfo javaTypeInfo;
+
 }

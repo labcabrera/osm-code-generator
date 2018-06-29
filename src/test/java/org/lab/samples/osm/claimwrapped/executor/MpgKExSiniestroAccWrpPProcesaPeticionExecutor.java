@@ -7,9 +7,10 @@ import org.lab.osm.connector.annotation.OracleParameter.ParameterType;
 import org.lab.osm.connector.annotation.OracleStoredProcedure;
 import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
+import org.lab.samples.osm.claimwrapped.model.OSinAccOutS;
 /**
  *
- * Generated at 2018-06-29T12:02:57.848Z
+ * Generated at 2018-06-29T13:10:18.037Z
  *
  * @author osm-code-generator
  */
@@ -26,7 +27,8 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 		@OracleParameter(
 			name = "P_O_SIN_ACC_OUT_S",
 			type = Types.STRUCT,
-			mode = ParameterType.OUT
+			mode = ParameterType.OUT,
+			returnStructClass = OSinAccOutS.class
 		)
 	})
 //@formatter:on

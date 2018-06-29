@@ -9,24 +9,34 @@
     "mode" : "IN",
     "argumentName" : "P_O_SIN_ACC_IN_S",
     "dataType" : "OBJECT",
-    "typeName" : "O_SIN_ACC_IN_S"
+    "typeName" : "O_SIN_ACC_IN_S",
+    "javaTypeInfo" : {
+      "name" : "OSinAccInS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "position" : 2,
     "mode" : "OUT",
     "argumentName" : "P_O_SIN_ACC_OUT_S",
     "dataType" : "OBJECT",
-    "typeName" : "O_SIN_ACC_OUT_S"
+    "typeName" : "O_SIN_ACC_OUT_S",
+    "javaTypeInfo" : {
+      "name" : "OSinAccOutS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   } ],
   "types" : [ {
     "typeName" : "O_DESCRIPCION_ST",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "ODescripcionSt",
     "columns" : [ ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "ODescripcionSt",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_EMAIL_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OEmailS",
     "columns" : [ {
       "index" : 1,
       "name" : "CORREO",
@@ -67,11 +77,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OEmailS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_CORRES_EXPDTE_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OCorresExpdteS",
     "columns" : [ {
       "index" : 1,
       "name" : "EMAIL",
@@ -242,11 +254,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OCorresExpdteS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_COMUNICANTE_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OComunicanteS",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -300,11 +314,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OComunicanteS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_FEDERACION_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OFederacionS",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -501,11 +517,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OFederacionS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_COLEGIO_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OColegioS",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -650,11 +668,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OColegioS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_CAUSANTE_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OCausanteS",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -877,11 +897,13 @@
         "javaPackage" : "java.math"
       }
     } ],
-    "dependencies" : [ "java.math.BigDecimal" ]
+    "javaTypeInfo" : {
+      "name" : "OCausanteS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ "java.math.BigDecimal" ]
+    }
   }, {
     "typeName" : "O_ACCIDENTE_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OAccidenteS",
     "columns" : [ {
       "index" : 1,
       "name" : "NOM_DECLA",
@@ -1260,11 +1282,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OAccidenteS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "O_SIN_ACC_IN_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OSinAccInS",
     "columns" : [ {
       "index" : 1,
       "name" : "NUM_POLIZA",
@@ -1526,11 +1550,13 @@
         "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
       }
     } ],
-    "dependencies" : [ "java.util.Date" ]
+    "javaTypeInfo" : {
+      "name" : "OSinAccInS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ "java.util.Date" ]
+    }
   }, {
     "typeName" : "O_SIN_ACC_OUT_S",
-    "javaPackage" : "org.lab.samples.osm.claimwrapped.model",
-    "javaClassName" : "OSinAccOutS",
     "columns" : [ {
       "index" : 1,
       "name" : "NUM_EXPEDIENTE",
@@ -1571,7 +1597,11 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "OSinAccOutS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ]
+    }
   } ],
   "javaExecutorInfo" : {
     "javaPackage" : "org.lab.samples.osm.claimwrapped.executor",

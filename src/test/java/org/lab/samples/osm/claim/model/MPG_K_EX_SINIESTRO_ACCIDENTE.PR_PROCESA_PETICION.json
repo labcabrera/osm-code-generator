@@ -9,36 +9,56 @@
     "mode" : "IN",
     "argumentName" : "P_R_SINIESTRO_ACC",
     "dataType" : "OBJECT",
-    "typeName" : "T_R_SINIESTRO_ACC"
+    "typeName" : "T_R_SINIESTRO_ACC",
+    "javaTypeInfo" : {
+      "name" : "TRSiniestroAcc",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "position" : 2,
     "mode" : "OUT",
     "argumentName" : "O_NUM_EXPEDIENTE",
     "dataType" : "VARCHAR2",
-    "typeName" : null
+    "typeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
   }, {
     "position" : 3,
     "mode" : "OUT",
     "argumentName" : "O_COD_ERROR",
     "dataType" : "VARCHAR2",
-    "typeName" : null
+    "typeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
   }, {
     "position" : 4,
     "mode" : "OUT",
     "argumentName" : "O_TXT_ERROR",
     "dataType" : "VARCHAR2",
-    "typeName" : null
+    "typeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
   } ],
   "types" : [ {
     "typeName" : "T_TAB_DESCRIPCION",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TTabDescripcion",
     "columns" : [ ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TTabDescripcion",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_EMAIL",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TREmail",
     "columns" : [ {
       "index" : 1,
       "name" : "CORREO",
@@ -79,11 +99,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TREmail",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_CORRES_EXPDTE",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRCorresExpdte",
     "columns" : [ {
       "index" : 1,
       "name" : "EMAIL",
@@ -254,11 +276,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TRCorresExpdte",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_COMUNICANTE",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRComunicante",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -312,11 +336,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TRComunicante",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_FEDERACION",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRFederacion",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -513,11 +539,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TRFederacion",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_COLEGIO",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRColegio",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -662,11 +690,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TRColegio",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_CAUSANTE",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRCausante",
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -889,11 +919,13 @@
         "javaPackage" : "java.math"
       }
     } ],
-    "dependencies" : [ "java.math.BigDecimal" ]
+    "javaTypeInfo" : {
+      "name" : "TRCausante",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ "java.math.BigDecimal" ]
+    }
   }, {
     "typeName" : "T_R_ACCIDENTE",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRAccidente",
     "columns" : [ {
       "index" : 1,
       "name" : "NOM_DECLA",
@@ -1272,11 +1304,13 @@
         "javaPackage" : "java.lang"
       }
     } ],
-    "dependencies" : [ ]
+    "javaTypeInfo" : {
+      "name" : "TRAccidente",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ ]
+    }
   }, {
     "typeName" : "T_R_SINIESTRO_ACC",
-    "javaPackage" : "org.lab.samples.osm.claim.model",
-    "javaClassName" : "TRSiniestroAcc",
     "columns" : [ {
       "index" : 1,
       "name" : "NUM_POLIZA",
@@ -1538,7 +1572,11 @@
         "javaPackage" : "org.lab.samples.osm.claim.model"
       }
     } ],
-    "dependencies" : [ "java.util.Date" ]
+    "javaTypeInfo" : {
+      "name" : "TRSiniestroAcc",
+      "typePackage" : "org.lab.samples.osm.claim.model",
+      "dependencies" : [ "java.util.Date" ]
+    }
   } ],
   "javaExecutorInfo" : {
     "javaPackage" : "org.lab.samples.osm.claim.executor",

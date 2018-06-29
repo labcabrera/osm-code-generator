@@ -12,6 +12,7 @@ import java.util.Properties;
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.exception.OsmModelReadException;
 import org.lab.osm.generator.java.JavaOracleTypeInfoAdapter;
+import org.lab.osm.generator.java.StoredProcedureParameterAdapter;
 import org.lab.osm.generator.java.StoredProcedureTypeAdapter;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
@@ -63,9 +64,11 @@ public class CodeGenerator {
 	private void executeJavaAdapter(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
 		JavaOracleTypeInfoAdapter javaOracleTypeAdapter = new JavaOracleTypeInfoAdapter(spInfo);
 		StoredProcedureTypeAdapter storedProcedureAdapter = new StoredProcedureTypeAdapter();
+		StoredProcedureParameterAdapter parameterAdapter = new StoredProcedureParameterAdapter();
 
 		storedProcedureAdapter.process(spInfo, options);
 		spInfo.getTypes().stream().forEach(x -> javaOracleTypeAdapter.process(x, options));
+		parameterAdapter.process(spInfo, options);
 	}
 
 	private void export(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
@@ -90,7 +93,7 @@ public class CodeGenerator {
 		}
 		// Java entity classes
 		for (OracleTypeInfo typeInfo : spInfo.getTypes()) {
-			File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
+			File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");
 			try (FileOutputStream out = new FileOutputStream(javaFile)) {
 				classWriter.write(typeInfo, out);
 			}
