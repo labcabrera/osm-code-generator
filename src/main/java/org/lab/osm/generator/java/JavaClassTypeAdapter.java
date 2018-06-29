@@ -5,6 +5,9 @@ import org.lab.osm.generator.model.TypeColumnInfo;
 import org.lab.osm.generator.model.TypeColumnInfo.JavaTypeColumnInfo;
 import org.lab.osm.generator.model.TypeInfo;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class JavaClassTypeAdapter {
 
 	private final ClassNameNormalizer classNameNormalizer;
@@ -53,8 +56,21 @@ public class JavaClassTypeAdapter {
 
 	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo, TypeColumnInfo columnInfo,
 		JavaTypeColumnInfo javaInfo) {
-		javaInfo.setJavaType("Object");
-		javaInfo.setJavaPackage("java.lang");
+
+		String typeName = columnInfo.getTypeName();
+
+		TypeInfo resolved = storedProcedureInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName))
+			.findFirst().orElseGet(() -> null);
+
+		if (resolved != null) {
+			javaInfo.setJavaType(resolved.getJavaClassName());
+			javaInfo.setJavaPackage(resolved.getJavaPackage());
+		}
+		else {
+			log.warn("Cant resolve type {} in {}", columnInfo, typeInfo);
+			javaInfo.setJavaType("Object");
+			javaInfo.setJavaPackage("java.lang");
+		}
 	}
 
 	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo,

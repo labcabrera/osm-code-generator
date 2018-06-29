@@ -5,8 +5,12 @@ import org.lab.osm.connector.annotation.OracleStruct;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @OracleStruct("T_R_COLEGIO")
+@Getter
+@Setter
+@ToString
 public class TRColegio {
 
 	@OracleField("NOMBRE")

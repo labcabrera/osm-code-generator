@@ -1,0 +1,72 @@
+{
+  "objectId" : 351682,
+  "objectName" : "DL_GNL_PAR",
+  "procedureName" : "F_GET",
+  "owner" : "MPD_LD",
+  "overload" : 0,
+  "parameters" : [ {
+    "position" : 0,
+    "mode" : "OUT",
+    "argumentName" : null,
+    "dataType" : "TABLE",
+    "typeName" : "O_AMD_GNL_PAR_ST"
+  }, {
+    "position" : 1,
+    "mode" : "IN",
+    "argumentName" : "P_O_AMD_GNL_PAR_S",
+    "dataType" : "OBJECT",
+    "typeName" : "O_AMD_GNL_PAR_S"
+  }, {
+    "position" : 1,
+    "mode" : "OUT",
+    "argumentName" : null,
+    "dataType" : "OBJECT",
+    "typeName" : "O_AMD_GNL_PAR_S"
+  } ],
+  "types" : [ {
+    "typeName" : "O_AMD_GNL_PAR_S",
+    "javaPackage" : "org.lab.samples.osm.participant",
+    "javaClassName" : "OAmdGnlParS",
+    "columns" : [ {
+      "index" : 1,
+      "name" : "PAR_PRC_PRC_VAL",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "parPrcPrcVal",
+        "isOracleType" : true,
+        "javaType" : "BigDecimal",
+        "javaPackage" : "java.math"
+      }
+    }, {
+      "index" : 2,
+      "name" : "DSP_PAR_PRC",
+      "typeName" : "VARCHAR2",
+      "length" : 200,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "dspParPrc",
+        "isOracleType" : true,
+        "javaType" : "String",
+        "javaPackage" : "java.lang"
+      }
+    }, {
+      "index" : 3,
+      "name" : "NAM_PAR_PRC",
+      "typeName" : "VARCHAR2",
+      "length" : 200,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "namParPrc",
+        "isOracleType" : true,
+        "javaType" : "String",
+        "javaPackage" : "java.lang"
+      }
+    } ],
+    "dependencies" : [ "java.math.BigDecimal" ]
+  } ]
+}

@@ -5,12 +5,15 @@ import org.lab.osm.connector.annotation.OracleStruct;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @OracleStruct("T_R_CORRES_EXPDTE")
+@Getter
+@Setter
+@ToString
 public class TRCorresExpdte {
 
-	@OracleField("EMAIL")
-	private Object email;
+	private TREmail email;
 
 	@OracleField("TIPO_VIA")
 	private String tipoVia;

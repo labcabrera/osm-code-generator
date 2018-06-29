@@ -8,15 +8,15 @@ public class CodeGeneratorTest {
 
 	private CodeGenerator codeGenerator = new CodeGenerator();
 
-	@Ignore
+//	@Ignore
 	@Test
 	public void testParticipantSearch() {
 		CodeGenerationRequest request = new CodeGenerationRequest();
 		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
 		request.setUser("MPD_LD");
 		request.setPassword("MPD_LD");
-		request.setObjectName("MPG_K_EX_SINIESTRO_ACCIDENTE");
-		request.setProcedureName("PR_PROCESA_PETICION");
+		request.setObjectName("DL_GNL_PAR");
+		request.setProcedureName("F_GET");
 		request.setJavaPackage("org.lab.samples.osm.participant");
 		request.setFolder("src/test/java/org/lab/samples/osm/participant");
 		request.setCleanTargetFolder(true);
@@ -24,6 +24,7 @@ public class CodeGeneratorTest {
 	}
 
 	@Test
+	@Ignore
 	public void testClaim() {
 		CodeGenerationRequest request = new CodeGenerationRequest();
 		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");

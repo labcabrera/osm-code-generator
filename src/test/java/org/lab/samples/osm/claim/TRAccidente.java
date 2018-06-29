@@ -5,8 +5,17 @@ import org.lab.osm.connector.annotation.OracleStruct;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+/**
+ * 
+ * @author lab
+ *
+ */
 @OracleStruct("T_R_ACCIDENTE")
+@Getter
+@Setter
+@ToString
 public class TRAccidente {
 
 	@OracleField("NOM_DECLA")
@@ -45,26 +54,21 @@ public class TRAccidente {
 	@OracleField("HORA_OCUR")
 	private String horaOcur;
 
-	@OracleField("FORMA_OCUR")
-	private Object formaOcur;
+	private TTabDescripcion formaOcur;
 
-	@OracleField("CAUSANTE")
-	private Object causante;
+	private TRCausante causante;
 
 	@OracleField("CLI_RECOMENDADA")
 	private String cliRecomendada;
 
-	@OracleField("DANOS_TERCEROS")
-	private Object danosTerceros;
+	private TTabDescripcion danosTerceros;
 
-	@OracleField("POLIZAS")
-	private Object polizas;
+	private TTabDescripcion polizas;
 
 	@OracleField("FALLECIMIENTO")
 	private String fallecimiento;
 
-	@OracleField("CLINICAS")
-	private Object clinicas;
+	private TTabDescripcion clinicas;
 
 	@OracleField("TRATAMIENTO")
 	private String tratamiento;
@@ -75,8 +79,7 @@ public class TRAccidente {
 	@OracleField("CLI_RECOMENDADA2")
 	private String cliRecomendada2;
 
-	@OracleField("LESIONES")
-	private Object lesiones;
+	private TTabDescripcion lesiones;
 
 	@OracleField("BAJA_LABOR")
 	private String bajaLabor;

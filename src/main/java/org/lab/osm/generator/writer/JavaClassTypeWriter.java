@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.time.Instant;
 
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.TypeColumnInfo;
@@ -21,9 +22,19 @@ public class JavaClassTypeWriter {
 			writer.write("\n");
 			writer.write("import lombok.Getter;\n");
 			writer.write("import lombok.Setter;\n");
+			writer.write("import lombok.ToString;\n");
 			writer.write("\n");
 			writeDependencies(typeInfo, writer);
+			writer.write("/**\n");
+			writer.write(" *\n");
+			writer.write(" * Generated at " + Instant.now() + "\n");
+			writer.write(" *\n");
+			writer.write(" * @author osm-code-generator\n");
+			writer.write(" */\n");
 			writer.write("@OracleStruct(\"" + typeInfo.getTypeName() + "\")\n");
+			writer.write("@Getter\n");
+			writer.write("@Setter\n");
+			writer.write("@ToString\n");
 			writer.write("public class " + typeInfo.getJavaClassName() + " {\n");
 			writer.write("\n");
 			writeFields(typeInfo, writer);
@@ -48,10 +59,18 @@ public class JavaClassTypeWriter {
 		// TODO
 		for (TypeColumnInfo i : typeInfo.getColumns()) {
 
-			writer.write("\t@OracleField(\"");
-			writer.write(i.getName());
-			writer.write("\")");
-			writer.write("\n");
+			switch (i.getTypeName()) {
+			case "VARCHAR2":
+			case "NUMBER":
+			case "DATE":
+				writer.write("\t@OracleField(\"");
+				writer.write(i.getName());
+				writer.write("\")");
+				writer.write("\n");
+				break;
+			default:
+				break;
+			}
 
 			writer.write("\tprivate ");
 			writer.write(i.getJavaInfo().getJavaType());

@@ -5,10 +5,14 @@ import org.lab.osm.connector.annotation.OracleStruct;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 
 @OracleStruct("T_R_SINIESTRO_ACC")
+@Getter
+@Setter
+@ToString
 public class TRSiniestroAcc {
 
 	@OracleField("NUM_POLIZA")
@@ -53,22 +57,16 @@ public class TRSiniestroAcc {
 	@OracleField("NUUMA")
 	private String nuuma;
 
-	@OracleField("DESCRIPCION")
-	private Object descripcion;
+	private TTabDescripcion descripcion;
 
-	@OracleField("CORRESPONDENCIA")
-	private Object correspondencia;
+	private TRCorresExpdte correspondencia;
 
-	@OracleField("COMUNICANTE")
-	private Object comunicante;
+	private TRComunicante comunicante;
 
-	@OracleField("FEDERACION")
-	private Object federacion;
+	private TRFederacion federacion;
 
-	@OracleField("COLEGIO")
-	private Object colegio;
+	private TRColegio colegio;
 
-	@OracleField("ACCIDENTE")
-	private Object accidente;
+	private TRAccidente accidente;
 
 }

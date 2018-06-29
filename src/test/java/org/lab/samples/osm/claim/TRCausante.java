@@ -5,10 +5,14 @@ import org.lab.osm.connector.annotation.OracleStruct;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
 @OracleStruct("T_R_CAUSANTE")
+@Getter
+@Setter
+@ToString
 public class TRCausante {
 
 	@OracleField("NOMBRE")
