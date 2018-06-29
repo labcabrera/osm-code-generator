@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TypeInfo {
+public class OracleTypeInfo {
 
 	private String typeName;
 	private String javaPackage;
@@ -16,7 +16,7 @@ public class TypeInfo {
 	private final List<TypeColumnInfo> columns;
 	private final List<String> dependencies;
 
-	public TypeInfo() {
+	public OracleTypeInfo() {
 		columns = new ArrayList<>();
 		dependencies = new ArrayList<>();
 	}

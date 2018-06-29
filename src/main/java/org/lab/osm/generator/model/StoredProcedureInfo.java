@@ -19,7 +19,7 @@ public class StoredProcedureInfo {
 
 	private List<StoredProcedureParameterInfo> parameters;
 
-	private List<TypeInfo> types;
+	private List<OracleTypeInfo> types;
 
 	private JavaExecutorInfo javaExecutorInfo;
 

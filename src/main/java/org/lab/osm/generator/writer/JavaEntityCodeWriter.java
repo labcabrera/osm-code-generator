@@ -9,11 +9,11 @@ import java.time.Instant;
 
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.TypeColumnInfo;
-import org.lab.osm.generator.model.TypeInfo;
+import org.lab.osm.generator.model.OracleTypeInfo;
 
 public class JavaEntityCodeWriter {
 
-	public void write(TypeInfo typeInfo, OutputStream out) {
+	public void write(OracleTypeInfo typeInfo, OutputStream out) {
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
 			writer.write("package " + typeInfo.getJavaPackage() + ";\n");
 			writer.write("\n");
@@ -46,7 +46,7 @@ public class JavaEntityCodeWriter {
 		}
 	}
 
-	private void writeDependencies(TypeInfo typeInfo, Writer writer) throws IOException {
+	private void writeDependencies(OracleTypeInfo typeInfo, Writer writer) throws IOException {
 		if (!typeInfo.getDependencies().isEmpty()) {
 			for (String dependency : typeInfo.getDependencies()) {
 				writer.write("import " + dependency + ";\n");
@@ -55,7 +55,7 @@ public class JavaEntityCodeWriter {
 		}
 	}
 
-	private void writeFields(TypeInfo typeInfo, Writer writer) throws IOException {
+	private void writeFields(OracleTypeInfo typeInfo, Writer writer) throws IOException {
 		for (TypeColumnInfo i : typeInfo.getColumns()) {
 			switch (i.getTypeName()) {
 			// TODO

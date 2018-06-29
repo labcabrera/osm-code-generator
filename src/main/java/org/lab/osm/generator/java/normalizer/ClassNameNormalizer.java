@@ -1,4 +1,4 @@
-package org.lab.osm.generator.java;
+package org.lab.osm.generator.java.normalizer;
 
 import java.util.function.UnaryOperator;
 

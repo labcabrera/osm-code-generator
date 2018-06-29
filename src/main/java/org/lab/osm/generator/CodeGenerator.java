@@ -2,19 +2,21 @@ package org.lab.osm.generator;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
 
 import org.lab.osm.generator.exception.OsmExportException;
-import org.lab.osm.generator.exception.OsmGeneratorException;
 import org.lab.osm.generator.exception.OsmModelReadException;
-import org.lab.osm.generator.java.JavaClassTypeAdapter;
+import org.lab.osm.generator.java.JavaOracleTypeInfoAdapter;
 import org.lab.osm.generator.java.StoredProcedureTypeAdapter;
+import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
+import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
-import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
 import org.lab.osm.generator.reader.StoredProcedureReader;
 import org.lab.osm.generator.reader.TypeReader;
@@ -35,75 +37,73 @@ public class CodeGenerator {
 		String objectName = request.getObjectName();
 		String procedureName = request.getProcedureName();
 		String user = request.getUser();
-		String javaPackage = request.getJavaPackage();
-		String folder = request.getFolder();
-		Boolean cleanFolder = request.getCleanTargetFolder();
+
 		List<StoredProcedureInfo> procedures;
-		try {
-			try (Connection connection = openConnection(request)) {
-				procedures = storedProcedureReader.read(connection, objectName, procedureName, user);
+		try (Connection connection = openConnection(request)) {
+			procedures = storedProcedureReader.read(connection, objectName, procedureName, user);
 
-				if (log.isDebugEnabled()) {
-					procedures.stream().forEach(sp -> log.debug(sp.toString()));
-					log.debug("Readed {} procedures", procedures.size());
-				}
-				procedures.forEach(x -> paramReader.read(connection, x));
-				procedures.forEach(x -> typeReader.read(connection, x));
+			if (log.isDebugEnabled()) {
+				procedures.stream().forEach(sp -> log.debug(sp.toString()));
+				log.debug("Readed {} procedures", procedures.size());
 			}
-			log.info("Closed connection. Executing java types adapter");
-			procedures.forEach(x -> executeJavaAdapter(x, javaPackage));
-			log.info("Starting code-gen");
-			procedures.forEach(x -> export(x, javaPackage, folder, cleanFolder));
 
+			procedures.forEach(x -> paramReader.read(connection, x));
+			procedures.forEach(x -> typeReader.read(connection, x));
 		}
-		catch (Exception ex) {
-			throw new OsmGeneratorException(ex);
+		catch (SQLException ex) {
+			throw new OsmModelReadException(ex);
 		}
+		log.info("Closed connection. Executing java types adapter");
+		procedures.forEach(x -> executeJavaAdapter(x, request.getOptions()));
+
+		log.info("Starting code-gen");
+		procedures.forEach(x -> export(x, request.getOptions()));
 	}
 
-	private void executeJavaAdapter(StoredProcedureInfo spInfo, String javaPackage) {
-		JavaClassTypeAdapter classTypeAdapter = new JavaClassTypeAdapter();
-		StoredProcedureTypeAdapter spTypeAdapter = new StoredProcedureTypeAdapter();
-		spTypeAdapter.execute(spInfo, javaPackage);
-		spInfo.getTypes().stream().forEach(x -> classTypeAdapter.execute(spInfo, x, javaPackage));
+	private void executeJavaAdapter(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
+		JavaOracleTypeInfoAdapter javaOracleTypeAdapter = new JavaOracleTypeInfoAdapter(spInfo);
+		StoredProcedureTypeAdapter storedProcedureAdapter = new StoredProcedureTypeAdapter();
+
+		storedProcedureAdapter.process(spInfo, options);
+		spInfo.getTypes().stream().forEach(x -> javaOracleTypeAdapter.process(x, options));
 	}
 
-	private void export(StoredProcedureInfo spInfo, String javaPackage, String folder, Boolean cleanFolder) {
+	private void export(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
 		try {
-			StoredProcedureInfoWriter jsonWriter = new StoredProcedureInfoWriter();
-
-			JavaEntityCodeWriter classWriter = new JavaEntityCodeWriter();
-			JavaExecutorCodeWriter executorCodeWriter = new JavaExecutorCodeWriter();
-
-			File parent = new File(folder);
-			if (!parent.exists() && !parent.mkdirs()) {
-				throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
-			}
-			if (cleanFolder != null && cleanFolder) {
-				for (File file : parent.listFiles()) {
-					file.delete();
-				}
-			}
-			// Json model
-			File jsonFile = new File(parent, spInfo.getObjectName() + "." + spInfo.getProcedureName() + ".json");
-			try (FileOutputStream out = new FileOutputStream(jsonFile)) {
-				jsonWriter.write(spInfo, out);
-			}
-			// Java entity classes
-			for (TypeInfo typeInfo : spInfo.getTypes()) {
-				File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
-				try (FileOutputStream out = new FileOutputStream(javaFile)) {
-					classWriter.write(typeInfo, out);
-				}
-			}
-			// Executor interface
-			File executorInterface = new File(parent, spInfo.getJavaExecutorInfo().getJavaType() + ".java");
-			try (FileOutputStream out = new FileOutputStream(executorInterface)) {
-				executorCodeWriter.write(spInfo, out);
-			}
+			exportModel(spInfo, options);
+			exportExecutor(spInfo, options);
 		}
 		catch (Exception ex) {
 			throw new OsmExportException(ex);
+		}
+	}
+
+	private void exportModel(StoredProcedureInfo spInfo, CodeGenerationOptions options) throws IOException {
+		StoredProcedureInfoWriter jsonWriter = new StoredProcedureInfoWriter();
+		JavaEntityCodeWriter classWriter = new JavaEntityCodeWriter();
+		File parent = resolveFolder(options.getEntityBaseFolder(), options.getEntityPackage(),
+			options.getCleanTargetFolders());
+		// Json model
+		File jsonFile = new File(parent, spInfo.getObjectName() + "." + spInfo.getProcedureName() + ".json");
+		try (FileOutputStream out = new FileOutputStream(jsonFile)) {
+			jsonWriter.write(spInfo, out);
+		}
+		// Java entity classes
+		for (OracleTypeInfo typeInfo : spInfo.getTypes()) {
+			File javaFile = new File(parent, typeInfo.getJavaClassName() + ".java");
+			try (FileOutputStream out = new FileOutputStream(javaFile)) {
+				classWriter.write(typeInfo, out);
+			}
+		}
+	}
+
+	private void exportExecutor(StoredProcedureInfo spInfo, CodeGenerationOptions options) throws IOException {
+		JavaExecutorCodeWriter executorCodeWriter = new JavaExecutorCodeWriter();
+		File parent = resolveFolder(options.getExecutorBaseFolder(), options.getExecutorPackage(),
+			options.getCleanTargetFolders());
+		File executorInterface = new File(parent, spInfo.getJavaExecutorInfo().getJavaType() + ".java");
+		try (FileOutputStream out = new FileOutputStream(executorInterface)) {
+			executorCodeWriter.write(spInfo, out);
 		}
 	}
 
@@ -118,6 +118,19 @@ public class CodeGenerator {
 		catch (Exception ex) {
 			throw new OsmModelReadException("Cant open connection " + request.getJdbcUrl(), ex);
 		}
+	}
+
+	private File resolveFolder(String folder, String javaPackage, Boolean cleanFolder) {
+		File parent = new File(folder + "/" + javaPackage.replaceAll("\\.", "/"));
+		if (!parent.exists() && !parent.mkdirs()) {
+			throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
+		}
+		if (cleanFolder != null && cleanFolder) {
+			for (File file : parent.listFiles()) {
+				file.delete();
+			}
+		}
+		return parent;
 	}
 
 }

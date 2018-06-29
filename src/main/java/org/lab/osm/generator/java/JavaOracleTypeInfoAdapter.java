@@ -1,32 +1,39 @@
 package org.lab.osm.generator.java;
 
+import org.lab.osm.generator.java.normalizer.ClassNameNormalizer;
+import org.lab.osm.generator.java.normalizer.FieldNameNormalizer;
+import org.lab.osm.generator.model.CodeGenerationOptions;
+import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
 import org.lab.osm.generator.model.TypeColumnInfo.JavaTypeColumnInfo;
-import org.lab.osm.generator.model.TypeInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class JavaClassTypeAdapter {
+public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<OracleTypeInfo> {
 
+	private final StoredProcedureInfo storedProcedureInfo;
 	private final ClassNameNormalizer classNameNormalizer;
 	private final FieldNameNormalizer fieldNameNormalizer;
 
-	public JavaClassTypeAdapter() {
+	public JavaOracleTypeInfoAdapter(StoredProcedureInfo storedProcedureInfo) {
+		this.storedProcedureInfo = storedProcedureInfo;
 		classNameNormalizer = new ClassNameNormalizer();
 		fieldNameNormalizer = new FieldNameNormalizer();
 	}
 
-	public void execute(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo, String javaPackage) {
+	@Override
+	public void process(OracleTypeInfo typeInfo, CodeGenerationOptions options) {
 		typeInfo.setJavaClassName(classNameNormalizer.apply(typeInfo.getTypeName()));
-		typeInfo.setJavaPackage(javaPackage);
+		typeInfo.setJavaPackage(options.getEntityPackage());
+
 		for (TypeColumnInfo columnInfo : typeInfo.getColumns()) {
 			execute(storedProcedureInfo, typeInfo, columnInfo);
 		}
 	}
 
-	public void execute(StoredProcedureInfo spInfo, TypeInfo typeInfo, TypeColumnInfo columnInfo) {
+	public void execute(StoredProcedureInfo spInfo, OracleTypeInfo typeInfo, TypeColumnInfo columnInfo) {
 		// TODO
 		JavaTypeColumnInfo javaInfo = new JavaTypeColumnInfo();
 
@@ -54,12 +61,12 @@ public class JavaClassTypeAdapter {
 		columnInfo.setJavaInfo(javaInfo);
 	}
 
-	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo, TypeColumnInfo columnInfo,
-		JavaTypeColumnInfo javaInfo) {
+	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, OracleTypeInfo typeInfo,
+		TypeColumnInfo columnInfo, JavaTypeColumnInfo javaInfo) {
 
 		String typeName = columnInfo.getTypeName();
 
-		TypeInfo resolved = storedProcedureInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName))
+		OracleTypeInfo resolved = storedProcedureInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName))
 			.findFirst().orElseGet(() -> null);
 
 		if (resolved != null) {
@@ -73,7 +80,7 @@ public class JavaClassTypeAdapter {
 		}
 	}
 
-	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo,
+	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, OracleTypeInfo typeInfo,
 		TypeColumnInfo columnInfo, JavaTypeColumnInfo javaInfo) {
 		// TODO check int / long / BigDecial using number precision/scale
 		javaInfo.setJavaType("BigDecimal");

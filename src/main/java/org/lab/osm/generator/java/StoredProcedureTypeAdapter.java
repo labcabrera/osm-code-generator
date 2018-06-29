@@ -1,11 +1,13 @@
 package org.lab.osm.generator.java;
 
+import org.lab.osm.generator.java.normalizer.ExecutorInterfaceNameNormalizer;
+import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo.JavaExecutorInfo;
 
-public class StoredProcedureTypeAdapter {
+public class StoredProcedureTypeAdapter implements JavaCodeGeneratorAdapter<StoredProcedureInfo> {
 
-	public void execute(StoredProcedureInfo spInfo, String javaPackage) {
+	public void process(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
 
 		ExecutorInterfaceNameNormalizer normalizer = new ExecutorInterfaceNameNormalizer();
 
@@ -13,7 +15,7 @@ public class StoredProcedureTypeAdapter {
 
 		JavaExecutorInfo executorInfo = new JavaExecutorInfo();
 		executorInfo.setJavaType(executorJavaClassName);
-		executorInfo.setJavaPackage(javaPackage);
+		executorInfo.setJavaPackage(options.getExecutorPackage());
 
 		spInfo.setJavaExecutorInfo(executorInfo);
 	}

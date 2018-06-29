@@ -45,7 +45,7 @@ public class StoredProcedureReader {
 		sb.append("  object_name, procedure_name");
 
 		String query = sb.toString();
-		log.debug("Query:\n{}", query);
+		log.debug("Stored procedure read query:\n{}", query);
 
 		try (PreparedStatement ps = connection.prepareStatement(query)) {
 			ResultSet rs = ps.executeQuery();

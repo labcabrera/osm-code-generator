@@ -48,9 +48,10 @@ public class JavaExecutorCodeWriter {
 	}
 
 	private void writeStoredProcedureAnnotation(StoredProcedureInfo spInfo, Writer writer) throws IOException {
+		String procedureName = spInfo.getObjectName() + "." + spInfo.getProcedureName();
 		writer.write("//@formatter:off\n");
 		writer.write("@OracleStoredProcedure(\n");
-		writer.write("\tname = \"" + "todo" + "\",\n");
+		writer.write("\tname = \"" + procedureName + "\",\n");
 		writer.write("\tisFunction = false,\n");
 		writer.write("\tparameters = {\n");
 
@@ -62,7 +63,8 @@ public class JavaExecutorCodeWriter {
 			writer.write("\t\t@OracleParameter(\n");
 			writer.write("\t\t\tname = \"" + pInfo.getArgumentName() + "\",\n");
 			writer.write("\t\t\ttype = Types.STRUCT,\n"); // TODO
-			writer.write("\t\t\tmode = ParameterType." + "OUT" + "\n");
+			writer.write("\t\t\tmode = ParameterType." + pInfo.getMode() + "\n");
+
 			if (iterator.hasNext()) {
 				writer.write("\t\t),\n");
 			}

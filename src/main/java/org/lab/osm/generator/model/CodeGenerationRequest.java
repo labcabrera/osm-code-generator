@@ -14,9 +14,7 @@ public class CodeGenerationRequest {
 	private String password;
 	private String objectName;
 	private String procedureName;
-	private String javaPackage;
-	private String folder;
 
-	private Boolean cleanTargetFolder;
+	private CodeGenerationOptions options;
 
 }

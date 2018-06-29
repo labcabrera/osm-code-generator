@@ -10,7 +10,7 @@ import org.lab.osm.generator.exception.OsmModelReadException;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
-import org.lab.osm.generator.model.TypeInfo;
+import org.lab.osm.generator.model.OracleTypeInfo;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +25,7 @@ public class TypeReader {
 			case "OBJECT":
 				String typeName = i.getTypeName();
 				if (!isTypeDefined(storedProcedureInfo, typeName)) {
-					TypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
+					OracleTypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
 					storedProcedureInfo.getTypes().add(typeInfo);
 				}
 				break;
@@ -37,7 +37,7 @@ public class TypeReader {
 		}
 	}
 
-	public TypeInfo read(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
+	public OracleTypeInfo read(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
 		@NonNull String typeName) {
 
 		StringBuilder sb = new StringBuilder();
@@ -51,9 +51,9 @@ public class TypeReader {
 		sb.append("  attr_no");
 
 		String query = sb.toString();
-		log.debug("Query:\n{}", query);
+		log.debug("Oracle type read query:\n{}", query);
 
-		TypeInfo result = new TypeInfo();
+		OracleTypeInfo result = new OracleTypeInfo();
 		result.setTypeName(typeName);
 		result.getColumns().clear();
 
@@ -91,7 +91,7 @@ public class TypeReader {
 			break;
 		default:
 			if (!isTypeDefined(storedProcedureInfo, typeName)) {
-				TypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
+				OracleTypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
 				storedProcedureInfo.getTypes().add(typeInfo);
 			}
 		}
