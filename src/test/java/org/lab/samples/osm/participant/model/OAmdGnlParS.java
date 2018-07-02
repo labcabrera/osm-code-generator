@@ -15,13 +15,13 @@ import java.math.BigDecimal;
 @ToString
 public class OAmdGnlParS {
 
-	@OracleField("PAR_PRC_PRC_VAL")
+	@OracleField(value = "PAR_PRC_PRC_VAL", typeName = "NUMBER", length = 0, precision = 0, scale = 0)
 	private BigDecimal parPrcPrcVal;
 
-	@OracleField("DSP_PAR_PRC")
+	@OracleField(value = "DSP_PAR_PRC", typeName = "VARCHAR2", length = 200)
 	private String dspParPrc;
 
-	@OracleField("NAM_PAR_PRC")
+	@OracleField(value = "NAM_PAR_PRC", typeName = "VARCHAR2", length = 200)
 	private String namParPrc;
 
 }

@@ -7,6 +7,7 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.time.Instant;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.OracleTypeInfo;
@@ -61,13 +62,32 @@ public class JavaEntityCodeWriter {
 	private void writeFields(OracleTypeInfo typeInfo, Writer writer) throws IOException {
 		for (TypeColumnInfo i : typeInfo.getColumns()) {
 			switch (i.getTypeName()) {
-			// TODO
 			case "VARCHAR2":
 			case "NUMBER":
 			case "DATE":
-				writer.write("\t@OracleField(\"");
+				writer.write("\t@OracleField(value = \"");
 				writer.write(i.getName());
-				writer.write("\")");
+				writer.write("\"");
+				if (StringUtils.isNotBlank(i.getTypeName())) {
+					writer.write(", typeName = \"");
+					writer.write(i.getTypeName());
+					writer.write("\"");
+				}
+				if (i.getLength() != null && i.getLength() >= 0) {
+					writer.write(", length = ");
+					writer.write(String.valueOf(i.getLength()));
+				}
+				if ("NUMBER".equals(i.getTypeName())) {
+					if (i.getPrecision() != null && i.getPrecision() >= 0) {
+						writer.write(", precision = ");
+						writer.write(String.valueOf(i.getPrecision()));
+					}
+					if (i.getScale() != null && i.getScale() >= 0) {
+						writer.write(", scale = ");
+						writer.write(String.valueOf(i.getScale()));
+					}
+				}
+				writer.write(")");
 				writer.write("\n");
 				break;
 			default:
