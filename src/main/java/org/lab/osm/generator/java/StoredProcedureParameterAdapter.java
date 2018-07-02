@@ -44,18 +44,21 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 		}
 	}
 
-	// TODO review
+	/**
+	 * Nota: cuando se trata de una funcion con un ARRAY como objeto de salida obtendremos dos parametros, el primero
+	 * haciendo referencia a la coleccion y el segundo haciendo referencia al tipo utilizado en la coleccion. Por ello
+	 * necesitamos almacenar el valor del objeto de Oracle utilizado para hacer el mapeo de tipos.
+	 * 
+	 * @param spInfo
+	 */
 	private void checkFunctionParameters(StoredProcedureInfo spInfo) {
 		if (!spInfo.isFunction()) {
 			return;
 		}
 		long outParams = spInfo.getParameters().stream().filter(x -> x.getMode() == Mode.OUT).count();
 		if (outParams > 1) {
-
-			// Buscamos el tipo OBJECT para mapear el objeto de salida en el caso de existir
 			StoredProcedureParameterInfo first = spInfo.getParameters().stream().filter(x -> x.getMode() == Mode.OUT)
 				.findFirst().get();
-
 			if ("TABLE".equals(first.getDataType())) {
 
 				StoredProcedureParameterInfo firstObjectType = spInfo.getParameters().stream()
@@ -65,7 +68,6 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 				if (firstObjectType != null) {
 					first.setSimpleObjectTypeName(firstObjectType.getTypeName());
 				}
-
 			}
 			spInfo.getParameters().removeIf(x -> x.getPosition() != 0 && x.getMode() == Mode.OUT);
 		}
