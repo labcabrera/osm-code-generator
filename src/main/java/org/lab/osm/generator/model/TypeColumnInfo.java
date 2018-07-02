@@ -13,18 +13,19 @@ public class TypeColumnInfo {
 	private Integer length;
 	private Integer precision;
 	private Integer scale;
+	private boolean isCollection = false;
 
-	private JavaTypeColumnInfo javaInfo;
+	private JavaTypeInfo javaInfo;
 
-	@Getter
-	@Setter
-	public static class JavaTypeColumnInfo {
-
-		private String normalizedName;
-		private Boolean isOracleType;
-		private String javaType;
-		private String javaPackage;
-
-	}
+	// @Getter
+	// @Setter
+	// public static class JavaTypeColumnInfo {
+	//
+	// private String normalizedName;
+	// private Boolean isOracleType;
+	// private String javaType;
+	// private String javaPackage;
+	//
+	// }
 
 }

@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.lab.osm.generator.exception.OsmModelReadException;
+import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
-import org.lab.osm.generator.model.OracleTypeInfo;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +20,7 @@ public class TypeReader {
 
 	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo storedProcedureInfo) {
 		storedProcedureInfo.setTypes(new ArrayList<>());
+
 		for (StoredProcedureParameterInfo i : storedProcedureInfo.getParameters()) {
 			switch (i.getDataType()) {
 			case "OBJECT":
@@ -30,7 +31,7 @@ public class TypeReader {
 				}
 				break;
 			case "TABLE":
-				//TODO revisar. No necesitamos mapear los tipos de colecciones
+				// TODO revisar. No necesitamos mapear los tipos de colecciones
 				break;
 			default:
 				break;
@@ -38,8 +39,45 @@ public class TypeReader {
 		}
 	}
 
+	public OracleTypeInfo readTypeAsCollection(@NonNull Connection connection, StoredProcedureInfo spInfo,
+		@NonNull String typeName) {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append("select").append("\n");
+		sb.append("  *").append("\n");
+		sb.append("from").append("\n");
+		sb.append("  all_coll_types").append("\n");
+		sb.append("where").append("\n");
+		sb.append("  type_name = '").append(typeName).append("'");
+
+		try (PreparedStatement ps = connection.prepareStatement(sb.toString())) {
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				final String collectionTypeName = rs.getString("elem_type_name");
+				OracleTypeInfo tmp = read(connection, spInfo, collectionTypeName);
+				if (spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(collectionTypeName)).count() == 0) {
+					spInfo.getTypes().add(tmp);
+				}
+				OracleTypeInfo result = new OracleTypeInfo();
+				result.setTypeName(typeName);
+				result.setCollectionTypeOf(collectionTypeName);
+				return result;
+			}
+			return null;
+		}
+		catch (SQLException ex) {
+			throw new OsmModelReadException("Error reading type " + typeName, ex);
+		}
+	}
+
 	public OracleTypeInfo read(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
 		@NonNull String typeName) {
+
+		OracleTypeInfo collectionType = readTypeAsCollection(connection, storedProcedureInfo, typeName);
+		if (collectionType != null) {
+			// TODO read child element
+			return collectionType;
+		}
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select").append("\n");

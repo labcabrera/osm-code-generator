@@ -94,9 +94,9 @@ public class JavaEntityCodeWriter {
 				break;
 			}
 			writer.write("\tprivate ");
-			writer.write(i.getJavaInfo().getJavaType());
+			writer.write(i.getJavaInfo().getName());
 			writer.write(" ");
-			writer.write(i.getJavaInfo().getNormalizedName());
+			writer.write(i.getJavaInfo().getNormalizedFieldName());
 			writer.write(";\n\n");
 		}
 	}

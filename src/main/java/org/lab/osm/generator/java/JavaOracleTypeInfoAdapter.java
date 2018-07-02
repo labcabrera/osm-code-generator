@@ -3,10 +3,10 @@ package org.lab.osm.generator.java;
 import org.lab.osm.generator.java.normalizer.ClassNameNormalizer;
 import org.lab.osm.generator.java.normalizer.FieldNameNormalizer;
 import org.lab.osm.generator.model.CodeGenerationOptions;
+import org.lab.osm.generator.model.JavaTypeInfo;
 import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
-import org.lab.osm.generator.model.TypeColumnInfo.JavaTypeColumnInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -35,19 +35,19 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 
 	public void execute(StoredProcedureInfo spInfo, OracleTypeInfo typeInfo, TypeColumnInfo columnInfo) {
 		// TODO
-		JavaTypeColumnInfo javaInfo = new JavaTypeColumnInfo();
+		JavaTypeInfo javaInfo = new JavaTypeInfo();
 
-		javaInfo.setIsOracleType(true);
-		javaInfo.setNormalizedName(fieldNameNormalizer.apply(columnInfo.getName()));
+		javaInfo.setNormalizedFieldName(fieldNameNormalizer.apply(columnInfo.getName()));
+		javaInfo.setOracleType(true);
 
 		switch (columnInfo.getTypeName()) {
 		case "VARCHAR2":
-			javaInfo.setJavaType("String");
-			javaInfo.setJavaPackage("java.lang");
+			javaInfo.setName("String");
+			javaInfo.setTypePackage("java.lang");
 			break;
 		case "DATE":
-			javaInfo.setJavaType("Date");
-			javaInfo.setJavaPackage("java.util");
+			javaInfo.setName("Date");
+			javaInfo.setTypePackage("java.util");
 			typeInfo.getJavaTypeInfo().addDependency("java.util.Date");
 			break;
 		case "NUMBER":
@@ -62,7 +62,7 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 	}
 
 	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, OracleTypeInfo typeInfo,
-		TypeColumnInfo columnInfo, JavaTypeColumnInfo javaInfo) {
+		TypeColumnInfo columnInfo, JavaTypeInfo javaInfo) {
 
 		String typeName = columnInfo.getTypeName();
 
@@ -70,21 +70,21 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 			.findFirst().orElseGet(() -> null);
 
 		if (resolved != null) {
-			javaInfo.setJavaType(resolved.getJavaTypeInfo().getName());
-			javaInfo.setJavaPackage(resolved.getJavaTypeInfo().getTypePackage());
+			javaInfo.setName(resolved.getJavaTypeInfo().getName());
+			javaInfo.setTypePackage(resolved.getJavaTypeInfo().getTypePackage());
 		}
 		else {
 			log.warn("Cant resolve type {} in {}", columnInfo, typeInfo);
-			javaInfo.setJavaType("Object");
-			javaInfo.setJavaPackage("java.lang");
+			javaInfo.setName("Object");
+			javaInfo.setTypePackage("java.lang");
 		}
 	}
 
 	private void resolveNumberType(StoredProcedureInfo storedProcedureInfo, OracleTypeInfo typeInfo,
-		TypeColumnInfo columnInfo, JavaTypeColumnInfo javaInfo) {
+		TypeColumnInfo columnInfo, JavaTypeInfo javaInfo) {
 		// TODO check int / long / BigDecial using number precision/scale
-		javaInfo.setJavaType("BigDecimal");
-		javaInfo.setJavaPackage("java.math");
+		javaInfo.setName("BigDecimal");
+		javaInfo.setTypePackage("java.math");
 		typeInfo.getJavaTypeInfo().addDependency("java.math.BigDecimal");
 	}
 

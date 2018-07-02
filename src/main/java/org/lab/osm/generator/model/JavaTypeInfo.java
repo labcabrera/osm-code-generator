@@ -20,9 +20,13 @@ public class JavaTypeInfo {
 	private String name;
 	private String typePackage;
 	private final List<String> dependencies;
+	
+	private String normalizedFieldName;
+	private boolean isOracleType;
 
 	public JavaTypeInfo() {
 		dependencies = new ArrayList<>();
+		isOracleType = false;
 	}
 
 	public void addDependency(String dependency) {

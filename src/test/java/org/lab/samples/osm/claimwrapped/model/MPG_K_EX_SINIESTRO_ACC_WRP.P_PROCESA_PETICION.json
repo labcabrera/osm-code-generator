@@ -14,7 +14,9 @@
     "javaTypeInfo" : {
       "name" : "OSinAccInS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "position" : 2,
@@ -26,19 +28,51 @@
     "javaTypeInfo" : {
       "name" : "OSinAccOutS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   } ],
   "types" : [ {
+    "typeName" : "O_DESCRIPCION_S",
+    "collectionTypeOf" : null,
+    "columns" : [ {
+      "index" : 1,
+      "name" : "DESCRIPCION",
+      "typeName" : "VARCHAR2",
+      "length" : 75,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "descripcion",
+        "oracleType" : true
+      },
+      "collection" : false
+    } ],
+    "javaTypeInfo" : {
+      "name" : "ODescripcionS",
+      "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
+    }
+  }, {
     "typeName" : "O_DESCRIPCION_ST",
+    "collectionTypeOf" : "O_DESCRIPCION_S",
     "columns" : [ ],
     "javaTypeInfo" : {
       "name" : "ODescripcionSt",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_EMAIL_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "CORREO",
@@ -47,11 +81,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "correo",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "correo",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "COD_CORRESPONDE",
@@ -60,11 +96,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codCorresponde",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codCorresponde",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "OBSERVACIONES",
@@ -73,19 +111,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "observaciones",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "observaciones",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OEmailS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_CORRES_EXPDTE_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "EMAIL",
@@ -94,11 +137,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "email",
-        "isOracleType" : true,
-        "javaType" : "OEmailS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OEmailS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "email",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "TIPO_VIA",
@@ -107,11 +152,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "tipoVia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "tipoVia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "NOM_VIA",
@@ -120,11 +167,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nomVia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nomVia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "NUMERO",
@@ -133,11 +182,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "numero",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "numero",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 5,
       "name" : "PORTAL",
@@ -146,11 +197,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "portal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "portal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 6,
       "name" : "ESC",
@@ -159,11 +212,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "esc",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "esc",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 7,
       "name" : "PISO",
@@ -172,11 +227,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "piso",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "piso",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 8,
       "name" : "PUERTA",
@@ -185,11 +242,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "puerta",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "puerta",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 9,
       "name" : "LOCALIDAD",
@@ -198,11 +257,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localidad",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localidad",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 10,
       "name" : "COD_POSTAL",
@@ -211,11 +272,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPostal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPostal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 11,
       "name" : "COD_PAIS",
@@ -224,11 +287,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPais",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPais",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 12,
       "name" : "APARTADO",
@@ -237,11 +302,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apartado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apartado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 13,
       "name" : "NOM_DEST",
@@ -250,19 +317,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nomDest",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nomDest",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OCorresExpdteS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_COMUNICANTE_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -271,11 +343,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nombre",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nombre",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "APELLIDOS",
@@ -284,11 +358,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apellidos",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apellidos",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "TELEFONO",
@@ -297,11 +373,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "telefono",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "telefono",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "COD_RELACION",
@@ -310,19 +388,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codRelacion",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codRelacion",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OComunicanteS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_FEDERACION_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -331,11 +414,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nombre",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nombre",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "APELLIDOS",
@@ -344,11 +429,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apellidos",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apellidos",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "DOMICILIO",
@@ -357,11 +444,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "domicilio",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "domicilio",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "LOCALIDAD",
@@ -370,11 +459,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localidad",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localidad",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 5,
       "name" : "COD_POSTAL",
@@ -383,11 +474,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPostal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPostal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 6,
       "name" : "DNI",
@@ -396,11 +489,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "dni",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "dni",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 7,
       "name" : "TELEF1",
@@ -409,11 +504,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "telef1",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "telef1",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 8,
       "name" : "TELEF2",
@@ -422,11 +519,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "telef2",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "telef2",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 9,
       "name" : "LICENCIA",
@@ -435,11 +534,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "licencia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "licencia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 10,
       "name" : "CLUB",
@@ -448,11 +549,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "club",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "club",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 11,
       "name" : "TCLUB",
@@ -461,11 +564,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "tclub",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "tclub",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 12,
       "name" : "TEL_CLUB",
@@ -474,11 +579,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "telClub",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "telClub",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 13,
       "name" : "ATENDIDO",
@@ -487,11 +594,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "atendido",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "atendido",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 14,
       "name" : "CLI_ATENDIDO",
@@ -500,11 +609,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "cliAtendido",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "cliAtendido",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 15,
       "name" : "CLI_RECOMENDADA",
@@ -513,19 +624,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "cliRecomendada",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "cliRecomendada",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OFederacionS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_COLEGIO_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -534,11 +650,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nombre",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nombre",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "APELLIDOS",
@@ -547,11 +665,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apellidos",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apellidos",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "DOMICILIO",
@@ -560,11 +680,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "domicilio",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "domicilio",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "LOCALIDAD",
@@ -573,11 +695,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localidad",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localidad",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 5,
       "name" : "COD_POSTAL",
@@ -586,11 +710,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPostal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPostal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 6,
       "name" : "TELEF1",
@@ -599,11 +725,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "telef1",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "telef1",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 7,
       "name" : "TELEF2",
@@ -612,11 +740,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "telef2",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "telef2",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 8,
       "name" : "CURSO",
@@ -625,11 +755,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "curso",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "curso",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 9,
       "name" : "ATENDIDO",
@@ -638,11 +770,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "atendido",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "atendido",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 10,
       "name" : "CLI_ATENDIDO",
@@ -651,11 +785,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "cliAtendido",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "cliAtendido",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 11,
       "name" : "CLI_RECOMENDADA",
@@ -664,19 +800,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "cliRecomendada",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "cliRecomendada",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OColegioS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_CAUSANTE_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NOMBRE",
@@ -685,11 +826,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nombre",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nombre",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "APELLIDOS",
@@ -698,11 +841,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apellidos",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apellidos",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "DIRECCION",
@@ -711,11 +856,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "direccion",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "direccion",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "LOCALIDAD",
@@ -724,11 +871,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localidad",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localidad",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 5,
       "name" : "PROVINCIA",
@@ -737,11 +886,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "provincia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "provincia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 6,
       "name" : "COD_POSTAL",
@@ -750,11 +901,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPostal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPostal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 7,
       "name" : "DNI",
@@ -763,11 +916,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "dni",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "dni",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 8,
       "name" : "NUM_TEL1",
@@ -776,11 +931,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "numTel1",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "numTel1",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 9,
       "name" : "OBS_TEL1",
@@ -789,11 +946,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "obsTel1",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "obsTel1",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 10,
       "name" : "NUM_TEL2",
@@ -802,11 +961,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "numTel2",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "numTel2",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 11,
       "name" : "OBS_TEL2",
@@ -815,11 +976,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "obsTel2",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "obsTel2",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 12,
       "name" : "ENT_BANCARIA",
@@ -828,11 +991,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "entBancaria",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "entBancaria",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 13,
       "name" : "SUC_BANCARIA",
@@ -841,11 +1006,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "sucBancaria",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "sucBancaria",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 14,
       "name" : "DC_BANCO",
@@ -854,11 +1021,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "dcBanco",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "dcBanco",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 15,
       "name" : "CTA_BANCARIA",
@@ -867,11 +1036,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "ctaBancaria",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "ctaBancaria",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 16,
       "name" : "COD_CIA",
@@ -880,11 +1051,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codCia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codCia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 17,
       "name" : "OBS_GENERAL",
@@ -893,19 +1066,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "obsGeneral",
-        "isOracleType" : true,
-        "javaType" : "BigDecimal",
-        "javaPackage" : "java.math"
-      }
+        "name" : "BigDecimal",
+        "typePackage" : "java.math",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "obsGeneral",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OCausanteS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ "java.math.BigDecimal" ]
+      "dependencies" : [ "java.math.BigDecimal" ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_ACCIDENTE_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NOM_DECLA",
@@ -914,11 +1092,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nomDecla",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nomDecla",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "APEL_DECLA",
@@ -927,11 +1107,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apelDecla",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apelDecla",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "TFNO_DECLA",
@@ -940,11 +1122,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "tfnoDecla",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "tfnoDecla",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "RELACION",
@@ -953,11 +1137,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "relacion",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "relacion",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 5,
       "name" : "NOM_ACCIDENTADO",
@@ -966,11 +1152,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nomAccidentado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nomAccidentado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 6,
       "name" : "APEL_ACCIDENTADO",
@@ -979,11 +1167,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "apelAccidentado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "apelAccidentado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 7,
       "name" : "TFNO_ACCIDENTADO",
@@ -992,11 +1182,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "tfnoAccidentado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "tfnoAccidentado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 8,
       "name" : "DOM_ACCIDENTADO",
@@ -1005,11 +1197,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "domAccidentado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "domAccidentado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 9,
       "name" : "LOC_ACCIDENTADO",
@@ -1018,11 +1212,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "locAccidentado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "locAccidentado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 10,
       "name" : "DIST_ACCIDENTADO",
@@ -1031,11 +1227,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "distAccidentado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "distAccidentado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 11,
       "name" : "LUGAR_OCUR",
@@ -1044,11 +1242,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "lugarOcur",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "lugarOcur",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 12,
       "name" : "HORA_OCUR",
@@ -1057,11 +1257,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "horaOcur",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "horaOcur",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 13,
       "name" : "FORMA_OCUR",
@@ -1070,11 +1272,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "formaOcur",
-        "isOracleType" : true,
-        "javaType" : "ODescripcionSt",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "ODescripcionSt",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "formaOcur",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 14,
       "name" : "CAUSANTE",
@@ -1083,11 +1287,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "causante",
-        "isOracleType" : true,
-        "javaType" : "OCausanteS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OCausanteS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "causante",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 15,
       "name" : "CLI_RECOMENDADA",
@@ -1096,11 +1302,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "cliRecomendada",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "cliRecomendada",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 16,
       "name" : "DANOS_TERCEROS",
@@ -1109,11 +1317,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "danosTerceros",
-        "isOracleType" : true,
-        "javaType" : "ODescripcionSt",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "ODescripcionSt",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "danosTerceros",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 17,
       "name" : "POLIZAS",
@@ -1122,11 +1332,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "polizas",
-        "isOracleType" : true,
-        "javaType" : "ODescripcionSt",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "ODescripcionSt",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "polizas",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 18,
       "name" : "FALLECIMIENTO",
@@ -1135,11 +1347,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "fallecimiento",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "fallecimiento",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 19,
       "name" : "CLINICAS",
@@ -1148,11 +1362,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "clinicas",
-        "isOracleType" : true,
-        "javaType" : "ODescripcionSt",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "ODescripcionSt",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "clinicas",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 20,
       "name" : "TRATAMIENTO",
@@ -1161,11 +1377,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "tratamiento",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "tratamiento",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 21,
       "name" : "INGRESADO",
@@ -1174,11 +1392,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "ingresado",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "ingresado",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 22,
       "name" : "CLI_RECOMENDADA2",
@@ -1187,11 +1407,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "cliRecomendada2",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "cliRecomendada2",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 23,
       "name" : "LESIONES",
@@ -1200,11 +1422,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "lesiones",
-        "isOracleType" : true,
-        "javaType" : "ODescripcionSt",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "ODescripcionSt",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "lesiones",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 24,
       "name" : "BAJA_LABOR",
@@ -1213,11 +1437,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "bajaLabor",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "bajaLabor",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 25,
       "name" : "DIAS",
@@ -1226,11 +1452,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "dias",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "dias",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 26,
       "name" : "LOCALIZACION",
@@ -1239,11 +1467,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localizacion",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localizacion",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 27,
       "name" : "LOCALI_ACT",
@@ -1252,11 +1482,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localiAct",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localiAct",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 28,
       "name" : "LOCAL_POSTAL",
@@ -1265,11 +1497,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localPostal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localPostal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 29,
       "name" : "LOCAL_TFNO",
@@ -1278,19 +1512,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localTfno",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localTfno",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OAccidenteS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_SIN_ACC_IN_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NUM_POLIZA",
@@ -1299,11 +1538,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "numPoliza",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "numPoliza",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "COD_MEDIO",
@@ -1312,11 +1553,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codMedio",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codMedio",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "COD_GARANT",
@@ -1325,11 +1568,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codGarant",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codGarant",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 4,
       "name" : "COD_PRIORIDAD",
@@ -1338,11 +1583,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPrioridad",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPrioridad",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 5,
       "name" : "FEC_OCURRENCIA",
@@ -1351,11 +1598,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "fecOcurrencia",
-        "isOracleType" : true,
-        "javaType" : "Date",
-        "javaPackage" : "java.util"
-      }
+        "name" : "Date",
+        "typePackage" : "java.util",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "fecOcurrencia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 6,
       "name" : "HORA_OCURRENCIA",
@@ -1364,11 +1613,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "horaOcurrencia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "horaOcurrencia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 7,
       "name" : "LUGAR_OCURRENCIA",
@@ -1377,11 +1628,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "lugarOcurrencia",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "lugarOcurrencia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 8,
       "name" : "LOCALIDAD",
@@ -1390,11 +1643,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "localidad",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "localidad",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 9,
       "name" : "COD_POSTAL",
@@ -1403,11 +1658,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codPostal",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codPostal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 10,
       "name" : "INE",
@@ -1416,11 +1673,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "ine",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "ine",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 11,
       "name" : "COD_CAUSA",
@@ -1429,11 +1688,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codCausa",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codCausa",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 12,
       "name" : "TIPO_EXPEDIENTE",
@@ -1442,11 +1703,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "tipoExpediente",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "tipoExpediente",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 13,
       "name" : "CLASE_EXPDTE",
@@ -1455,11 +1718,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "claseExpdte",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "claseExpdte",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 14,
       "name" : "NUUMA",
@@ -1468,11 +1733,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "nuuma",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "nuuma",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 15,
       "name" : "DESCRIPCION",
@@ -1481,11 +1748,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "descripcion",
-        "isOracleType" : true,
-        "javaType" : "ODescripcionSt",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "ODescripcionSt",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "descripcion",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 16,
       "name" : "CORRESPONDENCIA",
@@ -1494,11 +1763,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "correspondencia",
-        "isOracleType" : true,
-        "javaType" : "OCorresExpdteS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OCorresExpdteS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "correspondencia",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 17,
       "name" : "COMUNICANTE",
@@ -1507,11 +1778,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "comunicante",
-        "isOracleType" : true,
-        "javaType" : "OComunicanteS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OComunicanteS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "comunicante",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 18,
       "name" : "FEDERACION",
@@ -1520,11 +1793,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "federacion",
-        "isOracleType" : true,
-        "javaType" : "OFederacionS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OFederacionS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "federacion",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 19,
       "name" : "COLEGIO",
@@ -1533,11 +1808,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "colegio",
-        "isOracleType" : true,
-        "javaType" : "OColegioS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OColegioS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "colegio",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 20,
       "name" : "ACCIDENTE",
@@ -1546,19 +1823,24 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "accidente",
-        "isOracleType" : true,
-        "javaType" : "OAccidenteS",
-        "javaPackage" : "org.lab.samples.osm.claimwrapped.model"
-      }
+        "name" : "OAccidenteS",
+        "typePackage" : "org.lab.samples.osm.claimwrapped.model",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "accidente",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OSinAccInS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ "java.util.Date" ]
+      "dependencies" : [ "java.util.Date" ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "typeName" : "O_SIN_ACC_OUT_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "NUM_EXPEDIENTE",
@@ -1567,11 +1849,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "numExpediente",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "numExpediente",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "COD_ERROR",
@@ -1580,11 +1864,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "codError",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codError",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "TXT_ERROR",
@@ -1593,22 +1879,28 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "txtError",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "txtError",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OSinAccOutS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   } ],
   "javaExecutorInfo" : {
     "name" : "MpgKExSiniestroAccWrpPProcesaPeticionExecutor",
     "typePackage" : "org.lab.samples.osm.claimwrapped.executor",
-    "dependencies" : [ ]
+    "dependencies" : [ ],
+    "normalizedFieldName" : null,
+    "oracleType" : false
   },
   "function" : false
 }
