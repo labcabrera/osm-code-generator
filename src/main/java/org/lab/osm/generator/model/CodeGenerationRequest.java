@@ -12,6 +12,8 @@ public class CodeGenerationRequest {
 	private String jdbcUrl;
 	private String user;
 	private String password;
+	
+	private String owner;
 	private String objectName;
 	private String procedureName;
 

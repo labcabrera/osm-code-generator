@@ -1,0 +1,1884 @@
+{
+  "objectId" : 469307,
+  "objectName" : "LN_EM_CONSULTA_POLIZA_TRN",
+  "procedureName" : "P_OBTENER_POLIZA_FECHA",
+  "owner" : "TRON_LN",
+  "overload" : 3,
+  "parameters" : [ {
+    "position" : 1,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CIA",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 1,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CIA",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 1,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CIA",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 2,
+    "mode" : "IN",
+    "argumentName" : "P_ORIGEN_CONSULTA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 2,
+    "mode" : "IN",
+    "argumentName" : "P_ORIGEN_CONSULTA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 2,
+    "mode" : "IN",
+    "argumentName" : "P_ORIGEN_CONSULTA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 3,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_POLIZA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 3,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_POLIZA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 3,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_POLIZA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 4,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_APLI",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 4,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_APLI",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 4,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_APLI",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 5,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_SPTO_APLI",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 5,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_SPTO_APLI",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 5,
+    "mode" : "IN",
+    "argumentName" : "P_NUM_SPTO_APLI",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 6,
+    "mode" : "IN",
+    "argumentName" : "P_FECHA_CONSULTA",
+    "dataType" : "DATE",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 6,
+    "mode" : "IN",
+    "argumentName" : "P_FECHA_CONSULTA",
+    "dataType" : "DATE",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 6,
+    "mode" : "IN",
+    "argumentName" : "P_FECHA_CONSULTA",
+    "dataType" : "DATE",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 7,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_SPTO_TMP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 7,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_SPTO_TMP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 7,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_SPTO_TMP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 8,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_GEN",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 8,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_GEN",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 8,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_GEN",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 9,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_IND_COA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 9,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_IND_COA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 9,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_IND_COA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 10,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_AGENTE",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 10,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_AGENTE",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 10,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_AGENTE",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 11,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 11,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 11,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 12,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DIR_CORRESP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 12,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DIR_CORRESP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 12,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DIR_CORRESP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 13,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_FIG_PART_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 13,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_FIG_PART_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 13,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_FIG_PART_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 14,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_FIG_PART_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 14,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_FIG_PART_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 14,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_FIG_PART_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 15,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COB_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 15,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COB_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 15,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COB_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 16,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COB_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 16,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COB_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 16,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COB_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 17,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_BONIF_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 17,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_BONIF_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 17,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_BONIF_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 18,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_BONIF_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 18,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_BONIF_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 18,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_BONIF_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 19,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_PLAN_PAGO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 19,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_PLAN_PAGO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 19,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_PLAN_PAGO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 20,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_MEDIO_PAGO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 20,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_MEDIO_PAGO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 20,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_MEDIO_PAGO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 21,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DESGLOSE_ECO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 21,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DESGLOSE_ECO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 21,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DESGLOSE_ECO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 22,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DESGLOSE_ECO_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 22,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DESGLOSE_ECO_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 22,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DESGLOSE_ECO_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 23,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_OBTENER_PRIMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 23,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_OBTENER_PRIMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 23,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_OBTENER_PRIMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 24,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_TEXTO_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 24,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_TEXTO_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 24,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_TEXTO_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 25,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_TEXTO_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 25,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_TEXTO_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 25,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_TEXTO_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 26,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CLAU_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 26,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CLAU_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 26,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CLAU_POL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 27,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CLAU_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 27,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CLAU_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 27,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CLAU_OA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 28,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CONSULTA_GLOBAL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 28,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CONSULTA_GLOBAL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 28,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CONSULTA_GLOBAL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 29,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CON_DES_EMISION",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 29,
+    "mode" : "IN",
+    "argumentName" : "P_CLAVE_PROD_PETICIONARIO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 29,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CON_DES_EMISION",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 30,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_LK",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 30,
+    "mode" : "IN",
+    "argumentName" : "P_NUUMA_PETICIONARIO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 30,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_LK",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 31,
+    "mode" : "IN",
+    "argumentName" : "P_COD_IDIOMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 31,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_CON_DES_EMISION",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 31,
+    "mode" : "IN",
+    "argumentName" : "P_COD_IDIOMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 32,
+    "mode" : "IN",
+    "argumentName" : "P_COD_DOCUM_DESTINO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 32,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_LK",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 32,
+    "mode" : "IN",
+    "argumentName" : "P_COD_DOCUM_DESTINO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 33,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CANAL",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 33,
+    "mode" : "IN",
+    "argumentName" : "P_COD_IDIOMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 33,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CANAL",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 34,
+    "mode" : "IN",
+    "argumentName" : "P_CLAVE_PRODUCCION",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 34,
+    "mode" : "IN",
+    "argumentName" : "P_COD_DOCUM_DESTINO",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 34,
+    "mode" : "IN",
+    "argumentName" : "P_CLAVE_PRODUCCION",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 35,
+    "mode" : "IN",
+    "argumentName" : "P_COD_ROL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 35,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CANAL",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 35,
+    "mode" : "IN",
+    "argumentName" : "P_COD_ROL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 36,
+    "mode" : "IN",
+    "argumentName" : "P_COD_USR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 36,
+    "mode" : "IN",
+    "argumentName" : "P_CLAVE_PRODUCCION",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 36,
+    "mode" : "IN",
+    "argumentName" : "P_COD_USR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 37,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_SEGREGAR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 37,
+    "mode" : "IN",
+    "argumentName" : "P_COD_ROL",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 37,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_SEGREGAR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 38,
+    "mode" : "IN",
+    "argumentName" : "P_COD_USR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 38,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_DATOS_TERC_VIGOR",
+    "dataType" : "PL/SQL BOOLEAN",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  }, {
+    "position" : 39,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_SEGREGAR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : null,
+      "typePackage" : null,
+      "dependencies" : [ ]
+    }
+  } ],
+  "types" : [ {
+    "typeName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OsGnrMensajeAdvertS",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "OS_GNR_MENSAJE_ERROR_S",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OsGnrMensajeErrorS",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_DATOS_POL_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConDatosPolT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_DATOS_SPTO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConDatosSptoT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_REVALORIZA_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConRevalorizaT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_OCURRENCIA_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConOcurrenciaT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_CARACTER_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConCaracterT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_AGENTE_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConAgenteT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_COASEGURO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConCoaseguroT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_PLAN_PAGO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConPlanPagoT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_RIESGO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConRiesgoT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_DPERSONALES_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConDpersonalesT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_DOMICILIO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConDomicilioT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_FIGURA_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConFiguraT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_COBERTURA_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConCoberturaT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_BONI_RECA_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConBoniRecaT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_CONCEPTO_ECO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConConceptoEcoT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_CLAU_COMPLETA_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConClauCompletaT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_TEXTO_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConTextoT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_REG_NOINTERES_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConRegNointeresT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_NOTAS_OPE_T",
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OConNotasOpeT",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ]
+    }
+  }, {
+    "typeName" : "O_CON_POLIZA_S",
+    "columns" : [ {
+      "index" : 1,
+      "name" : "COD_CIA",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 2,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "codCia",
+        "isOracleType" : true,
+        "javaType" : "BigDecimal",
+        "javaPackage" : "java.math"
+      }
+    }, {
+      "index" : 2,
+      "name" : "NUM_APLI",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 5,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "numApli",
+        "isOracleType" : true,
+        "javaType" : "BigDecimal",
+        "javaPackage" : "java.math"
+      }
+    }, {
+      "index" : 3,
+      "name" : "NUM_SPTO_APLI",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "numSptoApli",
+        "isOracleType" : true,
+        "javaType" : "BigDecimal",
+        "javaPackage" : "java.math"
+      }
+    }, {
+      "index" : 4,
+      "name" : "NUM_POLIZA",
+      "typeName" : "VARCHAR2",
+      "length" : 15,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "numPoliza",
+        "isOracleType" : true,
+        "javaType" : "String",
+        "javaPackage" : "java.lang"
+      }
+    }, {
+      "index" : 5,
+      "name" : "NUM_PERIODO",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 2,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "numPeriodo",
+        "isOracleType" : true,
+        "javaType" : "BigDecimal",
+        "javaPackage" : "java.math"
+      }
+    }, {
+      "index" : 6,
+      "name" : "NUM_SPTO",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "numSpto",
+        "isOracleType" : true,
+        "javaType" : "BigDecimal",
+        "javaPackage" : "java.math"
+      }
+    }, {
+      "index" : 7,
+      "name" : "DATOS_GENERALES_POL",
+      "typeName" : "O_CON_DATOS_POL_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "datosGeneralesPol",
+        "isOracleType" : true,
+        "javaType" : "OConDatosPolT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 8,
+      "name" : "DATOS_GENERALES_SPTO",
+      "typeName" : "O_CON_DATOS_SPTO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "datosGeneralesSpto",
+        "isOracleType" : true,
+        "javaType" : "OConDatosSptoT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 9,
+      "name" : "REVALORIZACION",
+      "typeName" : "O_CON_REVALORIZA_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "revalorizacion",
+        "isOracleType" : true,
+        "javaType" : "OConRevalorizaT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 10,
+      "name" : "OCURRENCIAS",
+      "typeName" : "O_CON_OCURRENCIA_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "ocurrencias",
+        "isOracleType" : true,
+        "javaType" : "OConOcurrenciaT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 11,
+      "name" : "CARACTERISTICAS",
+      "typeName" : "O_CON_CARACTER_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "caracteristicas",
+        "isOracleType" : true,
+        "javaType" : "OConCaracterT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 12,
+      "name" : "AGENTE",
+      "typeName" : "O_CON_AGENTE_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "agente",
+        "isOracleType" : true,
+        "javaType" : "OConAgenteT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 13,
+      "name" : "COASEGURO",
+      "typeName" : "O_CON_COASEGURO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "coaseguro",
+        "isOracleType" : true,
+        "javaType" : "OConCoaseguroT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 14,
+      "name" : "PLANES_PAGO",
+      "typeName" : "O_CON_PLAN_PAGO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "planesPago",
+        "isOracleType" : true,
+        "javaType" : "OConPlanPagoT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 15,
+      "name" : "RIESGOS",
+      "typeName" : "O_CON_RIESGO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "riesgos",
+        "isOracleType" : true,
+        "javaType" : "OConRiesgoT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 16,
+      "name" : "DATOS_PERSONALES",
+      "typeName" : "O_CON_DPERSONALES_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "datosPersonales",
+        "isOracleType" : true,
+        "javaType" : "OConDpersonalesT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 17,
+      "name" : "DATOS_DOMICILIO",
+      "typeName" : "O_CON_DOMICILIO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "datosDomicilio",
+        "isOracleType" : true,
+        "javaType" : "OConDomicilioT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 18,
+      "name" : "FIGURAS_PARTICIPANTES",
+      "typeName" : "O_CON_FIGURA_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "figurasParticipantes",
+        "isOracleType" : true,
+        "javaType" : "OConFiguraT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 19,
+      "name" : "COBER_GARAN",
+      "typeName" : "O_CON_COBERTURA_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "coberGaran",
+        "isOracleType" : true,
+        "javaType" : "OConCoberturaT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 20,
+      "name" : "BONI_RECA",
+      "typeName" : "O_CON_BONI_RECA_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "boniReca",
+        "isOracleType" : true,
+        "javaType" : "OConBoniRecaT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 21,
+      "name" : "CONCEPTOS_ECO",
+      "typeName" : "O_CON_CONCEPTO_ECO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "conceptosEco",
+        "isOracleType" : true,
+        "javaType" : "OConConceptoEcoT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 22,
+      "name" : "CLAUSULAS",
+      "typeName" : "O_CON_CLAU_COMPLETA_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "clausulas",
+        "isOracleType" : true,
+        "javaType" : "OConClauCompletaT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 23,
+      "name" : "TEXTOS",
+      "typeName" : "O_CON_TEXTO_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "textos",
+        "isOracleType" : true,
+        "javaType" : "OConTextoT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 24,
+      "name" : "REG_NO_INTERES",
+      "typeName" : "O_CON_REG_NOINTERES_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "regNoInteres",
+        "isOracleType" : true,
+        "javaType" : "OConRegNointeresT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    }, {
+      "index" : 25,
+      "name" : "NOTAS",
+      "typeName" : "O_CON_NOTAS_OPE_T",
+      "length" : 0,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "normalizedName" : "notas",
+        "isOracleType" : true,
+        "javaType" : "OConNotasOpeT",
+        "javaPackage" : "org.lab.samples.osm.contract.model"
+      }
+    } ],
+    "javaTypeInfo" : {
+      "name" : "OConPolizaS",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ "java.math.BigDecimal" ]
+    }
+  } ],
+  "javaExecutorInfo" : {
+    "name" : "LnEmConsultaPolizaTrnPObtenerPolizaFechaExecutor",
+    "typePackage" : "org.lab.samples.osm.contract.executor",
+    "dependencies" : [ ]
+  },
+  "function" : true
+}

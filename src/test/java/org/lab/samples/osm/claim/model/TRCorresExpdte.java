@@ -15,40 +15,40 @@ public class TRCorresExpdte {
 
 	private TREmail email;
 
-	@OracleField("TIPO_VIA")
+	@OracleField(value = "TIPO_VIA", typeName = "VARCHAR2", length = 3)
 	private String tipoVia;
 
-	@OracleField("NOM_VIA")
+	@OracleField(value = "NOM_VIA", typeName = "VARCHAR2", length = 50)
 	private String nomVia;
 
-	@OracleField("NUMERO")
+	@OracleField(value = "NUMERO", typeName = "VARCHAR2", length = 4)
 	private String numero;
 
-	@OracleField("PORTAL")
+	@OracleField(value = "PORTAL", typeName = "VARCHAR2", length = 2)
 	private String portal;
 
-	@OracleField("ESC")
+	@OracleField(value = "ESC", typeName = "VARCHAR2", length = 3)
 	private String esc;
 
-	@OracleField("PISO")
+	@OracleField(value = "PISO", typeName = "VARCHAR2", length = 2)
 	private String piso;
 
-	@OracleField("PUERTA")
+	@OracleField(value = "PUERTA", typeName = "VARCHAR2", length = 2)
 	private String puerta;
 
-	@OracleField("LOCALIDAD")
+	@OracleField(value = "LOCALIDAD", typeName = "VARCHAR2", length = 50)
 	private String localidad;
 
-	@OracleField("COD_POSTAL")
+	@OracleField(value = "COD_POSTAL", typeName = "VARCHAR2", length = 5)
 	private String codPostal;
 
-	@OracleField("COD_PAIS")
+	@OracleField(value = "COD_PAIS", typeName = "VARCHAR2", length = 3)
 	private String codPais;
 
-	@OracleField("APARTADO")
+	@OracleField(value = "APARTADO", typeName = "VARCHAR2", length = 10)
 	private String apartado;
 
-	@OracleField("NOM_DEST")
+	@OracleField(value = "NOM_DEST", typeName = "VARCHAR2", length = 50)
 	private String nomDest;
 
 }

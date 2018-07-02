@@ -15,46 +15,46 @@ import java.util.Date;
 @ToString
 public class OSinAccInS {
 
-	@OracleField("NUM_POLIZA")
+	@OracleField(value = "NUM_POLIZA", typeName = "VARCHAR2", length = 13)
 	private String numPoliza;
 
-	@OracleField("COD_MEDIO")
+	@OracleField(value = "COD_MEDIO", typeName = "VARCHAR2", length = 1)
 	private String codMedio;
 
-	@OracleField("COD_GARANT")
+	@OracleField(value = "COD_GARANT", typeName = "VARCHAR2", length = 2)
 	private String codGarant;
 
-	@OracleField("COD_PRIORIDAD")
+	@OracleField(value = "COD_PRIORIDAD", typeName = "VARCHAR2", length = 1)
 	private String codPrioridad;
 
-	@OracleField("FEC_OCURRENCIA")
+	@OracleField(value = "FEC_OCURRENCIA", typeName = "DATE", length = 0)
 	private Date fecOcurrencia;
 
-	@OracleField("HORA_OCURRENCIA")
+	@OracleField(value = "HORA_OCURRENCIA", typeName = "VARCHAR2", length = 5)
 	private String horaOcurrencia;
 
-	@OracleField("LUGAR_OCURRENCIA")
+	@OracleField(value = "LUGAR_OCURRENCIA", typeName = "VARCHAR2", length = 50)
 	private String lugarOcurrencia;
 
-	@OracleField("LOCALIDAD")
+	@OracleField(value = "LOCALIDAD", typeName = "VARCHAR2", length = 20)
 	private String localidad;
 
-	@OracleField("COD_POSTAL")
+	@OracleField(value = "COD_POSTAL", typeName = "VARCHAR2", length = 5)
 	private String codPostal;
 
-	@OracleField("INE")
+	@OracleField(value = "INE", typeName = "VARCHAR2", length = 9)
 	private String ine;
 
-	@OracleField("COD_CAUSA")
+	@OracleField(value = "COD_CAUSA", typeName = "VARCHAR2", length = 4)
 	private String codCausa;
 
-	@OracleField("TIPO_EXPEDIENTE")
+	@OracleField(value = "TIPO_EXPEDIENTE", typeName = "VARCHAR2", length = 2)
 	private String tipoExpediente;
 
-	@OracleField("CLASE_EXPDTE")
+	@OracleField(value = "CLASE_EXPDTE", typeName = "VARCHAR2", length = 3)
 	private String claseExpdte;
 
-	@OracleField("NUUMA")
+	@OracleField(value = "NUUMA", typeName = "VARCHAR2", length = 10)
 	private String nuuma;
 
 	private ODescripcionSt descripcion;

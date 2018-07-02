@@ -13,13 +13,13 @@ import lombok.ToString;
 @ToString
 public class OSinAccOutS {
 
-	@OracleField("NUM_EXPEDIENTE")
+	@OracleField(value = "NUM_EXPEDIENTE", typeName = "VARCHAR2", length = 40)
 	private String numExpediente;
 
-	@OracleField("COD_ERROR")
+	@OracleField(value = "COD_ERROR", typeName = "VARCHAR2", length = 10)
 	private String codError;
 
-	@OracleField("TXT_ERROR")
+	@OracleField(value = "TXT_ERROR", typeName = "VARCHAR2", length = 10)
 	private String txtError;
 
 }

@@ -13,13 +13,13 @@ import lombok.ToString;
 @ToString
 public class TREmail {
 
-	@OracleField("CORREO")
+	@OracleField(value = "CORREO", typeName = "VARCHAR2", length = 50)
 	private String correo;
 
-	@OracleField("COD_CORRESPONDE")
+	@OracleField(value = "COD_CORRESPONDE", typeName = "VARCHAR2", length = 2)
 	private String codCorresponde;
 
-	@OracleField("OBSERVACIONES")
+	@OracleField(value = "OBSERVACIONES", typeName = "VARCHAR2", length = 100)
 	private String observaciones;
 
 }

@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.exception.OsmModelReadException;
 import org.lab.osm.generator.java.JavaOracleTypeInfoAdapter;
@@ -32,16 +33,17 @@ import oracle.jdbc.OracleDriver;
 public class CodeGenerator {
 
 	public void execute(CodeGenerationRequest request) {
+		String objectName = request.getObjectName();
+		String procedureName = request.getProcedureName();
+		String owner = StringUtils.isBlank(request.getOwner()) ? request.getUser() : request.getOwner();
+
 		StoredProcedureReader storedProcedureReader = new StoredProcedureReader();
 		StoredProcedureParameterReader paramReader = new StoredProcedureParameterReader();
 		TypeReader typeReader = new TypeReader();
-		String objectName = request.getObjectName();
-		String procedureName = request.getProcedureName();
-		String user = request.getUser();
 
 		List<StoredProcedureInfo> procedures;
 		try (Connection connection = openConnection(request)) {
-			procedures = storedProcedureReader.read(connection, objectName, procedureName, user);
+			procedures = storedProcedureReader.read(connection, objectName, procedureName, owner);
 
 			if (log.isDebugEnabled()) {
 				procedures.stream().forEach(sp -> log.debug(sp.toString()));

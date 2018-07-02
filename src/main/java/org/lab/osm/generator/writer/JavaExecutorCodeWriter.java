@@ -120,11 +120,18 @@ public class JavaExecutorCodeWriter {
 	private void writeParameterType(StoredProcedureInfo spInfo, StoredProcedureParameterInfo paramInfo, Writer writer)
 		throws IOException {
 		switch (paramInfo.getDataType()) {
+		case "NUMERIC":
+		case "DATE":
+			writer.write("\t\t\ttype = Types." + paramInfo.getDataType() + ",\n");
+			break;
 		case "VARCHAR2":
 			writer.write("\t\t\ttype = Types.NVARCHAR,\n");
 			break;
-		case "NUMERIC":
+		case "NUMBER":
 			writer.write("\t\t\ttype = Types.NUMERIC,\n");
+			break;
+		case "PL/SQL BOOLEAN":
+			writer.write("\t\t\ttype = Types.BOOLEAN,\n");
 			break;
 		case "OBJECT":
 			writer.write("\t\t\ttype = Types.STRUCT,\n");

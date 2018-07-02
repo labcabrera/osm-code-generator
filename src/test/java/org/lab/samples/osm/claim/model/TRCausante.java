@@ -15,55 +15,55 @@ import java.math.BigDecimal;
 @ToString
 public class TRCausante {
 
-	@OracleField("NOMBRE")
+	@OracleField(value = "NOMBRE", typeName = "VARCHAR2", length = 15)
 	private String nombre;
 
-	@OracleField("APELLIDOS")
+	@OracleField(value = "APELLIDOS", typeName = "VARCHAR2", length = 35)
 	private String apellidos;
 
-	@OracleField("DIRECCION")
+	@OracleField(value = "DIRECCION", typeName = "VARCHAR2", length = 35)
 	private String direccion;
 
-	@OracleField("LOCALIDAD")
+	@OracleField(value = "LOCALIDAD", typeName = "VARCHAR2", length = 35)
 	private String localidad;
 
-	@OracleField("PROVINCIA")
+	@OracleField(value = "PROVINCIA", typeName = "VARCHAR2", length = 2)
 	private String provincia;
 
-	@OracleField("COD_POSTAL")
+	@OracleField(value = "COD_POSTAL", typeName = "VARCHAR2", length = 5)
 	private String codPostal;
 
-	@OracleField("DNI")
+	@OracleField(value = "DNI", typeName = "VARCHAR2", length = 10)
 	private String dni;
 
-	@OracleField("NUM_TEL1")
+	@OracleField(value = "NUM_TEL1", typeName = "VARCHAR2", length = 10)
 	private String numTel1;
 
-	@OracleField("OBS_TEL1")
+	@OracleField(value = "OBS_TEL1", typeName = "VARCHAR2", length = 40)
 	private String obsTel1;
 
-	@OracleField("NUM_TEL2")
+	@OracleField(value = "NUM_TEL2", typeName = "VARCHAR2", length = 10)
 	private String numTel2;
 
-	@OracleField("OBS_TEL2")
+	@OracleField(value = "OBS_TEL2", typeName = "VARCHAR2", length = 40)
 	private String obsTel2;
 
-	@OracleField("ENT_BANCARIA")
+	@OracleField(value = "ENT_BANCARIA", typeName = "VARCHAR2", length = 4)
 	private String entBancaria;
 
-	@OracleField("SUC_BANCARIA")
+	@OracleField(value = "SUC_BANCARIA", typeName = "VARCHAR2", length = 4)
 	private String sucBancaria;
 
-	@OracleField("DC_BANCO")
+	@OracleField(value = "DC_BANCO", typeName = "VARCHAR2", length = 2)
 	private String dcBanco;
 
-	@OracleField("CTA_BANCARIA")
+	@OracleField(value = "CTA_BANCARIA", typeName = "VARCHAR2", length = 10)
 	private String ctaBancaria;
 
-	@OracleField("COD_CIA")
+	@OracleField(value = "COD_CIA", typeName = "VARCHAR2", length = 4)
 	private String codCia;
 
-	@OracleField("OBS_GENERAL")
+	@OracleField(value = "OBS_GENERAL", typeName = "NUMBER", length = 0, precision = 0, scale = 0)
 	private BigDecimal obsGeneral;
 
 }

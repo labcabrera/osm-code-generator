@@ -13,49 +13,49 @@ import lombok.ToString;
 @ToString
 public class TRFederacion {
 
-	@OracleField("NOMBRE")
+	@OracleField(value = "NOMBRE", typeName = "VARCHAR2", length = 15)
 	private String nombre;
 
-	@OracleField("APELLIDOS")
+	@OracleField(value = "APELLIDOS", typeName = "VARCHAR2", length = 35)
 	private String apellidos;
 
-	@OracleField("DOMICILIO")
+	@OracleField(value = "DOMICILIO", typeName = "VARCHAR2", length = 67)
 	private String domicilio;
 
-	@OracleField("LOCALIDAD")
+	@OracleField(value = "LOCALIDAD", typeName = "VARCHAR2", length = 20)
 	private String localidad;
 
-	@OracleField("COD_POSTAL")
+	@OracleField(value = "COD_POSTAL", typeName = "VARCHAR2", length = 5)
 	private String codPostal;
 
-	@OracleField("DNI")
+	@OracleField(value = "DNI", typeName = "VARCHAR2", length = 10)
 	private String dni;
 
-	@OracleField("TELEF1")
+	@OracleField(value = "TELEF1", typeName = "VARCHAR2", length = 10)
 	private String telef1;
 
-	@OracleField("TELEF2")
+	@OracleField(value = "TELEF2", typeName = "VARCHAR2", length = 10)
 	private String telef2;
 
-	@OracleField("LICENCIA")
+	@OracleField(value = "LICENCIA", typeName = "VARCHAR2", length = 20)
 	private String licencia;
 
-	@OracleField("CLUB")
+	@OracleField(value = "CLUB", typeName = "VARCHAR2", length = 10)
 	private String club;
 
-	@OracleField("TCLUB")
+	@OracleField(value = "TCLUB", typeName = "VARCHAR2", length = 100)
 	private String tclub;
 
-	@OracleField("TEL_CLUB")
+	@OracleField(value = "TEL_CLUB", typeName = "VARCHAR2", length = 10)
 	private String telClub;
 
-	@OracleField("ATENDIDO")
+	@OracleField(value = "ATENDIDO", typeName = "VARCHAR2", length = 1)
 	private String atendido;
 
-	@OracleField("CLI_ATENDIDO")
+	@OracleField(value = "CLI_ATENDIDO", typeName = "VARCHAR2", length = 100)
 	private String cliAtendido;
 
-	@OracleField("CLI_RECOMENDADA")
+	@OracleField(value = "CLI_RECOMENDADA", typeName = "VARCHAR2", length = 100)
 	private String cliRecomendada;
 
 }

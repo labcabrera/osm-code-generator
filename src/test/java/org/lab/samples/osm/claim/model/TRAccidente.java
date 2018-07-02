@@ -13,85 +13,85 @@ import lombok.ToString;
 @ToString
 public class TRAccidente {
 
-	@OracleField("NOM_DECLA")
+	@OracleField(value = "NOM_DECLA", typeName = "VARCHAR2", length = 15)
 	private String nomDecla;
 
-	@OracleField("APEL_DECLA")
+	@OracleField(value = "APEL_DECLA", typeName = "VARCHAR2", length = 35)
 	private String apelDecla;
 
-	@OracleField("TFNO_DECLA")
+	@OracleField(value = "TFNO_DECLA", typeName = "VARCHAR2", length = 10)
 	private String tfnoDecla;
 
-	@OracleField("RELACION")
+	@OracleField(value = "RELACION", typeName = "VARCHAR2", length = 33)
 	private String relacion;
 
-	@OracleField("NOM_ACCIDENTADO")
+	@OracleField(value = "NOM_ACCIDENTADO", typeName = "VARCHAR2", length = 51)
 	private String nomAccidentado;
 
-	@OracleField("APEL_ACCIDENTADO")
+	@OracleField(value = "APEL_ACCIDENTADO", typeName = "VARCHAR2", length = 35)
 	private String apelAccidentado;
 
-	@OracleField("TFNO_ACCIDENTADO")
+	@OracleField(value = "TFNO_ACCIDENTADO", typeName = "VARCHAR2", length = 10)
 	private String tfnoAccidentado;
 
-	@OracleField("DOM_ACCIDENTADO")
+	@OracleField(value = "DOM_ACCIDENTADO", typeName = "VARCHAR2", length = 100)
 	private String domAccidentado;
 
-	@OracleField("LOC_ACCIDENTADO")
+	@OracleField(value = "LOC_ACCIDENTADO", typeName = "VARCHAR2", length = 30)
 	private String locAccidentado;
 
-	@OracleField("DIST_ACCIDENTADO")
+	@OracleField(value = "DIST_ACCIDENTADO", typeName = "VARCHAR2", length = 5)
 	private String distAccidentado;
 
-	@OracleField("LUGAR_OCUR")
+	@OracleField(value = "LUGAR_OCUR", typeName = "VARCHAR2", length = 42)
 	private String lugarOcur;
 
-	@OracleField("HORA_OCUR")
+	@OracleField(value = "HORA_OCUR", typeName = "VARCHAR2", length = 5)
 	private String horaOcur;
 
 	private TTabDescripcion formaOcur;
 
 	private TRCausante causante;
 
-	@OracleField("CLI_RECOMENDADA")
+	@OracleField(value = "CLI_RECOMENDADA", typeName = "VARCHAR2", length = 10)
 	private String cliRecomendada;
 
 	private TTabDescripcion danosTerceros;
 
 	private TTabDescripcion polizas;
 
-	@OracleField("FALLECIMIENTO")
+	@OracleField(value = "FALLECIMIENTO", typeName = "VARCHAR2", length = 1)
 	private String fallecimiento;
 
 	private TTabDescripcion clinicas;
 
-	@OracleField("TRATAMIENTO")
+	@OracleField(value = "TRATAMIENTO", typeName = "VARCHAR2", length = 1)
 	private String tratamiento;
 
-	@OracleField("INGRESADO")
+	@OracleField(value = "INGRESADO", typeName = "VARCHAR2", length = 1)
 	private String ingresado;
 
-	@OracleField("CLI_RECOMENDADA2")
+	@OracleField(value = "CLI_RECOMENDADA2", typeName = "VARCHAR2", length = 100)
 	private String cliRecomendada2;
 
 	private TTabDescripcion lesiones;
 
-	@OracleField("BAJA_LABOR")
+	@OracleField(value = "BAJA_LABOR", typeName = "VARCHAR2", length = 1)
 	private String bajaLabor;
 
-	@OracleField("DIAS")
+	@OracleField(value = "DIAS", typeName = "VARCHAR2", length = 27)
 	private String dias;
 
-	@OracleField("LOCALIZACION")
+	@OracleField(value = "LOCALIZACION", typeName = "VARCHAR2", length = 76)
 	private String localizacion;
 
-	@OracleField("LOCALI_ACT")
+	@OracleField(value = "LOCALI_ACT", typeName = "VARCHAR2", length = 30)
 	private String localiAct;
 
-	@OracleField("LOCAL_POSTAL")
+	@OracleField(value = "LOCAL_POSTAL", typeName = "VARCHAR2", length = 5)
 	private String localPostal;
 
-	@OracleField("LOCAL_TFNO")
+	@OracleField(value = "LOCAL_TFNO", typeName = "VARCHAR2", length = 10)
 	private String localTfno;
 
 }

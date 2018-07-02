@@ -13,16 +13,16 @@ import lombok.ToString;
 @ToString
 public class OComunicanteS {
 
-	@OracleField("NOMBRE")
+	@OracleField(value = "NOMBRE", typeName = "VARCHAR2", length = 15)
 	private String nombre;
 
-	@OracleField("APELLIDOS")
+	@OracleField(value = "APELLIDOS", typeName = "VARCHAR2", length = 35)
 	private String apellidos;
 
-	@OracleField("TELEFONO")
+	@OracleField(value = "TELEFONO", typeName = "VARCHAR2", length = 10)
 	private String telefono;
 
-	@OracleField("COD_RELACION")
+	@OracleField(value = "COD_RELACION", typeName = "VARCHAR2", length = 2)
 	private String codRelacion;
 
 }

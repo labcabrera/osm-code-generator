@@ -16,10 +16,10 @@ import lombok.extern.slf4j.Slf4j;
 public class StoredProcedureReader {
 
 	public List<StoredProcedureInfo> read( //@formatter:off
-		Connection connection,
-		String objectName,
-		String procedureName,
-		String owner) throws SQLException { //@formatter:on
+			Connection connection,
+			String objectName,
+			String procedureName,
+			String owner) throws SQLException { //@formatter:on
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select").append("\n");
@@ -31,7 +31,7 @@ public class StoredProcedureReader {
 		sb.append("from").append("\n");
 		sb.append("  all_procedures").append("\n");
 		sb.append("where procedure_name is not null").append("\n");
-		sb.append("  and object_type='PACKAGE'").append("\n");
+		sb.append("  and object_type = 'PACKAGE'").append("\n");
 		if (StringUtils.isNotBlank(objectName)) {
 			sb.append("  and object_name = '").append(objectName).append("'").append("\n");
 		}

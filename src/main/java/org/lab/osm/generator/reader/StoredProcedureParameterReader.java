@@ -10,7 +10,6 @@ import java.util.List;
 import org.lab.osm.generator.exception.OsmGeneratorException;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
-import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -54,7 +53,7 @@ public class StoredProcedureParameterReader {
 				StoredProcedureParameterInfo paramInfo = new StoredProcedureParameterInfo();
 				paramInfo.setDataType(rs.getString("data_type"));
 				paramInfo.setPosition(rs.getInt("position"));
-				paramInfo.setMode(Mode.valueOf(rs.getString("in_out")));
+				paramInfo.setMode(StoredProcedureParameterInfo.Mode.parse(rs.getString("in_out")));
 				paramInfo.setTypeName(rs.getString("type_name"));
 				paramInfo.setArgumentName(rs.getString("argument_name"));
 				params.add(paramInfo);
