@@ -10,6 +10,7 @@
     "argumentName" : "P_O_SIN_ACC_IN_S",
     "dataType" : "OBJECT",
     "typeName" : "O_SIN_ACC_IN_S",
+    "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OSinAccInS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",
@@ -21,6 +22,7 @@
     "argumentName" : "P_O_SIN_ACC_OUT_S",
     "dataType" : "OBJECT",
     "typeName" : "O_SIN_ACC_OUT_S",
+    "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OSinAccOutS",
       "typePackage" : "org.lab.samples.osm.claimwrapped.model",

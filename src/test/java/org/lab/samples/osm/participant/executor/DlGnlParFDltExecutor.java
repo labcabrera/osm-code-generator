@@ -11,7 +11,7 @@ import org.lab.samples.osm.participant.model.OAmdGnlParS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "DL_GNL_PAR.F_UPD",
+	name = "DL_GNL_PAR.F_DLT",
 	isFunction = true,
 	parameters = {
 		@OracleParameter(
@@ -26,15 +26,9 @@ import org.lab.samples.osm.participant.model.OAmdGnlParS;
 			typeName = "O_AMD_GNL_PAR_S",
 			type = Types.STRUCT,
 			mode = ParameterType.IN
-		),
-		@OracleParameter(
-			name = "P_USR_VAL",
-			typeName = "null",
-			type = Types.NVARCHAR,
-			mode = ParameterType.IN
 		)
 	})
 //@formatter:on
-public interface DlGnlParFUpdExecutor extends StoredProcedureExecutor {
+public interface DlGnlParFDltExecutor extends StoredProcedureExecutor {
 
 }

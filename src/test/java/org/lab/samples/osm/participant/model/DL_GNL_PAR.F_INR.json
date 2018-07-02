@@ -1,7 +1,7 @@
 {
   "objectId" : 351682,
   "objectName" : "DL_GNL_PAR",
-  "procedureName" : "F_UPD",
+  "procedureName" : "F_INR",
   "owner" : "MPD_LD",
   "overload" : 0,
   "parameters" : [ {
@@ -90,7 +90,7 @@
     }
   } ],
   "javaExecutorInfo" : {
-    "name" : "DlGnlParFUpdExecutor",
+    "name" : "DlGnlParFInrExecutor",
     "typePackage" : "org.lab.samples.osm.participant.executor",
     "dependencies" : [ ]
   },

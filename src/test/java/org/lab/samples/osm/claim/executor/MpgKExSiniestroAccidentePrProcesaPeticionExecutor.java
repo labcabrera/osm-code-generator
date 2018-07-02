@@ -14,21 +14,25 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 	parameters = {
 		@OracleParameter(
 			name = "P_R_SINIESTRO_ACC",
+			typeName = "T_R_SINIESTRO_ACC",
 			type = Types.STRUCT,
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
 			name = "O_NUM_EXPEDIENTE",
+			typeName = "null",
 			type = Types.NVARCHAR,
 			mode = ParameterType.OUT
 		),
 		@OracleParameter(
 			name = "O_COD_ERROR",
+			typeName = "null",
 			type = Types.NVARCHAR,
 			mode = ParameterType.OUT
 		),
 		@OracleParameter(
 			name = "O_TXT_ERROR",
+			typeName = "null",
 			type = Types.NVARCHAR,
 			mode = ParameterType.OUT
 		)

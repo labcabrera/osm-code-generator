@@ -1,7 +1,7 @@
 {
   "objectId" : 351682,
   "objectName" : "DL_GNL_PAR",
-  "procedureName" : "F_UPD",
+  "procedureName" : "F_DLT",
   "owner" : "MPD_LD",
   "overload" : 0,
   "parameters" : [ {
@@ -26,18 +26,6 @@
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
       "typePackage" : "org.lab.samples.osm.participant.model",
-      "dependencies" : [ ]
-    }
-  }, {
-    "position" : 2,
-    "mode" : "IN",
-    "argumentName" : "P_USR_VAL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
       "dependencies" : [ ]
     }
   } ],
@@ -90,7 +78,7 @@
     }
   } ],
   "javaExecutorInfo" : {
-    "name" : "DlGnlParFUpdExecutor",
+    "name" : "DlGnlParFDltExecutor",
     "typePackage" : "org.lab.samples.osm.participant.executor",
     "dependencies" : [ ]
   },
