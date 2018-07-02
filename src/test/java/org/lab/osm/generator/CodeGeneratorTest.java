@@ -1,5 +1,6 @@
 package org.lab.osm.generator;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
@@ -28,7 +29,7 @@ public class CodeGeneratorTest {
 	}
 
 	@Test
-	// @Ignore
+	@Ignore
 	public void testParticipantUpdate() {
 		CodeGenerationRequest request = new CodeGenerationRequest();
 		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
@@ -47,7 +48,7 @@ public class CodeGeneratorTest {
 	}
 
 	@Test
-	// @Ignore
+	@Ignore
 	public void testClaim() {
 		CodeGenerationRequest request = new CodeGenerationRequest();
 		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
@@ -66,7 +67,7 @@ public class CodeGeneratorTest {
 	}
 
 	@Test
-	// @Ignore
+	@Ignore
 	public void testClaimWrapper() {
 		CodeGenerationRequest request = new CodeGenerationRequest();
 		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");

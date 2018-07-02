@@ -7,12 +7,13 @@
   "parameters" : [ {
     "position" : 0,
     "mode" : "OUT",
-    "argumentName" : null,
+    "argumentName" : "O_AMD_GNL_PAR_ST",
     "dataType" : "TABLE",
     "typeName" : "O_AMD_GNL_PAR_ST",
+    "simpleObjectTypeName" : "O_AMD_GNL_PAR_S",
     "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
+      "name" : "OAmdGnlParS",
+      "typePackage" : "org.lab.samples.osm.participant.model",
       "dependencies" : [ ]
     }
   }, {
@@ -21,17 +22,7 @@
     "argumentName" : "P_O_AMD_GNL_PAR_S",
     "dataType" : "OBJECT",
     "typeName" : "O_AMD_GNL_PAR_S",
-    "javaTypeInfo" : {
-      "name" : "OAmdGnlParS",
-      "typePackage" : "org.lab.samples.osm.participant.model",
-      "dependencies" : [ ]
-    }
-  }, {
-    "position" : 1,
-    "mode" : "OUT",
-    "argumentName" : null,
-    "dataType" : "OBJECT",
-    "typeName" : "O_AMD_GNL_PAR_S",
+    "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
       "typePackage" : "org.lab.samples.osm.participant.model",

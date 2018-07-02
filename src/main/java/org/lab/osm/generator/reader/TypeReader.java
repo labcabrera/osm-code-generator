@@ -30,6 +30,7 @@ public class TypeReader {
 				}
 				break;
 			case "TABLE":
+				//TODO revisar. No necesitamos mapear los tipos de colecciones
 				break;
 			default:
 				break;

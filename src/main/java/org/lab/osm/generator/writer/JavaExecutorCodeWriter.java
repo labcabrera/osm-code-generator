@@ -73,6 +73,9 @@ public class JavaExecutorCodeWriter {
 		for (String dependency : resolved) {
 			writer.write("import " + dependency + ";\n");
 		}
+		if (!resolved.isEmpty()) {
+			writer.write("\n");
+		}
 	}
 
 	private void writeStoredProcedureAnnotation(StoredProcedureInfo spInfo, Writer writer) throws IOException {
@@ -89,6 +92,7 @@ public class JavaExecutorCodeWriter {
 			StoredProcedureParameterInfo paramInfo = iterator.next();
 			writer.write("\t\t@OracleParameter(\n");
 			writer.write("\t\t\tname = \"" + paramInfo.getArgumentName() + "\",\n");
+			writer.write("\t\t\ttypeName = \"" + paramInfo.getTypeName() + "\",\n");
 			writeParameterType(spInfo, paramInfo, writer);
 
 			boolean useReturnStruct = paramInfo.getMode() != Mode.IN && paramInfo.getJavaTypeInfo() != null
@@ -109,7 +113,6 @@ public class JavaExecutorCodeWriter {
 				writer.write("\t\t)\n");
 			}
 		}
-
 		writer.write("\t})\n");
 		writer.write("//@formatter:on\n");
 	}
