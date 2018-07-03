@@ -29,7 +29,7 @@ public class StoredProcedureReader {
 		sb.append("  object_name,").append("\n");
 		sb.append("  procedure_name, ").append("\n");
 		sb.append("  owner,").append("\n");
-		sb.append("  nvl (overload, 0) overload").append("\n");
+		sb.append("  overload").append("\n");
 		sb.append("from").append("\n");
 		sb.append("  all_procedures").append("\n");
 		sb.append("where procedure_name is not null").append("\n");
@@ -63,6 +63,9 @@ public class StoredProcedureReader {
 				item.setOwner(rs.getString("owner"));
 				item.setOverload(rs.getInt("overload"));
 				item.setFunction(false);
+				if (item.getOverload() == 0) {
+					item.setOverload(null);
+				}
 				results.add(item);
 			}
 			return results;

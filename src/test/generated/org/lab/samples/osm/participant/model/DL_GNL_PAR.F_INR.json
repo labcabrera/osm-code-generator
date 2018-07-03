@@ -3,7 +3,7 @@
   "objectName" : "DL_GNL_PAR",
   "procedureName" : "F_INR",
   "owner" : "MPD_LD",
-  "overload" : 0,
+  "overload" : null,
   "parameters" : [ {
     "position" : 0,
     "mode" : "OUT",

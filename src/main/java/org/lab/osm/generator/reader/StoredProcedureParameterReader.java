@@ -16,8 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class StoredProcedureParameterReader {
 
-	public void read(Connection connection, StoredProcedureInfo storedProcedureInfo) {
-		log.info("Reading stored procedure parameters {}", storedProcedureInfo);
+	public void read(Connection connection, StoredProcedureInfo spInfo) {
+		log.info("Reading stored procedure parameters {}", spInfo);
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select ").append("\n");
@@ -25,7 +25,7 @@ public class StoredProcedureParameterReader {
 		sb.append("  object_name,").append("\n");
 		sb.append("  package_name,").append("\n");
 		sb.append("  object_id,").append("\n");
-		sb.append("  nvl (overload, 0) overload,").append("\n");
+		sb.append("  overload,").append("\n");
 		sb.append("  argument_name,").append("\n");
 		sb.append("  data_type,").append("\n");
 		sb.append("  position,").append("\n");
@@ -34,10 +34,10 @@ public class StoredProcedureParameterReader {
 		sb.append("from").append("\n");
 		sb.append("  all_arguments").append("\n");
 		sb.append("where").append("\n");
-		sb.append("  object_id = ").append(storedProcedureInfo.getObjectId()).append("\n");
-		sb.append("  and object_name = '").append(storedProcedureInfo.getProcedureName()).append("'").append("\n");
-		if (storedProcedureInfo.getOverload() != null) {
-			sb.append("  and overload = ").append(storedProcedureInfo.getOverload()).append("\n");
+		sb.append("  object_id = ").append(spInfo.getObjectId()).append("\n");
+		sb.append("  and object_name = '").append(spInfo.getProcedureName()).append("'").append("\n");
+		if (spInfo.getOverload() != null) {
+			sb.append("  and overload = ").append(spInfo.getOverload()).append("\n");
 		}
 		sb.append("order by").append("\n");
 		sb.append("  position");
@@ -58,10 +58,10 @@ public class StoredProcedureParameterReader {
 				params.add(paramInfo);
 
 				if (paramInfo.getArgumentName() == null) {
-					storedProcedureInfo.setFunction(true);
+					spInfo.setFunction(true);
 				}
 			}
-			storedProcedureInfo.setParameters(params);
+			spInfo.setParameters(params);
 		}
 		catch (SQLException ex) {
 			throw new OsmGeneratorException("Stored procedure parameter read error", ex);

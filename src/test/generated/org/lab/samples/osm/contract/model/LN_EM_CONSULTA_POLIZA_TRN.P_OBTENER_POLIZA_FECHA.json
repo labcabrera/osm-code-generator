@@ -14672,24 +14672,129 @@
       "oracleType" : false
     }
   }, {
-    "typeName" : "OS_GNR_MENSAJE_ERROR_S",
+    "typeName" : "O_GNR_MENSAJE_ERROR_S",
     "collectionTypeOf" : null,
-    "columns" : [ ],
+    "columns" : [ {
+      "index" : 1,
+      "name" : "COD_ERROR",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 8,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "BigDecimal",
+        "typePackage" : "java.math",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codError",
+        "oracleType" : true
+      },
+      "collection" : false
+    }, {
+      "index" : 2,
+      "name" : "TXT_ERROR",
+      "typeName" : "VARCHAR2",
+      "length" : 200,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "txtError",
+        "oracleType" : true
+      },
+      "collection" : false
+    }, {
+      "index" : 3,
+      "name" : "TXT_CAMPO",
+      "typeName" : "VARCHAR2",
+      "length" : 30,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "txtCampo",
+        "oracleType" : true
+      },
+      "collection" : false
+    }, {
+      "index" : 4,
+      "name" : "TXT_RUTA_ERROR",
+      "typeName" : "VARCHAR2",
+      "length" : 2000,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "txtRutaError",
+        "oracleType" : true
+      },
+      "collection" : false
+    }, {
+      "index" : 5,
+      "name" : "TXT_PILA_ERROR",
+      "typeName" : "VARCHAR2",
+      "length" : 2000,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "txtPilaError",
+        "oracleType" : true
+      },
+      "collection" : false
+    } ],
     "javaTypeInfo" : {
-      "name" : "OsGnrMensajeErrorS",
+      "name" : "OGnrMensajeErrorS",
       "typePackage" : "org.lab.samples.osm.contract.model",
-      "dependencies" : [ ],
+      "dependencies" : [ "java.math.BigDecimal" ],
       "normalizedFieldName" : null,
       "oracleType" : false
     }
   }, {
-    "typeName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "typeName" : "O_GNR_MENSAJE_ADVERT_S",
     "collectionTypeOf" : null,
-    "columns" : [ ],
+    "columns" : [ {
+      "index" : 1,
+      "name" : "COD_ADVERT",
+      "typeName" : "NUMBER",
+      "length" : 0,
+      "precision" : 8,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "BigDecimal",
+        "typePackage" : "java.math",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "codAdvert",
+        "oracleType" : true
+      },
+      "collection" : false
+    }, {
+      "index" : 2,
+      "name" : "TXT_ADVERT",
+      "typeName" : "VARCHAR2",
+      "length" : 4000,
+      "precision" : 0,
+      "scale" : 0,
+      "javaInfo" : {
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "txtAdvert",
+        "oracleType" : true
+      },
+      "collection" : false
+    } ],
     "javaTypeInfo" : {
-      "name" : "OsGnrMensajeAdvertS",
+      "name" : "OGnrMensajeAdvertS",
       "typePackage" : "org.lab.samples.osm.contract.model",
-      "dependencies" : [ ],
+      "dependencies" : [ "java.math.BigDecimal" ],
       "normalizedFieldName" : null,
       "oracleType" : false
     }

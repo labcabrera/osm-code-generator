@@ -1,7 +1,10 @@
 package org.lab.samples.osm.participant.model;
 
 import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
@@ -11,6 +14,9 @@ import org.lab.osm.connector.annotation.OracleStruct;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OAmdGnlParS {
 
 	@OracleField(value = "PAR_PRC_PRC_VAL", typeName = "NUMBER", precision = 0, scale = 0)

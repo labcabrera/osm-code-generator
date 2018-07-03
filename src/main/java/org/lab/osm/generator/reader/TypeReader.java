@@ -18,19 +18,19 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TypeReader {
 
-	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo storedProcedureInfo) {
-		storedProcedureInfo.setTypes(new ArrayList<>());
-		for (StoredProcedureParameterInfo i : storedProcedureInfo.getParameters()) {
+	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo spInfo) {
+		spInfo.setTypes(new ArrayList<>());
+		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
 			switch (i.getDataType()) {
 			case "OBJECT":
 				String typeName = i.getTypeName();
-				if (!isTypeDefined(storedProcedureInfo, typeName)) {
-					OracleTypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
-					storedProcedureInfo.getTypes().add(typeInfo);
+				if (!isTypeDefined(spInfo, typeName)) {
+					OracleTypeInfo typeInfo = read(connection, spInfo, typeName);
+					spInfo.getTypes().add(typeInfo);
 				}
 				break;
 			case "TABLE":
-				// TODO revisar. No necesitamos mapear los tipos de colecciones
+				// TODO revisar. En principio necesitamos mapear los tipos de colecciones
 				break;
 			default:
 				break;
@@ -39,6 +39,16 @@ public class TypeReader {
 	}
 
 	public OracleTypeInfo read(@NonNull Connection connection, StoredProcedureInfo spInfo, @NonNull String typeName) {
+
+		// TODO fix this
+		if ("OS_GNR_MENSAJE_ERROR_S".equals(typeName)) {
+			typeName = "O_GNR_MENSAJE_ERROR_S";
+		}
+		else if ("OS_GNR_MENSAJE_ADVERT_S".equals(typeName)) {
+			typeName = "O_GNR_MENSAJE_ADVERT_S";
+		}
+		// ENDTODO
+
 		if (isOracleSimpleType(typeName)) {
 			log.trace("Skiping primitive type {}", typeName);
 			return null;
@@ -61,7 +71,7 @@ public class TypeReader {
 		sb.append("  attr_no");
 
 		String query = sb.toString();
-		log.debug("Oracle type read query:\n{}", query);
+		log.debug("Oracle type read query:\n{}\n", query);
 
 		OracleTypeInfo result = new OracleTypeInfo();
 		result.setTypeName(typeName);
