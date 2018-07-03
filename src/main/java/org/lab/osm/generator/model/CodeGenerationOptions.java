@@ -17,5 +17,7 @@ public class CodeGenerationOptions {
 
 	private Boolean cleanTargetFolders;
 	private Boolean generateComments;
+	
+	private Integer overload;
 
 }

@@ -2,7 +2,10 @@ package org.lab.samples.osm.contract.model;
 
 import java.math.BigDecimal;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleCollection;
@@ -14,6 +17,9 @@ import org.lab.samples.osm.contract.model.OConLineaTextoS;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConClausulaS {
 
 	@OracleField(value = "COD_CLAUSULA", typeName = "VARCHAR2", length = 15)

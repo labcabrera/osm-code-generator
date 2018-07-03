@@ -1,6 +1,9 @@
 package org.lab.samples.osm.contract.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
@@ -11,6 +14,9 @@ import org.lab.samples.osm.contract.model.OConDirExtranjExtTrn;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConDirExtranjS {
 
 	@OracleField(value = "NOM_DOMICILIO", typeName = "VARCHAR2", length = 50)

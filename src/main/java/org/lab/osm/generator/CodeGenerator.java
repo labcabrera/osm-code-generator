@@ -43,7 +43,7 @@ public class CodeGenerator {
 
 		List<StoredProcedureInfo> procedures;
 		try (Connection connection = openConnection(request)) {
-			procedures = storedProcedureReader.read(connection, objectName, procedureName, owner);
+			procedures = storedProcedureReader.read(connection, objectName, procedureName, owner, request.getOptions());
 
 			if (log.isDebugEnabled()) {
 				procedures.stream().forEach(sp -> log.debug(sp.toString()));

@@ -1,7 +1,10 @@
 package org.lab.samples.osm.contract.model;
 
 import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
@@ -12,6 +15,9 @@ import org.lab.samples.osm.contract.model.OConSumaAsegExtTrn;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConSumaAsegS {
 
 	@OracleField(value = "IMP_CAP_BAJA_SINI_ACC", typeName = "NUMBER", precision = 0, scale = 0)

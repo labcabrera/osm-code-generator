@@ -1,6 +1,8 @@
 package org.lab.samples.osm.contract.model;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleStruct;
@@ -9,6 +11,8 @@ import org.lab.osm.connector.annotation.OracleStruct;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@Builder
 public class OsGnrMensajeAdvertS {
 
 }

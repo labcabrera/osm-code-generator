@@ -3,7 +3,10 @@ package org.lab.samples.osm.contract.model;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleCollection;
@@ -18,6 +21,9 @@ import org.lab.samples.osm.contract.model.OEmModalidadS;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConDatosPolS {
 
 	@OracleField(value = "COD_CANAL_ORIGEN", typeName = "VARCHAR2", length = 3)

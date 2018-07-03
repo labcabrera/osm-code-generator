@@ -15,7 +15,7 @@ public class StoredProcedureInfo {
 	private String objectName;
 	private String procedureName;
 	private String owner;
-	private int overload;
+	private Integer overload;
 	private boolean isFunction;
 
 	private List<StoredProcedureParameterInfo> parameters;

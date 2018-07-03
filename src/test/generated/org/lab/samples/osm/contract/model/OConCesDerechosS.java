@@ -2,7 +2,10 @@ package org.lab.samples.osm.contract.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
@@ -13,6 +16,9 @@ import org.lab.samples.osm.contract.model.OConDirNacionalS;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConCesDerechosS {
 
 	@OracleField(value = "COD_INT", typeName = "VARCHAR2", length = 20)

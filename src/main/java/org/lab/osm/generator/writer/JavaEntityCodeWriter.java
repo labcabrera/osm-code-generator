@@ -16,12 +16,6 @@ import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
-import org.lab.samples.osm.claimwrapped.model.ODescripcionS;
-import org.lab.samples.osm.claimwrapped.model.ODescripcionS.ODescripcionSBuilder;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
 
 public class JavaEntityCodeWriter {
 
@@ -33,12 +27,22 @@ public class JavaEntityCodeWriter {
 		Set<String> dependencies = new HashSet<>();
 		collector.collect(spInfo, entityType, fields, dependencies);
 
+		dependencies.add("org.lab.osm.connector.annotation.OracleStruct");
+		dependencies.add("lombok.Getter");
+		dependencies.add("lombok.Setter");
+		dependencies.add("lombok.ToString");
+		dependencies.add("lombok.NoArgsConstructor");
+		if (fields.size() > 0) {
+			dependencies.add("lombok.AllArgsConstructor");
+		}
+
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
-			writer.write("package " + entityType.getJavaTypeInfo().getTypePackage() + ";\n");
-			writer.write("\n");
+			writer.write("package ");
+			writer.write(entityType.getJavaTypeInfo().getTypePackage());
+			writer.write(";\n\n");
 			writeDependencies(dependencies, writer);
 			writeJavaDoc(options, writer);
-			writeClass(entityType, writer);
+			writeClass(entityType, fields, writer);
 			writer.write("\n");
 			writeFields(fields, writer);
 			writer.write("}\n");
@@ -60,14 +64,16 @@ public class JavaEntityCodeWriter {
 		}
 	}
 
-	private void writeClass(OracleTypeInfo entityType, Writer writer) throws IOException {
+	private void writeClass(OracleTypeInfo entityType, List<String> fields, Writer writer) throws IOException {
 		writer.write("@OracleStruct(\"" + entityType.getTypeName() + "\")\n");
 		writer.write("@Getter\n");
 		writer.write("@Setter\n");
 		writer.write("@ToString\n");
-		writer.write("@ToString\n");
 		writer.write("@NoArgsConstructor\n");
-		writer.write("@@Builder\n");
+		if (fields.size() > 0) {
+			writer.write("@AllArgsConstructor\n");
+		}
+		writer.write("@Builder\n");
 		writer.write("public class " + entityType.getJavaTypeInfo().getName() + " {\n");
 	}
 

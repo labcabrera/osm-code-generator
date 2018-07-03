@@ -1,7 +1,10 @@
 package org.lab.samples.osm.contract.model;
 
 import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
@@ -12,6 +15,9 @@ import org.lab.samples.osm.contract.model.OConPersonaFisicExtTrn;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConPersonaFisicS {
 
 	@OracleField(value = "NOM_TERCERO", typeName = "VARCHAR2", length = 150)

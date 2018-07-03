@@ -24,6 +24,8 @@ public class ContractCodeGeneratorTest {
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.contract.executor");
 		request.getOptions().setCleanTargetFolders(true);
 		request.getOptions().setGenerateComments(false);
+
+		request.getOptions().setOverload(1);
 		codeGenerator.execute(request);
 	}
 

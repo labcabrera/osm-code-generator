@@ -3,7 +3,10 @@ package org.lab.samples.osm.contract.model;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleCollection;
@@ -26,6 +29,9 @@ import org.lab.samples.osm.contract.model.OConTextoS;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConRiesgoS {
 
 	@OracleField(value = "NUM_OBJETO_ASEGURADO", typeName = "NUMBER", precision = 6, scale = 0)

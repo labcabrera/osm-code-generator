@@ -3,7 +3,7 @@
   "objectName" : "LN_EM_CONSULTA_POLIZA_TRN",
   "procedureName" : "P_OBTENER_POLIZA_FECHA",
   "owner" : "TRON_LN",
-  "overload" : 3,
+  "overload" : 1,
   "parameters" : [ {
     "position" : 1,
     "mode" : "IN",
@@ -19,93 +19,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 1,
-    "mode" : "IN",
-    "argumentName" : "P_COD_CIA",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 1,
-    "mode" : "IN",
-    "argumentName" : "P_COD_CIA",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 2,
     "mode" : "IN",
     "argumentName" : "P_ORIGEN_CONSULTA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 2,
-    "mode" : "IN",
-    "argumentName" : "P_ORIGEN_CONSULTA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 2,
-    "mode" : "IN",
-    "argumentName" : "P_ORIGEN_CONSULTA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 3,
-    "mode" : "IN",
-    "argumentName" : "P_NUM_POLIZA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 3,
-    "mode" : "IN",
-    "argumentName" : "P_NUM_POLIZA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -145,62 +61,6 @@
       "oracleType" : false
     }
   }, {
-    "position" : 4,
-    "mode" : "IN",
-    "argumentName" : "P_NUM_APLI",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 4,
-    "mode" : "IN",
-    "argumentName" : "P_NUM_APLI",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 5,
-    "mode" : "IN",
-    "argumentName" : "P_NUM_SPTO_APLI",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 5,
-    "mode" : "IN",
-    "argumentName" : "P_NUM_SPTO_APLI",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 5,
     "mode" : "IN",
     "argumentName" : "P_NUM_SPTO_APLI",
@@ -229,93 +89,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 6,
-    "mode" : "IN",
-    "argumentName" : "P_FECHA_CONSULTA",
-    "dataType" : "DATE",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 6,
-    "mode" : "IN",
-    "argumentName" : "P_FECHA_CONSULTA",
-    "dataType" : "DATE",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 7,
     "mode" : "IN",
     "argumentName" : "P_MCA_SPTO_TMP",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 7,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_SPTO_TMP",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 7,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_SPTO_TMP",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 8,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DATOS_GEN",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 8,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DATOS_GEN",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -355,93 +131,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 9,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_IND_COA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 9,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_IND_COA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 10,
     "mode" : "IN",
     "argumentName" : "P_MCA_AGENTE",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 10,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_AGENTE",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 10,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_AGENTE",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 11,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DATOS_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 11,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DATOS_OA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -481,93 +173,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 12,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DIR_CORRESP",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 12,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DIR_CORRESP",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 13,
     "mode" : "IN",
     "argumentName" : "P_MCA_FIG_PART_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 13,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_FIG_PART_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 13,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_FIG_PART_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 14,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_FIG_PART_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 14,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_FIG_PART_OA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -607,93 +215,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 15,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_COB_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 15,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_COB_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 16,
     "mode" : "IN",
     "argumentName" : "P_MCA_COB_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 16,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_COB_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 16,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_COB_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 17,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_BONIF_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 17,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_BONIF_POL",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -733,93 +257,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 18,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_BONIF_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 18,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_BONIF_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 19,
     "mode" : "IN",
     "argumentName" : "P_MCA_PLAN_PAGO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 19,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_PLAN_PAGO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 19,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_PLAN_PAGO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 20,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_MEDIO_PAGO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 20,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_MEDIO_PAGO",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -859,93 +299,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 21,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DESGLOSE_ECO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 21,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DESGLOSE_ECO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 22,
     "mode" : "IN",
     "argumentName" : "P_MCA_DESGLOSE_ECO_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 22,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DESGLOSE_ECO_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 22,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DESGLOSE_ECO_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 23,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_OBTENER_PRIMA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 23,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_OBTENER_PRIMA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -985,93 +341,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 24,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_TEXTO_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 24,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_TEXTO_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 25,
     "mode" : "IN",
     "argumentName" : "P_MCA_TEXTO_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 25,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_TEXTO_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 25,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_TEXTO_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 26,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CLAU_POL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 26,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CLAU_POL",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -1111,93 +383,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 27,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CLAU_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 27,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CLAU_OA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 28,
     "mode" : "IN",
     "argumentName" : "P_MCA_CONSULTA_GLOBAL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 28,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CONSULTA_GLOBAL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 28,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CONSULTA_GLOBAL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 29,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CON_DES_EMISION",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 29,
-    "mode" : "IN",
-    "argumentName" : "P_CLAVE_PROD_PETICIONARIO",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -1237,93 +425,9 @@
       "oracleType" : false
     }
   }, {
-    "position" : 30,
-    "mode" : "IN",
-    "argumentName" : "P_NUUMA_PETICIONARIO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 30,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_LK",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 31,
     "mode" : "IN",
     "argumentName" : "P_COD_IDIOMA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 31,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_CON_DES_EMISION",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 31,
-    "mode" : "IN",
-    "argumentName" : "P_COD_IDIOMA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 32,
-    "mode" : "IN",
-    "argumentName" : "P_COD_DOCUM_DESTINO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 32,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_LK",
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
@@ -1363,94 +467,10 @@
       "oracleType" : false
     }
   }, {
-    "position" : 33,
-    "mode" : "IN",
-    "argumentName" : "P_COD_IDIOMA",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 33,
-    "mode" : "IN",
-    "argumentName" : "P_COD_CANAL",
-    "dataType" : "NUMBER",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 34,
     "mode" : "IN",
     "argumentName" : "P_CLAVE_PRODUCCION",
     "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 34,
-    "mode" : "IN",
-    "argumentName" : "P_COD_DOCUM_DESTINO",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 34,
-    "mode" : "IN",
-    "argumentName" : "P_CLAVE_PRODUCCION",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 35,
-    "mode" : "IN",
-    "argumentName" : "P_COD_ROL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 35,
-    "mode" : "IN",
-    "argumentName" : "P_COD_CANAL",
-    "dataType" : "NUMBER",
     "typeName" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
@@ -1489,105 +509,7 @@
       "oracleType" : false
     }
   }, {
-    "position" : 36,
-    "mode" : "IN",
-    "argumentName" : "P_CLAVE_PRODUCCION",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 36,
-    "mode" : "IN",
-    "argumentName" : "P_COD_USR",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "position" : 37,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_SEGREGAR",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 37,
-    "mode" : "IN",
-    "argumentName" : "P_COD_ROL",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 37,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_SEGREGAR",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 38,
-    "mode" : "IN",
-    "argumentName" : "P_COD_USR",
-    "dataType" : "VARCHAR2",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 38,
-    "mode" : "IN",
-    "argumentName" : "P_MCA_DATOS_TERC_VIGOR",
-    "dataType" : "PL/SQL BOOLEAN",
-    "typeName" : null,
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 39,
     "mode" : "IN",
     "argumentName" : "P_MCA_SEGREGAR",
     "dataType" : "VARCHAR2",
@@ -1602,28 +524,6 @@
     }
   } ],
   "types" : [ {
-    "typeName" : "OS_GNR_MENSAJE_ADVERT_S",
-    "collectionTypeOf" : null,
-    "columns" : [ ],
-    "javaTypeInfo" : {
-      "name" : "OsGnrMensajeAdvertS",
-      "typePackage" : "org.lab.samples.osm.contract.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "OS_GNR_MENSAJE_ERROR_S",
-    "collectionTypeOf" : null,
-    "columns" : [ ],
-    "javaTypeInfo" : {
-      "name" : "OsGnrMensajeErrorS",
-      "typePackage" : "org.lab.samples.osm.contract.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "typeName" : "O_EM_MODALIDAD_EXT_TRN",
     "collectionTypeOf" : null,
     "columns" : [ {
@@ -15768,6 +14668,28 @@
       "name" : "OConPolizaS",
       "typePackage" : "org.lab.samples.osm.contract.model",
       "dependencies" : [ "java.math.BigDecimal" ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
+    }
+  }, {
+    "typeName" : "OS_GNR_MENSAJE_ERROR_S",
+    "collectionTypeOf" : null,
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OsGnrMensajeErrorS",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
+    }
+  }, {
+    "typeName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "collectionTypeOf" : null,
+    "columns" : [ ],
+    "javaTypeInfo" : {
+      "name" : "OsGnrMensajeAdvertS",
+      "typePackage" : "org.lab.samples.osm.contract.model",
+      "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
     }

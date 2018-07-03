@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +20,8 @@ public class StoredProcedureReader {
 			Connection connection,
 			String objectName,
 			String procedureName,
-			String owner) throws SQLException { //@formatter:on
+			String owner,
+			CodeGenerationOptions options) throws SQLException { //@formatter:on
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select").append("\n");
@@ -40,6 +42,9 @@ public class StoredProcedureReader {
 		}
 		if (StringUtils.isNotBlank(owner)) {
 			sb.append("  and owner = '").append(owner).append("'").append("\n");
+		}
+		if (options.getOverload() != null) {
+			sb.append("  and overload = ").append(options.getOverload()).append("\n");
 		}
 		sb.append("order by").append("\n");
 		sb.append("  object_name, procedure_name");

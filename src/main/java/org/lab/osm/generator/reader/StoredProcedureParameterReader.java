@@ -36,6 +36,9 @@ public class StoredProcedureParameterReader {
 		sb.append("where").append("\n");
 		sb.append("  object_id = ").append(storedProcedureInfo.getObjectId()).append("\n");
 		sb.append("  and object_name = '").append(storedProcedureInfo.getProcedureName()).append("'").append("\n");
+		if (storedProcedureInfo.getOverload() != null) {
+			sb.append("  and overload = ").append(storedProcedureInfo.getOverload()).append("\n");
+		}
 		sb.append("order by").append("\n");
 		sb.append("  position");
 

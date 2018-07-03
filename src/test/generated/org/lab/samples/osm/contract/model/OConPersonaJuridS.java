@@ -1,6 +1,9 @@
 package org.lab.samples.osm.contract.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
@@ -11,6 +14,9 @@ import org.lab.samples.osm.contract.model.OConPersonaJuridExtTrn;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConPersonaJuridS {
 
 	@OracleField(value = "RAZON_SOCIAL", typeName = "VARCHAR2", length = 150)

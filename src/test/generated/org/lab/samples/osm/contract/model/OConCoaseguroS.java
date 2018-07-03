@@ -1,7 +1,10 @@
 package org.lab.samples.osm.contract.model;
 
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleCollection;
@@ -14,6 +17,9 @@ import org.lab.samples.osm.contract.model.OConCoaCedS;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OConCoaseguroS {
 
 	@OracleField(value = "TIP_COA", typeName = "VARCHAR2", length = 3)

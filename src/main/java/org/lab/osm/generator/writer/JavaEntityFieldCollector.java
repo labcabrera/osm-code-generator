@@ -20,12 +20,6 @@ public class JavaEntityFieldCollector {
 			@NonNull List<String> fields,
 			@NonNull Set<String> dependencies) { //@formatter:on
 
-		dependencies.add("org.lab.osm.connector.annotation.OracleStruct");
-		dependencies.add("lombok.Getter");
-		dependencies.add("lombok.Setter");
-		dependencies.add("lombok.ToString");
-		dependencies.add("lombok.AllArgsConstructor");
-		dependencies.add("lombok.NoArgsConstructor");
 		dependencies.add("lombok.Builder");
 		writeFields(spInfo, entityType, fields, dependencies);
 	}
