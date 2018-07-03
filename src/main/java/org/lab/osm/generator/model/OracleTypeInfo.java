@@ -14,8 +14,6 @@ public class OracleTypeInfo {
 	private String collectionTypeOf;
 	private final List<TypeColumnInfo> columns;
 	private JavaTypeInfo javaTypeInfo;
-	
-	
 
 	public OracleTypeInfo() {
 		columns = new ArrayList<>();

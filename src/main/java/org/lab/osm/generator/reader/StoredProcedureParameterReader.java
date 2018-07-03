@@ -16,12 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class StoredProcedureParameterReader {
 
-	public void read( //@formatter:off
-			Connection connection, 
-			StoredProcedureInfo storedProcedureInfo) { //@formatter:on
-
+	public void read(Connection connection, StoredProcedureInfo storedProcedureInfo) {
 		log.info("Reading stored procedure parameters {}", storedProcedureInfo);
-		storedProcedureInfo.setParameters(null);
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select ").append("\n");

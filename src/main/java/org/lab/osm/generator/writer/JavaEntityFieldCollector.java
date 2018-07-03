@@ -43,24 +43,37 @@ public class JavaEntityFieldCollector {
 	private void writeCollection(StoredProcedureInfo spInfo, OracleTypeInfo typeInfo, TypeColumnInfo i,
 		List<String> fields, Set<String> dependencies) {
 
-		OracleTypeInfo tmp = spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(i.getTypeName())).findFirst()
-			.orElseThrow(() -> new OsmExportException("Missing collection type " + i.getTypeName()));
-		OracleTypeInfo base = spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(tmp.getCollectionTypeOf()))
-			.findFirst().orElseThrow(() -> new OsmExportException("Missing collection type base " + i.getTypeName()));
-
-		String genericType = base.getJavaTypeInfo().getName();
 		String fieldName = i.getJavaInfo().getNormalizedFieldName();
-
-		Assert.notNull(genericType, "Missing Oracle collection generic type for type " + i.getTypeName());
 		Assert.notNull(fieldName, "Missing fieldName for type " + i.getTypeName());
 
 		dependencies.add("java.util.List");
 		dependencies.add("org.lab.osm.connector.annotation.OracleCollection");
-		dependencies.add(base.getJavaTypeInfo().getCompleteName());
+
+		OracleTypeInfo tmp = spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(i.getTypeName())).findFirst()
+			.orElseThrow(() -> new OsmExportException("Missing collection type " + i.getTypeName()));
+
+		String genericType = null;
+		String collectionTypeName = tmp.getTypeName();
+
+		// TODO map simple types
+		switch (tmp.getCollectionTypeOf()) {
+		case "VARCHAR2":
+			genericType = "String";
+			break;
+		default:
+			OracleTypeInfo base = spInfo.getTypes().stream()
+				.filter(x -> x.getTypeName().equals(tmp.getCollectionTypeOf())).findFirst()
+				.orElseThrow(() -> new OsmExportException("Missing collection type base " + i.getTypeName()));
+			genericType = base.getJavaTypeInfo().getName();
+			dependencies.add(base.getJavaTypeInfo().getCompleteName());
+			break;
+		}
+
+		// Assert.notNull(genericType, "Missing Oracle collection generic type for type " + i.getTypeName());
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("\t@OracleCollection(\"");
-		sb.append(base.getTypeName());
+		sb.append(collectionTypeName);
 		sb.append("\")\n");
 		sb.append("\tprivate List<" + genericType + "> " + fieldName + ";\n");
 

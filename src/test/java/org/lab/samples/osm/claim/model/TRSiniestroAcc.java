@@ -13,7 +13,6 @@ import org.lab.samples.osm.claim.model.TRColegio;
 import org.lab.samples.osm.claim.model.TRComunicante;
 import org.lab.samples.osm.claim.model.TRCorresExpdte;
 import org.lab.samples.osm.claim.model.TRFederacion;
-import org.lab.samples.osm.claim.model.Varchar2;
 
 @OracleStruct("T_R_SINIESTRO_ACC")
 @Getter
@@ -63,8 +62,8 @@ public class TRSiniestroAcc {
 	@OracleField(value = "NUUMA", typeName = "VARCHAR2", length = 10)
 	private String nuuma;
 
-	@OracleCollection("VARCHAR2")
-	private List<Varchar2> descripcion;
+	@OracleCollection("T_TAB_DESCRIPCION")
+	private List<String> descripcion;
 
 	private TRCorresExpdte correspondencia;
 

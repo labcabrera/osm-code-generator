@@ -62,17 +62,6 @@
     }
   } ],
   "types" : [ {
-    "typeName" : "VARCHAR2",
-    "collectionTypeOf" : null,
-    "columns" : [ ],
-    "javaTypeInfo" : {
-      "name" : "Varchar2",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
     "typeName" : "T_TAB_DESCRIPCION",
     "collectionTypeOf" : "VARCHAR2",
     "columns" : [ ],

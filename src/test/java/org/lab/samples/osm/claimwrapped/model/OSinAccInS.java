@@ -63,7 +63,7 @@ public class OSinAccInS {
 	@OracleField(value = "NUUMA", typeName = "VARCHAR2", length = 10)
 	private String nuuma;
 
-	@OracleCollection("O_DESCRIPCION_S")
+	@OracleCollection("O_DESCRIPCION_ST")
 	private List<ODescripcionS> descripcion;
 
 	private OCorresExpdteS correspondencia;

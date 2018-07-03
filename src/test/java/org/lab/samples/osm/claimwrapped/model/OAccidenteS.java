@@ -52,7 +52,7 @@ public class OAccidenteS {
 	@OracleField(value = "HORA_OCUR", typeName = "VARCHAR2", length = 5)
 	private String horaOcur;
 
-	@OracleCollection("O_DESCRIPCION_S")
+	@OracleCollection("O_DESCRIPCION_ST")
 	private List<ODescripcionS> formaOcur;
 
 	private OCausanteS causante;
@@ -60,16 +60,16 @@ public class OAccidenteS {
 	@OracleField(value = "CLI_RECOMENDADA", typeName = "VARCHAR2", length = 10)
 	private String cliRecomendada;
 
-	@OracleCollection("O_DESCRIPCION_S")
+	@OracleCollection("O_DESCRIPCION_ST")
 	private List<ODescripcionS> danosTerceros;
 
-	@OracleCollection("O_DESCRIPCION_S")
+	@OracleCollection("O_DESCRIPCION_ST")
 	private List<ODescripcionS> polizas;
 
 	@OracleField(value = "FALLECIMIENTO", typeName = "VARCHAR2", length = 1)
 	private String fallecimiento;
 
-	@OracleCollection("O_DESCRIPCION_S")
+	@OracleCollection("O_DESCRIPCION_ST")
 	private List<ODescripcionS> clinicas;
 
 	@OracleField(value = "TRATAMIENTO", typeName = "VARCHAR2", length = 1)
@@ -81,7 +81,7 @@ public class OAccidenteS {
 	@OracleField(value = "CLI_RECOMENDADA2", typeName = "VARCHAR2", length = 100)
 	private String cliRecomendada2;
 
-	@OracleCollection("O_DESCRIPCION_S")
+	@OracleCollection("O_DESCRIPCION_ST")
 	private List<ODescripcionS> lesiones;
 
 	@OracleField(value = "BAJA_LABOR", typeName = "VARCHAR2", length = 1)
