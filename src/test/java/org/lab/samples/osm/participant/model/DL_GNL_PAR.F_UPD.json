@@ -14,7 +14,9 @@
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
       "typePackage" : "org.lab.samples.osm.participant.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "position" : 1,
@@ -26,7 +28,9 @@
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
       "typePackage" : "org.lab.samples.osm.participant.model",
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   }, {
     "position" : 2,
@@ -38,11 +42,14 @@
     "javaTypeInfo" : {
       "name" : null,
       "typePackage" : null,
-      "dependencies" : [ ]
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   } ],
   "types" : [ {
     "typeName" : "O_AMD_GNL_PAR_S",
+    "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
       "name" : "PAR_PRC_PRC_VAL",
@@ -51,11 +58,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "parPrcPrcVal",
-        "isOracleType" : true,
-        "javaType" : "BigDecimal",
-        "javaPackage" : "java.math"
-      }
+        "name" : "BigDecimal",
+        "typePackage" : "java.math",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "parPrcPrcVal",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 2,
       "name" : "DSP_PAR_PRC",
@@ -64,11 +73,13 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "dspParPrc",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "dspParPrc",
+        "oracleType" : true
+      },
+      "collection" : false
     }, {
       "index" : 3,
       "name" : "NAM_PAR_PRC",
@@ -77,22 +88,28 @@
       "precision" : 0,
       "scale" : 0,
       "javaInfo" : {
-        "normalizedName" : "namParPrc",
-        "isOracleType" : true,
-        "javaType" : "String",
-        "javaPackage" : "java.lang"
-      }
+        "name" : "String",
+        "typePackage" : "java.lang",
+        "dependencies" : [ ],
+        "normalizedFieldName" : "namParPrc",
+        "oracleType" : true
+      },
+      "collection" : false
     } ],
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
       "typePackage" : "org.lab.samples.osm.participant.model",
-      "dependencies" : [ "java.math.BigDecimal" ]
+      "dependencies" : [ "java.math.BigDecimal" ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
     }
   } ],
   "javaExecutorInfo" : {
     "name" : "DlGnlParFUpdExecutor",
     "typePackage" : "org.lab.samples.osm.participant.executor",
-    "dependencies" : [ ]
+    "dependencies" : [ ],
+    "normalizedFieldName" : null,
+    "oracleType" : false
   },
   "function" : true
 }

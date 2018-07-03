@@ -1,13 +1,19 @@
 package org.lab.samples.osm.claim.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
+import java.util.Date;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Date;
+import org.lab.osm.connector.annotation.OracleCollection;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
+import org.lab.samples.osm.claim.model.TRAccidente;
+import org.lab.samples.osm.claim.model.TRColegio;
+import org.lab.samples.osm.claim.model.TRComunicante;
+import org.lab.samples.osm.claim.model.TRCorresExpdte;
+import org.lab.samples.osm.claim.model.TRFederacion;
+import org.lab.samples.osm.claim.model.Varchar2;
 
 @OracleStruct("T_R_SINIESTRO_ACC")
 @Getter
@@ -27,7 +33,7 @@ public class TRSiniestroAcc {
 	@OracleField(value = "COD_PRIORIDAD", typeName = "VARCHAR2", length = 1)
 	private String codPrioridad;
 
-	@OracleField(value = "FEC_OCURRENCIA", typeName = "DATE", length = 0)
+	@OracleField(value = "FEC_OCURRENCIA", typeName = "DATE")
 	private Date fecOcurrencia;
 
 	@OracleField(value = "HORA_OCURRENCIA", typeName = "VARCHAR2", length = 5)
@@ -57,7 +63,8 @@ public class TRSiniestroAcc {
 	@OracleField(value = "NUUMA", typeName = "VARCHAR2", length = 10)
 	private String nuuma;
 
-	private TTabDescripcion descripcion;
+	@OracleCollection("VARCHAR2")
+	private List<Varchar2> descripcion;
 
 	private TRCorresExpdte correspondencia;
 

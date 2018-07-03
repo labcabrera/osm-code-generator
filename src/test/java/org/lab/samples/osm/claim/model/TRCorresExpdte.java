@@ -1,11 +1,11 @@
 package org.lab.samples.osm.claim.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
+import org.lab.samples.osm.claim.model.TREmail;
 
 @OracleStruct("T_R_CORRES_EXPDTE")
 @Getter

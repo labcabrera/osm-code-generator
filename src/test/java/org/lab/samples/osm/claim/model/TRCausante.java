@@ -1,13 +1,11 @@
 package org.lab.samples.osm.claim.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
+import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.math.BigDecimal;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
 
 @OracleStruct("T_R_CAUSANTE")
 @Getter
@@ -63,7 +61,7 @@ public class TRCausante {
 	@OracleField(value = "COD_CIA", typeName = "VARCHAR2", length = 4)
 	private String codCia;
 
-	@OracleField(value = "OBS_GENERAL", typeName = "NUMBER", length = 0, precision = 0, scale = 0)
+	@OracleField(value = "OBS_GENERAL", typeName = "NUMBER", precision = 0, scale = 0)
 	private BigDecimal obsGeneral;
 
 }
