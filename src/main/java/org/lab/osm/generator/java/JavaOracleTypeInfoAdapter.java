@@ -17,8 +17,8 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 	private final ClassNameNormalizer classNameNormalizer;
 	private final FieldNameNormalizer fieldNameNormalizer;
 
-	public JavaOracleTypeInfoAdapter(StoredProcedureInfo storedProcedureInfo) {
-		this.storedProcedureInfo = storedProcedureInfo;
+	public JavaOracleTypeInfoAdapter(StoredProcedureInfo spInfo) {
+		this.storedProcedureInfo = spInfo;
 		classNameNormalizer = new ClassNameNormalizer();
 		fieldNameNormalizer = new FieldNameNormalizer();
 	}
@@ -39,6 +39,11 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 
 		javaInfo.setNormalizedFieldName(fieldNameNormalizer.apply(columnInfo.getName()));
 		javaInfo.setOracleType(true);
+		
+		if(typeInfo.getCollectionTypeOf() != null) {
+			
+			System.out.println("");
+		}
 
 		switch (columnInfo.getTypeName()) {
 		case "VARCHAR2":

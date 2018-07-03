@@ -1,13 +1,19 @@
 package org.lab.samples.osm.claimwrapped.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
+import java.util.Date;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Date;
+import org.lab.osm.connector.annotation.OracleCollection;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
+import org.lab.samples.osm.claimwrapped.model.OAccidenteS;
+import org.lab.samples.osm.claimwrapped.model.OColegioS;
+import org.lab.samples.osm.claimwrapped.model.OComunicanteS;
+import org.lab.samples.osm.claimwrapped.model.OCorresExpdteS;
+import org.lab.samples.osm.claimwrapped.model.ODescripcionS;
+import org.lab.samples.osm.claimwrapped.model.OFederacionS;
 
 @OracleStruct("O_SIN_ACC_IN_S")
 @Getter
@@ -27,7 +33,7 @@ public class OSinAccInS {
 	@OracleField(value = "COD_PRIORIDAD", typeName = "VARCHAR2", length = 1)
 	private String codPrioridad;
 
-	@OracleField(value = "FEC_OCURRENCIA", typeName = "DATE", length = 0)
+	@OracleField(value = "FEC_OCURRENCIA", typeName = "DATE")
 	private Date fecOcurrencia;
 
 	@OracleField(value = "HORA_OCURRENCIA", typeName = "VARCHAR2", length = 5)
@@ -57,7 +63,8 @@ public class OSinAccInS {
 	@OracleField(value = "NUUMA", typeName = "VARCHAR2", length = 10)
 	private String nuuma;
 
-	private ODescripcionSt descripcion;
+	@OracleCollection("O_DESCRIPCION_S")
+	private List<ODescripcionS> descripcion;
 
 	private OCorresExpdteS correspondencia;
 

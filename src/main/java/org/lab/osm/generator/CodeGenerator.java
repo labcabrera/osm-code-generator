@@ -95,9 +95,12 @@ public class CodeGenerator {
 		}
 		// Java entity classes
 		for (OracleTypeInfo typeInfo : spInfo.getTypes()) {
-			File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");
-			try (FileOutputStream out = new FileOutputStream(javaFile)) {
-				classWriter.write(typeInfo, out, options);
+			// Exclude collections
+			if (typeInfo.getCollectionTypeOf() == null) {
+				File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");
+				try (FileOutputStream out = new FileOutputStream(javaFile)) {
+					classWriter.write(spInfo, typeInfo, out, options);
+				}
 			}
 		}
 	}

@@ -1,11 +1,11 @@
 package org.lab.samples.osm.claimwrapped.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
+import org.lab.samples.osm.claimwrapped.model.OEmailS;
 
 @OracleStruct("O_CORRES_EXPDTE_S")
 @Getter

@@ -1,11 +1,14 @@
 package org.lab.samples.osm.claimwrapped.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.lab.osm.connector.annotation.OracleCollection;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
+import org.lab.samples.osm.claimwrapped.model.OCausanteS;
+import org.lab.samples.osm.claimwrapped.model.ODescripcionS;
 
 @OracleStruct("O_ACCIDENTE_S")
 @Getter
@@ -49,21 +52,25 @@ public class OAccidenteS {
 	@OracleField(value = "HORA_OCUR", typeName = "VARCHAR2", length = 5)
 	private String horaOcur;
 
-	private ODescripcionSt formaOcur;
+	@OracleCollection("O_DESCRIPCION_S")
+	private List<ODescripcionS> formaOcur;
 
 	private OCausanteS causante;
 
 	@OracleField(value = "CLI_RECOMENDADA", typeName = "VARCHAR2", length = 10)
 	private String cliRecomendada;
 
-	private ODescripcionSt danosTerceros;
+	@OracleCollection("O_DESCRIPCION_S")
+	private List<ODescripcionS> danosTerceros;
 
-	private ODescripcionSt polizas;
+	@OracleCollection("O_DESCRIPCION_S")
+	private List<ODescripcionS> polizas;
 
 	@OracleField(value = "FALLECIMIENTO", typeName = "VARCHAR2", length = 1)
 	private String fallecimiento;
 
-	private ODescripcionSt clinicas;
+	@OracleCollection("O_DESCRIPCION_S")
+	private List<ODescripcionS> clinicas;
 
 	@OracleField(value = "TRATAMIENTO", typeName = "VARCHAR2", length = 1)
 	private String tratamiento;
@@ -74,7 +81,8 @@ public class OAccidenteS {
 	@OracleField(value = "CLI_RECOMENDADA2", typeName = "VARCHAR2", length = 100)
 	private String cliRecomendada2;
 
-	private ODescripcionSt lesiones;
+	@OracleCollection("O_DESCRIPCION_S")
+	private List<ODescripcionS> lesiones;
 
 	@OracleField(value = "BAJA_LABOR", typeName = "VARCHAR2", length = 1)
 	private String bajaLabor;
