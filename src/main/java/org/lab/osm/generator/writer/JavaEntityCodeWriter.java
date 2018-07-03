@@ -16,6 +16,12 @@ import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.OracleTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
+import org.lab.samples.osm.claimwrapped.model.ODescripcionS;
+import org.lab.samples.osm.claimwrapped.model.ODescripcionS.ODescripcionSBuilder;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 public class JavaEntityCodeWriter {
 
@@ -59,6 +65,9 @@ public class JavaEntityCodeWriter {
 		writer.write("@Getter\n");
 		writer.write("@Setter\n");
 		writer.write("@ToString\n");
+		writer.write("@ToString\n");
+		writer.write("@NoArgsConstructor\n");
+		writer.write("@@Builder\n");
 		writer.write("public class " + entityType.getJavaTypeInfo().getName() + " {\n");
 	}
 

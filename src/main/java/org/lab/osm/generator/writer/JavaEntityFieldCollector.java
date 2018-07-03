@@ -24,6 +24,9 @@ public class JavaEntityFieldCollector {
 		dependencies.add("lombok.Getter");
 		dependencies.add("lombok.Setter");
 		dependencies.add("lombok.ToString");
+		dependencies.add("lombok.AllArgsConstructor");
+		dependencies.add("lombok.NoArgsConstructor");
+		dependencies.add("lombok.Builder");
 		writeFields(spInfo, entityType, fields, dependencies);
 	}
 
