@@ -28,7 +28,7 @@ public class OConBoniRecaS {
 	@OracleField(value = "NOM_BONI_RECA", typeName = "VARCHAR2", length = 30)
 	private String nomBoniReca;
 
-	@OracleCollection("O_CON_CARACTER_S")
+	@OracleCollection("O_CON_CARACTER_T")
 	private List<OConCaracterS> caracteristicas;
 
 	@OracleField(value = "MCA_VIGENTE", typeName = "VARCHAR2", length = 1)

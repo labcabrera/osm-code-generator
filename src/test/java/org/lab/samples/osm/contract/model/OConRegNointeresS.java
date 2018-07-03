@@ -18,7 +18,7 @@ public class OConRegNointeresS {
 	@OracleField(value = "TXT_OBS_NO_INTERES", typeName = "VARCHAR2", length = 2000)
 	private String txtObsNoInteres;
 
-	@OracleCollection("O_CON_MOTIVO_SPTO_S")
+	@OracleCollection("O_CON_MOTIVO_SPTO_T")
 	private List<OConMotivoSptoS> listaMotivos;
 
 }

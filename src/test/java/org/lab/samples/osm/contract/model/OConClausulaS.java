@@ -31,7 +31,7 @@ public class OConClausulaS {
 	@OracleField(value = "MCA_IMP", typeName = "VARCHAR2", length = 1)
 	private String mcaImp;
 
-	@OracleCollection("O_CON_LINEA_TEXTO_S")
+	@OracleCollection("O_CON_LINEA_TEXTO_T")
 	private List<OConLineaTextoS> lineasTextos;
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)

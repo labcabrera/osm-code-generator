@@ -57,16 +57,16 @@ public class OConFiguraPartS {
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
 	private BigDecimal numPeriodo;
 
-	@OracleCollection("O_CON_DPERSONALES_S")
+	@OracleCollection("O_CON_DPERSONALES_T")
 	private List<OConDpersonalesS> datosPersonales;
 
-	@OracleCollection("O_CON_DOMICILIO_S")
+	@OracleCollection("O_CON_DOMICILIO_T")
 	private List<OConDomicilioS> datosDomicilio;
 
-	@OracleCollection("O_CON_CONTACTO_S")
+	@OracleCollection("O_CON_CONTACTO_T")
 	private List<OConContactoS> datosContacto;
 
-	@OracleCollection("O_CON_MEDIO_PAGO_S")
+	@OracleCollection("O_CON_MEDIO_PAGO_T")
 	private List<OConMedioPagoS> mediosPago;
 
 	@OracleField(value = "MCA_CAL", typeName = "VARCHAR2", length = 1)
@@ -81,7 +81,7 @@ public class OConFiguraPartS {
 	@OracleField(value = "SEC_LICENCIA", typeName = "NUMBER", precision = 0, scale = 0)
 	private BigDecimal secLicencia;
 
-	@OracleCollection("O_CON_LICENCIA_S")
+	@OracleCollection("O_CON_LICENCIA_T")
 	private List<OConLicenciaS> licencia;
 
 	@OracleField(value = "FEC_VALIDEZ_ORIG", typeName = "DATE")

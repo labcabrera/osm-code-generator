@@ -50,7 +50,7 @@ public class OConTextoS {
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
 	private BigDecimal numPeriodo;
 
-	@OracleCollection("O_CON_LINEA_TEXTO_S")
+	@OracleCollection("O_CON_LINEA_TEXTO_T")
 	private List<OConLineaTextoS> lineas;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)

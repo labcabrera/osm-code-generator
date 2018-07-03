@@ -84,34 +84,34 @@ public class OConCoberturaS {
 	@OracleField(value = "NOM_MON_IMP_CAP", typeName = "VARCHAR2", length = 30)
 	private String nomMonImpCap;
 
-	@OracleCollection("O_CON_SUMA_ASEG_S")
+	@OracleCollection("O_CON_SUMA_ASEG_T")
 	private List<OConSumaAsegS> sumaAsegurada;
 
-	@OracleCollection("O_CON_FRANQUICIA_S")
+	@OracleCollection("O_CON_FRANQUICIA_T")
 	private List<OConFranquiciaS> franquicia;
 
-	@OracleCollection("O_CON_LIMITE_S")
+	@OracleCollection("O_CON_LIMITE_T")
 	private List<OConLimiteS> limite;
 
-	@OracleCollection("O_CON_REVALORIZA_S")
+	@OracleCollection("O_CON_REVALORIZA_T")
 	private List<OConRevalorizaS> revalorizacion;
 
-	@OracleCollection("O_CON_PLAN_PAGO_S")
+	@OracleCollection("O_CON_PLAN_PAGO_T")
 	private List<OConPlanPagoS> planesPago;
 
-	@OracleCollection("O_CON_CARACTER_S")
+	@OracleCollection("O_CON_CARACTER_T")
 	private List<OConCaracterS> caracteristicas;
 
-	@OracleCollection("O_CON_OCURRENCIA_S")
+	@OracleCollection("O_CON_OCURRENCIA_T")
 	private List<OConOcurrenciaS> ocurrencia;
 
-	@OracleCollection("O_CON_CLAU_COMPLETA_S")
+	@OracleCollection("O_CON_CLAU_COMPLETA_T")
 	private List<OConClauCompletaS> clausula;
 
-	@OracleCollection("O_CON_TEXTO_S")
+	@OracleCollection("O_CON_TEXTO_T")
 	private List<OConTextoS> textos;
 
-	@OracleCollection("O_CON_GARANTIA_S")
+	@OracleCollection("O_CON_GARANTIA_T")
 	private List<OConGarantiaS> garantias;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
@@ -138,7 +138,7 @@ public class OConCoberturaS {
 	@OracleField(value = "ATR_COB_6", typeName = "NUMBER", precision = 0, scale = 0)
 	private BigDecimal atrCob6;
 
-	@OracleCollection("O_CON_PRESTACION_S")
+	@OracleCollection("O_CON_PRESTACION_T")
 	private List<OConPrestacionS> prestaciones;
 
 	@OracleField(value = "MCA_SEGREGADA", typeName = "VARCHAR2", length = 1)

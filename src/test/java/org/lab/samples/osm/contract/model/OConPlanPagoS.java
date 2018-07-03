@@ -55,7 +55,7 @@ public class OConPlanPagoS {
 	@OracleField(value = "MCA_PRINCIPAL", typeName = "VARCHAR2", length = 1)
 	private String mcaPrincipal;
 
-	@OracleCollection("O_CON_CONCEPTO_DES_S")
+	@OracleCollection("O_CON_CONCEPTO_DES_T")
 	private List<OConConceptoDesS> conceptosDesglose;
 
 }

@@ -31,7 +31,7 @@ public class OConOcurrenciaS {
 	@OracleField(value = "NUM_OCU", typeName = "NUMBER", precision = 5, scale = 0)
 	private BigDecimal numOcu;
 
-	@OracleCollection("O_CON_CARACTER_OCU_S")
+	@OracleCollection("O_CON_CARACTER_OCU_T")
 	private List<OConCaracterOcuS> listaCaracteristicas;
 
 	@OracleField(value = "ATR_OCU_1", typeName = "VARCHAR2", length = 22)

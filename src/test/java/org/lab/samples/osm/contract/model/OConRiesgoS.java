@@ -70,40 +70,40 @@ public class OConRiesgoS {
 	@OracleField(value = "CLAVE_OAS", typeName = "VARCHAR2", length = 30)
 	private String claveOas;
 
-	@OracleCollection("O_CON_REASEGURO_S")
+	@OracleCollection("O_CON_REASEGURO_T")
 	private List<OConReaseguroS> reaseguro;
 
-	@OracleCollection("O_CON_CARACTER_S")
+	@OracleCollection("O_CON_CARACTER_T")
 	private List<OConCaracterS> caracteristicas;
 
-	@OracleCollection("O_CON_OCURRENCIA_S")
+	@OracleCollection("O_CON_OCURRENCIA_T")
 	private List<OConOcurrenciaS> ocurrencia;
 
-	@OracleCollection("O_CON_CLAU_COMPLETA_S")
+	@OracleCollection("O_CON_CLAU_COMPLETA_T")
 	private List<OConClauCompletaS> clausulas;
 
-	@OracleCollection("O_CON_COBERTURA_S")
+	@OracleCollection("O_CON_COBERTURA_T")
 	private List<OConCoberturaS> cobsGars;
 
-	@OracleCollection("O_CON_TEXTO_S")
+	@OracleCollection("O_CON_TEXTO_T")
 	private List<OConTextoS> textos;
 
-	@OracleCollection("O_CON_FIGURA_PART_S")
+	@OracleCollection("O_CON_FIGURA_PART_T")
 	private List<OConFiguraPartS> figurasPart;
 
-	@OracleCollection("O_CON_BONI_RECA_S")
+	@OracleCollection("O_CON_BONI_RECA_T")
 	private List<OConBoniRecaS> boniReca;
 
-	@OracleCollection("O_CON_CONCEPTO_ECO_S")
+	@OracleCollection("O_CON_CONCEPTO_ECO_T")
 	private List<OConConceptoEcoS> conceptosEco;
 
-	@OracleCollection("O_CON_PLAN_PAGO_S")
+	@OracleCollection("O_CON_PLAN_PAGO_T")
 	private List<OConPlanPagoS> planPago;
 
-	@OracleCollection("O_CON_CTRL_TECNICO_S")
+	@OracleCollection("O_CON_CTRL_TECNICO_T")
 	private List<OConCtrlTecnicoS> controlesTecnicos;
 
-	@OracleCollection("O_CON_PRIMA_S")
+	@OracleCollection("O_CON_PRIMA_T")
 	private List<OConPrimaS> primas;
 
 	@OracleField(value = "TIP_SPTO", typeName = "VARCHAR2", length = 3)

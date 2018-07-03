@@ -200,13 +200,13 @@ public class OConDatosPolS {
 	@OracleField(value = "NUM_SPTO_ORIGEN", typeName = "NUMBER", precision = 0, scale = 0)
 	private BigDecimal numSptoOrigen;
 
-	@OracleCollection("O_EM_MODALIDAD_S")
+	@OracleCollection("O_EM_MODALIDAD_T")
 	private List<OEmModalidadS> productosComerciales;
 
-	@OracleCollection("O_CON_CARACTER_S")
+	@OracleCollection("O_CON_CARACTER_T")
 	private List<OConCaracterS> listaCaracteristicas;
 
-	@OracleCollection("O_CON_OCURRENCIA_S")
+	@OracleCollection("O_CON_OCURRENCIA_T")
 	private List<OConOcurrenciaS> listaOcurrencias;
 
 	private OConDatosPolExtTrn ext;

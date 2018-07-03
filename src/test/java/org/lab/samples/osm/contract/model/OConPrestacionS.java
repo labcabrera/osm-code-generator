@@ -75,19 +75,19 @@ public class OConPrestacionS {
 	@OracleField(value = "COD_COB_REL", typeName = "NUMBER", precision = 8, scale = 0)
 	private BigDecimal codCobRel;
 
-	@OracleCollection("O_CON_CLAU_COMPLETA_S")
+	@OracleCollection("O_CON_CLAU_COMPLETA_T")
 	private List<OConClauCompletaS> clausulas;
 
-	@OracleCollection("O_CON_TEXTO_S")
+	@OracleCollection("O_CON_TEXTO_T")
 	private List<OConTextoS> textos;
 
-	@OracleCollection("O_CON_LIMITE_S")
+	@OracleCollection("O_CON_LIMITE_T")
 	private List<OConLimiteS> limites;
 
-	@OracleCollection("O_CON_CARACTER_S")
+	@OracleCollection("O_CON_CARACTER_T")
 	private List<OConCaracterS> caracteristicas;
 
-	@OracleCollection("O_CON_OCURRENCIA_S")
+	@OracleCollection("O_CON_OCURRENCIA_T")
 	private List<OConOcurrenciaS> ocurrencias;
 
 }

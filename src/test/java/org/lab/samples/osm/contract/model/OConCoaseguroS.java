@@ -25,10 +25,10 @@ public class OConCoaseguroS {
 	@OracleField(value = "COD_CUADRO_COA", typeName = "VARCHAR2", length = 10)
 	private String codCuadroCoa;
 
-	@OracleCollection("O_CON_COA_CED_S")
+	@OracleCollection("O_CON_COA_CED_T")
 	private List<OConCoaCedS> coaCedido;
 
-	@OracleCollection("O_CON_COA_ACEP_S")
+	@OracleCollection("O_CON_COA_ACEP_T")
 	private List<OConCoaAcepS> coaAceptado;
 
 	@OracleField(value = "NOM_CUADRO_COA", typeName = "VARCHAR2", length = 30)

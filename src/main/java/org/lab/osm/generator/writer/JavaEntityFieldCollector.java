@@ -20,7 +20,6 @@ public class JavaEntityFieldCollector {
 			@NonNull List<String> fields,
 			@NonNull Set<String> dependencies) { //@formatter:on
 
-		dependencies.add("org.lab.osm.connector.annotation.OracleField");
 		dependencies.add("org.lab.osm.connector.annotation.OracleStruct");
 		dependencies.add("lombok.Getter");
 		dependencies.add("lombok.Setter");
@@ -63,29 +62,28 @@ public class JavaEntityFieldCollector {
 		default:
 			OracleTypeInfo base = spInfo.getTypes().stream()
 				.filter(x -> x.getTypeName().equals(tmp.getCollectionTypeOf())).findFirst()
-				.orElseThrow(() -> new OsmExportException("Missing collection type base " + i.getTypeName()));
+				.orElseThrow(() -> new OsmExportException("Unsupported collection type " + collectionTypeName));
 			genericType = base.getJavaTypeInfo().getName();
 			dependencies.add(base.getJavaTypeInfo().getCompleteName());
 			break;
 		}
-
-		// Assert.notNull(genericType, "Missing Oracle collection generic type for type " + i.getTypeName());
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("\t@OracleCollection(\"");
 		sb.append(collectionTypeName);
 		sb.append("\")\n");
 		sb.append("\tprivate List<" + genericType + "> " + fieldName + ";\n");
-
 		fields.add(sb.toString());
 	}
 
 	private void writeField(TypeColumnInfo columnInfo, List<String> fields, Set<String> dependencies) {
+
 		StringBuilder sb = new StringBuilder();
 		switch (columnInfo.getTypeName()) {
 		case "VARCHAR2":
 		case "NUMBER":
 		case "DATE":
+			dependencies.add("org.lab.osm.connector.annotation.OracleField");
 			sb.append("\t@OracleField(value = \"");
 			sb.append(columnInfo.getName());
 			sb.append("\"");
@@ -119,10 +117,8 @@ public class JavaEntityFieldCollector {
 		sb.append(" ");
 		sb.append(columnInfo.getJavaInfo().getNormalizedFieldName());
 		sb.append(";\n");
-
-		dependencies.add(columnInfo.getJavaInfo().getCompleteName());
-
 		fields.add(sb.toString());
+		dependencies.add(columnInfo.getJavaInfo().getCompleteName());
 	}
 
 	private boolean isCollection(StoredProcedureInfo spInfo, TypeColumnInfo typeInfo) {
@@ -133,10 +129,6 @@ public class JavaEntityFieldCollector {
 			return true;
 		}
 		return false;
-	}
-
-	public void addDependency(List<String> dependencies, String dependency) {
-
 	}
 
 }
