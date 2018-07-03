@@ -17,8 +17,8 @@ public class ClaimCodeGeneratorTest {
 		request.setObjectName("MPG_K_EX_SINIESTRO_ACCIDENTE");
 		request.setProcedureName("PR_PROCESA_PETICION");
 		request.setOptions(new CodeGenerationOptions());
-		request.getOptions().setEntityBaseFolder("./src/test/java");
-		request.getOptions().setExecutorBaseFolder("./src/test/java");
+		request.getOptions().setEntityBaseFolder("./src/test/generated");
+		request.getOptions().setExecutorBaseFolder("./src/test/generated");
 		request.getOptions().setEntityPackage("org.lab.samples.osm.claim.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.claim.executor");
 		request.getOptions().setCleanTargetFolders(true);

@@ -18,8 +18,8 @@ public class ContractCodeGeneratorTest {
 		request.setObjectName("LN_EM_CONSULTA_POLIZA_TRN");
 		request.setProcedureName("P_OBTENER_POLIZA_FECHA");
 		request.setOptions(new CodeGenerationOptions());
-		request.getOptions().setEntityBaseFolder("./src/test/java");
-		request.getOptions().setExecutorBaseFolder("./src/test/java");
+		request.getOptions().setEntityBaseFolder("./src/test/generated");
+		request.getOptions().setExecutorBaseFolder("./src/test/generated");
 		request.getOptions().setEntityPackage("org.lab.samples.osm.contract.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.contract.executor");
 		request.getOptions().setCleanTargetFolders(true);

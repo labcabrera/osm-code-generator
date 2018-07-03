@@ -54,3 +54,12 @@ dependencies {
   testCompile("junit:junit:4.12")
   testCompile("org.springframework:spring-test:${springVersion}")
 }
+
+sourceSets {
+  test {
+    java {
+      srcDir 'src/test/java'
+      srcDir 'src/test/generated'
+    }
+  }
+}

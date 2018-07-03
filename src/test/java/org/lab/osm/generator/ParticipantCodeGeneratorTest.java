@@ -17,8 +17,8 @@ public class ParticipantCodeGeneratorTest {
 		request.setObjectName("DL_GNL_PAR");
 		request.setProcedureName("F_GET");
 		request.setOptions(new CodeGenerationOptions());
-		request.getOptions().setEntityBaseFolder("./src/test/java");
-		request.getOptions().setExecutorBaseFolder("./src/test/java");
+		request.getOptions().setEntityBaseFolder("./src/test/generated");
+		request.getOptions().setExecutorBaseFolder("./src/test/generated");
 		request.getOptions().setEntityPackage("org.lab.samples.osm.participant.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
@@ -35,8 +35,8 @@ public class ParticipantCodeGeneratorTest {
 		request.setObjectName("DL_GNL_PAR");
 		request.setProcedureName("F_UPD");
 		request.setOptions(new CodeGenerationOptions());
-		request.getOptions().setEntityBaseFolder("./src/test/java");
-		request.getOptions().setExecutorBaseFolder("./src/test/java");
+		request.getOptions().setEntityBaseFolder("./src/test/generated");
+		request.getOptions().setExecutorBaseFolder("./src/test/generated");
 		request.getOptions().setEntityPackage("org.lab.samples.osm.participant.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
@@ -53,8 +53,8 @@ public class ParticipantCodeGeneratorTest {
 		request.setObjectName("DL_GNL_PAR");
 		request.setProcedureName("F_INR");
 		request.setOptions(new CodeGenerationOptions());
-		request.getOptions().setEntityBaseFolder("./src/test/java");
-		request.getOptions().setExecutorBaseFolder("./src/test/java");
+		request.getOptions().setEntityBaseFolder("./src/test/generated");
+		request.getOptions().setExecutorBaseFolder("./src/test/generated");
 		request.getOptions().setEntityPackage("org.lab.samples.osm.participant.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
@@ -71,8 +71,8 @@ public class ParticipantCodeGeneratorTest {
 		request.setObjectName("DL_GNL_PAR");
 		request.setProcedureName("F_DLT");
 		request.setOptions(new CodeGenerationOptions());
-		request.getOptions().setEntityBaseFolder("./src/test/java");
-		request.getOptions().setExecutorBaseFolder("./src/test/java");
+		request.getOptions().setEntityBaseFolder("./src/test/generated");
+		request.getOptions().setExecutorBaseFolder("./src/test/generated");
 		request.getOptions().setEntityPackage("org.lab.samples.osm.participant.model");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
