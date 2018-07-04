@@ -10,7 +10,7 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 //@formatter:off
 @OracleStoredProcedure(
 	name = "LN_EM_CONSULTA_POLIZA_TRN.P_OBTENER_POLIZA_FECHA",
-	isFunction = true,
+	isFunction = false,
 	parameters = {
 		@OracleParameter(
 			name = "P_COD_CIA",

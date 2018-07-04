@@ -7,7 +7,10 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.lab.osm.connector.handler.OracleStoredProcedureAnnotationProcessor;
+import org.lab.osm.connector.mapper.DefaultStructDefinitionService;
 import org.lab.osm.connector.mapper.StructDefinitionService;
+import org.lab.osm.connector.metadata.DefaultMetadataCollector;
+import org.lab.osm.connector.metadata.MetadataCollector;
 import org.lab.osm.connector.service.MetadataStructMapperService;
 import org.lab.osm.connector.service.StructMapperService;
 import org.springframework.context.annotation.Bean;
@@ -37,14 +40,20 @@ public class ClaimWrappedTestConfiguration {
 	}
 
 	@Bean
-	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService)
-		throws SQLException {
-		return new MetadataStructMapperService(dataSource, definitionService, "org.lab.samples.osm.claimwrapped");
+	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService,
+		MetadataCollector metadataCollector) throws SQLException {
+		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector,
+			"org.lab.samples.osm.claimwrapped");
 	}
 
 	@Bean
 	StructDefinitionService structDefinitionService() {
-		return new StructDefinitionService();
+		return new DefaultStructDefinitionService();
+	}
+
+	@Bean
+	MetadataCollector metadataCollector(DataSource dataSource) {
+		return new DefaultMetadataCollector(dataSource);
 	}
 
 	@Bean

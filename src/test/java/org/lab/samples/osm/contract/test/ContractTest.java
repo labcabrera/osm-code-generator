@@ -1,9 +1,10 @@
 package org.lab.samples.osm.contract.test;
 
+import java.util.Calendar;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lab.samples.osm.claim.model.TRSiniestroAcc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -17,13 +18,17 @@ public class ContractTest {
 
 	@Test
 	public void test() {
-		Object result = service.execute(null);
+		ContractRequestInfo request = buildRequest();
+		Object result = service.execute(request);
 
 		Assert.assertNotNull(result);
 	}
 
-	private TRSiniestroAcc buildRequest() {
-		TRSiniestroAcc request = new TRSiniestroAcc();
+	private ContractRequestInfo buildRequest() {
+		ContractRequestInfo request = new ContractRequestInfo();
+
+		request.setPFechaConsulta(Calendar.getInstance().getTime());
+
 		return request;
 	}
 

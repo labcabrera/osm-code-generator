@@ -7,11 +7,16 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.lab.osm.connector.handler.OracleStoredProcedureAnnotationProcessor;
+import org.lab.osm.connector.mapper.SerializedStructDefinitionService;
 import org.lab.osm.connector.mapper.StructDefinitionService;
+import org.lab.osm.connector.metadata.JsonMetadataCollector;
+import org.lab.osm.connector.metadata.MetadataCollector;
 import org.lab.osm.connector.service.MetadataStructMapperService;
 import org.lab.osm.connector.service.StructMapperService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import oracle.jdbc.pool.OracleDataSource;
 
@@ -37,14 +42,25 @@ public class ContractTestConfiguration {
 	}
 
 	@Bean
-	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService)
-		throws SQLException {
-		return new MetadataStructMapperService(dataSource, definitionService, "org.lab.samples.osm.contract");
+	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService,
+		MetadataCollector metadataCollector) throws SQLException {
+		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector,
+			"org.lab.samples.osm.contract");
 	}
 
 	@Bean
 	StructDefinitionService structDefinitionService() {
-		return new StructDefinitionService();
+		return new SerializedStructDefinitionService("/tmp/osm-connector/contract");
+	}
+
+	@Bean
+	MetadataCollector metadataCollector(DataSource dataSource, ObjectMapper objectMapper) {
+		return new JsonMetadataCollector(dataSource, objectMapper, "/tmp/osm-connector/participant");
+	}
+
+	@Bean
+	ObjectMapper objectMapper() {
+		return new ObjectMapper();
 	}
 
 	@Bean
