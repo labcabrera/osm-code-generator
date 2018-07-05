@@ -1,4 +1,4 @@
-package org.lab.samples.osm.nwt.contract.test;
+package org.lab.samples.osm.nwt.address.test;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,10 +21,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import oracle.jdbc.pool.OracleDataSource;
 
 @Configuration
-public class ContractTestConfiguration {
+public class AddressTestConfiguration {
 
-	private static final String BASE_PACKAGE = "org.lab.samples.osm.nwt.contract";
-	private static final String METADATA_FOLDER = "/tmp/osm-connector/nwt/contract";
+	private static final String BASE_PACKAGE = "org.lab.samples.osm.nwt.address";
 
 	@Bean
 	DataSource dataSource() throws SQLException {
@@ -47,17 +46,18 @@ public class ContractTestConfiguration {
 	@Bean
 	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService,
 		MetadataCollector metadataCollector) throws SQLException {
+
 		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGE);
 	}
 
 	@Bean
 	StructDefinitionService structDefinitionService() {
-		return new SerializedStructDefinitionService(METADATA_FOLDER);
+		return new SerializedStructDefinitionService("/tmp/osm-connector/nwt/address");
 	}
 
 	@Bean
 	MetadataCollector metadataCollector(DataSource dataSource, ObjectMapper objectMapper) {
-		return new JsonMetadataCollector(dataSource, objectMapper, METADATA_FOLDER);
+		return new JsonMetadataCollector(dataSource, objectMapper, "/tmp/osm-connector/nwt/address");
 	}
 
 	@Bean
@@ -66,8 +66,8 @@ public class ContractTestConfiguration {
 	}
 
 	@Bean
-	public ContractService claimService() {
-		return new ContractService();
+	public AddressService addressService() {
+		return new AddressService();
 	}
 
 }

@@ -20,19 +20,16 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 		),
 		@OracleParameter(
 			name = "O_NUM_EXPEDIENTE",
-			typeName = "null",
 			type = Types.NVARCHAR,
 			mode = ParameterType.OUT
 		),
 		@OracleParameter(
 			name = "O_COD_ERROR",
-			typeName = "null",
 			type = Types.NVARCHAR,
 			mode = ParameterType.OUT
 		),
 		@OracleParameter(
 			name = "O_TXT_ERROR",
-			typeName = "null",
 			type = Types.NVARCHAR,
 			mode = ParameterType.OUT
 		)

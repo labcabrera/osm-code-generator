@@ -6,6 +6,8 @@
   "overload" : null,
   "parameters" : [ {
     "position" : 1,
+    "sequence" : 1,
+    "dataLevel" : 0,
     "mode" : "IN",
     "argumentName" : "P_O_SIN_ACC_IN_S",
     "dataType" : "OBJECT",
@@ -20,6 +22,8 @@
     }
   }, {
     "position" : 2,
+    "sequence" : 2,
+    "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "P_O_SIN_ACC_OUT_S",
     "dataType" : "OBJECT",

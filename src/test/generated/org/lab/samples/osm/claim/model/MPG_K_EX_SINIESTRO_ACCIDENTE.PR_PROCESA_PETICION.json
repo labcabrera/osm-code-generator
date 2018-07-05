@@ -6,6 +6,8 @@
   "overload" : null,
   "parameters" : [ {
     "position" : 1,
+    "sequence" : 1,
+    "dataLevel" : 0,
     "mode" : "IN",
     "argumentName" : "P_R_SINIESTRO_ACC",
     "dataType" : "OBJECT",
@@ -20,6 +22,8 @@
     }
   }, {
     "position" : 2,
+    "sequence" : 2,
+    "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "O_NUM_EXPEDIENTE",
     "dataType" : "VARCHAR2",
@@ -34,6 +38,8 @@
     }
   }, {
     "position" : 3,
+    "sequence" : 3,
+    "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "O_COD_ERROR",
     "dataType" : "VARCHAR2",
@@ -48,6 +54,8 @@
     }
   }, {
     "position" : 4,
+    "sequence" : 4,
+    "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "O_TXT_ERROR",
     "dataType" : "VARCHAR2",

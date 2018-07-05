@@ -6,6 +6,8 @@
   "overload" : null,
   "parameters" : [ {
     "position" : 0,
+    "sequence" : 1,
+    "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "O_AMD_GNL_PAR_ST",
     "dataType" : "TABLE",
@@ -20,6 +22,8 @@
     }
   }, {
     "position" : 1,
+    "sequence" : 3,
+    "dataLevel" : 0,
     "mode" : "IN",
     "argumentName" : "P_O_AMD_GNL_PAR_S",
     "dataType" : "OBJECT",
