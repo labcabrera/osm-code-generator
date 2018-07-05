@@ -37,7 +37,7 @@
       "oracleType" : false
     }
   } ],
-  "types" : {
+  "typeRegistry" : {
     "types" : [ {
       "typeName" : "O_AMD_GNL_PAR_S",
       "synonymName" : null,
