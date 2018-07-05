@@ -5,7 +5,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lab.osm.generator.exception.OsmExportException;
-import org.lab.osm.generator.model.OracleTypeInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
 import org.springframework.util.Assert;
@@ -16,7 +16,7 @@ public class JavaEntityFieldCollector {
 
 	public void collect( //@formatter:off
 			@NonNull StoredProcedureInfo spInfo,
-			@NonNull OracleTypeInfo entityType,
+			@NonNull TypeInfo entityType,
 			@NonNull List<String> fields,
 			@NonNull Set<String> dependencies) { //@formatter:on
 
@@ -24,7 +24,7 @@ public class JavaEntityFieldCollector {
 		writeFields(spInfo, entityType, fields, dependencies);
 	}
 
-	private void writeFields(StoredProcedureInfo spInfo, OracleTypeInfo entityType, List<String> fields,
+	private void writeFields(StoredProcedureInfo spInfo, TypeInfo entityType, List<String> fields,
 		Set<String> dependencies) {
 		for (TypeColumnInfo i : entityType.getColumns()) {
 			if (isCollection(spInfo, i)) {
@@ -36,7 +36,7 @@ public class JavaEntityFieldCollector {
 		}
 	}
 
-	private void writeCollection(StoredProcedureInfo spInfo, OracleTypeInfo typeInfo, TypeColumnInfo i,
+	private void writeCollection(StoredProcedureInfo spInfo, TypeInfo typeInfo, TypeColumnInfo i,
 		List<String> fields, Set<String> dependencies) {
 
 		String fieldName = i.getJavaInfo().getNormalizedFieldName();
@@ -45,7 +45,7 @@ public class JavaEntityFieldCollector {
 		dependencies.add("java.util.List");
 		dependencies.add("org.lab.osm.connector.annotation.OracleCollection");
 
-		OracleTypeInfo tmp = spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(i.getTypeName())).findFirst()
+		TypeInfo tmp = spInfo.getTypeRegistry().findType(i.getTypeName())
 			.orElseThrow(() -> new OsmExportException("Missing collection type " + i.getTypeName()));
 
 		String genericType = null;
@@ -57,8 +57,7 @@ public class JavaEntityFieldCollector {
 			genericType = "String";
 			break;
 		default:
-			OracleTypeInfo base = spInfo.getTypes().stream()
-				.filter(x -> x.getTypeName().equals(tmp.getCollectionTypeOf())).findFirst()
+			TypeInfo base = spInfo.getTypeRegistry().findType(tmp.getCollectionTypeOf())
 				.orElseThrow(() -> new OsmExportException("Unsupported collection type " + collectionTypeName));
 			genericType = base.getJavaTypeInfo().getName();
 			dependencies.add(base.getJavaTypeInfo().getCompleteName());
@@ -120,8 +119,7 @@ public class JavaEntityFieldCollector {
 
 	private boolean isCollection(StoredProcedureInfo spInfo, TypeColumnInfo typeInfo) {
 		String typeName = typeInfo.getTypeName();
-		OracleTypeInfo tmp = spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName)).findFirst()
-			.orElseGet(() -> null);
+		TypeInfo tmp = spInfo.getTypeRegistry().findType(typeName).orElseGet(() -> null);
 		if (tmp != null && tmp.getCollectionTypeOf() != null) {
 			return true;
 		}

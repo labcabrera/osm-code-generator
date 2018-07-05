@@ -16,9 +16,15 @@ public class AddressTest {
 
 	@Test
 	public void test() {
-		Object[] args = new Object[] {
+		Object[] args = new Object[] { //@formatter:off
+			null,					// P_COD_INT_TMP
+			null,					// P_COD_CIA
+			null,					// P_COD_USR
+			null,					// P_COD_IDIOMA
+			null,					// P_MCA_COPIA
+			null					// P_COD_INT_TMP_PRV
+		}; //@formatter:on
 
-		};
 		Object result = service.execute(args);
 
 		Assert.assertNotNull(result);

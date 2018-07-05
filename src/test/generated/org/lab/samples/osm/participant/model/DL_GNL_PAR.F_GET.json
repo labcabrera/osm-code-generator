@@ -37,64 +37,67 @@
       "oracleType" : false
     }
   } ],
-  "types" : [ {
-    "typeName" : "O_AMD_GNL_PAR_S",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "PAR_PRC_PRC_VAL",
-      "typeName" : "NUMBER",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "BigDecimal",
-        "typePackage" : "java.math",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "parPrcPrcVal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "DSP_PAR_PRC",
-      "typeName" : "VARCHAR2",
-      "length" : 200,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "dspParPrc",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "NAM_PAR_PRC",
-      "typeName" : "VARCHAR2",
-      "length" : 200,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "namParPrc",
-        "oracleType" : true
-      },
-      "collection" : false
+  "types" : {
+    "types" : [ {
+      "typeName" : "O_AMD_GNL_PAR_S",
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "PAR_PRC_PRC_VAL",
+        "typeName" : "NUMBER",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "BigDecimal",
+          "typePackage" : "java.math",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "parPrcPrcVal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "DSP_PAR_PRC",
+        "typeName" : "VARCHAR2",
+        "length" : 200,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "dspParPrc",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "NAM_PAR_PRC",
+        "typeName" : "VARCHAR2",
+        "length" : 200,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "namParPrc",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
+        "name" : "OAmdGnlParS",
+        "typePackage" : "org.lab.samples.osm.participant.model",
+        "dependencies" : [ "java.math.BigDecimal" ],
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     } ],
-    "javaTypeInfo" : {
-      "name" : "OAmdGnlParS",
-      "typePackage" : "org.lab.samples.osm.participant.model",
-      "dependencies" : [ "java.math.BigDecimal" ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  } ],
+    "synonyms" : { }
+  },
   "javaExecutorInfo" : {
     "name" : "DlGnlParFGetExecutor",
     "typePackage" : "org.lab.samples.osm.participant.executor",

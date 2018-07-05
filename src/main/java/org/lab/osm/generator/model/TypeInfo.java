@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class OracleTypeInfo {
+public class TypeInfo {
 
 	private String typeName;
 	private String synonymName;
@@ -16,7 +16,7 @@ public class OracleTypeInfo {
 	private final List<TypeColumnInfo> columns;
 	private JavaTypeInfo javaTypeInfo;
 
-	public OracleTypeInfo() {
+	public TypeInfo() {
 		columns = new ArrayList<>();
 		javaTypeInfo = new JavaTypeInfo();
 	}

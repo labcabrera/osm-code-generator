@@ -2,7 +2,7 @@ package org.lab.osm.generator.java;
 
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.JavaTypeInfo;
-import org.lab.osm.generator.model.OracleTypeInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
@@ -64,17 +64,17 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 		else {
 			typeName = paramInfo.getTypeName();
 		}
+		if (typeName != null) {
 
-		OracleTypeInfo typeInfo = spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName)).findFirst()
-			.orElseGet(() -> null);
-
-		if (typeInfo != null) {
-			String name = typeInfo.getJavaTypeInfo().getName();
-			String javaPackage = typeInfo.getJavaTypeInfo().getTypePackage();
-			javaTypeInfo.setName(name);
-			javaTypeInfo.setTypePackage(javaPackage);
+			TypeInfo typeInfo = spInfo.getTypeRegistry().findType(typeName).orElseGet(() -> null);
+			if (typeInfo != null) {
+				String name = typeInfo.getJavaTypeInfo().getName();
+				String javaPackage = typeInfo.getJavaTypeInfo().getTypePackage();
+				javaTypeInfo.setName(name);
+				javaTypeInfo.setTypePackage(javaPackage);
+			}
+			paramInfo.setJavaTypeInfo(javaTypeInfo);
 		}
-		paramInfo.setJavaTypeInfo(javaTypeInfo);
 	}
 
 }

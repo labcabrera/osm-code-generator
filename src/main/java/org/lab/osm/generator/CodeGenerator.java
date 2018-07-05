@@ -17,7 +17,7 @@ import org.lab.osm.generator.java.StoredProcedureParameterAdapter;
 import org.lab.osm.generator.java.StoredProcedureTypeAdapter;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
-import org.lab.osm.generator.model.OracleTypeInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
 import org.lab.osm.generator.reader.StoredProcedureReader;
@@ -69,7 +69,7 @@ public class CodeGenerator {
 		StoredProcedureParameterAdapter parameterAdapter = new StoredProcedureParameterAdapter();
 
 		storedProcedureAdapter.process(spInfo, options);
-		spInfo.getTypes().stream().forEach(x -> javaOracleTypeAdapter.process(x, options));
+		spInfo.getTypeRegistry().getTypes().stream().forEach(x -> javaOracleTypeAdapter.process(x, options));
 		parameterAdapter.process(spInfo, options);
 	}
 
@@ -94,7 +94,7 @@ public class CodeGenerator {
 			jsonWriter.write(spInfo, out);
 		}
 		// Java entity classes
-		for (OracleTypeInfo typeInfo : spInfo.getTypes()) {
+		for (TypeInfo typeInfo : spInfo.getTypeRegistry().getTypes()) {
 			// Exclude collections
 			if (typeInfo.getCollectionTypeOf() == null) {
 				File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");

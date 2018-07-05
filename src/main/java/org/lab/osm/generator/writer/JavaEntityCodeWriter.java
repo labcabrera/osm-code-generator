@@ -14,12 +14,12 @@ import java.util.Set;
 
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
-import org.lab.osm.generator.model.OracleTypeInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 
 public class JavaEntityCodeWriter {
 
-	public void write(StoredProcedureInfo spInfo, OracleTypeInfo entityType, OutputStream out,
+	public void write(StoredProcedureInfo spInfo, TypeInfo entityType, OutputStream out,
 		CodeGenerationOptions options) {
 
 		JavaEntityFieldCollector collector = new JavaEntityFieldCollector();
@@ -64,7 +64,7 @@ public class JavaEntityCodeWriter {
 		}
 	}
 
-	private void writeClass(OracleTypeInfo entityType, List<String> fields, Writer writer) throws IOException {
+	private void writeClass(TypeInfo entityType, List<String> fields, Writer writer) throws IOException {
 		writer.write("@OracleStruct(\"" + entityType.getTypeName() + "\")\n");
 		writer.write("@Getter\n");
 		writer.write("@Setter\n");

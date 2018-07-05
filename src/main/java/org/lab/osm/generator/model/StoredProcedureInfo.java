@@ -20,8 +20,12 @@ public class StoredProcedureInfo {
 
 	private List<StoredProcedureParameterInfo> parameters;
 
-	private List<OracleTypeInfo> types;
+	private final TypeRegistry typeRegistry;
 
 	private JavaTypeInfo javaExecutorInfo;
+
+	public StoredProcedureInfo() {
+		typeRegistry = new TypeRegistry();
+	}
 
 }

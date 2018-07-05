@@ -1,11 +1,11 @@
-package org.lab.osm.generator.nwt;
+package org.lab.samples.osm.nwt.address.test;
 
 import org.junit.Test;
 import org.lab.osm.generator.CodeGenerator;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
 
-public class NwtAddressCodeGeneratorTest {
+public class AddressCodeGeneratorTest {
 
 	private CodeGenerator codeGenerator = new CodeGenerator();
 

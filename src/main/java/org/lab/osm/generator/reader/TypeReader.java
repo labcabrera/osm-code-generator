@@ -4,10 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import org.lab.osm.generator.exception.OsmModelReadException;
-import org.lab.osm.generator.model.OracleTypeInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
@@ -25,14 +24,13 @@ public class TypeReader {
 	}
 
 	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo spInfo) {
-		spInfo.setTypes(new ArrayList<>());
 		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
 			switch (i.getDataType()) {
 			case "OBJECT":
 				String typeName = i.getTypeName();
-				if (!isTypeDefined(spInfo, typeName)) {
-					OracleTypeInfo typeInfo = read(connection, spInfo, typeName);
-					spInfo.getTypes().add(typeInfo);
+				if (!spInfo.getTypeRegistry().isDefined(typeName)) {
+					TypeInfo typeInfo = read(connection, spInfo, typeName);
+					spInfo.getTypeRegistry().registerType(typeInfo);
 				}
 				break;
 			case "TABLE":
@@ -44,7 +42,7 @@ public class TypeReader {
 		}
 	}
 
-	public OracleTypeInfo read(@NonNull Connection connection, StoredProcedureInfo spInfo, @NonNull String typeName) {
+	public TypeInfo read(@NonNull Connection connection, StoredProcedureInfo spInfo, @NonNull String typeName) {
 
 		String effectiveName;
 		try {
@@ -60,7 +58,7 @@ public class TypeReader {
 			return null;
 		}
 
-		OracleTypeInfo collectionType = readTypeAsCollection(connection, spInfo, effectiveName);
+		TypeInfo collectionType = readTypeAsCollection(connection, spInfo, effectiveName);
 		if (collectionType != null) {
 			// TODO read child element
 			return collectionType;
@@ -79,7 +77,7 @@ public class TypeReader {
 		String query = sb.toString();
 		log.debug("Oracle type read query:\n{}\n", query);
 
-		OracleTypeInfo result = new OracleTypeInfo();
+		TypeInfo result = new TypeInfo();
 		result.setTypeName(effectiveName);
 		result.setSynonymName(effectiveName.equals(typeName) ? null : typeName);
 		result.getColumns().clear();
@@ -104,7 +102,7 @@ public class TypeReader {
 		}
 	}
 
-	private OracleTypeInfo readTypeAsCollection(@NonNull Connection connection, StoredProcedureInfo spInfo,
+	private TypeInfo readTypeAsCollection(@NonNull Connection connection, StoredProcedureInfo spInfo,
 		@NonNull String typeName) {
 
 		StringBuilder sb = new StringBuilder();
@@ -115,7 +113,7 @@ public class TypeReader {
 		sb.append("where").append("\n");
 		sb.append("  type_name = '").append(typeName).append("'");
 
-		OracleTypeInfo result = null;
+		TypeInfo result = null;
 
 		try (PreparedStatement ps = connection.prepareStatement(sb.toString())) {
 			ResultSet rs = ps.executeQuery();
@@ -123,18 +121,17 @@ public class TypeReader {
 				final String collectionTypeName = rs.getString("elem_type_name");
 				switch (collectionTypeName) {
 				case "VARCHAR2":
-					result = new OracleTypeInfo();
+					result = new TypeInfo();
 					result.setTypeName(typeName);
 					result.setCollectionTypeOf(collectionTypeName);
 					return result;
 				default:
 					// Non-primitive collection
-					OracleTypeInfo tmp = read(connection, spInfo, collectionTypeName);
-					if (spInfo.getTypes().stream().filter(x -> x.getTypeName().equals(collectionTypeName))
-						.count() == 0) {
-						spInfo.getTypes().add(tmp);
+					TypeInfo tmp = read(connection, spInfo, collectionTypeName);
+					if (!spInfo.getTypeRegistry().isDefined(collectionTypeName)) {
+						spInfo.getTypeRegistry().registerType(tmp);
 					}
-					result = new OracleTypeInfo();
+					result = new TypeInfo();
 					result.setTypeName(typeName);
 					result.setCollectionTypeOf(collectionTypeName);
 					return result;
@@ -147,17 +144,13 @@ public class TypeReader {
 		}
 	}
 
-	private boolean isTypeDefined(StoredProcedureInfo storedProcedureInfo, String typeName) {
-		return storedProcedureInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName)).count() > 0;
-	}
-
 	private void resolveType(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
 		TypeColumnInfo columnInfo) {
 		String typeName = columnInfo.getTypeName();
-		if (!isOracleSimpleType(typeName) && !isTypeDefined(storedProcedureInfo, typeName)) {
-			OracleTypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
+		if (!isOracleSimpleType(typeName) && !storedProcedureInfo.getTypeRegistry().isDefined(typeName)) {
+			TypeInfo typeInfo = read(connection, storedProcedureInfo, typeName);
 			if (typeInfo != null) {
-				storedProcedureInfo.getTypes().add(typeInfo);
+				storedProcedureInfo.getTypeRegistry().registerType(typeInfo);
 			}
 		}
 	}
