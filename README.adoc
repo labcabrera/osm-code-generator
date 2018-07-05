@@ -35,6 +35,11 @@ estructura:
 }
 ----
 
+== Sobrecarga de procedimientos
+
+Dado que en Oracle es posible tener varios procedimientos con el mismo nombre podemos utilizar la opcion _overload_ del
+objeto `CodeGenerationOptions` para discrimiar entre los diferentes procedimientos.
+
 == Pruebas locales
 
 Para hacer las pruebas podemos utilizar la imagen Docker

@@ -13,7 +13,9 @@ import org.lab.samples.osm.nwt.account.model.OGnrMensajeErrorS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "TRON_LN.LN_TRC_CUENTA_TRN.P_ACTUALIZA",
+	name = "P_ACTUALIZA",
+	oraclePackage = "LN_TRC_CUENTA_TRN",
+	owner = "TRON_LN",
 	isFunction = false,
 	parameters = {
 		@OracleParameter(
