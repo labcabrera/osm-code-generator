@@ -37,8 +37,8 @@ estructura:
 
 == Pruebas locales
 
-Para hacer las pruebas podemos utilizar la 
-https://hub.docker.com/r/wnameless/oracle-xe-11g/[imagen Docker wnameless/oracle-xe-11g]
+Para hacer las pruebas podemos utilizar la imagen Docker
+https://hub.docker.com/r/wnameless/oracle-xe-11g/[wnameless/oracle-xe-11g]
 de Oracle Database Express Edition 11g.
 
 Para ejecutar la imagen simplemente ejecutaremos:
