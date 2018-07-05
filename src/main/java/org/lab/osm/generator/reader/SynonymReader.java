@@ -36,6 +36,7 @@ public class SynonymReader {
 				break;
 			}
 		}
+		typeRegistry.getSynonyms().put(objectName, result);
 		return result;
 	}
 
