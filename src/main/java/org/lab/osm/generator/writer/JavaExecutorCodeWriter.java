@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.JavaTypeInfo;
@@ -92,7 +93,9 @@ public class JavaExecutorCodeWriter {
 			StoredProcedureParameterInfo paramInfo = iterator.next();
 			writer.write("\t\t@OracleParameter(\n");
 			writer.write("\t\t\tname = \"" + paramInfo.getArgumentName() + "\",\n");
-			writer.write("\t\t\ttypeName = \"" + paramInfo.getTypeName() + "\",\n");
+			if (StringUtils.isNotBlank(paramInfo.getTypeName())) {
+				writer.write("\t\t\ttypeName = \"" + paramInfo.getTypeName() + "\",\n");
+			}
 			writeParameterType(spInfo, paramInfo, writer);
 
 			boolean useReturnStruct = paramInfo.getMode() != Mode.IN && paramInfo.getJavaTypeInfo() != null

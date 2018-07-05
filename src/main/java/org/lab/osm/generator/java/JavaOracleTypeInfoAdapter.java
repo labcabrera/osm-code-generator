@@ -34,16 +34,9 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 	}
 
 	public void execute(StoredProcedureInfo spInfo, OracleTypeInfo typeInfo, TypeColumnInfo columnInfo) {
-		// TODO
 		JavaTypeInfo javaInfo = new JavaTypeInfo();
-
 		javaInfo.setNormalizedFieldName(fieldNameNormalizer.apply(columnInfo.getName()));
 		javaInfo.setOracleType(true);
-		
-		if(typeInfo.getCollectionTypeOf() != null) {
-			
-			System.out.println("");
-		}
 
 		switch (columnInfo.getTypeName()) {
 		case "VARCHAR2":
@@ -68,12 +61,9 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<Oracl
 
 	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, OracleTypeInfo typeInfo,
 		TypeColumnInfo columnInfo, JavaTypeInfo javaInfo) {
-
 		String typeName = columnInfo.getTypeName();
-
 		OracleTypeInfo resolved = storedProcedureInfo.getTypes().stream().filter(x -> x.getTypeName().equals(typeName))
 			.findFirst().orElseGet(() -> null);
-
 		if (resolved != null) {
 			javaInfo.setName(resolved.getJavaTypeInfo().getName());
 			javaInfo.setTypePackage(resolved.getJavaTypeInfo().getTypePackage());

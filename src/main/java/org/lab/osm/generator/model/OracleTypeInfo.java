@@ -11,6 +11,7 @@ import lombok.Setter;
 public class OracleTypeInfo {
 
 	private String typeName;
+	private String synonymName;
 	private String collectionTypeOf;
 	private final List<TypeColumnInfo> columns;
 	private JavaTypeInfo javaTypeInfo;

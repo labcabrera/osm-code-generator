@@ -33,10 +33,13 @@ public class StoredProcedureParameterInfo {
 	}
 
 	private int position;
+	private int sequence;
+	private int dataLevel;
 	private Mode mode;
 	private String argumentName;
 	private String dataType;
 	private String typeName;
+	
 
 	private String simpleObjectTypeName;
 

@@ -21,16 +21,7 @@ public class StoredProcedureParameterReader {
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("select ").append("\n");
-		sb.append("  owner,").append("\n");
-		sb.append("  object_name,").append("\n");
-		sb.append("  package_name,").append("\n");
-		sb.append("  object_id,").append("\n");
-		sb.append("  overload,").append("\n");
-		sb.append("  argument_name,").append("\n");
-		sb.append("  data_type,").append("\n");
-		sb.append("  position,").append("\n");
-		sb.append("  in_out,").append("\n");
-		sb.append("  type_name").append("\n");
+		sb.append("  *").append("\n");
 		sb.append("from").append("\n");
 		sb.append("  all_arguments").append("\n");
 		sb.append("where").append("\n");
@@ -40,7 +31,7 @@ public class StoredProcedureParameterReader {
 			sb.append("  and overload = ").append(spInfo.getOverload()).append("\n");
 		}
 		sb.append("order by").append("\n");
-		sb.append("  position");
+		sb.append("  sequence");
 
 		String query = sb.toString();
 		log.debug("Stored procedure parameter read query:\n{}", query);
@@ -52,14 +43,15 @@ public class StoredProcedureParameterReader {
 				StoredProcedureParameterInfo paramInfo = new StoredProcedureParameterInfo();
 				paramInfo.setDataType(rs.getString("data_type"));
 				paramInfo.setPosition(rs.getInt("position"));
+				paramInfo.setSequence(rs.getInt("sequence"));
+				paramInfo.setDataLevel(rs.getInt("data_level"));
 				paramInfo.setMode(StoredProcedureParameterInfo.Mode.parse(rs.getString("in_out")));
 				paramInfo.setTypeName(rs.getString("type_name"));
 				paramInfo.setArgumentName(rs.getString("argument_name"));
-				params.add(paramInfo);
-
-				if (paramInfo.getArgumentName() == null) {
+				if (paramInfo.getPosition() == 0) {
 					spInfo.setFunction(true);
 				}
+				params.add(paramInfo);
 			}
 			spInfo.setParameters(params);
 		}

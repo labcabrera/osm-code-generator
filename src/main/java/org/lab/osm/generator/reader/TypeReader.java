@@ -18,6 +18,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TypeReader {
 
+	private final SynonymReader synonymReader;
+
+	public TypeReader() {
+		this.synonymReader = new SynonymReader();
+	}
+
 	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo spInfo) {
 		spInfo.setTypes(new ArrayList<>());
 		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
@@ -40,21 +46,21 @@ public class TypeReader {
 
 	public OracleTypeInfo read(@NonNull Connection connection, StoredProcedureInfo spInfo, @NonNull String typeName) {
 
-		// TODO fix this
-		if ("OS_GNR_MENSAJE_ERROR_S".equals(typeName)) {
-			typeName = "O_GNR_MENSAJE_ERROR_S";
+		String effectiveName;
+		try {
+			effectiveName = synonymReader.read(connection, typeName);
+			effectiveName = effectiveName != null ? effectiveName : typeName;
 		}
-		else if ("OS_GNR_MENSAJE_ADVERT_S".equals(typeName)) {
-			typeName = "O_GNR_MENSAJE_ADVERT_S";
+		catch (SQLException ex) {
+			throw new OsmModelReadException("Error processing synonym " + typeName, ex);
 		}
-		// ENDTODO
 
-		if (isOracleSimpleType(typeName)) {
-			log.trace("Skiping primitive type {}", typeName);
+		if (isOracleSimpleType(effectiveName)) {
+			log.trace("Skiping primitive type {}", effectiveName);
 			return null;
 		}
 
-		OracleTypeInfo collectionType = readTypeAsCollection(connection, spInfo, typeName);
+		OracleTypeInfo collectionType = readTypeAsCollection(connection, spInfo, effectiveName);
 		if (collectionType != null) {
 			// TODO read child element
 			return collectionType;
@@ -66,7 +72,7 @@ public class TypeReader {
 		sb.append("from").append("\n");
 		sb.append("  all_type_attrs").append("\n");
 		sb.append("where").append("\n");
-		sb.append("  type_name = '").append(typeName).append("'\n");
+		sb.append("  type_name = '").append(effectiveName).append("'\n");
 		sb.append("order by\n");
 		sb.append("  attr_no");
 
@@ -74,7 +80,8 @@ public class TypeReader {
 		log.debug("Oracle type read query:\n{}\n", query);
 
 		OracleTypeInfo result = new OracleTypeInfo();
-		result.setTypeName(typeName);
+		result.setTypeName(effectiveName);
+		result.setSynonymName(effectiveName.equals(typeName) ? null : typeName);
 		result.getColumns().clear();
 
 		try (PreparedStatement ps = connection.prepareStatement(query)) {
@@ -93,7 +100,7 @@ public class TypeReader {
 			return result;
 		}
 		catch (SQLException ex) {
-			throw new OsmModelReadException("Error reading type " + typeName, ex);
+			throw new OsmModelReadException("Error reading type " + effectiveName, ex);
 		}
 	}
 
