@@ -1,14 +1,13 @@
 package org.lab.samples.osm.claimwrapped.model;
 
-import org.lab.osm.connector.annotation.OracleField;
-import org.lab.osm.connector.annotation.OracleStruct;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.lab.osm.connector.annotation.OracleField;
+import org.lab.osm.connector.annotation.OracleStruct;
 
 @OracleStruct("O_DESCRIPCION_S")
 @Getter

@@ -3,7 +3,7 @@
   "objectName" : "MPG_K_EX_SINIESTRO_ACCIDENTE",
   "procedureName" : "PR_PROCESA_PETICION",
   "owner" : "MPD_LD",
-  "overload" : 0,
+  "overload" : null,
   "parameters" : [ {
     "position" : 1,
     "mode" : "IN",

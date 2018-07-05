@@ -1,7 +1,10 @@
 package org.lab.samples.osm.claim.model;
 
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleCollection;
@@ -13,6 +16,9 @@ import org.lab.samples.osm.claim.model.TRCausante;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class TRAccidente {
 
 	@OracleField(value = "NOM_DECLA", typeName = "VARCHAR2", length = 15)

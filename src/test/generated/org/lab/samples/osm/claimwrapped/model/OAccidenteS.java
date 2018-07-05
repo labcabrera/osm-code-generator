@@ -1,7 +1,10 @@
 package org.lab.samples.osm.claimwrapped.model;
 
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleCollection;
@@ -14,6 +17,9 @@ import org.lab.samples.osm.claimwrapped.model.ODescripcionS;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OAccidenteS {
 
 	@OracleField(value = "NOM_DECLA", typeName = "VARCHAR2", length = 15)
