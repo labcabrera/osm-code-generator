@@ -7,13 +7,16 @@ import java.sql.SQLException;
 
 import org.lab.osm.generator.model.TypeRegistry;
 
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SynonymReader {
 
 	// TODO check owner
-	public String read(Connection connection, String objectName, TypeRegistry typeRegistry) throws SQLException {
+	public String read(@NonNull Connection connection, @NonNull String objectName, @NonNull TypeRegistry typeRegistry)
+		throws SQLException {
+
 		if (typeRegistry.getSynonyms().containsKey(objectName)) {
 			return typeRegistry.getSynonyms().get(objectName);
 		}

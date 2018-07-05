@@ -41,6 +41,7 @@
     "types" : [ {
       "typeName" : "O_DESCRIPCION_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -68,6 +69,7 @@
     }, {
       "typeName" : "O_DESCRIPCION_ST",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_DESCRIPCION_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -80,6 +82,7 @@
     }, {
       "typeName" : "O_EMAIL_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -137,6 +140,7 @@
     }, {
       "typeName" : "O_CORRES_EXPDTE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -344,6 +348,7 @@
     }, {
       "typeName" : "O_COMUNICANTE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -416,6 +421,7 @@
     }, {
       "typeName" : "O_FEDERACION_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -653,6 +659,7 @@
     }, {
       "typeName" : "O_COLEGIO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -830,6 +837,7 @@
     }, {
       "typeName" : "O_CAUSANTE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1097,6 +1105,7 @@
     }, {
       "typeName" : "O_ACCIDENTE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1544,6 +1553,7 @@
     }, {
       "typeName" : "O_SIN_ACC_IN_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1856,6 +1866,7 @@
     }, {
       "typeName" : "O_SIN_ACC_OUT_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1911,7 +1922,19 @@
         "oracleType" : false
       }
     } ],
-    "synonyms" : { }
+    "synonyms" : {
+      "O_CORRES_EXPDTE_S" : null,
+      "O_COLEGIO_S" : null,
+      "O_CAUSANTE_S" : null,
+      "O_DESCRIPCION_S" : null,
+      "O_DESCRIPCION_ST" : null,
+      "O_ACCIDENTE_S" : null,
+      "O_EMAIL_S" : null,
+      "O_FEDERACION_S" : null,
+      "O_SIN_ACC_OUT_S" : null,
+      "O_SIN_ACC_IN_S" : null,
+      "O_COMUNICANTE_S" : null
+    }
   },
   "javaExecutorInfo" : {
     "name" : "MpgKExSiniestroAccWrpPProcesaPeticionExecutor",

@@ -1,4 +1,4 @@
-package org.lab.samples.osm.nwt.address.executor;
+package org.lab.samples.osm.nwt.account.executor;
 
 import java.sql.Types;
 
@@ -7,22 +7,18 @@ import org.lab.osm.connector.annotation.OracleParameter.ParameterType;
 import org.lab.osm.connector.annotation.OracleStoredProcedure;
 import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
-import org.lab.samples.osm.nwt.address.model.OGnrMensajeErrorS;
-import org.lab.samples.osm.nwt.address.model.OGnrMensajeAdvertS;
+import org.lab.samples.osm.nwt.account.model.OTrcCuentaS;
+import org.lab.samples.osm.nwt.account.model.OGnrMensajeAdvertS;
+import org.lab.samples.osm.nwt.account.model.OGnrMensajeErrorS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "TRON_LN.LN_TRC_DIRECCION_TRN.P_TRASPASO_PRV",
+	name = "TRON_LN.LN_TRC_CUENTA_TRN.P_ACTUALIZA",
 	isFunction = false,
 	parameters = {
 		@OracleParameter(
-			name = "P_COD_INT_TMP",
+			name = "P_COD_INT",
 			type = Types.NVARCHAR,
-			mode = ParameterType.IN
-		),
-		@OracleParameter(
-			name = "P_COD_CIA",
-			type = Types.NUMERIC,
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
@@ -36,12 +32,22 @@ import org.lab.samples.osm.nwt.address.model.OGnrMensajeAdvertS;
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
-			name = "P_MCA_COPIA",
+			name = "P_COD_CIA",
+			type = Types.NUMERIC,
+			mode = ParameterType.IN
+		),
+		@OracleParameter(
+			name = "P_COD_ACT_TERCERO",
+			type = Types.NUMERIC,
+			mode = ParameterType.IN
+		),
+		@OracleParameter(
+			name = "P_MCA_LK",
 			type = Types.NVARCHAR,
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
-			name = "P_COD_INT_TMP_PRV",
+			name = "P_COD_APL",
 			type = Types.NVARCHAR,
 			mode = ParameterType.IN
 		),
@@ -58,9 +64,16 @@ import org.lab.samples.osm.nwt.address.model.OGnrMensajeAdvertS;
 			type = Types.STRUCT,
 			mode = ParameterType.OUT,
 			returnStructClass = OGnrMensajeErrorS.class
+		),
+		@OracleParameter(
+			name = "P_O_TRC_CUENTA_S",
+			typeName = "O_TRC_CUENTA_S",
+			type = Types.STRUCT,
+			mode = ParameterType.IN_OUT,
+			returnStructClass = OTrcCuentaS.class
 		)
 	})
 //@formatter:on
-public interface LnTrcDireccionTrnPTraspasoPrvExecutor extends StoredProcedureExecutor {
+public interface LnTrcCuentaTrnPActualizaExecutor extends StoredProcedureExecutor {
 
 }

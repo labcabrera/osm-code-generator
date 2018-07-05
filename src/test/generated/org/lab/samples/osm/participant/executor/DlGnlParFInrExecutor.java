@@ -11,7 +11,9 @@ import org.lab.samples.osm.participant.model.OAmdGnlParS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "DL_GNL_PAR.F_INR",
+	name = "F_INR",
+	oraclePackage = "DL_GNL_PAR",
+	owner = "MPD_LD",
 	isFunction = true,
 	parameters = {
 		@OracleParameter(

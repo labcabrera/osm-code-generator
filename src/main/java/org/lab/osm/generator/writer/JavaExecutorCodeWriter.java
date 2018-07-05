@@ -80,10 +80,15 @@ public class JavaExecutorCodeWriter {
 	}
 
 	private void writeStoredProcedureAnnotation(StoredProcedureInfo spInfo, Writer writer) throws IOException {
-		String procedureName = spInfo.getObjectName() + "." + spInfo.getProcedureName();
 		writer.write("//@formatter:off\n");
 		writer.write("@OracleStoredProcedure(\n");
-		writer.write("\tname = \"" + procedureName + "\",\n");
+		writer.write("\tname = \"" + spInfo.getProcedureName() + "\",\n");
+		if (StringUtils.isNotBlank(spInfo.getObjectName())) {
+			writer.write("\toraclePackage = \"" + spInfo.getObjectName() + "\",\n");
+		}
+		if (StringUtils.isNotBlank(spInfo.getOwner())) {
+			writer.write("\towner = \"" + spInfo.getOwner() + "\",\n");
+		}
 		writer.write("\tisFunction = " + spInfo.isFunction() + ",\n");
 		writer.write("\tparameters = {\n");
 

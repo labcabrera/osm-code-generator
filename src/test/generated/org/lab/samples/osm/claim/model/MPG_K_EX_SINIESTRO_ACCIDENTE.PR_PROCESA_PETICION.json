@@ -55,6 +55,7 @@
     "types" : [ {
       "typeName" : "T_TAB_DESCRIPCION",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "VARCHAR2",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -67,6 +68,7 @@
     }, {
       "typeName" : "T_R_EMAIL",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -124,6 +126,7 @@
     }, {
       "typeName" : "T_R_CORRES_EXPDTE",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -331,6 +334,7 @@
     }, {
       "typeName" : "T_R_COMUNICANTE",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -403,6 +407,7 @@
     }, {
       "typeName" : "T_R_FEDERACION",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -640,6 +645,7 @@
     }, {
       "typeName" : "T_R_COLEGIO",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -817,6 +823,7 @@
     }, {
       "typeName" : "T_R_CAUSANTE",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1084,6 +1091,7 @@
     }, {
       "typeName" : "T_R_ACCIDENTE",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1531,6 +1539,7 @@
     }, {
       "typeName" : "T_R_SINIESTRO_ACC",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1841,7 +1850,17 @@
         "oracleType" : false
       }
     } ],
-    "synonyms" : { }
+    "synonyms" : {
+      "T_R_CORRES_EXPDTE" : null,
+      "T_R_ACCIDENTE" : null,
+      "T_R_SINIESTRO_ACC" : null,
+      "T_R_COLEGIO" : null,
+      "T_R_CAUSANTE" : null,
+      "T_TAB_DESCRIPCION" : null,
+      "T_R_EMAIL" : null,
+      "T_R_FEDERACION" : null,
+      "T_R_COMUNICANTE" : null
+    }
   },
   "javaExecutorInfo" : {
     "name" : "MpgKExSiniestroAccidentePrProcesaPeticionExecutor",

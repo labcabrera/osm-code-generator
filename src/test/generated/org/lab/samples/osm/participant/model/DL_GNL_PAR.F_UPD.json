@@ -51,6 +51,7 @@
     "types" : [ {
       "typeName" : "O_AMD_GNL_PAR_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -106,7 +107,9 @@
         "oracleType" : false
       }
     } ],
-    "synonyms" : { }
+    "synonyms" : {
+      "O_AMD_GNL_PAR_S" : null
+    }
   },
   "javaExecutorInfo" : {
     "name" : "DlGnlParFUpdExecutor",

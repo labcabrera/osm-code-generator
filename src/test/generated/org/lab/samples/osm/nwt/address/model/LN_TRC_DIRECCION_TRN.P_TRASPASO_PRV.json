@@ -69,13 +69,13 @@
     "sequence" : 7,
     "dataLevel" : 0,
     "mode" : "OUT",
-    "argumentName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "argumentName" : "P_O_GNR_MENSAJE_ADVERT_T",
     "dataType" : "OBJECT",
-    "typeName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "typeName" : "O_GNR_MENSAJE_ADVERT_S",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
+      "name" : "OGnrMensajeAdvertS",
+      "typePackage" : "org.lab.samples.osm.nwt.address.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -85,13 +85,13 @@
     "sequence" : 9,
     "dataLevel" : 0,
     "mode" : "OUT",
-    "argumentName" : "OS_GNR_MENSAJE_ERROR_S",
+    "argumentName" : "P_O_GNR_MENSAJE_ERROR_T",
     "dataType" : "OBJECT",
-    "typeName" : "OS_GNR_MENSAJE_ERROR_S",
+    "typeName" : "O_GNR_MENSAJE_ERROR_S",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
+      "name" : "OGnrMensajeErrorS",
+      "typePackage" : "org.lab.samples.osm.nwt.address.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -100,7 +100,8 @@
   "typeRegistry" : {
     "types" : [ {
       "typeName" : "O_GNR_MENSAJE_ADVERT_S",
-      "synonymName" : "OS_GNR_MENSAJE_ADVERT_S",
+      "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -142,7 +143,8 @@
       }
     }, {
       "typeName" : "O_GNR_MENSAJE_ERROR_S",
-      "synonymName" : "OS_GNR_MENSAJE_ERROR_S",
+      "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -229,6 +231,10 @@
       }
     } ],
     "synonyms" : {
+      "O_GNR_MENSAJE_ERROR_T" : null,
+      "O_GNR_MENSAJE_ADVERT_S" : null,
+      "O_GNR_MENSAJE_ADVERT_T" : null,
+      "O_GNR_MENSAJE_ERROR_S" : null,
       "OS_GNR_MENSAJE_ERROR_S" : "O_GNR_MENSAJE_ERROR_S",
       "OS_GNR_MENSAJE_ADVERT_S" : "O_GNR_MENSAJE_ADVERT_S"
     }

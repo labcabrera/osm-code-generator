@@ -16,6 +16,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class StoredProcedureParameterReader {
 
+	private final SynonymReader synonymReader;
+
+	public StoredProcedureParameterReader() {
+		this.synonymReader = new SynonymReader();
+	}
+
 	public void read(Connection connection, StoredProcedureInfo spInfo) {
 		log.info("Reading stored procedure parameters {}", spInfo);
 
@@ -40,17 +46,29 @@ public class StoredProcedureParameterReader {
 			ResultSet rs = ps.executeQuery();
 			List<StoredProcedureParameterInfo> params = new ArrayList<>();
 			while (rs.next()) {
+
+				// Check synosym
+				String typeName = rs.getString("type_name");
+				if (typeName != null) {
+					String effectiveType = synonymReader.read(connection, typeName, spInfo.getTypeRegistry());
+					if (effectiveType != null) {
+						typeName = effectiveType;
+					}
+				}
+
 				StoredProcedureParameterInfo paramInfo = new StoredProcedureParameterInfo();
 				paramInfo.setDataType(rs.getString("data_type"));
 				paramInfo.setPosition(rs.getInt("position"));
 				paramInfo.setSequence(rs.getInt("sequence"));
 				paramInfo.setDataLevel(rs.getInt("data_level"));
 				paramInfo.setMode(StoredProcedureParameterInfo.Mode.parse(rs.getString("in_out")));
-				paramInfo.setTypeName(rs.getString("type_name"));
+				paramInfo.setTypeName(typeName);
 				paramInfo.setArgumentName(rs.getString("argument_name"));
+
 				if (paramInfo.getPosition() == 0) {
 					spInfo.setFunction(true);
 				}
+
 				params.add(paramInfo);
 			}
 			spInfo.setParameters(params);

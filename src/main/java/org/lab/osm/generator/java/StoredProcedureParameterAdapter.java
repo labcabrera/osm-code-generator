@@ -41,7 +41,7 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 				else {
 					prev.setTypeName(value.getTypeName());
 					prev.setDataType(value.getDataType());
-					prev.setArgumentName(value.getTypeName());
+					prev.setArgumentName(prev.getArgumentName() != null ? prev.getArgumentName() : value.getTypeName());
 				}
 
 				spInfo.getParameters().remove(index);

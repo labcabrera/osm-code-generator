@@ -11,7 +11,7 @@ import org.lab.samples.osm.claimwrapped.model.OSinAccOutS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "MPG_K_EX_SINIESTRO_ACC_WRP.P_PROCESA_PETICION",
+	name = "MPD_LD.MPG_K_EX_SINIESTRO_ACC_WRP.P_PROCESA_PETICION",
 	isFunction = false,
 	parameters = {
 		@OracleParameter(
