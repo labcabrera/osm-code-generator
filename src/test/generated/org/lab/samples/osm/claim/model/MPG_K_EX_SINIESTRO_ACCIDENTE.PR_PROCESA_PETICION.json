@@ -29,13 +29,7 @@
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
+    "javaTypeInfo" : null
   }, {
     "position" : 3,
     "sequence" : 3,
@@ -45,13 +39,7 @@
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
+    "javaTypeInfo" : null
   }, {
     "position" : 4,
     "sequence" : 4,
@@ -61,1803 +49,1800 @@
     "dataType" : "VARCHAR2",
     "typeName" : null,
     "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
+    "javaTypeInfo" : null
   } ],
-  "types" : [ {
-    "typeName" : "T_TAB_DESCRIPCION",
-    "synonymName" : null,
-    "collectionTypeOf" : "VARCHAR2",
-    "columns" : [ ],
-    "javaTypeInfo" : {
-      "name" : "TTabDescripcion",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_EMAIL",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "CORREO",
-      "typeName" : "VARCHAR2",
-      "length" : 50,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
+  "typeRegistry" : {
+    "types" : [ {
+      "typeName" : "T_TAB_DESCRIPCION",
+      "synonymName" : null,
+      "collectionTypeOf" : "VARCHAR2",
+      "columns" : [ ],
+      "javaTypeInfo" : {
+        "name" : "TTabDescripcion",
+        "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "correo",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     }, {
-      "index" : 2,
-      "name" : "COD_CORRESPONDE",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codCorresponde",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "OBSERVACIONES",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "observaciones",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TREmail",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_CORRES_EXPDTE",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "EMAIL",
       "typeName" : "T_R_EMAIL",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "CORREO",
+        "typeName" : "VARCHAR2",
+        "length" : 50,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "correo",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "COD_CORRESPONDE",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codCorresponde",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "OBSERVACIONES",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "observaciones",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
         "name" : "TREmail",
         "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "email",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     }, {
-      "index" : 2,
-      "name" : "TIPO_VIA",
-      "typeName" : "VARCHAR2",
-      "length" : 3,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "tipoVia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "NOM_VIA",
-      "typeName" : "VARCHAR2",
-      "length" : 50,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nomVia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "NUMERO",
-      "typeName" : "VARCHAR2",
-      "length" : 4,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "numero",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 5,
-      "name" : "PORTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "portal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 6,
-      "name" : "ESC",
-      "typeName" : "VARCHAR2",
-      "length" : 3,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "esc",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 7,
-      "name" : "PISO",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "piso",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 8,
-      "name" : "PUERTA",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "puerta",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 9,
-      "name" : "LOCALIDAD",
-      "typeName" : "VARCHAR2",
-      "length" : 50,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localidad",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 10,
-      "name" : "COD_POSTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPostal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 11,
-      "name" : "COD_PAIS",
-      "typeName" : "VARCHAR2",
-      "length" : 3,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPais",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 12,
-      "name" : "APARTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apartado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 13,
-      "name" : "NOM_DEST",
-      "typeName" : "VARCHAR2",
-      "length" : 50,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nomDest",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TRCorresExpdte",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_COMUNICANTE",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "NOMBRE",
-      "typeName" : "VARCHAR2",
-      "length" : 15,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nombre",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "APELLIDOS",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apellidos",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "TELEFONO",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "telefono",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "COD_RELACION",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codRelacion",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TRComunicante",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_FEDERACION",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "NOMBRE",
-      "typeName" : "VARCHAR2",
-      "length" : 15,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nombre",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "APELLIDOS",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apellidos",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "DOMICILIO",
-      "typeName" : "VARCHAR2",
-      "length" : 67,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "domicilio",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "LOCALIDAD",
-      "typeName" : "VARCHAR2",
-      "length" : 20,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localidad",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 5,
-      "name" : "COD_POSTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPostal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 6,
-      "name" : "DNI",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "dni",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 7,
-      "name" : "TELEF1",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "telef1",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 8,
-      "name" : "TELEF2",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "telef2",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 9,
-      "name" : "LICENCIA",
-      "typeName" : "VARCHAR2",
-      "length" : 20,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "licencia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 10,
-      "name" : "CLUB",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "club",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 11,
-      "name" : "TCLUB",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "tclub",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 12,
-      "name" : "TEL_CLUB",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "telClub",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 13,
-      "name" : "ATENDIDO",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "atendido",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 14,
-      "name" : "CLI_ATENDIDO",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "cliAtendido",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 15,
-      "name" : "CLI_RECOMENDADA",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "cliRecomendada",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TRFederacion",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_COLEGIO",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "NOMBRE",
-      "typeName" : "VARCHAR2",
-      "length" : 15,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nombre",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "APELLIDOS",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apellidos",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "DOMICILIO",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "domicilio",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "LOCALIDAD",
-      "typeName" : "VARCHAR2",
-      "length" : 20,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localidad",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 5,
-      "name" : "COD_POSTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPostal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 6,
-      "name" : "TELEF1",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "telef1",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 7,
-      "name" : "TELEF2",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "telef2",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 8,
-      "name" : "CURSO",
-      "typeName" : "VARCHAR2",
-      "length" : 25,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "curso",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 9,
-      "name" : "ATENDIDO",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "atendido",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 10,
-      "name" : "CLI_ATENDIDO",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "cliAtendido",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 11,
-      "name" : "CLI_RECOMENDADA",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "cliRecomendada",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TRColegio",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_CAUSANTE",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "NOMBRE",
-      "typeName" : "VARCHAR2",
-      "length" : 15,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nombre",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "APELLIDOS",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apellidos",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "DIRECCION",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "direccion",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "LOCALIDAD",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localidad",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 5,
-      "name" : "PROVINCIA",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "provincia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 6,
-      "name" : "COD_POSTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPostal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 7,
-      "name" : "DNI",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "dni",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 8,
-      "name" : "NUM_TEL1",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "numTel1",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 9,
-      "name" : "OBS_TEL1",
-      "typeName" : "VARCHAR2",
-      "length" : 40,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "obsTel1",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 10,
-      "name" : "NUM_TEL2",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "numTel2",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 11,
-      "name" : "OBS_TEL2",
-      "typeName" : "VARCHAR2",
-      "length" : 40,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "obsTel2",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 12,
-      "name" : "ENT_BANCARIA",
-      "typeName" : "VARCHAR2",
-      "length" : 4,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "entBancaria",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 13,
-      "name" : "SUC_BANCARIA",
-      "typeName" : "VARCHAR2",
-      "length" : 4,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "sucBancaria",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 14,
-      "name" : "DC_BANCO",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "dcBanco",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 15,
-      "name" : "CTA_BANCARIA",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "ctaBancaria",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 16,
-      "name" : "COD_CIA",
-      "typeName" : "VARCHAR2",
-      "length" : 4,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codCia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 17,
-      "name" : "OBS_GENERAL",
-      "typeName" : "NUMBER",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "BigDecimal",
-        "typePackage" : "java.math",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "obsGeneral",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TRCausante",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ "java.math.BigDecimal" ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_ACCIDENTE",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "NOM_DECLA",
-      "typeName" : "VARCHAR2",
-      "length" : 15,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nomDecla",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "APEL_DECLA",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apelDecla",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "TFNO_DECLA",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "tfnoDecla",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "RELACION",
-      "typeName" : "VARCHAR2",
-      "length" : 33,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "relacion",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 5,
-      "name" : "NOM_ACCIDENTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 51,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nomAccidentado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 6,
-      "name" : "APEL_ACCIDENTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 35,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "apelAccidentado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 7,
-      "name" : "TFNO_ACCIDENTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "tfnoAccidentado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 8,
-      "name" : "DOM_ACCIDENTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "domAccidentado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 9,
-      "name" : "LOC_ACCIDENTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 30,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "locAccidentado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 10,
-      "name" : "DIST_ACCIDENTADO",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "distAccidentado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 11,
-      "name" : "LUGAR_OCUR",
-      "typeName" : "VARCHAR2",
-      "length" : 42,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "lugarOcur",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 12,
-      "name" : "HORA_OCUR",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "horaOcur",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 13,
-      "name" : "FORMA_OCUR",
-      "typeName" : "T_TAB_DESCRIPCION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TTabDescripcion",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "formaOcur",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 14,
-      "name" : "CAUSANTE",
-      "typeName" : "T_R_CAUSANTE",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TRCausante",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "causante",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 15,
-      "name" : "CLI_RECOMENDADA",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "cliRecomendada",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 16,
-      "name" : "DANOS_TERCEROS",
-      "typeName" : "T_TAB_DESCRIPCION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TTabDescripcion",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "danosTerceros",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 17,
-      "name" : "POLIZAS",
-      "typeName" : "T_TAB_DESCRIPCION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TTabDescripcion",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "polizas",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 18,
-      "name" : "FALLECIMIENTO",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "fallecimiento",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 19,
-      "name" : "CLINICAS",
-      "typeName" : "T_TAB_DESCRIPCION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TTabDescripcion",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "clinicas",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 20,
-      "name" : "TRATAMIENTO",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "tratamiento",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 21,
-      "name" : "INGRESADO",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "ingresado",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 22,
-      "name" : "CLI_RECOMENDADA2",
-      "typeName" : "VARCHAR2",
-      "length" : 100,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "cliRecomendada2",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 23,
-      "name" : "LESIONES",
-      "typeName" : "T_TAB_DESCRIPCION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TTabDescripcion",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "lesiones",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 24,
-      "name" : "BAJA_LABOR",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "bajaLabor",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 25,
-      "name" : "DIAS",
-      "typeName" : "VARCHAR2",
-      "length" : 27,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "dias",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 26,
-      "name" : "LOCALIZACION",
-      "typeName" : "VARCHAR2",
-      "length" : 76,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localizacion",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 27,
-      "name" : "LOCALI_ACT",
-      "typeName" : "VARCHAR2",
-      "length" : 30,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localiAct",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 28,
-      "name" : "LOCAL_POSTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localPostal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 29,
-      "name" : "LOCAL_TFNO",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localTfno",
-        "oracleType" : true
-      },
-      "collection" : false
-    } ],
-    "javaTypeInfo" : {
-      "name" : "TRAccidente",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "typeName" : "T_R_SINIESTRO_ACC",
-    "synonymName" : null,
-    "collectionTypeOf" : null,
-    "columns" : [ {
-      "index" : 1,
-      "name" : "NUM_POLIZA",
-      "typeName" : "VARCHAR2",
-      "length" : 13,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "numPoliza",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 2,
-      "name" : "COD_MEDIO",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codMedio",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 3,
-      "name" : "COD_GARANT",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codGarant",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 4,
-      "name" : "COD_PRIORIDAD",
-      "typeName" : "VARCHAR2",
-      "length" : 1,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPrioridad",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 5,
-      "name" : "FEC_OCURRENCIA",
-      "typeName" : "DATE",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "Date",
-        "typePackage" : "java.util",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "fecOcurrencia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 6,
-      "name" : "HORA_OCURRENCIA",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "horaOcurrencia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 7,
-      "name" : "LUGAR_OCURRENCIA",
-      "typeName" : "VARCHAR2",
-      "length" : 50,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "lugarOcurrencia",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 8,
-      "name" : "LOCALIDAD",
-      "typeName" : "VARCHAR2",
-      "length" : 20,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "localidad",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 9,
-      "name" : "COD_POSTAL",
-      "typeName" : "VARCHAR2",
-      "length" : 5,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codPostal",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 10,
-      "name" : "INE",
-      "typeName" : "VARCHAR2",
-      "length" : 9,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "ine",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 11,
-      "name" : "COD_CAUSA",
-      "typeName" : "VARCHAR2",
-      "length" : 4,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "codCausa",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 12,
-      "name" : "TIPO_EXPEDIENTE",
-      "typeName" : "VARCHAR2",
-      "length" : 2,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "tipoExpediente",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 13,
-      "name" : "CLASE_EXPDTE",
-      "typeName" : "VARCHAR2",
-      "length" : 3,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "claseExpdte",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 14,
-      "name" : "NUUMA",
-      "typeName" : "VARCHAR2",
-      "length" : 10,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "String",
-        "typePackage" : "java.lang",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "nuuma",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 15,
-      "name" : "DESCRIPCION",
-      "typeName" : "T_TAB_DESCRIPCION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
-        "name" : "TTabDescripcion",
-        "typePackage" : "org.lab.samples.osm.claim.model",
-        "dependencies" : [ ],
-        "normalizedFieldName" : "descripcion",
-        "oracleType" : true
-      },
-      "collection" : false
-    }, {
-      "index" : 16,
-      "name" : "CORRESPONDENCIA",
       "typeName" : "T_R_CORRES_EXPDTE",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "EMAIL",
+        "typeName" : "T_R_EMAIL",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TREmail",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "email",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "TIPO_VIA",
+        "typeName" : "VARCHAR2",
+        "length" : 3,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "tipoVia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "NOM_VIA",
+        "typeName" : "VARCHAR2",
+        "length" : 50,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nomVia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "NUMERO",
+        "typeName" : "VARCHAR2",
+        "length" : 4,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "numero",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "PORTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "portal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 6,
+        "name" : "ESC",
+        "typeName" : "VARCHAR2",
+        "length" : 3,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "esc",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 7,
+        "name" : "PISO",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "piso",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 8,
+        "name" : "PUERTA",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "puerta",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 9,
+        "name" : "LOCALIDAD",
+        "typeName" : "VARCHAR2",
+        "length" : 50,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localidad",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 10,
+        "name" : "COD_POSTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPostal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 11,
+        "name" : "COD_PAIS",
+        "typeName" : "VARCHAR2",
+        "length" : 3,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPais",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 12,
+        "name" : "APARTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apartado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 13,
+        "name" : "NOM_DEST",
+        "typeName" : "VARCHAR2",
+        "length" : 50,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nomDest",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
         "name" : "TRCorresExpdte",
         "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "correspondencia",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     }, {
-      "index" : 17,
-      "name" : "COMUNICANTE",
       "typeName" : "T_R_COMUNICANTE",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "NOMBRE",
+        "typeName" : "VARCHAR2",
+        "length" : 15,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nombre",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "APELLIDOS",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apellidos",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "TELEFONO",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "telefono",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "COD_RELACION",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codRelacion",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
         "name" : "TRComunicante",
         "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "comunicante",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     }, {
-      "index" : 18,
-      "name" : "FEDERACION",
       "typeName" : "T_R_FEDERACION",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "NOMBRE",
+        "typeName" : "VARCHAR2",
+        "length" : 15,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nombre",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "APELLIDOS",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apellidos",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "DOMICILIO",
+        "typeName" : "VARCHAR2",
+        "length" : 67,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "domicilio",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "LOCALIDAD",
+        "typeName" : "VARCHAR2",
+        "length" : 20,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localidad",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "COD_POSTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPostal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 6,
+        "name" : "DNI",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "dni",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 7,
+        "name" : "TELEF1",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "telef1",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 8,
+        "name" : "TELEF2",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "telef2",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 9,
+        "name" : "LICENCIA",
+        "typeName" : "VARCHAR2",
+        "length" : 20,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "licencia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 10,
+        "name" : "CLUB",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "club",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 11,
+        "name" : "TCLUB",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "tclub",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 12,
+        "name" : "TEL_CLUB",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "telClub",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 13,
+        "name" : "ATENDIDO",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "atendido",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 14,
+        "name" : "CLI_ATENDIDO",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "cliAtendido",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 15,
+        "name" : "CLI_RECOMENDADA",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "cliRecomendada",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
         "name" : "TRFederacion",
         "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "federacion",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     }, {
-      "index" : 19,
-      "name" : "COLEGIO",
       "typeName" : "T_R_COLEGIO",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "NOMBRE",
+        "typeName" : "VARCHAR2",
+        "length" : 15,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nombre",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "APELLIDOS",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apellidos",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "DOMICILIO",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "domicilio",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "LOCALIDAD",
+        "typeName" : "VARCHAR2",
+        "length" : 20,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localidad",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "COD_POSTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPostal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 6,
+        "name" : "TELEF1",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "telef1",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 7,
+        "name" : "TELEF2",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "telef2",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 8,
+        "name" : "CURSO",
+        "typeName" : "VARCHAR2",
+        "length" : 25,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "curso",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 9,
+        "name" : "ATENDIDO",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "atendido",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 10,
+        "name" : "CLI_ATENDIDO",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "cliAtendido",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 11,
+        "name" : "CLI_RECOMENDADA",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "cliRecomendada",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
         "name" : "TRColegio",
         "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "colegio",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     }, {
-      "index" : 20,
-      "name" : "ACCIDENTE",
+      "typeName" : "T_R_CAUSANTE",
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "NOMBRE",
+        "typeName" : "VARCHAR2",
+        "length" : 15,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nombre",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "APELLIDOS",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apellidos",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "DIRECCION",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "direccion",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "LOCALIDAD",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localidad",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "PROVINCIA",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "provincia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 6,
+        "name" : "COD_POSTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPostal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 7,
+        "name" : "DNI",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "dni",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 8,
+        "name" : "NUM_TEL1",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "numTel1",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 9,
+        "name" : "OBS_TEL1",
+        "typeName" : "VARCHAR2",
+        "length" : 40,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "obsTel1",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 10,
+        "name" : "NUM_TEL2",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "numTel2",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 11,
+        "name" : "OBS_TEL2",
+        "typeName" : "VARCHAR2",
+        "length" : 40,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "obsTel2",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 12,
+        "name" : "ENT_BANCARIA",
+        "typeName" : "VARCHAR2",
+        "length" : 4,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "entBancaria",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 13,
+        "name" : "SUC_BANCARIA",
+        "typeName" : "VARCHAR2",
+        "length" : 4,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "sucBancaria",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 14,
+        "name" : "DC_BANCO",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "dcBanco",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 15,
+        "name" : "CTA_BANCARIA",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "ctaBancaria",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 16,
+        "name" : "COD_CIA",
+        "typeName" : "VARCHAR2",
+        "length" : 4,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codCia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 17,
+        "name" : "OBS_GENERAL",
+        "typeName" : "NUMBER",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "BigDecimal",
+          "typePackage" : "java.math",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "obsGeneral",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
+        "name" : "TRCausante",
+        "typePackage" : "org.lab.samples.osm.claim.model",
+        "dependencies" : [ "java.math.BigDecimal" ],
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
+    }, {
       "typeName" : "T_R_ACCIDENTE",
-      "length" : 0,
-      "precision" : 0,
-      "scale" : 0,
-      "javaInfo" : {
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "NOM_DECLA",
+        "typeName" : "VARCHAR2",
+        "length" : 15,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nomDecla",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "APEL_DECLA",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apelDecla",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "TFNO_DECLA",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "tfnoDecla",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "RELACION",
+        "typeName" : "VARCHAR2",
+        "length" : 33,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "relacion",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "NOM_ACCIDENTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 51,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nomAccidentado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 6,
+        "name" : "APEL_ACCIDENTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 35,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "apelAccidentado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 7,
+        "name" : "TFNO_ACCIDENTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "tfnoAccidentado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 8,
+        "name" : "DOM_ACCIDENTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "domAccidentado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 9,
+        "name" : "LOC_ACCIDENTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 30,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "locAccidentado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 10,
+        "name" : "DIST_ACCIDENTADO",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "distAccidentado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 11,
+        "name" : "LUGAR_OCUR",
+        "typeName" : "VARCHAR2",
+        "length" : 42,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "lugarOcur",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 12,
+        "name" : "HORA_OCUR",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "horaOcur",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 13,
+        "name" : "FORMA_OCUR",
+        "typeName" : "T_TAB_DESCRIPCION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TTabDescripcion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "formaOcur",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 14,
+        "name" : "CAUSANTE",
+        "typeName" : "T_R_CAUSANTE",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TRCausante",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "causante",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 15,
+        "name" : "CLI_RECOMENDADA",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "cliRecomendada",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 16,
+        "name" : "DANOS_TERCEROS",
+        "typeName" : "T_TAB_DESCRIPCION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TTabDescripcion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "danosTerceros",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 17,
+        "name" : "POLIZAS",
+        "typeName" : "T_TAB_DESCRIPCION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TTabDescripcion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "polizas",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 18,
+        "name" : "FALLECIMIENTO",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "fallecimiento",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 19,
+        "name" : "CLINICAS",
+        "typeName" : "T_TAB_DESCRIPCION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TTabDescripcion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "clinicas",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 20,
+        "name" : "TRATAMIENTO",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "tratamiento",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 21,
+        "name" : "INGRESADO",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "ingresado",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 22,
+        "name" : "CLI_RECOMENDADA2",
+        "typeName" : "VARCHAR2",
+        "length" : 100,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "cliRecomendada2",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 23,
+        "name" : "LESIONES",
+        "typeName" : "T_TAB_DESCRIPCION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TTabDescripcion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "lesiones",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 24,
+        "name" : "BAJA_LABOR",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "bajaLabor",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 25,
+        "name" : "DIAS",
+        "typeName" : "VARCHAR2",
+        "length" : 27,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "dias",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 26,
+        "name" : "LOCALIZACION",
+        "typeName" : "VARCHAR2",
+        "length" : 76,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localizacion",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 27,
+        "name" : "LOCALI_ACT",
+        "typeName" : "VARCHAR2",
+        "length" : 30,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localiAct",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 28,
+        "name" : "LOCAL_POSTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localPostal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 29,
+        "name" : "LOCAL_TFNO",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localTfno",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
         "name" : "TRAccidente",
         "typePackage" : "org.lab.samples.osm.claim.model",
         "dependencies" : [ ],
-        "normalizedFieldName" : "accidente",
-        "oracleType" : true
-      },
-      "collection" : false
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
+    }, {
+      "typeName" : "T_R_SINIESTRO_ACC",
+      "synonymName" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "NUM_POLIZA",
+        "typeName" : "VARCHAR2",
+        "length" : 13,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "numPoliza",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "COD_MEDIO",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codMedio",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "COD_GARANT",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codGarant",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "COD_PRIORIDAD",
+        "typeName" : "VARCHAR2",
+        "length" : 1,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPrioridad",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "FEC_OCURRENCIA",
+        "typeName" : "DATE",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "Date",
+          "typePackage" : "java.util",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "fecOcurrencia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 6,
+        "name" : "HORA_OCURRENCIA",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "horaOcurrencia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 7,
+        "name" : "LUGAR_OCURRENCIA",
+        "typeName" : "VARCHAR2",
+        "length" : 50,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "lugarOcurrencia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 8,
+        "name" : "LOCALIDAD",
+        "typeName" : "VARCHAR2",
+        "length" : 20,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "localidad",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 9,
+        "name" : "COD_POSTAL",
+        "typeName" : "VARCHAR2",
+        "length" : 5,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codPostal",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 10,
+        "name" : "INE",
+        "typeName" : "VARCHAR2",
+        "length" : 9,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "ine",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 11,
+        "name" : "COD_CAUSA",
+        "typeName" : "VARCHAR2",
+        "length" : 4,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codCausa",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 12,
+        "name" : "TIPO_EXPEDIENTE",
+        "typeName" : "VARCHAR2",
+        "length" : 2,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "tipoExpediente",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 13,
+        "name" : "CLASE_EXPDTE",
+        "typeName" : "VARCHAR2",
+        "length" : 3,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "claseExpdte",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 14,
+        "name" : "NUUMA",
+        "typeName" : "VARCHAR2",
+        "length" : 10,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "nuuma",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 15,
+        "name" : "DESCRIPCION",
+        "typeName" : "T_TAB_DESCRIPCION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TTabDescripcion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "descripcion",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 16,
+        "name" : "CORRESPONDENCIA",
+        "typeName" : "T_R_CORRES_EXPDTE",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TRCorresExpdte",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "correspondencia",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 17,
+        "name" : "COMUNICANTE",
+        "typeName" : "T_R_COMUNICANTE",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TRComunicante",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "comunicante",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 18,
+        "name" : "FEDERACION",
+        "typeName" : "T_R_FEDERACION",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TRFederacion",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "federacion",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 19,
+        "name" : "COLEGIO",
+        "typeName" : "T_R_COLEGIO",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TRColegio",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "colegio",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 20,
+        "name" : "ACCIDENTE",
+        "typeName" : "T_R_ACCIDENTE",
+        "length" : 0,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "TRAccidente",
+          "typePackage" : "org.lab.samples.osm.claim.model",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "accidente",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
+        "name" : "TRSiniestroAcc",
+        "typePackage" : "org.lab.samples.osm.claim.model",
+        "dependencies" : [ "java.util.Date" ],
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
     } ],
-    "javaTypeInfo" : {
-      "name" : "TRSiniestroAcc",
-      "typePackage" : "org.lab.samples.osm.claim.model",
-      "dependencies" : [ "java.util.Date" ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  } ],
+    "synonyms" : { }
+  },
   "javaExecutorInfo" : {
     "name" : "MpgKExSiniestroAccidentePrProcesaPeticionExecutor",
     "typePackage" : "org.lab.samples.osm.claim.executor",
