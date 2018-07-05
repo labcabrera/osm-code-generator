@@ -66,8 +66,8 @@ public class TypeReader {
 		sb.append("from").append("\n");
 		sb.append("  all_type_attrs").append("\n");
 		sb.append("where").append("\n");
-		sb.append("  type_name = '").append(typeName).append("'");
-		sb.append("order by");
+		sb.append("  type_name = '").append(typeName).append("'\n");
+		sb.append("order by\n");
 		sb.append("  attr_no");
 
 		String query = sb.toString();
