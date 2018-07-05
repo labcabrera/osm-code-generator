@@ -9,7 +9,9 @@ import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "MPD_LD.MPG_K_EX_SINIESTRO_ACCIDENTE.PR_PROCESA_PETICION",
+	name = "PR_PROCESA_PETICION",
+	oraclePackage = "MPG_K_EX_SINIESTRO_ACCIDENTE",
+	owner = "MPD_LD",
 	isFunction = false,
 	parameters = {
 		@OracleParameter(
