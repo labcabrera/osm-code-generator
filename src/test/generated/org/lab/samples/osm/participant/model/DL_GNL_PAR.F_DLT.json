@@ -9,7 +9,7 @@
     "sequence" : 1,
     "dataLevel" : 0,
     "mode" : "OUT",
-    "argumentName" : null,
+    "argumentName" : "OBJECT",
     "dataType" : "OBJECT",
     "typeName" : "O_AMD_GNL_PAR_S",
     "simpleObjectTypeName" : null,
@@ -39,6 +39,7 @@
   } ],
   "types" : [ {
     "typeName" : "O_AMD_GNL_PAR_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,

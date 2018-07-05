@@ -39,6 +39,7 @@
   } ],
   "types" : [ {
     "typeName" : "O_AMD_GNL_PAR_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,

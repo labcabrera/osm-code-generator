@@ -71,6 +71,7 @@
   } ],
   "types" : [ {
     "typeName" : "T_TAB_DESCRIPCION",
+    "synonymName" : null,
     "collectionTypeOf" : "VARCHAR2",
     "columns" : [ ],
     "javaTypeInfo" : {
@@ -82,6 +83,7 @@
     }
   }, {
     "typeName" : "T_R_EMAIL",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -138,6 +140,7 @@
     }
   }, {
     "typeName" : "T_R_CORRES_EXPDTE",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -344,6 +347,7 @@
     }
   }, {
     "typeName" : "T_R_COMUNICANTE",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -415,6 +419,7 @@
     }
   }, {
     "typeName" : "T_R_FEDERACION",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -651,6 +656,7 @@
     }
   }, {
     "typeName" : "T_R_COLEGIO",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -827,6 +833,7 @@
     }
   }, {
     "typeName" : "T_R_CAUSANTE",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -1093,6 +1100,7 @@
     }
   }, {
     "typeName" : "T_R_ACCIDENTE",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -1539,6 +1547,7 @@
     }
   }, {
     "typeName" : "T_R_SINIESTRO_ACC",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,

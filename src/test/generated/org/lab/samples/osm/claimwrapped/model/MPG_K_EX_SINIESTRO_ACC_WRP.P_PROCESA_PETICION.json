@@ -39,6 +39,7 @@
   } ],
   "types" : [ {
     "typeName" : "O_DESCRIPCION_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -65,6 +66,7 @@
     }
   }, {
     "typeName" : "O_DESCRIPCION_ST",
+    "synonymName" : null,
     "collectionTypeOf" : "O_DESCRIPCION_S",
     "columns" : [ ],
     "javaTypeInfo" : {
@@ -76,6 +78,7 @@
     }
   }, {
     "typeName" : "O_EMAIL_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -132,6 +135,7 @@
     }
   }, {
     "typeName" : "O_CORRES_EXPDTE_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -338,6 +342,7 @@
     }
   }, {
     "typeName" : "O_COMUNICANTE_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -409,6 +414,7 @@
     }
   }, {
     "typeName" : "O_FEDERACION_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -645,6 +651,7 @@
     }
   }, {
     "typeName" : "O_COLEGIO_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -821,6 +828,7 @@
     }
   }, {
     "typeName" : "O_CAUSANTE_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -1087,6 +1095,7 @@
     }
   }, {
     "typeName" : "O_ACCIDENTE_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -1533,6 +1542,7 @@
     }
   }, {
     "typeName" : "O_SIN_ACC_IN_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,
@@ -1844,6 +1854,7 @@
     }
   }, {
     "typeName" : "O_SIN_ACC_OUT_S",
+    "synonymName" : null,
     "collectionTypeOf" : null,
     "columns" : [ {
       "index" : 1,

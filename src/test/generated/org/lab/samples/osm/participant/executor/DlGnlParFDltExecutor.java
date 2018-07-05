@@ -15,7 +15,7 @@ import org.lab.samples.osm.participant.model.OAmdGnlParS;
 	isFunction = true,
 	parameters = {
 		@OracleParameter(
-			name = "null",
+			name = "OBJECT",
 			typeName = "O_AMD_GNL_PAR_S",
 			type = Types.STRUCT,
 			mode = ParameterType.OUT,
