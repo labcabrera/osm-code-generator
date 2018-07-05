@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.lab.osm.generator.exception.OsmModelReadException;
-import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
+import org.lab.osm.generator.model.TypeInfo;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -43,10 +43,11 @@ public class TypeReader {
 	}
 
 	public TypeInfo read(@NonNull Connection connection, StoredProcedureInfo spInfo, @NonNull String typeName) {
+		log.info("Reading type {}", typeName);
 
 		String effectiveName;
 		try {
-			effectiveName = synonymReader.read(connection, typeName);
+			effectiveName = synonymReader.read(connection, typeName, spInfo.getTypeRegistry());
 			effectiveName = effectiveName != null ? effectiveName : typeName;
 		}
 		catch (SQLException ex) {

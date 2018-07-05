@@ -5,13 +5,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.lab.osm.generator.model.TypeRegistry;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SynonymReader {
 
 	// TODO check owner
-	public String read(Connection connection, String objectName) throws SQLException {
+	public String read(Connection connection, String objectName, TypeRegistry typeRegistry) throws SQLException {
+		if (typeRegistry.getSynonyms().containsKey(objectName)) {
+			return typeRegistry.getSynonyms().get(objectName);
+		}
+
 		StringBuilder sb = new StringBuilder();
 		sb.append("select * FROM all_synonyms WHERE synonym_name = '");
 		sb.append(objectName);
