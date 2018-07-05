@@ -3,6 +3,8 @@ package org.lab.samples.osm.nwt.company.test;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.lab.samples.osm.nwt.company.model.ODcCompaniaS;
+import org.lab.samples.osm.nwt.company.model.OEmDatosComunesS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -16,9 +18,10 @@ public class CompanyTest {
 
 	@Test
 	public void test() {
-		Object[] args = new Object[100];
+		OEmDatosComunesS commonData = new OEmDatosComunesS();
+		ODcCompaniaS company = new ODcCompaniaS();
 
-		Object result = service.execute(args);
+		Object result = service.execute(commonData, company);
 		Assert.assertNotNull(result);
 	}
 }
