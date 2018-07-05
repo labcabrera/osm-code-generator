@@ -1,12 +1,12 @@
 package org.lab.samples.osm.nwt.contract.test;
 
-import org.lab.samples.osm.nwt.contract.executor.LnEmConsultaPolizaTrnPObtenerPolizaFechaExecutor;
+import org.lab.samples.osm.nwt.contract.executor.LnEmConsultaPolizaTrnPObtenerPolizaFechaOverload1Executor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ContractService {
 
 	@Autowired
-	private LnEmConsultaPolizaTrnPObtenerPolizaFechaExecutor executor;
+	private LnEmConsultaPolizaTrnPObtenerPolizaFechaOverload1Executor executor;
 
 	public Object execute(ContractRequestInfo request) {
 

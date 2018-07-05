@@ -38,7 +38,15 @@ estructura:
 == Sobrecarga de procedimientos
 
 Dado que en Oracle es posible tener varios procedimientos con el mismo nombre podemos utilizar la opcion _overload_ del
-objeto `CodeGenerationOptions` para discrimiar entre los diferentes procedimientos.
+objeto
+https://github.com/labcabrera/osm-code-generator/blob/master/src/main/java/org/lab/osm/generator/model/CodeGenerationOptions.java[CodeGenerationOptions]
+para discrimiar entre los diferentes procedimientos.
+
+Al hacerlo se pueden generar varias interfaces añadiendo _Overload${index}_ al final:
+
+* _SomeProcedureNameOverload1Executor_
+* _SomeProcedureNameOverload2Executor_
+* ...
 
 == Pruebas locales
 

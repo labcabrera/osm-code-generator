@@ -379,7 +379,7 @@
     "sequence" : 38,
     "dataLevel" : 0,
     "mode" : "OUT",
-    "argumentName" : "O_CON_POLIZA_S",
+    "argumentName" : "P_O_CON_POLIZA_T",
     "dataType" : "OBJECT",
     "typeName" : "O_CON_POLIZA_S",
     "simpleObjectTypeName" : null,
@@ -395,13 +395,13 @@
     "sequence" : 40,
     "dataLevel" : 0,
     "mode" : "OUT",
-    "argumentName" : "OS_GNR_MENSAJE_ERROR_S",
+    "argumentName" : "P_O_GNR_MENSAJE_ERROR_T",
     "dataType" : "OBJECT",
-    "typeName" : "OS_GNR_MENSAJE_ERROR_S",
+    "typeName" : "O_GNR_MENSAJE_ERROR_S",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
+      "name" : "OGnrMensajeErrorS",
+      "typePackage" : "org.lab.samples.osm.nwt.contract.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -411,13 +411,13 @@
     "sequence" : 42,
     "dataLevel" : 0,
     "mode" : "OUT",
-    "argumentName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "argumentName" : "P_O_GNR_MENSAJE_ADVERT_T",
     "dataType" : "OBJECT",
-    "typeName" : "OS_GNR_MENSAJE_ADVERT_S",
+    "typeName" : "O_GNR_MENSAJE_ADVERT_S",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
+      "name" : "OGnrMensajeAdvertS",
+      "typePackage" : "org.lab.samples.osm.nwt.contract.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -427,6 +427,7 @@
     "types" : [ {
       "typeName" : "O_EM_MODALIDAD_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -454,6 +455,7 @@
     }, {
       "typeName" : "O_EM_MODALIDAD_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -766,6 +768,7 @@
     }, {
       "typeName" : "O_EM_MODALIDAD_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_EM_MODALIDAD_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -778,6 +781,7 @@
     }, {
       "typeName" : "O_CON_CARACTER_OCU_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -805,6 +809,7 @@
     }, {
       "typeName" : "O_CON_CARACTER_OCU_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -997,6 +1002,7 @@
     }, {
       "typeName" : "O_CON_CARACTER_OCU_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CARACTER_OCU_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -1009,6 +1015,7 @@
     }, {
       "typeName" : "O_CON_OCURRENCIA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1231,6 +1238,7 @@
     }, {
       "typeName" : "O_CON_CARACTER_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1408,6 +1416,7 @@
     }, {
       "typeName" : "O_CON_CARACTER_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CARACTER_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -1420,6 +1429,7 @@
     }, {
       "typeName" : "O_CON_OCURRENCIA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_OCURRENCIA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -1432,6 +1442,7 @@
     }, {
       "typeName" : "O_CON_DATOS_POL_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -1459,6 +1470,7 @@
     }, {
       "typeName" : "O_CON_DATOS_POL_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -2956,6 +2968,7 @@
     }, {
       "typeName" : "O_CON_DATOS_POL_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_DATOS_POL_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -2968,6 +2981,7 @@
     }, {
       "typeName" : "O_CON_DATOS_SPTO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -2995,6 +3009,7 @@
     }, {
       "typeName" : "O_CON_DATOS_SPTO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -4822,6 +4837,7 @@
     }, {
       "typeName" : "O_CON_DATOS_SPTO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_DATOS_SPTO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -4834,6 +4850,7 @@
     }, {
       "typeName" : "O_CON_REVALORIZA_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -4861,6 +4878,7 @@
     }, {
       "typeName" : "O_CON_REVALORIZA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -5053,6 +5071,7 @@
     }, {
       "typeName" : "O_CON_REVALORIZA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_REVALORIZA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -5065,6 +5084,7 @@
     }, {
       "typeName" : "O_CON_DIR_NACIONAL_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -5092,6 +5112,7 @@
     }, {
       "typeName" : "O_CON_DIR_NACIONAL_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -5389,6 +5410,7 @@
     }, {
       "typeName" : "O_CON_AGENTE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -5911,6 +5933,7 @@
     }, {
       "typeName" : "O_CON_AGENTE_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_AGENTE_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -5923,6 +5946,7 @@
     }, {
       "typeName" : "O_CON_COA_CED_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -5950,6 +5974,7 @@
     }, {
       "typeName" : "O_CON_COA_CED_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -6112,6 +6137,7 @@
     }, {
       "typeName" : "O_CON_COA_CED_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_COA_CED_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -6124,6 +6150,7 @@
     }, {
       "typeName" : "O_CON_COA_ACEP_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -6151,6 +6178,7 @@
     }, {
       "typeName" : "O_CON_COA_ACEP_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -6358,6 +6386,7 @@
     }, {
       "typeName" : "O_CON_COA_ACEP_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_COA_ACEP_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -6370,6 +6399,7 @@
     }, {
       "typeName" : "O_CON_COASEGURO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -6472,6 +6502,7 @@
     }, {
       "typeName" : "O_CON_COASEGURO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_COASEGURO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -6484,6 +6515,7 @@
     }, {
       "typeName" : "O_CON_CONCEPTO_ECO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -6511,6 +6543,7 @@
     }, {
       "typeName" : "O_CON_CONCEPTO_ECO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -6793,6 +6826,7 @@
     }, {
       "typeName" : "O_CON_CONCEPTO_DES_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7090,6 +7124,7 @@
     }, {
       "typeName" : "O_CON_CONCEPTO_DES_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CONCEPTO_DES_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -7102,6 +7137,7 @@
     }, {
       "typeName" : "O_CON_PLAN_PAGO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7324,6 +7360,7 @@
     }, {
       "typeName" : "O_CON_PLAN_PAGO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_PLAN_PAGO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -7336,6 +7373,7 @@
     }, {
       "typeName" : "O_CON_REASEGURO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7363,6 +7401,7 @@
     }, {
       "typeName" : "O_CON_REASEGURO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7465,6 +7504,7 @@
     }, {
       "typeName" : "O_CON_REASEGURO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_REASEGURO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -7477,6 +7517,7 @@
     }, {
       "typeName" : "O_CON_LINEA_TEXTO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7504,6 +7545,7 @@
     }, {
       "typeName" : "O_CON_LINEA_TEXTO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7666,6 +7708,7 @@
     }, {
       "typeName" : "O_CON_LINEA_TEXTO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_LINEA_TEXTO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -7678,6 +7721,7 @@
     }, {
       "typeName" : "O_CON_CLAUSULA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7855,6 +7899,7 @@
     }, {
       "typeName" : "O_CON_CLAU_COMPLETA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7897,6 +7942,7 @@
     }, {
       "typeName" : "O_CON_CLAU_COMPLETA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CLAU_COMPLETA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -7909,6 +7955,7 @@
     }, {
       "typeName" : "O_CON_SUMA_ASEG_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -7936,6 +7983,7 @@
     }, {
       "typeName" : "O_CON_SUMA_ASEG_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8068,6 +8116,7 @@
     }, {
       "typeName" : "O_CON_SUMA_ASEG_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_SUMA_ASEG_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -8080,6 +8129,7 @@
     }, {
       "typeName" : "O_CON_FRANQUICIA_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8107,6 +8157,7 @@
     }, {
       "typeName" : "O_CON_FRANQUICIA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8239,6 +8290,7 @@
     }, {
       "typeName" : "O_CON_FRANQUICIA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_FRANQUICIA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -8251,6 +8303,7 @@
     }, {
       "typeName" : "O_CON_LIMITE_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8278,6 +8331,7 @@
     }, {
       "typeName" : "O_CON_LIMITE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8335,6 +8389,7 @@
     }, {
       "typeName" : "O_CON_LIMITE_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_LIMITE_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -8347,6 +8402,7 @@
     }, {
       "typeName" : "O_CON_TEXTO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8629,6 +8685,7 @@
     }, {
       "typeName" : "O_CON_TEXTO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_TEXTO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -8641,6 +8698,7 @@
     }, {
       "typeName" : "O_CON_PRESTACION_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -8998,6 +9056,7 @@
     }, {
       "typeName" : "O_CON_PRESTACION_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_PRESTACION_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -9010,6 +9069,7 @@
     }, {
       "typeName" : "O_CON_GARANTIA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -9622,6 +9682,7 @@
     }, {
       "typeName" : "O_CON_GARANTIA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_GARANTIA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -9634,6 +9695,7 @@
     }, {
       "typeName" : "O_CON_COBERTURA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -10246,6 +10308,7 @@
     }, {
       "typeName" : "O_CON_COBERTURA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_COBERTURA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -10258,6 +10321,7 @@
     }, {
       "typeName" : "O_CON_PERSONA_FISIC_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -10285,6 +10349,7 @@
     }, {
       "typeName" : "O_CON_PERSONA_FISIC_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -10507,6 +10572,7 @@
     }, {
       "typeName" : "O_CON_PERSONA_JURID_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -10534,6 +10600,7 @@
     }, {
       "typeName" : "O_CON_PERSONA_JURID_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -10651,6 +10718,7 @@
     }, {
       "typeName" : "O_CON_DPERSONALES_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11008,6 +11076,7 @@
     }, {
       "typeName" : "O_CON_DPERSONALES_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_DPERSONALES_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -11020,6 +11089,7 @@
     }, {
       "typeName" : "O_CON_DIR_EXTRANJ_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11047,6 +11117,7 @@
     }, {
       "typeName" : "O_CON_DIR_EXTRANJ_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11164,6 +11235,7 @@
     }, {
       "typeName" : "O_CON_APDO_CORREOS_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11191,6 +11263,7 @@
     }, {
       "typeName" : "O_CON_APDO_CORREOS_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11308,6 +11381,7 @@
     }, {
       "typeName" : "O_CON_DOMICILIO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11455,6 +11529,7 @@
     }, {
       "typeName" : "O_CON_DOMICILIO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_DOMICILIO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -11467,6 +11542,7 @@
     }, {
       "typeName" : "O_CON_CONTACTO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11494,6 +11570,7 @@
     }, {
       "typeName" : "O_CON_CONTACTO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11701,6 +11778,7 @@
     }, {
       "typeName" : "O_CON_CONTACTO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CONTACTO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -11713,6 +11791,7 @@
     }, {
       "typeName" : "O_CON_MEDIO_PAGO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -11740,6 +11819,7 @@
     }, {
       "typeName" : "O_CON_MEDIO_PAGO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -12082,6 +12162,7 @@
     }, {
       "typeName" : "O_CON_MEDIO_PAGO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_MEDIO_PAGO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -12094,6 +12175,7 @@
     }, {
       "typeName" : "O_CON_LICENCIA_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -12121,6 +12203,7 @@
     }, {
       "typeName" : "O_CON_LICENCIA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -12358,6 +12441,7 @@
     }, {
       "typeName" : "O_CON_LICENCIA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_LICENCIA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -12370,6 +12454,7 @@
     }, {
       "typeName" : "O_CON_FIGURA_PART_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -12712,6 +12797,7 @@
     }, {
       "typeName" : "O_CON_FIGURA_PART_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_FIGURA_PART_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -12724,6 +12810,7 @@
     }, {
       "typeName" : "O_CON_BONI_RECA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -12826,6 +12913,7 @@
     }, {
       "typeName" : "O_CON_BONI_RECA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_BONI_RECA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -12838,6 +12926,7 @@
     }, {
       "typeName" : "O_CON_CONCEPTO_ECO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CONCEPTO_ECO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -12850,6 +12939,7 @@
     }, {
       "typeName" : "O_CON_CTRL_TECNICO_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -12877,6 +12967,7 @@
     }, {
       "typeName" : "O_CON_CTRL_TECNICO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -13159,6 +13250,7 @@
     }, {
       "typeName" : "O_CON_CTRL_TECNICO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_CTRL_TECNICO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -13171,6 +13263,7 @@
     }, {
       "typeName" : "O_CON_PRIMA_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -13198,6 +13291,7 @@
     }, {
       "typeName" : "O_CON_PRIMA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -13285,6 +13379,7 @@
     }, {
       "typeName" : "O_CON_PRIMA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_PRIMA_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -13297,6 +13392,7 @@
     }, {
       "typeName" : "O_CON_RIESGO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -13834,6 +13930,7 @@
     }, {
       "typeName" : "O_CON_RIESGO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_RIESGO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -13846,6 +13943,7 @@
     }, {
       "typeName" : "O_CON_CES_DERECHOS_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -13978,6 +14076,7 @@
     }, {
       "typeName" : "O_CON_FIGURA_CT",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14020,6 +14119,7 @@
     }, {
       "typeName" : "O_CON_FIGURA_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_FIGURA_CT",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -14032,6 +14132,7 @@
     }, {
       "typeName" : "O_CON_MOTIVO_SPTO_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14074,6 +14175,7 @@
     }, {
       "typeName" : "O_CON_MOTIVO_SPTO_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_MOTIVO_SPTO_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -14086,6 +14188,7 @@
     }, {
       "typeName" : "O_CON_REG_NOINTERES_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14128,6 +14231,7 @@
     }, {
       "typeName" : "O_CON_REG_NOINTERES_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_REG_NOINTERES_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -14140,6 +14244,7 @@
     }, {
       "typeName" : "O_CON_NOTAS_OPE_EXT_TRN",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14167,6 +14272,7 @@
     }, {
       "typeName" : "O_CON_NOTAS_OPE_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14284,6 +14390,7 @@
     }, {
       "typeName" : "O_CON_NOTAS_OPE_T",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : "O_CON_NOTAS_OPE_S",
       "columns" : [ ],
       "javaTypeInfo" : {
@@ -14296,6 +14403,7 @@
     }, {
       "typeName" : "O_CON_POLIZA_S",
       "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14682,7 +14790,8 @@
       }
     }, {
       "typeName" : "O_GNR_MENSAJE_ERROR_S",
-      "synonymName" : "OS_GNR_MENSAJE_ERROR_S",
+      "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14769,7 +14878,8 @@
       }
     }, {
       "typeName" : "O_GNR_MENSAJE_ADVERT_S",
-      "synonymName" : "OS_GNR_MENSAJE_ADVERT_S",
+      "synonymName" : null,
+      "owner" : null,
       "collectionTypeOf" : null,
       "columns" : [ {
         "index" : 1,
@@ -14830,6 +14940,7 @@
       "O_CON_DOMICILIO_T" : null,
       "O_CON_PRIMA_EXT_TRN" : null,
       "O_CON_POLIZA_S" : null,
+      "O_CON_POLIZA_T" : null,
       "O_CON_LIMITE_EXT_TRN" : null,
       "O_CON_PERSONA_FISIC_S" : null,
       "O_CON_AGENTE_T" : null,
@@ -14892,6 +15003,8 @@
       "O_CON_MEDIO_PAGO_T" : null,
       "O_CON_DIR_NACIONAL_S" : null,
       "O_CON_APDO_CORREOS_EXT_TRN" : null,
+      "O_GNR_MENSAJE_ADVERT_S" : null,
+      "O_GNR_MENSAJE_ADVERT_T" : null,
       "O_CON_DPERSONALES_S" : null,
       "O_CON_PLAN_PAGO_T" : null,
       "O_CON_PLAN_PAGO_S" : null,
@@ -14916,6 +15029,8 @@
       "O_CON_CTRL_TECNICO_T" : null,
       "O_CON_CTRL_TECNICO_S" : null,
       "O_CON_TEXTO_S" : null,
+      "O_GNR_MENSAJE_ERROR_T" : null,
+      "O_GNR_MENSAJE_ERROR_S" : null,
       "O_CON_FRANQUICIA_EXT_TRN" : null,
       "O_CON_PRIMA_S" : null,
       "O_CON_PRIMA_T" : null,
@@ -14924,7 +15039,7 @@
     }
   },
   "javaExecutorInfo" : {
-    "name" : "LnEmConsultaPolizaTrnPObtenerPolizaFechaExecutor",
+    "name" : "LnEmConsultaPolizaTrnPObtenerPolizaFechaOverload1Executor",
     "typePackage" : "org.lab.samples.osm.nwt.contract.executor",
     "dependencies" : [ ],
     "normalizedFieldName" : null,

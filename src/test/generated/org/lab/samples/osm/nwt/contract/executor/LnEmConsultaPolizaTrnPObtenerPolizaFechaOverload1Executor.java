@@ -7,11 +7,15 @@ import org.lab.osm.connector.annotation.OracleParameter.ParameterType;
 import org.lab.osm.connector.annotation.OracleStoredProcedure;
 import org.lab.osm.connector.handler.StoredProcedureExecutor;
 
+import org.lab.samples.osm.nwt.contract.model.OGnrMensajeErrorS;
 import org.lab.samples.osm.nwt.contract.model.OConPolizaS;
+import org.lab.samples.osm.nwt.contract.model.OGnrMensajeAdvertS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "LN_EM_CONSULTA_POLIZA_TRN.P_OBTENER_POLIZA_FECHA",
+	name = "P_OBTENER_POLIZA_FECHA",
+	oraclePackage = "LN_EM_CONSULTA_POLIZA_TRN",
+	owner = "TRON_LN",
 	isFunction = false,
 	parameters = {
 		@OracleParameter(
@@ -200,26 +204,28 @@ import org.lab.samples.osm.nwt.contract.model.OConPolizaS;
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
-			name = "O_CON_POLIZA_S",
+			name = "P_O_CON_POLIZA_T",
 			typeName = "O_CON_POLIZA_S",
 			type = Types.STRUCT,
 			mode = ParameterType.OUT,
 			returnStructClass = OConPolizaS.class
 		),
 		@OracleParameter(
-			name = "OS_GNR_MENSAJE_ERROR_S",
-			typeName = "OS_GNR_MENSAJE_ERROR_S",
+			name = "P_O_GNR_MENSAJE_ERROR_T",
+			typeName = "O_GNR_MENSAJE_ERROR_S",
 			type = Types.STRUCT,
-			mode = ParameterType.OUT
+			mode = ParameterType.OUT,
+			returnStructClass = OGnrMensajeErrorS.class
 		),
 		@OracleParameter(
-			name = "OS_GNR_MENSAJE_ADVERT_S",
-			typeName = "OS_GNR_MENSAJE_ADVERT_S",
+			name = "P_O_GNR_MENSAJE_ADVERT_T",
+			typeName = "O_GNR_MENSAJE_ADVERT_S",
 			type = Types.STRUCT,
-			mode = ParameterType.OUT
+			mode = ParameterType.OUT,
+			returnStructClass = OGnrMensajeAdvertS.class
 		)
 	})
 //@formatter:on
-public interface LnEmConsultaPolizaTrnPObtenerPolizaFechaExecutor extends StoredProcedureExecutor {
+public interface LnEmConsultaPolizaTrnPObtenerPolizaFechaOverload1Executor extends StoredProcedureExecutor {
 
 }
