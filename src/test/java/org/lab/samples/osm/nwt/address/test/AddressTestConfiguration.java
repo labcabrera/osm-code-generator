@@ -1,8 +1,6 @@
 package org.lab.samples.osm.nwt.address.test;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -23,7 +21,7 @@ import oracle.jdbc.pool.OracleDataSource;
 @Configuration
 public class AddressTestConfiguration {
 
-	private static final String BASE_PACKAGE = "org.lab.samples.osm.nwt.address";
+	private static final String[] BASE_PACKAGES = { "org.lab.samples.osm.nwt.address" };
 
 	@Bean
 	DataSource dataSource() throws SQLException {
@@ -36,10 +34,8 @@ public class AddressTestConfiguration {
 
 	@Bean
 	static OracleStoredProcedureAnnotationProcessor oracleRepositoryAnnotationProcessor() {
-		List<String> basePackages = new ArrayList<>();
-		basePackages.add(BASE_PACKAGE);
 		OracleStoredProcedureAnnotationProcessor bean = new OracleStoredProcedureAnnotationProcessor();
-		bean.setBasePackages(basePackages);
+		bean.setBasePackages(BASE_PACKAGES);
 		return bean;
 	}
 
@@ -47,7 +43,7 @@ public class AddressTestConfiguration {
 	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService,
 		MetadataCollector metadataCollector) throws SQLException {
 
-		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGE);
+		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGES);
 	}
 
 	@Bean
@@ -66,7 +62,7 @@ public class AddressTestConfiguration {
 	}
 
 	@Bean
-	public AddressService addressService() {
+	AddressService addressService() {
 		return new AddressService();
 	}
 

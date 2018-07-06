@@ -1,8 +1,6 @@
 package org.lab.samples.osm.claimwrapped.test;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -21,6 +19,8 @@ import oracle.jdbc.pool.OracleDataSource;
 @Configuration
 public class ClaimWrappedTestConfiguration {
 
+	private static final String[] BASE_PACKAGES = { "org.lab.samples.osm.claimwrapped" };
+
 	@Bean
 	DataSource dataSource() throws SQLException {
 		OracleDataSource dataSource = new OracleDataSource();
@@ -32,18 +32,15 @@ public class ClaimWrappedTestConfiguration {
 
 	@Bean
 	static OracleStoredProcedureAnnotationProcessor oracleRepositoryAnnotationProcessor() {
-		List<String> basePackages = new ArrayList<>();
-		basePackages.add("org.lab.samples.osm.claimwrapped");
 		OracleStoredProcedureAnnotationProcessor bean = new OracleStoredProcedureAnnotationProcessor();
-		bean.setBasePackages(basePackages);
+		bean.setBasePackages(BASE_PACKAGES);
 		return bean;
 	}
 
 	@Bean
 	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService,
 		MetadataCollector metadataCollector) throws SQLException {
-		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector,
-			"org.lab.samples.osm.claimwrapped");
+		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGES);
 	}
 
 	@Bean
@@ -57,7 +54,7 @@ public class ClaimWrappedTestConfiguration {
 	}
 
 	@Bean
-	public ClaimWrappedService claimWrappedService() {
+	ClaimWrappedService claimWrappedService() {
 		return new ClaimWrappedService();
 	}
 

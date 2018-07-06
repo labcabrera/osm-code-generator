@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ParticipantTestConfiguration.class })
 @Slf4j
-public class ParticipantServiceTest {
+public class ParticipantTest {
 
 	@Autowired
 	private ParticipantService participantService;

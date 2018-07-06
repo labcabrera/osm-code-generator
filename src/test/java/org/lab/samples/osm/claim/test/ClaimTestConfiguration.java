@@ -1,8 +1,6 @@
 package org.lab.samples.osm.claim.test;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -20,6 +18,8 @@ import oracle.jdbc.pool.OracleDataSource;
 @Configuration
 public class ClaimTestConfiguration {
 
+	private static final String[] BASE_PACKAGES = { "org.lab.samples.osm.claim" };
+
 	@Bean
 	DataSource dataSource() throws SQLException {
 		OracleDataSource dataSource = new OracleDataSource();
@@ -31,18 +31,15 @@ public class ClaimTestConfiguration {
 
 	@Bean
 	static OracleStoredProcedureAnnotationProcessor oracleRepositoryAnnotationProcessor() {
-		List<String> basePackages = new ArrayList<>();
-		basePackages.add("org.lab.samples.osm.claim");
 		OracleStoredProcedureAnnotationProcessor bean = new OracleStoredProcedureAnnotationProcessor();
-		bean.setBasePackages(basePackages);
+		bean.setBasePackages(BASE_PACKAGES);
 		return bean;
 	}
 
 	@Bean
 	StructMapperService metadataMapperService(DataSource dataSource, DefaultStructDefinitionService definitionService,
 		MetadataCollector metadataCollector) throws SQLException {
-		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector,
-			"org.lab.samples.osm.claim");
+		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGES);
 	}
 
 	@Bean
