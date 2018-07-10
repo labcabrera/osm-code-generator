@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.company.test;
 
-import org.lab.samples.osm.tron.company.LnEmCompaniaGprTrnPObtenerDetalleCompaniaExecutor;
+import org.lab.samples.osm.tron.company.executor.LnEmCompaniaGprTrnPObtenerDetalleCompaniaExecutor;
 import org.lab.samples.osm.tron.model.ODcCompaniaS;
 import org.lab.samples.osm.tron.model.OEmDatosComunesS;
 import org.springframework.beans.factory.annotation.Autowired;

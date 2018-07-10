@@ -1,9 +1,9 @@
-package org.lab.samples.osm.tron.bank.test;
+package org.lab.samples.osm.tron.coverage.test;
 
-import org.lab.samples.osm.tron.coverage.LnEmComUtilityMesPFormarCoberturasLisCobExecutor;
+import org.lab.samples.osm.tron.coverage.executor.LnEmComUtilityMesPFormarCoberturasLisCobExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class BankService {
+public class CoverageService {
 
 	@Autowired
 	private LnEmComUtilityMesPFormarCoberturasLisCobExecutor executor;

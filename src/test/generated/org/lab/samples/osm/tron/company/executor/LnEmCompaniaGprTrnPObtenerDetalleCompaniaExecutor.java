@@ -1,4 +1,4 @@
-package org.lab.samples.osm.tron.company;
+package org.lab.samples.osm.tron.company.executor;
 
 import java.sql.Types;
 

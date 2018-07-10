@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.account.test;
 
-import org.lab.samples.osm.account.executor.LnTrcCuentaTrnPActualizaExecutor;
+import org.lab.samples.osm.tron.account.executor.LnTrcCuentaTrnPActualizaExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AccountService {

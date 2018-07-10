@@ -1,4 +1,4 @@
-package org.lab.samples.osm.tron.bank.test;
+package org.lab.samples.osm.tron.coverage.test;
 
 import java.sql.SQLException;
 
@@ -17,10 +17,10 @@ import oracle.jdbc.pool.OracleDataSource;
 	modelPackages = "org.lab.samples.osm.bank",
 	executorPackages = "org.lab.samples.osm.bank",
 	serializationFolder= "/opt/osm-connector",
-	serializationPrefix = "test-banks")
+	serializationPrefix = "test-coverage")
 @Configuration
 //@formatter:on
-public class BankTestConfiguration {
+public class CoverageTestConfiguration {
 
 	@Bean
 	DataSource dataSource() throws SQLException {
@@ -32,8 +32,8 @@ public class BankTestConfiguration {
 	}
 
 	@Bean
-	BankService claimService() {
-		return new BankService();
+	CoverageService claimService() {
+		return new CoverageService();
 	}
 
 	@Bean

@@ -1,4 +1,4 @@
-package org.lab.samples.osm.account.model;
+package org.lab.samples.osm.tron.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,7 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.lab.osm.connector.annotation.OracleField;
 import org.lab.osm.connector.annotation.OracleStruct;
-import org.lab.samples.osm.account.model.OTrcCuentaExtTrn;
+import org.lab.samples.osm.tron.model.OTrcCuentaExtTrn;
 
 @OracleStruct("O_TRC_CUENTA_S")
 @Getter

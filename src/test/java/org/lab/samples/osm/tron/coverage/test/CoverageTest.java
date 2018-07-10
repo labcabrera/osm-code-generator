@@ -1,4 +1,4 @@
-package org.lab.samples.osm.tron.bank.test;
+package org.lab.samples.osm.tron.coverage.test;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,11 +10,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { BankTestConfiguration.class })
-public class BankTest {
+@ContextConfiguration(classes = { CoverageTestConfiguration.class })
+public class CoverageTest {
 
 	@Autowired
-	private BankService service;
+	private CoverageService service;
 
 	@Test
 	public void test() {

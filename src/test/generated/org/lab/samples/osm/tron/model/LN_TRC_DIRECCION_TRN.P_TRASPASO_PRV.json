@@ -12,6 +12,7 @@
     "argumentName" : "P_COD_INT_TMP",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -22,6 +23,7 @@
     "argumentName" : "P_COD_CIA",
     "dataType" : "NUMBER",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -32,6 +34,7 @@
     "argumentName" : "P_COD_USR",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -42,6 +45,7 @@
     "argumentName" : "P_COD_IDIOMA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -52,6 +56,7 @@
     "argumentName" : "P_MCA_COPIA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -62,6 +67,7 @@
     "argumentName" : "P_COD_INT_TMP_PRV",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -72,10 +78,11 @@
     "argumentName" : "P_O_GNR_MENSAJE_ADVERT_T",
     "dataType" : "TABLE",
     "typeName" : "O_GNR_MENSAJE_ADVERT_T",
+    "typeOwner" : "TRON_LN",
     "simpleObjectTypeName" : "O_GNR_MENSAJE_ADVERT_S",
     "javaTypeInfo" : {
       "name" : "OGnrMensajeAdvertS",
-      "typePackage" : "org.lab.samples.osm.address.model",
+      "typePackage" : "org.lab.samples.osm.tron.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -88,10 +95,11 @@
     "argumentName" : "P_O_GNR_MENSAJE_ERROR_T",
     "dataType" : "TABLE",
     "typeName" : "O_GNR_MENSAJE_ERROR_T",
+    "typeOwner" : "TRON_LN",
     "simpleObjectTypeName" : "O_GNR_MENSAJE_ERROR_S",
     "javaTypeInfo" : {
       "name" : "OGnrMensajeErrorS",
-      "typePackage" : "org.lab.samples.osm.address.model",
+      "typePackage" : "org.lab.samples.osm.tron.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -136,7 +144,7 @@
       } ],
       "javaTypeInfo" : {
         "name" : "OGnrMensajeAdvertS",
-        "typePackage" : "org.lab.samples.osm.address.model",
+        "typePackage" : "org.lab.samples.osm.tron.model",
         "dependencies" : [ "java.math.BigDecimal" ],
         "normalizedFieldName" : null,
         "oracleType" : false
@@ -224,7 +232,7 @@
       } ],
       "javaTypeInfo" : {
         "name" : "OGnrMensajeErrorS",
-        "typePackage" : "org.lab.samples.osm.address.model",
+        "typePackage" : "org.lab.samples.osm.tron.model",
         "dependencies" : [ "java.math.BigDecimal" ],
         "normalizedFieldName" : null,
         "oracleType" : false
@@ -241,7 +249,7 @@
   },
   "javaExecutorInfo" : {
     "name" : "LnTrcDireccionTrnPTraspasoPrvOverload1Executor",
-    "typePackage" : "org.lab.samples.osm.address.executor",
+    "typePackage" : "org.lab.samples.osm.tron.address.executor",
     "dependencies" : [ ],
     "normalizedFieldName" : null,
     "oracleType" : false

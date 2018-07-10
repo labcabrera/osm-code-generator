@@ -2,7 +2,7 @@ package org.lab.samples.osm.tron.address.test;
 
 import java.util.Map;
 
-import org.lab.samples.osm.address.executor.LnTrcDireccionTrnPTraspasoPrvOverload1Executor;
+import org.lab.samples.osm.tron.address.executor.LnTrcDireccionTrnPTraspasoPrvOverload1Executor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AddressService {

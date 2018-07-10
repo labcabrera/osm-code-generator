@@ -967,7 +967,7 @@
   },
   "javaExecutorInfo" : {
     "name" : "LnEmCompaniaGprTrnPObtenerDetalleCompaniaExecutor",
-    "typePackage" : "org.lab.samples.osm.tron.company",
+    "typePackage" : "org.lab.samples.osm.tron.company.executor",
     "dependencies" : [ ],
     "normalizedFieldName" : null,
     "oracleType" : false

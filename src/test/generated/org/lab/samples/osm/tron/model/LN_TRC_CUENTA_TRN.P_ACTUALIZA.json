@@ -12,6 +12,7 @@
     "argumentName" : "P_COD_INT",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -22,6 +23,7 @@
     "argumentName" : "P_COD_USR",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -32,6 +34,7 @@
     "argumentName" : "P_COD_IDIOMA",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -42,6 +45,7 @@
     "argumentName" : "P_COD_CIA",
     "dataType" : "NUMBER",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -52,6 +56,7 @@
     "argumentName" : "P_COD_ACT_TERCERO",
     "dataType" : "NUMBER",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -62,6 +67,7 @@
     "argumentName" : "P_MCA_LK",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -72,6 +78,7 @@
     "argumentName" : "P_COD_APL",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -80,12 +87,13 @@
     "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "P_O_GNR_MENSAJE_ADVERT_T",
-    "dataType" : "OBJECT",
-    "typeName" : "O_GNR_MENSAJE_ADVERT_S",
-    "simpleObjectTypeName" : null,
+    "dataType" : "TABLE",
+    "typeName" : "O_GNR_MENSAJE_ADVERT_T",
+    "typeOwner" : "TRON_LN",
+    "simpleObjectTypeName" : "O_GNR_MENSAJE_ADVERT_S",
     "javaTypeInfo" : {
       "name" : "OGnrMensajeAdvertS",
-      "typePackage" : "org.lab.samples.osm.account.model",
+      "typePackage" : "org.lab.samples.osm.tron.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -96,12 +104,13 @@
     "dataLevel" : 0,
     "mode" : "OUT",
     "argumentName" : "P_O_GNR_MENSAJE_ERROR_T",
-    "dataType" : "OBJECT",
-    "typeName" : "O_GNR_MENSAJE_ERROR_S",
-    "simpleObjectTypeName" : null,
+    "dataType" : "TABLE",
+    "typeName" : "O_GNR_MENSAJE_ERROR_T",
+    "typeOwner" : "TRON_LN",
+    "simpleObjectTypeName" : "O_GNR_MENSAJE_ERROR_S",
     "javaTypeInfo" : {
       "name" : "OGnrMensajeErrorS",
-      "typePackage" : "org.lab.samples.osm.account.model",
+      "typePackage" : "org.lab.samples.osm.tron.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -114,10 +123,11 @@
     "argumentName" : "P_O_TRC_CUENTA_S",
     "dataType" : "OBJECT",
     "typeName" : "O_TRC_CUENTA_S",
+    "typeOwner" : "TRON_LN",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OTrcCuentaS",
-      "typePackage" : "org.lab.samples.osm.account.model",
+      "typePackage" : "org.lab.samples.osm.tron.model",
       "dependencies" : [ ],
       "normalizedFieldName" : null,
       "oracleType" : false
@@ -162,7 +172,7 @@
       } ],
       "javaTypeInfo" : {
         "name" : "OGnrMensajeAdvertS",
-        "typePackage" : "org.lab.samples.osm.account.model",
+        "typePackage" : "org.lab.samples.osm.tron.model",
         "dependencies" : [ "java.math.BigDecimal" ],
         "normalizedFieldName" : null,
         "oracleType" : false
@@ -250,7 +260,7 @@
       } ],
       "javaTypeInfo" : {
         "name" : "OGnrMensajeErrorS",
-        "typePackage" : "org.lab.samples.osm.account.model",
+        "typePackage" : "org.lab.samples.osm.tron.model",
         "dependencies" : [ "java.math.BigDecimal" ],
         "normalizedFieldName" : null,
         "oracleType" : false
@@ -278,7 +288,7 @@
       } ],
       "javaTypeInfo" : {
         "name" : "OTrcCuentaExtTrn",
-        "typePackage" : "org.lab.samples.osm.account.model",
+        "typePackage" : "org.lab.samples.osm.tron.model",
         "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
@@ -837,7 +847,7 @@
         "scale" : 0,
         "javaInfo" : {
           "name" : "OTrcCuentaExtTrn",
-          "typePackage" : "org.lab.samples.osm.account.model",
+          "typePackage" : "org.lab.samples.osm.tron.model",
           "dependencies" : [ ],
           "normalizedFieldName" : "ext",
           "oracleType" : true
@@ -981,7 +991,7 @@
       } ],
       "javaTypeInfo" : {
         "name" : "OTrcCuentaS",
-        "typePackage" : "org.lab.samples.osm.account.model",
+        "typePackage" : "org.lab.samples.osm.tron.model",
         "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
@@ -1000,7 +1010,7 @@
   },
   "javaExecutorInfo" : {
     "name" : "LnTrcCuentaTrnPActualizaExecutor",
-    "typePackage" : "org.lab.samples.osm.account.executor",
+    "typePackage" : "org.lab.samples.osm.tron.account.executor",
     "dependencies" : [ ],
     "normalizedFieldName" : null,
     "oracleType" : false

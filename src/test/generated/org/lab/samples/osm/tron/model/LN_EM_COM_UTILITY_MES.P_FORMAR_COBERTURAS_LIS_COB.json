@@ -14805,7 +14805,7 @@
   },
   "javaExecutorInfo" : {
     "name" : "LnEmComUtilityMesPFormarCoberturasLisCobExecutor",
-    "typePackage" : "org.lab.samples.osm.tron.coverage",
+    "typePackage" : "org.lab.samples.osm.tron.coverage.executor",
     "dependencies" : [ ],
     "normalizedFieldName" : null,
     "oracleType" : false

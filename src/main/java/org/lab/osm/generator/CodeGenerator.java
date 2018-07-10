@@ -94,12 +94,15 @@ public class CodeGenerator {
 			jsonWriter.write(spInfo, out);
 		}
 		// Java entity classes
+		boolean override = options.getOverrideModelFiles() != null && options.getOverrideModelFiles();
 		for (TypeInfo typeInfo : spInfo.getTypeRegistry().getTypes()) {
 			// Exclude collections
 			if (typeInfo.getCollectionTypeOf() == null) {
 				File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");
-				try (FileOutputStream out = new FileOutputStream(javaFile)) {
-					classWriter.write(spInfo, typeInfo, out, options);
+				if (!javaFile.exists() || override) {
+					try (FileOutputStream out = new FileOutputStream(javaFile)) {
+						classWriter.write(spInfo, typeInfo, out, options);
+					}
 				}
 			}
 		}

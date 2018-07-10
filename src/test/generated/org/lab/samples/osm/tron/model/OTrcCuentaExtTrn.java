@@ -1,4 +1,4 @@
-package org.lab.samples.osm.account.model;
+package org.lab.samples.osm.tron.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

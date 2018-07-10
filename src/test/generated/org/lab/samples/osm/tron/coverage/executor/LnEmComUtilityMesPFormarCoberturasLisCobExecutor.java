@@ -1,4 +1,4 @@
-package org.lab.samples.osm.tron.coverage;
+package org.lab.samples.osm.tron.coverage.executor;
 
 import java.sql.Types;
 
