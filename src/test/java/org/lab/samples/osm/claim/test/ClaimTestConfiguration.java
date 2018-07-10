@@ -4,21 +4,23 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
-import org.lab.osm.connector.handler.OracleStoredProcedureAnnotationProcessor;
-import org.lab.osm.connector.mapper.DefaultStructDefinitionService;
-import org.lab.osm.connector.metadata.DefaultMetadataCollector;
-import org.lab.osm.connector.metadata.MetadataCollector;
-import org.lab.osm.connector.service.MetadataStructMapperService;
-import org.lab.osm.connector.service.StructMapperService;
+import org.lab.osm.connector.EnableOsmConnector;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import oracle.jdbc.pool.OracleDataSource;
 
+//@formatter:off
+@EnableOsmConnector(
+	modelPackages = "org.lab.samples.osm.claim",
+	executorPackages = "org.lab.samples.osm.claim",
+	serializationFolder= "/opt/osm-connector",
+	serializationPrefix = "test-claim")
 @Configuration
+//@formatter:on
 public class ClaimTestConfiguration {
-
-	private static final String[] BASE_PACKAGES = { "org.lab.samples.osm.claim" };
 
 	@Bean
 	DataSource dataSource() throws SQLException {
@@ -30,31 +32,13 @@ public class ClaimTestConfiguration {
 	}
 
 	@Bean
-	static OracleStoredProcedureAnnotationProcessor oracleRepositoryAnnotationProcessor() {
-		OracleStoredProcedureAnnotationProcessor bean = new OracleStoredProcedureAnnotationProcessor();
-		bean.setBasePackages(BASE_PACKAGES);
-		return bean;
-	}
-
-	@Bean
-	StructMapperService metadataMapperService(DataSource dataSource, DefaultStructDefinitionService definitionService,
-		MetadataCollector metadataCollector) throws SQLException {
-		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGES);
-	}
-
-	@Bean
-	DefaultStructDefinitionService structDefinitionService() {
-		return new DefaultStructDefinitionService();
-	}
-
-	@Bean
-	MetadataCollector metadataCollector(DataSource dataSource) {
-		return new DefaultMetadataCollector(dataSource);
-	}
-
-	@Bean
-	public ClaimService claimService() {
+	ClaimService claimService() {
 		return new ClaimService();
+	}
+
+	@Bean
+	ObjectMapper objectMapper() {
+		return new ObjectMapper();
 	}
 
 }

@@ -27,6 +27,7 @@ public class ClaimTest {
 
 	private TRSiniestroAcc buildRequest() {
 		TRSiniestroAcc request = new TRSiniestroAcc();
+		request.setNumPoliza("1234567890");
 		return request;
 	}
 

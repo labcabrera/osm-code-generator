@@ -1,4 +1,4 @@
-package org.lab.samples.osm.participant.test;
+package org.lab.samples.osm.address.test;
 
 import java.sql.SQLException;
 
@@ -13,31 +13,32 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import oracle.jdbc.pool.OracleDataSource;
 
 //@formatter:off
-@Configuration
 @EnableOsmConnector(
-	modelPackages = "org.lab.samples.osm.participant.model",
-	executorPackages = "org.lab.samples.osm.participant.executor",
+	modelPackages = "org.lab.samples.osm.address",
+	executorPackages = "org.lab.samples.osm.address",
 	serializationFolder= "/opt/osm-connector",
-	serializationPrefix = "test-participant")
+	serializationPrefix = "test-address")
+@Configuration
 //@formatter:on
-public class ParticipantTestConfiguration {
+public class AddressTestConfiguration {
 
 	@Bean
 	DataSource dataSource() throws SQLException {
 		OracleDataSource dataSource = new OracleDataSource();
-		dataSource.setURL("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
-		dataSource.setUser("MPD_LD");
-		dataSource.setPassword("MPD_LD");
+		dataSource.setURL("jdbc:oracle:thin:@BDMDI1:1523:MDI1");
+		dataSource.setUser("TRON_APP");
+		dataSource.setPassword("TRON_APP");
 		return dataSource;
 	}
 
 	@Bean
-	ParticipantService participantService() {
-		return new ParticipantService();
+	AddressService addressService() {
+		return new AddressService();
 	}
 
 	@Bean
 	ObjectMapper objectMapper() {
 		return new ObjectMapper();
 	}
+
 }

@@ -13,6 +13,17 @@ import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Oracle stored procedure argument reader.
+ * 
+ * References:
+ * <ul>
+ * <li>https://docs.oracle.com/cd/B28359_01/server.111/b28320/statviews_1014.htm</li>
+ * </ul>
+ * 
+ * @author lab.cabrera@gmail.com
+ *
+ */
 @Slf4j
 public class StoredProcedureParameterReader {
 

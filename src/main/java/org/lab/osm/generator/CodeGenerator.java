@@ -17,8 +17,8 @@ import org.lab.osm.generator.java.StoredProcedureParameterAdapter;
 import org.lab.osm.generator.java.StoredProcedureTypeAdapter;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
-import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
+import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
 import org.lab.osm.generator.reader.StoredProcedureReader;
 import org.lab.osm.generator.reader.TypeReader;
@@ -129,7 +129,7 @@ public class CodeGenerator {
 	}
 
 	private File resolveFolder(String folder, String javaPackage, Boolean cleanFolder) {
-		File parent = new File(folder + "/" + javaPackage.replaceAll("\\.", "/"));
+		File parent = new File(folder, javaPackage.replaceAll("\\.", "/"));
 		if (!parent.exists() && !parent.mkdirs()) {
 			throw new OsmExportException("Cant create folder " + parent.getAbsolutePath());
 		}

@@ -1,0 +1,250 @@
+{
+  "objectId" : 135852,
+  "objectName" : "LN_TRC_DIRECCION_TRN",
+  "procedureName" : "P_TRASPASO_PRV",
+  "owner" : "TRON_LN",
+  "overload" : 1,
+  "parameters" : [ {
+    "position" : 1,
+    "sequence" : 1,
+    "dataLevel" : 0,
+    "mode" : "IN",
+    "argumentName" : "P_COD_INT_TMP",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : null
+  }, {
+    "position" : 2,
+    "sequence" : 2,
+    "dataLevel" : 0,
+    "mode" : "IN",
+    "argumentName" : "P_COD_CIA",
+    "dataType" : "NUMBER",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : null
+  }, {
+    "position" : 3,
+    "sequence" : 3,
+    "dataLevel" : 0,
+    "mode" : "IN",
+    "argumentName" : "P_COD_USR",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : null
+  }, {
+    "position" : 4,
+    "sequence" : 4,
+    "dataLevel" : 0,
+    "mode" : "IN",
+    "argumentName" : "P_COD_IDIOMA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : null
+  }, {
+    "position" : 5,
+    "sequence" : 5,
+    "dataLevel" : 0,
+    "mode" : "IN",
+    "argumentName" : "P_MCA_COPIA",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : null
+  }, {
+    "position" : 6,
+    "sequence" : 6,
+    "dataLevel" : 0,
+    "mode" : "IN",
+    "argumentName" : "P_COD_INT_TMP_PRV",
+    "dataType" : "VARCHAR2",
+    "typeName" : null,
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : null
+  }, {
+    "position" : 7,
+    "sequence" : 7,
+    "dataLevel" : 0,
+    "mode" : "OUT",
+    "argumentName" : "P_O_GNR_MENSAJE_ADVERT_T",
+    "dataType" : "OBJECT",
+    "typeName" : "O_GNR_MENSAJE_ADVERT_S",
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : "OGnrMensajeAdvertS",
+      "typePackage" : "org.lab.samples.osm.address.model",
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
+    }
+  }, {
+    "position" : 8,
+    "sequence" : 9,
+    "dataLevel" : 0,
+    "mode" : "OUT",
+    "argumentName" : "P_O_GNR_MENSAJE_ERROR_T",
+    "dataType" : "OBJECT",
+    "typeName" : "O_GNR_MENSAJE_ERROR_S",
+    "simpleObjectTypeName" : null,
+    "javaTypeInfo" : {
+      "name" : "OGnrMensajeErrorS",
+      "typePackage" : "org.lab.samples.osm.address.model",
+      "dependencies" : [ ],
+      "normalizedFieldName" : null,
+      "oracleType" : false
+    }
+  } ],
+  "typeRegistry" : {
+    "types" : [ {
+      "typeName" : "O_GNR_MENSAJE_ADVERT_S",
+      "synonymName" : null,
+      "owner" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "COD_ADVERT",
+        "typeName" : "NUMBER",
+        "length" : 0,
+        "precision" : 8,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "BigDecimal",
+          "typePackage" : "java.math",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codAdvert",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "TXT_ADVERT",
+        "typeName" : "VARCHAR2",
+        "length" : 4000,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "txtAdvert",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
+        "name" : "OGnrMensajeAdvertS",
+        "typePackage" : "org.lab.samples.osm.address.model",
+        "dependencies" : [ "java.math.BigDecimal" ],
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
+    }, {
+      "typeName" : "O_GNR_MENSAJE_ERROR_S",
+      "synonymName" : null,
+      "owner" : null,
+      "collectionTypeOf" : null,
+      "columns" : [ {
+        "index" : 1,
+        "name" : "COD_ERROR",
+        "typeName" : "NUMBER",
+        "length" : 0,
+        "precision" : 8,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "BigDecimal",
+          "typePackage" : "java.math",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "codError",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 2,
+        "name" : "TXT_ERROR",
+        "typeName" : "VARCHAR2",
+        "length" : 200,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "txtError",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 3,
+        "name" : "TXT_CAMPO",
+        "typeName" : "VARCHAR2",
+        "length" : 30,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "txtCampo",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 4,
+        "name" : "TXT_RUTA_ERROR",
+        "typeName" : "VARCHAR2",
+        "length" : 2000,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "txtRutaError",
+          "oracleType" : true
+        },
+        "collection" : false
+      }, {
+        "index" : 5,
+        "name" : "TXT_PILA_ERROR",
+        "typeName" : "VARCHAR2",
+        "length" : 2000,
+        "precision" : 0,
+        "scale" : 0,
+        "javaInfo" : {
+          "name" : "String",
+          "typePackage" : "java.lang",
+          "dependencies" : [ ],
+          "normalizedFieldName" : "txtPilaError",
+          "oracleType" : true
+        },
+        "collection" : false
+      } ],
+      "javaTypeInfo" : {
+        "name" : "OGnrMensajeErrorS",
+        "typePackage" : "org.lab.samples.osm.address.model",
+        "dependencies" : [ "java.math.BigDecimal" ],
+        "normalizedFieldName" : null,
+        "oracleType" : false
+      }
+    } ],
+    "synonyms" : {
+      "O_GNR_MENSAJE_ERROR_T" : null,
+      "O_GNR_MENSAJE_ADVERT_S" : null,
+      "O_GNR_MENSAJE_ADVERT_T" : null,
+      "O_GNR_MENSAJE_ERROR_S" : null,
+      "OS_GNR_MENSAJE_ERROR_S" : "O_GNR_MENSAJE_ERROR_S",
+      "OS_GNR_MENSAJE_ADVERT_S" : "O_GNR_MENSAJE_ADVERT_S"
+    }
+  },
+  "javaExecutorInfo" : {
+    "name" : "LnTrcDireccionTrnPTraspasoPrvOverload1Executor",
+    "typePackage" : "org.lab.samples.osm.address.executor",
+    "dependencies" : [ ],
+    "normalizedFieldName" : null,
+    "oracleType" : false
+  },
+  "function" : false
+}
