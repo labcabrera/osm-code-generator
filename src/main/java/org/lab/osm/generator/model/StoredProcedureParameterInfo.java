@@ -39,6 +39,7 @@ public class StoredProcedureParameterInfo {
 	private String argumentName;
 	private String dataType;
 	private String typeName;
+	private String typeOwner;
 
 	private String simpleObjectTypeName;
 

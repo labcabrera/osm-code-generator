@@ -6,7 +6,7 @@
     </encoder>
   </appender>
 
-  <logger name="org.lab" level="DEBUG" />
+  <logger name="org.lab" level="TRACE" />
 
   <root level="info">
     <appender-ref ref="STDOUT" />

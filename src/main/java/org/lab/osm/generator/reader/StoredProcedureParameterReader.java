@@ -74,6 +74,7 @@ public class StoredProcedureParameterReader {
 				paramInfo.setDataLevel(rs.getInt("data_level"));
 				paramInfo.setMode(StoredProcedureParameterInfo.Mode.parse(rs.getString("in_out")));
 				paramInfo.setTypeName(typeName);
+				paramInfo.setTypeOwner(rs.getString("type_owner"));
 				paramInfo.setArgumentName(rs.getString("argument_name"));
 
 				if (paramInfo.getPosition() == 0) {
