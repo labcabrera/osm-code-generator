@@ -16,6 +16,7 @@ public class CodeGenerationOptions {
 	private String executorBaseFolder;
 
 	private Boolean cleanTargetFolders;
+	private Boolean overrideModelFiles;
 	private Boolean generateComments;
 	
 	private Integer overload;
