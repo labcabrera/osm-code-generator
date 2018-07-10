@@ -2,10 +2,15 @@ buildscript {
   ext {
     springVersion          = '5.0.7.RELEASE'
     oracleDriverVersion    = '11.2.0.4.0-atlassian-hosted'
-    commonsLang3Version    = '3.7'
     reflectionsVersion     = '0.9.11'
+    jacksonVersion         = '2.9.6'
     slf4jVersion           = '1.7.25'
+    lobackVersion          = '1.2.3'
+    commonsLang3Version    = '3.7'
+    commonsIoVersion       = '2.6'
     lombokVersion          = '1.16.22'
+    junitVersion           = '4.12'
+    osmConnectorVersion    = '0.0.1-SNAPSHOT'
     mvnProxy = "http://nexus:8080/nexus/content/groups/public/"
   }
   repositories {
@@ -41,17 +46,16 @@ dependencies {
   compile("org.springframework:spring-context:${springVersion}")
   compile("org.springframework:spring-jdbc:${springVersion}")
   compile("org.apache.commons:commons-lang3:${commonsLang3Version}")
-  compile("commons-io:commons-io:2.6")
   compile("org.reflections:reflections:${reflectionsVersion}")
+  compile("commons-io:commons-io:${commonsIoVersion}")
   compile("com.oracle:ojdbc6:${oracleDriverVersion}")
   compile("org.slf4j:slf4j-api:${slf4jVersion}")
-  compile("ch.qos.logback:logback-classic:1.2.3")
-  compile("com.fasterxml.jackson.core:jackson-databind:2.9.6")
-
+  compile("ch.qos.logback:logback-classic:${lobackVersion}")
+  compile("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
   compileOnly("org.projectlombok:lombok:${lombokVersion}")
 
-  testCompile("org.lab.osm:osm-connector:0.0.1-SNAPSHOT")
-  testCompile("junit:junit:4.12")
+  testCompile("org.lab.osm:osm-connector:${osmConnectorVersion}")
+  testCompile("junit:junit:${junitVersion}")
   testCompile("org.springframework:spring-test:${springVersion}")
 }
 

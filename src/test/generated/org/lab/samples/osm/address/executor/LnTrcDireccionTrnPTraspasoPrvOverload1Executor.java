@@ -49,15 +49,15 @@ import org.lab.samples.osm.address.model.OGnrMensajeAdvertS;
 		),
 		@OracleParameter(
 			name = "P_O_GNR_MENSAJE_ADVERT_T",
-			typeName = "O_GNR_MENSAJE_ADVERT_S",
-			type = Types.STRUCT,
+			typeName = "O_GNR_MENSAJE_ADVERT_T",
+			type = Types.ARRAY,
 			mode = ParameterType.OUT,
 			returnStructClass = OGnrMensajeAdvertS.class
 		),
 		@OracleParameter(
 			name = "P_O_GNR_MENSAJE_ERROR_T",
-			typeName = "O_GNR_MENSAJE_ERROR_S",
-			type = Types.STRUCT,
+			typeName = "O_GNR_MENSAJE_ERROR_T",
+			type = Types.ARRAY,
 			mode = ParameterType.OUT,
 			returnStructClass = OGnrMensajeErrorS.class
 		)

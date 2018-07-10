@@ -206,21 +206,21 @@ import org.lab.samples.osm.contract.model.OGnrMensajeAdvertS;
 		@OracleParameter(
 			name = "P_O_CON_POLIZA_T",
 			typeName = "O_CON_POLIZA_S",
-			type = Types.STRUCT,
+			type = Types.ARRAY,
 			mode = ParameterType.OUT,
 			returnStructClass = OConPolizaS.class
 		),
 		@OracleParameter(
 			name = "P_O_GNR_MENSAJE_ERROR_T",
 			typeName = "O_GNR_MENSAJE_ERROR_S",
-			type = Types.STRUCT,
+			type = Types.ARRAY,
 			mode = ParameterType.OUT,
 			returnStructClass = OGnrMensajeErrorS.class
 		),
 		@OracleParameter(
 			name = "P_O_GNR_MENSAJE_ADVERT_T",
 			typeName = "O_GNR_MENSAJE_ADVERT_S",
-			type = Types.STRUCT,
+			type = Types.ARRAY,
 			mode = ParameterType.OUT,
 			returnStructClass = OGnrMensajeAdvertS.class
 		)

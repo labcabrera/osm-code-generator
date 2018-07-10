@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
+import org.lab.osm.generator.adapter.JavaOracleTypeInfoAdapter;
+import org.lab.osm.generator.adapter.StoredProcedureParameterAdapter;
+import org.lab.osm.generator.adapter.StoredProcedureTypeAdapter;
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.exception.OsmModelReadException;
-import org.lab.osm.generator.java.JavaOracleTypeInfoAdapter;
-import org.lab.osm.generator.java.StoredProcedureParameterAdapter;
-import org.lab.osm.generator.java.StoredProcedureTypeAdapter;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
 import org.lab.osm.generator.model.StoredProcedureInfo;
@@ -22,8 +22,8 @@ import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
 import org.lab.osm.generator.reader.StoredProcedureReader;
 import org.lab.osm.generator.reader.TypeReader;
-import org.lab.osm.generator.writer.JavaEntityCodeWriter;
-import org.lab.osm.generator.writer.JavaExecutorCodeWriter;
+import org.lab.osm.generator.writer.EntityCodeWriter;
+import org.lab.osm.generator.writer.ExecutorCodeWriter;
 import org.lab.osm.generator.writer.StoredProcedureInfoWriter;
 
 import lombok.extern.slf4j.Slf4j;
@@ -85,7 +85,7 @@ public class CodeGenerator {
 
 	private void exportModel(StoredProcedureInfo spInfo, CodeGenerationOptions options) throws IOException {
 		StoredProcedureInfoWriter jsonWriter = new StoredProcedureInfoWriter();
-		JavaEntityCodeWriter classWriter = new JavaEntityCodeWriter();
+		EntityCodeWriter classWriter = new EntityCodeWriter();
 		File parent = resolveFolder(options.getEntityBaseFolder(), options.getEntityPackage(),
 			options.getCleanTargetFolders());
 		// Json model
@@ -106,7 +106,7 @@ public class CodeGenerator {
 	}
 
 	private void exportExecutor(StoredProcedureInfo spInfo, CodeGenerationOptions options) throws IOException {
-		JavaExecutorCodeWriter executorCodeWriter = new JavaExecutorCodeWriter();
+		ExecutorCodeWriter executorCodeWriter = new ExecutorCodeWriter();
 		File parent = resolveFolder(options.getExecutorBaseFolder(), options.getExecutorPackage(),
 			options.getCleanTargetFolders());
 		File executorInterface = new File(parent, spInfo.getJavaExecutorInfo().getName() + ".java");

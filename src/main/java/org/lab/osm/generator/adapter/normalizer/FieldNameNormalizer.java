@@ -1,16 +1,14 @@
-package org.lab.osm.generator.java.normalizer;
+package org.lab.osm.generator.adapter.normalizer;
 
 import java.util.function.UnaryOperator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.StringUtils;
-
-public class ExecutorInterfaceNameNormalizer implements UnaryOperator<String> {
+public class FieldNameNormalizer implements UnaryOperator<String> {
 
 	@Override
 	public String apply(String typeName) {
-		String tmp = typeName.toLowerCase().replaceAll("\\.", "_") + "_executor";
+		String tmp = typeName.toLowerCase();
 		Pattern pattern = Pattern.compile("(_\\w)");
 		Matcher matcher = pattern.matcher(tmp);
 		StringBuffer sb = new StringBuffer();
@@ -21,6 +19,6 @@ public class ExecutorInterfaceNameNormalizer implements UnaryOperator<String> {
 			matcher.appendReplacement(sb, g0.replaceFirst(Pattern.quote(g1), replacement));
 		}
 		matcher.appendTail(sb);
-		return StringUtils.capitalize(sb.toString());
+		return sb.toString();
 	}
 }

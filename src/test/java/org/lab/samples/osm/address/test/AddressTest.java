@@ -17,12 +17,12 @@ public class AddressTest {
 	@Test
 	public void test() {
 		Object[] args = new Object[] { //@formatter:off
-			null,					// P_COD_INT_TMP
-			null,					// P_COD_CIA
-			null,					// P_COD_USR
-			null,					// P_COD_IDIOMA
-			null,					// P_MCA_COPIA
-			null					// P_COD_INT_TMP_PRV
+			"A",						// P_COD_INT_TMP
+			1,						// P_COD_CIA
+			"B",						// P_COD_USR
+			"C", 					// P_COD_IDIOMA
+			"D",						// P_MCA_COPIA
+			"E"						// P_COD_INT_TMP_PRV
 		}; //@formatter:on
 
 		Object result = service.execute(args);

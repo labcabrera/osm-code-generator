@@ -1,7 +1,7 @@
-package org.lab.osm.generator.java;
+package org.lab.osm.generator.adapter;
 
-import org.lab.osm.generator.java.normalizer.ClassNameNormalizer;
-import org.lab.osm.generator.java.normalizer.FieldNameNormalizer;
+import org.lab.osm.generator.adapter.normalizer.ClassNameNormalizer;
+import org.lab.osm.generator.adapter.normalizer.FieldNameNormalizer;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.JavaTypeInfo;
 import org.lab.osm.generator.model.TypeInfo;

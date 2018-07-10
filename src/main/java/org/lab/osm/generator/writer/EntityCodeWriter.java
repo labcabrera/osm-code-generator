@@ -17,12 +17,12 @@ import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 
-public class JavaEntityCodeWriter {
+public class EntityCodeWriter {
 
 	public void write(StoredProcedureInfo spInfo, TypeInfo entityType, OutputStream out,
 		CodeGenerationOptions options) {
 
-		JavaEntityFieldCollector collector = new JavaEntityFieldCollector();
+		EntityFieldCollector collector = new EntityFieldCollector();
 		List<String> fields = new ArrayList<>();
 		Set<String> dependencies = new HashSet<>();
 		collector.collect(spInfo, entityType, fields, dependencies);

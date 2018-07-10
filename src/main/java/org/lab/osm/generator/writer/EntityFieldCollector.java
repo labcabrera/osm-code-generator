@@ -12,7 +12,7 @@ import org.springframework.util.Assert;
 
 import lombok.NonNull;
 
-public class JavaEntityFieldCollector {
+public class EntityFieldCollector {
 
 	public void collect( //@formatter:off
 			@NonNull StoredProcedureInfo spInfo,

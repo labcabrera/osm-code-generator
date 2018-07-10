@@ -21,7 +21,7 @@ import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class JavaExecutorCodeWriter {
+public class ExecutorCodeWriter {
 
 	public void write(StoredProcedureInfo spInfo, OutputStream out, CodeGenerationOptions options) {
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {

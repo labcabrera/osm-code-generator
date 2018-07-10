@@ -1,11 +1,11 @@
-package org.lab.osm.generator.java;
+package org.lab.osm.generator.adapter;
 
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.JavaTypeInfo;
-import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
+import org.lab.osm.generator.model.TypeInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -39,8 +39,8 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 					prev.setArgumentName(prev.getTypeName());
 				}
 				else {
-					prev.setTypeName(value.getTypeName());
-					prev.setDataType(value.getDataType());
+					prev.setSimpleObjectTypeName(value.getTypeName());
+					// prev.setTypeName(value.getTypeName());
 					prev.setArgumentName(prev.getArgumentName() != null ? prev.getArgumentName() : value.getTypeName());
 				}
 

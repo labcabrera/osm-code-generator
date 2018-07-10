@@ -1,7 +1,7 @@
-package org.lab.osm.generator.java;
+package org.lab.osm.generator.adapter;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lab.osm.generator.java.normalizer.ExecutorInterfaceNameNormalizer;
+import org.lab.osm.generator.adapter.normalizer.ExecutorInterfaceNameNormalizer;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.JavaTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;

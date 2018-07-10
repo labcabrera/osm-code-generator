@@ -1,4 +1,4 @@
-package org.lab.osm.generator.java;
+package org.lab.osm.generator.adapter;
 
 import org.lab.osm.generator.model.CodeGenerationOptions;
 

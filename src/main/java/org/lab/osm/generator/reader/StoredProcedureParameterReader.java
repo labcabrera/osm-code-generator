@@ -22,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
  * </ul>
  * 
  * @author lab.cabrera@gmail.com
+ * @since 1.0.0
  *
  */
 @Slf4j
@@ -58,7 +59,6 @@ public class StoredProcedureParameterReader {
 			List<StoredProcedureParameterInfo> params = new ArrayList<>();
 			while (rs.next()) {
 
-				// Check synosym
 				String typeName = rs.getString("type_name");
 				if (typeName != null) {
 					String effectiveType = synonymReader.read(connection, typeName, spInfo.getTypeRegistry());
