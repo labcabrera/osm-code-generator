@@ -3,6 +3,7 @@ package org.lab.samples.osm.tron.coverage.test;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.lab.samples.osm.tron.coverage.executor.LnEmComUtilityMesPFormarCoberturasLisCobExecutor;
 import org.lab.samples.osm.tron.model.OConPolizaS;
 import org.lab.samples.osm.tron.model.OEmDatosComunesS;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +15,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class CoverageTest {
 
 	@Autowired
-	private CoverageService service;
+	private LnEmComUtilityMesPFormarCoberturasLisCobExecutor executor;
 
 	@Test
 	public void test() {
-
 		OEmDatosComunesS dc = new OEmDatosComunesS();
 		OConPolizaS dp = new OConPolizaS();
 
-		Object[] args = new Object[] { dc, dp };
-		Object result = service.execute(args);
+		Object result = executor.execute(dc, dp);
 
 		Assert.assertNotNull(result);
 	}

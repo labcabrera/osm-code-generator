@@ -12,6 +12,10 @@ import oracle.jdbc.pool.OracleDataSource;
 
 public abstract class TronBaseConfiguration {
 
+	public static final String TRON_MODEL_PACKAGE = "org.lab.samples.osm.tron.model";
+	public static final String TRON_SERIALIZED_FOLDER = "/opt/osm-connector";
+	public static final String TRON_SERIALIZED_PREFIX = "tron";
+
 	@Bean
 	DataSource dataSource() throws SQLException {
 		OracleDataSource dataSource = new OracleDataSource();

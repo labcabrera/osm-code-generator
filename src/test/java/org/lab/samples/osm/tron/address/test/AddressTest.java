@@ -3,6 +3,7 @@ package org.lab.samples.osm.tron.address.test;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.lab.samples.osm.tron.address.executor.LnTrcDireccionTrnPTraspasoPrvOverload1Executor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -12,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class AddressTest {
 
 	@Autowired
-	private AddressService service;
+	private LnTrcDireccionTrnPTraspasoPrvOverload1Executor executor;
 
 	@Test
 	public void test() {
@@ -25,7 +26,7 @@ public class AddressTest {
 			"E"						// P_COD_INT_TMP_PRV
 		}; //@formatter:on
 
-		Object result = service.execute(args);
+		Object result = executor.execute(args);
 
 		Assert.assertNotNull(result);
 	}
