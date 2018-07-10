@@ -12,27 +12,19 @@ import org.lab.samples.osm.tron.model.OGnrMensajeErrorS;
 
 //@formatter:off
 @OracleStoredProcedure(
-	name = "P_DETALLE_CTRL_TECNICO",
+	name = "P_QUERY",
 	oraclePackage = "LN_EM_CTRL_TECNICO_TRN",
 	owner = "TRON_LN",
 	isFunction = false,
 	parameters = {
 		@OracleParameter(
-			name = "P_O_GPR_CNT_TECNICO_T",
-			typeName = "O_GPR_CNT_TECNICO_T",
-			type = Types.ARRAY,
+			name = "P_COD_CIA",
+			type = Types.NUMERIC,
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
-			name = "OBJECT",
-			typeName = "O_GPR_CNT_TECNICO_S",
-			type = Types.STRUCT,
-			mode = ParameterType.IN
-		),
-		@OracleParameter(
-			name = "P_O_EM_DATOS_COMUNES_S",
-			typeName = "O_EM_DATOS_COMUNES_S",
-			type = Types.STRUCT,
+			name = "P_COD_IDIOMA",
+			type = Types.NVARCHAR,
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
@@ -51,6 +43,6 @@ import org.lab.samples.osm.tron.model.OGnrMensajeErrorS;
 		)
 	})
 //@formatter:on
-public interface LnEmCtrlTecnicoTrnPDetalleCtrlTecnicoExecutor extends StoredProcedureExecutor {
+public interface LnEmCtrlTecnicoTrnPQueryExecutor extends StoredProcedureExecutor {
 
 }

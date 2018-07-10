@@ -12,6 +12,7 @@
     "argumentName" : "OBJECT",
     "dataType" : "OBJECT",
     "typeName" : "O_AMD_GNL_PAR_S",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
@@ -28,6 +29,7 @@
     "argumentName" : "P_O_AMD_GNL_PAR_S",
     "dataType" : "OBJECT",
     "typeName" : "O_AMD_GNL_PAR_S",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
@@ -44,6 +46,7 @@
     "argumentName" : "P_USR_VAL",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   } ],

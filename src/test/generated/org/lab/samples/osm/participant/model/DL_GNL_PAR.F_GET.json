@@ -12,6 +12,7 @@
     "argumentName" : "O_AMD_GNL_PAR_ST",
     "dataType" : "TABLE",
     "typeName" : "O_AMD_GNL_PAR_ST",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : "O_AMD_GNL_PAR_S",
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",
@@ -28,6 +29,7 @@
     "argumentName" : "P_O_AMD_GNL_PAR_S",
     "dataType" : "OBJECT",
     "typeName" : "O_AMD_GNL_PAR_S",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OAmdGnlParS",

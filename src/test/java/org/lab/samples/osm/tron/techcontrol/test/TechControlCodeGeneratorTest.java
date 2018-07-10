@@ -10,11 +10,11 @@ public class TechControlCodeGeneratorTest {
 	private CodeGenerator codeGenerator = new CodeGenerator();
 
 	@Test
-	public void testClaim() {
+	public void test() {
 		CodeGenerationRequest request = new TronTestUtils().baseRequest();
 		request.setOwner("TRON_LN");
 		request.setObjectName("LN_EM_CTRL_TECNICO_TRN");
-		request.setProcedureName("P_DETALLE_CTRL_TECNICO");
+		request.setProcedureName("P_QUERY");
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.tron.techcontrol.executor");
 		codeGenerator.execute(request);
 	}
