@@ -4,7 +4,6 @@ import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.JavaTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
-import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
 import org.lab.osm.generator.model.TypeInfo;
 
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +13,9 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 
 	@Override
 	public void process(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
+		log.debug("Processing parameters");
+		spInfo.getParameters().forEach(x -> log.debug("- {}", x));
+
 		while (mergeParameters(spInfo, options)) {
 			log.debug("Loading parameters");
 		}
@@ -29,7 +31,9 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 			StoredProcedureParameterInfo prev = spInfo.getParameters().get(index - 1);
 			StoredProcedureParameterInfo value = spInfo.getParameters().get(index);
 
-			if (value.getMode() == Mode.OUT && value.getDataLevel() == 1 && "TABLE".equals(prev.getDataType())
+			// if (value.getMode() == Mode.OUT && value.getDataLevel() == 1 && "TABLE".equals(prev.getDataType())
+			// && "OBJECT".equals(value.getDataType())) {
+			if (value.getDataLevel() == 1 && "TABLE".equals(prev.getDataType())
 				&& "OBJECT".equals(value.getDataType())) {
 
 				log.debug("Detected OBJECT/TABLE parameter {} : {}", prev, value);
