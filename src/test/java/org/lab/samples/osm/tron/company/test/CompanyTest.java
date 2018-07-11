@@ -1,8 +1,13 @@
 package org.lab.samples.osm.tron.company.test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.lab.samples.osm.tron.company.executor.LnEmCompaniaGprTrnPObtenerDetalleCompaniaExecutor;
 import org.lab.samples.osm.tron.model.ODcCompaniaS;
 import org.lab.samples.osm.tron.model.OEmDatosComunesS;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +19,22 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class CompanyTest {
 
 	@Autowired
-	private CompanyService service;
+	private LnEmCompaniaGprTrnPObtenerDetalleCompaniaExecutor executor;
 
 	@Test
 	public void test() {
 		OEmDatosComunesS commonData = new OEmDatosComunesS();
-		ODcCompaniaS company = new ODcCompaniaS();
+		commonData.setCodPlataforma("P");
+		commonData.setCodIdioma("ES");
 
-		Object result = service.execute(commonData, company);
+		ODcCompaniaS company = new ODcCompaniaS();
+		company.setNomCia("Test Company");
+		company.setCodIdioma("ES");
+
+		List<ODcCompaniaS> companies = new ArrayList<>();
+		companies.add(company);
+
+		Map<String, Object> result = executor.execute(commonData, companies);
 		Assert.assertNotNull(result);
 	}
 }

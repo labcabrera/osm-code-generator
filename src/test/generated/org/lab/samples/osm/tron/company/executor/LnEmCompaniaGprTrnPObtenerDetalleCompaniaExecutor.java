@@ -30,12 +30,6 @@ import org.lab.samples.osm.tron.model.OGnrMensajeErrorS;
 			mode = ParameterType.IN
 		),
 		@OracleParameter(
-			name = "OBJECT",
-			typeName = "O_DC_COMPANIA_S",
-			type = Types.STRUCT,
-			mode = ParameterType.IN
-		),
-		@OracleParameter(
 			name = "P_O_DC_COMPANIA_SAL_T",
 			typeName = "O_DC_COMPANIA_T",
 			type = Types.ARRAY,

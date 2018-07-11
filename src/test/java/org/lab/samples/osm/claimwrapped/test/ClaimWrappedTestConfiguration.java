@@ -5,8 +5,8 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.lab.osm.connector.handler.OracleStoredProcedureAnnotationProcessor;
-import org.lab.osm.connector.mapper.DefaultStructDefinitionService;
 import org.lab.osm.connector.mapper.StructDefinitionService;
+import org.lab.osm.connector.mapper.impl.DefaultStructDefinitionService;
 import org.lab.osm.connector.metadata.DefaultMetadataCollector;
 import org.lab.osm.connector.metadata.MetadataCollector;
 import org.lab.osm.connector.service.MetadataStructMapperService;

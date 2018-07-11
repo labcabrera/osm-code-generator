@@ -2,7 +2,6 @@ package org.lab.samples.osm.tron.company.test;
 
 import org.lab.osm.connector.EnableOsmConnector;
 import org.lab.samples.osm.tron.TronBaseConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 //@formatter:off
@@ -14,10 +13,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 //@formatter:on
 public class CompanyTestConfiguration extends TronBaseConfiguration {
-
-	@Bean
-	CompanyService claimService() {
-		return new CompanyService();
-	}
 
 }

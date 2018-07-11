@@ -30,24 +30,7 @@
     "dataType" : "TABLE",
     "typeName" : "O_DC_COMPANIA_T",
     "typeOwner" : "TRON_LN",
-    "simpleObjectTypeName" : null,
-    "javaTypeInfo" : {
-      "name" : null,
-      "typePackage" : null,
-      "dependencies" : [ ],
-      "normalizedFieldName" : null,
-      "oracleType" : false
-    }
-  }, {
-    "position" : 1,
-    "sequence" : 3,
-    "dataLevel" : 1,
-    "mode" : "IN",
-    "argumentName" : "OBJECT",
-    "dataType" : "OBJECT",
-    "typeName" : "O_DC_COMPANIA_S",
-    "typeOwner" : "TRON_DD",
-    "simpleObjectTypeName" : null,
+    "simpleObjectTypeName" : "O_DC_COMPANIA_S",
     "javaTypeInfo" : {
       "name" : "ODcCompaniaS",
       "typePackage" : "org.lab.samples.osm.tron.model",

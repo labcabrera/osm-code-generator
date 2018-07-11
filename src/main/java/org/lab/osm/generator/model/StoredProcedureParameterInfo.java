@@ -4,9 +4,11 @@ import org.lab.osm.connector.exception.OsmConnectorException;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class StoredProcedureParameterInfo {
 
 	public enum Mode {

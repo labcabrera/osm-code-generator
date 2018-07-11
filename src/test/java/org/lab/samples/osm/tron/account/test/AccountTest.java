@@ -1,5 +1,7 @@
 package org.lab.samples.osm.tron.account.test;
 
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,8 +19,17 @@ public class AccountTest {
 
 	@Test
 	public void test() {
-		Object[] args = new Object[100];
-		Object result = executor.execute(args);
+		Object[] args = new Object[7];
+
+		args[0] = "A"; // P_COD_INT
+		args[1] = "B"; // P_COD_USR
+		args[2] = "C"; // P_COD_IDIOMA
+		args[3] = 10; // P_COD_CIA
+		args[4] = 20; // P_COD_ACT_TERCERO
+		args[5] = "F"; // P_MCA_LK
+		args[6] = "G"; // P_COD_APL
+
+		Map<String, Object> result = executor.execute(args);
 		Assert.assertNotNull(result);
 	}
 }

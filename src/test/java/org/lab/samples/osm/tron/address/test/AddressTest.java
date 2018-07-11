@@ -1,5 +1,7 @@
 package org.lab.samples.osm.tron.address.test;
 
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,17 +19,14 @@ public class AddressTest {
 
 	@Test
 	public void test() {
-		Object[] args = new Object[] { //@formatter:off
-			"A",						// P_COD_INT_TMP
-			1,						// P_COD_CIA
-			"B",						// P_COD_USR
-			"C", 					// P_COD_IDIOMA
-			"D",						// P_MCA_COPIA
-			"E"						// P_COD_INT_TMP_PRV
-		}; //@formatter:on
-
-		Object result = executor.execute(args);
-
+		Object[] args = new Object[6];
+		args[0] = "A"; // P_COD_INT_TMP
+		args[1] = 1; // P_COD_CIA
+		args[2] = "B"; // P_COD_USR
+		args[3] = "C"; // P_COD_IDIOMA
+		args[4] = "D"; // P_MCA_COPIA
+		args[5] = "E"; // P_COD_INT_TMP_PRV
+		Map<String, Object> result = executor.execute(args);
 		Assert.assertNotNull(result);
 	}
 
