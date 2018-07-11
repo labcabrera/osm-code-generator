@@ -19,7 +19,7 @@ public class AccountTest {
 
 	@Test
 	public void test() {
-		Object[] args = new Object[7];
+		Object[] args = new Object[8];
 
 		args[0] = "A"; // P_COD_INT
 		args[1] = "B"; // P_COD_USR
@@ -28,6 +28,7 @@ public class AccountTest {
 		args[4] = 20; // P_COD_ACT_TERCERO
 		args[5] = "F"; // P_MCA_LK
 		args[6] = "G"; // P_COD_APL
+		args[7] = null; // P_O_TRC_CUENTA_S
 
 		Map<String, Object> result = executor.execute(args);
 		Assert.assertNotNull(result);

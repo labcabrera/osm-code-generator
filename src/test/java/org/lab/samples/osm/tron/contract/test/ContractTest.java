@@ -20,15 +20,14 @@ public class ContractTest {
 	public void test() {
 		ContractRequestInfo request = buildRequest();
 		Object result = service.execute(request);
-
 		Assert.assertNotNull(result);
 	}
 
 	private ContractRequestInfo buildRequest() {
 		ContractRequestInfo request = new ContractRequestInfo();
-
+		request.setPCodCia(1L);
+		request.setPNumPoliza("12345");
 		request.setPFechaConsulta(Calendar.getInstance().getTime());
-
 		return request;
 	}
 
