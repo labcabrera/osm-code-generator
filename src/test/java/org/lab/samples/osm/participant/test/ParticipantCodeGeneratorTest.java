@@ -24,6 +24,7 @@ public class ParticipantCodeGeneratorTest {
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
 		request.getOptions().setGenerateComments(false);
+		request.getOptions().setOverrideModelFiles(true);
 		codeGenerator.execute(request);
 	}
 
@@ -42,6 +43,7 @@ public class ParticipantCodeGeneratorTest {
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
 		request.getOptions().setGenerateComments(false);
+		request.getOptions().setOverrideModelFiles(true);
 		codeGenerator.execute(request);
 	}
 
@@ -60,6 +62,7 @@ public class ParticipantCodeGeneratorTest {
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
 		request.getOptions().setGenerateComments(false);
+		request.getOptions().setOverrideModelFiles(true);
 		codeGenerator.execute(request);
 	}
 
@@ -78,6 +81,7 @@ public class ParticipantCodeGeneratorTest {
 		request.getOptions().setExecutorPackage("org.lab.samples.osm.participant.executor");
 		request.getOptions().setCleanTargetFolders(false);
 		request.getOptions().setGenerateComments(false);
+		request.getOptions().setOverrideModelFiles(true);
 		codeGenerator.execute(request);
 	}
 

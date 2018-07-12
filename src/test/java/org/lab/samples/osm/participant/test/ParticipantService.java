@@ -1,6 +1,5 @@
 package org.lab.samples.osm.participant.test;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +34,7 @@ public class ParticipantService {
 
 	public OAmdGnlParS findById(Long id) {
 		OAmdGnlParS example = new OAmdGnlParS();
-		example.setParPrcPrcVal(new BigDecimal(id));
+		example.setParPrcPrcVal(id);
 		Map<String, Object> map = participantSearchExecutor.execute(example);
 		List<OAmdGnlParS> list = (List<OAmdGnlParS>) map.entrySet().iterator().next().getValue();
 		return list.isEmpty() ? null : list.iterator().next();

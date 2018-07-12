@@ -1,6 +1,6 @@
 package org.lab.samples.osm.participant.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +20,7 @@ import org.lab.osm.connector.annotation.OracleStruct;
 public class OAmdGnlParS {
 
 	@OracleField(value = "PAR_PRC_PRC_VAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal parPrcPrcVal;
+	private Long parPrcPrcVal;
 
 	@OracleField(value = "DSP_PAR_PRC", typeName = "VARCHAR2", length = 200)
 	private String dspParPrc;

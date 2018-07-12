@@ -12,6 +12,7 @@
     "argumentName" : "P_R_SINIESTRO_ACC",
     "dataType" : "OBJECT",
     "typeName" : "T_R_SINIESTRO_ACC",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "TRSiniestroAcc",
@@ -28,6 +29,7 @@
     "argumentName" : "O_NUM_EXPEDIENTE",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -38,6 +40,7 @@
     "argumentName" : "O_COD_ERROR",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   }, {
@@ -48,6 +51,7 @@
     "argumentName" : "O_TXT_ERROR",
     "dataType" : "VARCHAR2",
     "typeName" : null,
+    "typeOwner" : null,
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : null
   } ],

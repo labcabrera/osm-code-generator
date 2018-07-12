@@ -16,13 +16,13 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 		log.debug("Processing parameters");
 		spInfo.getParameters().forEach(x -> log.debug("- {}", x));
 
-		while (mergeParameters(spInfo, options)) {
+		while (mergeTableParameters(spInfo, options)) {
 			log.debug("Loading parameters");
 		}
 		spInfo.getParameters().forEach(x -> readJavaType(spInfo, x));
 	}
 
-	private boolean mergeParameters(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
+	private boolean mergeTableParameters(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
 		if (spInfo.getParameters().size() < 2) {
 			return false;
 		}
@@ -31,8 +31,6 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 			StoredProcedureParameterInfo prev = spInfo.getParameters().get(index - 1);
 			StoredProcedureParameterInfo value = spInfo.getParameters().get(index);
 
-			// if (value.getMode() == Mode.OUT && value.getDataLevel() == 1 && "TABLE".equals(prev.getDataType())
-			// && "OBJECT".equals(value.getDataType())) {
 			if (value.getDataLevel() == 1 && "TABLE".equals(prev.getDataType())
 				&& "OBJECT".equals(value.getDataType())) {
 

@@ -5,12 +5,13 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.lab.osm.connector.handler.OracleStoredProcedureAnnotationProcessor;
+import org.lab.osm.connector.handler.StoredProcedureHandlerParameterProcessor;
 import org.lab.osm.connector.mapper.StructDefinitionService;
+import org.lab.osm.connector.mapper.StructMapperService;
 import org.lab.osm.connector.mapper.impl.DefaultStructDefinitionService;
-import org.lab.osm.connector.metadata.DefaultMetadataCollector;
+import org.lab.osm.connector.mapper.impl.MetadataStructMapperService;
 import org.lab.osm.connector.metadata.MetadataCollector;
-import org.lab.osm.connector.service.MetadataStructMapperService;
-import org.lab.osm.connector.service.StructMapperService;
+import org.lab.osm.connector.metadata.impl.DefaultMetadataCollector;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -38,9 +39,8 @@ public class ClaimWrappedTestConfiguration {
 	}
 
 	@Bean
-	StructMapperService metadataMapperService(DataSource dataSource, StructDefinitionService definitionService,
-		MetadataCollector metadataCollector) throws SQLException {
-		return new MetadataStructMapperService(dataSource, definitionService, metadataCollector, BASE_PACKAGES);
+	StructMapperService metadataMapperService(StructDefinitionService definitionService, MetadataCollector collector) {
+		return new MetadataStructMapperService(definitionService, collector, BASE_PACKAGES);
 	}
 
 	@Bean
@@ -56,6 +56,12 @@ public class ClaimWrappedTestConfiguration {
 	@Bean
 	ClaimWrappedService claimWrappedService() {
 		return new ClaimWrappedService();
+	}
+
+	@Bean
+	StoredProcedureHandlerParameterProcessor storedProcedureHandlerParameterProcessor(
+		StructMapperService mapperService) {
+		return new StoredProcedureHandlerParameterProcessor(mapperService);
 	}
 
 }

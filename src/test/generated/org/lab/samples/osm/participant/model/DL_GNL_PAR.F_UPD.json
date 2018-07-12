@@ -64,8 +64,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "parPrcPrcVal",
           "oracleType" : true
@@ -105,7 +105,7 @@
       "javaTypeInfo" : {
         "name" : "OAmdGnlParS",
         "typePackage" : "org.lab.samples.osm.participant.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }

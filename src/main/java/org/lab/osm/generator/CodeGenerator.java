@@ -59,8 +59,10 @@ public class CodeGenerator {
 		log.info("Closed connection. Executing java types adapter");
 		procedures.forEach(x -> executeJavaAdapter(x, request.getOptions()));
 
-		log.info("Starting code-gen");
+		log.info("Starting OSM code generation");
 		procedures.forEach(x -> export(x, request.getOptions()));
+
+		log.info("Generated code");
 	}
 
 	private void executeJavaAdapter(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
@@ -127,7 +129,7 @@ public class CodeGenerator {
 			return DriverManager.getConnection(request.getJdbcUrl(), connectionProps);
 		}
 		catch (Exception ex) {
-			throw new OsmModelReadException("Cant open connection " + request.getJdbcUrl(), ex);
+			throw new OsmModelReadException("Can not open connection " + request.getJdbcUrl(), ex);
 		}
 	}
 
