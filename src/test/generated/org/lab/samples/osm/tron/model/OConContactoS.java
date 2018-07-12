@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +22,7 @@ import org.lab.samples.osm.tron.model.OConContactoExtTrn;
 public class OConContactoS {
 
 	@OracleField(value = "SEC_MEDIO_CONTACTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secMedioContacto;
+	private Long secMedioContacto;
 
 	@OracleField(value = "TLF_ZONA", typeName = "VARCHAR2", length = 5)
 	private String tlfZona;
@@ -57,6 +57,6 @@ public class OConContactoS {
 	private String obs;
 
 	@OracleField(value = "SEC_DIR", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secDir;
+	private Long secDir;
 
 }

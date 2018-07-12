@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -42,6 +42,6 @@ public class OConCesDerechosS {
 	private OConDirNacionalS dirNacional;
 
 	@OracleField(value = "IMP_CESION", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impCesion;
+	private Long impCesion;
 
 }

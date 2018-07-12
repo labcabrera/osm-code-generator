@@ -33,9 +33,6 @@ public class TypeReader {
 					spInfo.getTypeRegistry().registerType(typeInfo);
 				}
 				break;
-			case "TABLE":
-				// TODO revisar. En principio necesitamos mapear los tipos de colecciones
-				break;
 			default:
 				break;
 			}
@@ -61,7 +58,6 @@ public class TypeReader {
 
 		TypeInfo collectionType = readTypeAsCollection(connection, spInfo, effectiveName);
 		if (collectionType != null) {
-			// TODO read child element
 			return collectionType;
 		}
 

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -28,7 +28,7 @@ import org.lab.samples.osm.tron.model.OConTextoS;
 public class OConPrestacionS {
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCob;
+	private Long codCob;
 
 	@OracleField(value = "NOM_COB", typeName = "VARCHAR2", length = 150)
 	private String nomCob;
@@ -40,7 +40,7 @@ public class OConPrestacionS {
 	private Date fecVctoCob;
 
 	@OracleField(value = "NUM_SECU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecu;
+	private Long numSecu;
 
 	@OracleField(value = "MCA_CARACTERISTICAS", typeName = "VARCHAR2", length = 1)
 	private String mcaCaracteristicas;
@@ -49,37 +49,37 @@ public class OConPrestacionS {
 	private String mcaFranquiciaPrestacion;
 
 	@OracleField(value = "ATR_COB_1", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrCob1;
+	private Long atrCob1;
 
 	@OracleField(value = "ATR_COB_2", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrCob2;
+	private Long atrCob2;
 
 	@OracleField(value = "ATR_COB_3", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrCob3;
+	private Long atrCob3;
 
 	@OracleField(value = "ATR_COB_4", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrCob4;
+	private Long atrCob4;
 
 	@OracleField(value = "ATR_COB_5", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrCob5;
+	private Long atrCob5;
 
 	@OracleField(value = "ATR_COB_6", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrCob6;
+	private Long atrCob6;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 	@OracleField(value = "MCA_INH", typeName = "VARCHAR2", length = 6)
 	private String mcaInh;
 
 	@OracleField(value = "COD_LISTA_OCU", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codListaOcu;
+	private Long codListaOcu;
 
 	@OracleField(value = "COD_COB_REL", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCobRel;
+	private Long codCobRel;
 
 	@OracleCollection("O_CON_CLAU_COMPLETA_T")
 	private List<OConClauCompletaS> clausulas;

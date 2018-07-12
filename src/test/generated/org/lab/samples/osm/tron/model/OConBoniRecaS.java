@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,7 +23,7 @@ import org.lab.samples.osm.tron.model.OConCaracterS;
 public class OConBoniRecaS {
 
 	@OracleField(value = "COD_BONI_RECA", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codBoniReca;
+	private Long codBoniReca;
 
 	@OracleField(value = "TIP_BONI_RECA", typeName = "VARCHAR2", length = 3)
 	private String tipBoniReca;

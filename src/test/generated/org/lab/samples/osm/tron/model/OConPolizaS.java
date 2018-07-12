@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,22 +41,22 @@ import org.lab.samples.osm.tron.model.OConTextoS;
 public class OConPolizaS {
 
 	@OracleField(value = "COD_CIA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal codCia;
+	private Long codCia;
 
 	@OracleField(value = "NUM_APLI", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal numApli;
+	private Long numApli;
 
 	@OracleField(value = "NUM_SPTO_APLI", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoApli;
+	private Long numSptoApli;
 
 	@OracleField(value = "NUM_POLIZA", typeName = "VARCHAR2", length = 15)
 	private String numPoliza;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleField(value = "NUM_SPTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSpto;
+	private Long numSpto;
 
 	@OracleCollection("O_CON_DATOS_POL_T")
 	private List<OConDatosPolS> datosGeneralesPol;

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,7 +33,7 @@ public class OEmDatosComunesS {
 	private String codCanalSalida;
 
 	@OracleField(value = "COD_CANAL", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal codCanal;
+	private Long codCanal;
 
 	@OracleField(value = "COD_TERCERO_AGT", typeName = "VARCHAR2", length = 10)
 	private String codTerceroAgt;
@@ -42,7 +42,7 @@ public class OEmDatosComunesS {
 	private String mcaLiteralTraduc;
 
 	@OracleField(value = "NUM_ROWS", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal numRows;
+	private Long numRows;
 
 	@OracleField(value = "TIP_OPERACION", typeName = "VARCHAR2", length = 3)
 	private String tipOperacion;

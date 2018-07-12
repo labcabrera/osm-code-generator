@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -33,7 +33,7 @@ public class OConDatosPolS {
 	private String nomCanalOrigen;
 
 	@OracleField(value = "COD_CIA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal codCia;
+	private Long codCia;
 
 	@OracleField(value = "NOM_CIA", typeName = "VARCHAR2", length = 30)
 	private String nomCia;
@@ -45,13 +45,13 @@ public class OConDatosPolS {
 	private String nomMon;
 
 	@OracleField(value = "COD_PRODUCTO", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal codProducto;
+	private Long codProducto;
 
 	@OracleField(value = "NOM_PRODUCTO", typeName = "VARCHAR2", length = 150)
 	private String nomProducto;
 
 	@OracleField(value = "COD_SECTOR", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codSector;
+	private Long codSector;
 
 	@OracleField(value = "NOM_SECTOR", typeName = "VARCHAR2", length = 30)
 	private String nomSector;
@@ -69,10 +69,10 @@ public class OConDatosPolS {
 	private Date fecVctoPagoPrima;
 
 	@OracleField(value = "CANT_RENOVACIONES", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal cantRenovaciones;
+	private Long cantRenovaciones;
 
 	@OracleField(value = "NUM_OBJETOS_ASEG", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numObjetosAseg;
+	private Long numObjetosAseg;
 
 	@OracleField(value = "NUM_OPER_ORIGEN", typeName = "VARCHAR2", length = 15)
 	private String numOperOrigen;
@@ -96,13 +96,13 @@ public class OConDatosPolS {
 	private String nomTipPoliza;
 
 	@OracleField(value = "COD_ACUERDO", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codAcuerdo;
+	private Long codAcuerdo;
 
 	@OracleField(value = "NOM_ACUERDO", typeName = "VARCHAR2", length = 30)
 	private String nomAcuerdo;
 
 	@OracleField(value = "COD_SUBSECTOR", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codSubsector;
+	private Long codSubsector;
 
 	@OracleField(value = "NOM_SUBSECTOR", typeName = "VARCHAR2", length = 30)
 	private String nomSubsector;
@@ -120,13 +120,13 @@ public class OConDatosPolS {
 	private String nomEstadoOperacion;
 
 	@OracleField(value = "COD_LOCALIDAD_FIRMA", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codLocalidadFirma;
+	private Long codLocalidadFirma;
 
 	@OracleField(value = "NOM_LOCALIDAD_FIRMA", typeName = "VARCHAR2", length = 150)
 	private String nomLocalidadFirma;
 
 	@OracleField(value = "COD_PROVINCIA_FIRMA", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal codProvinciaFirma;
+	private Long codProvinciaFirma;
 
 	@OracleField(value = "NOM_PROVINCIA_FIRMA", typeName = "VARCHAR2", length = 50)
 	private String nomProvinciaFirma;
@@ -162,16 +162,16 @@ public class OConDatosPolS {
 	private String mcaProrrata;
 
 	@OracleField(value = "PCT_TEMPORALIDAD", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctTemporalidad;
+	private Long pctTemporalidad;
 
 	@OracleField(value = "MCA_REVALORIZA", typeName = "VARCHAR2", length = 1)
 	private String mcaRevaloriza;
 
 	@OracleField(value = "IND_REVALORIZA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal indRevaloriza;
+	private Long indRevaloriza;
 
 	@OracleField(value = "PCT_REVALORIZA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctRevaloriza;
+	private Long pctRevaloriza;
 
 	@OracleField(value = "TIP_REVALORIZA_ESP", typeName = "VARCHAR2", length = 3)
 	private String tipRevalorizaEsp;
@@ -198,13 +198,13 @@ public class OConDatosPolS {
 	private Date fecCompromiso;
 
 	@OracleField(value = "DIAS_COMPROMISO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal diasCompromiso;
+	private Long diasCompromiso;
 
 	@OracleField(value = "NUM_POLIZA_ORIGEN", typeName = "VARCHAR2", length = 15)
 	private String numPolizaOrigen;
 
 	@OracleField(value = "NUM_SPTO_ORIGEN", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoOrigen;
+	private Long numSptoOrigen;
 
 	@OracleCollection("O_EM_MODALIDAD_T")
 	private List<OEmModalidadS> productosComerciales;
@@ -221,16 +221,16 @@ public class OConDatosPolS {
 	private Date fecEm;
 
 	@OracleField(value = "NUM_APLI", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal numApli;
+	private Long numApli;
 
 	@OracleField(value = "NUM_PRESUPUESTO", typeName = "VARCHAR2", length = 15)
 	private String numPresupuesto;
 
 	@OracleField(value = "NUM_RIESGOS", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgos;
+	private Long numRiesgos;
 
 	@OracleField(value = "NUM_SECU_ESTR", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecuEstr;
+	private Long numSecuEstr;
 
 	@OracleField(value = "COD_ELEM_NIVEL1", typeName = "VARCHAR2", length = 7)
 	private String codElemNivel1;

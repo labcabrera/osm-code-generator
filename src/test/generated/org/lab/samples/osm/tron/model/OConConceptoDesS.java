@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,28 +21,28 @@ import org.lab.samples.osm.tron.model.OConConceptoEcoS;
 public class OConConceptoDesS {
 
 	@OracleField(value = "COD_DES", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codDes;
+	private Long codDes;
 
 	@OracleField(value = "NOM_DES", typeName = "VARCHAR2", length = 150)
 	private String nomDes;
 
 	@OracleField(value = "IMP_ACUM_ANUAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impAcumAnual;
+	private Long impAcumAnual;
 
 	@OracleField(value = "IMP_ANUAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impAnual;
+	private Long impAnual;
 
 	@OracleField(value = "IMP_SPTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impSpto;
+	private Long impSpto;
 
 	@OracleField(value = "IMP_NO_CONSUMIDO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impNoConsumido;
+	private Long impNoConsumido;
 
 	@OracleField(value = "IMP_VIGENCIA", typeName = "VARCHAR2", length = 10)
 	private String impVigencia;
 
 	@OracleField(value = "NUM_SECU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecu;
+	private Long numSecu;
 
 	@OracleField(value = "TIP_DES", typeName = "VARCHAR2", length = 3)
 	private String tipDes;
@@ -54,7 +54,7 @@ public class OConConceptoDesS {
 	private String mcaInformativo;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	private OConConceptoEcoS conceptoEco;
 
@@ -65,15 +65,15 @@ public class OConConceptoDesS {
 	private String atrDes3;
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCob;
+	private Long codCob;
 
 	@OracleField(value = "COD_PLAN_PAGO", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal codPlanPago;
+	private Long codPlanPago;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 	@OracleField(value = "NUM_TASA_DES", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numTasaDes;
+	private Long numTasaDes;
 
 }

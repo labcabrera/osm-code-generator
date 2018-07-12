@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +22,7 @@ import org.lab.samples.osm.tron.model.OConLineaTextoExtTrn;
 public class OConLineaTextoS {
 
 	@OracleField(value = "NUM_SECU_VAL_TXT", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecuValTxt;
+	private Long numSecuValTxt;
 
 	@OracleField(value = "VAL_TXT", typeName = "VARCHAR2", length = 2000)
 	private String valTxt;
@@ -36,16 +36,16 @@ public class OConLineaTextoS {
 	private OConLineaTextoExtTrn ext;
 
 	@OracleField(value = "COD_TXT_INT", typeName = "NUMBER", precision = 10, scale = 0)
-	private BigDecimal codTxtInt;
+	private Long codTxtInt;
 
 	@OracleField(value = "MCA_TXT_VARIABLE", typeName = "VARCHAR2", length = 1)
 	private String mcaTxtVariable;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleField(value = "COD_CLAUSULA", typeName = "VARCHAR2", length = 15)
 	private String codClausula;

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,10 +25,10 @@ public class OConMedioPagoS {
 	private String codInt;
 
 	@OracleField(value = "SEC_MEDIO_PAGOCOB", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secMedioPagocob;
+	private Long secMedioPagocob;
 
 	@OracleField(value = "SEC_MEDIO_PAGOCOB_ALTER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secMedioPagocobAlter;
+	private Long secMedioPagocobAlter;
 
 	@OracleField(value = "MCA_PRIMER_RECIBO", typeName = "VARCHAR2", length = 1)
 	private String mcaPrimerRecibo;

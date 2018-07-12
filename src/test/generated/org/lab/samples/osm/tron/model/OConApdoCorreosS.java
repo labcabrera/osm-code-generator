@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,13 +27,13 @@ public class OConApdoCorreosS {
 	private String codPostal;
 
 	@OracleField(value = "COD_LOCALIDAD", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codLocalidad;
+	private Long codLocalidad;
 
 	@OracleField(value = "NOM_LOCALIDAD", typeName = "VARCHAR2", length = 50)
 	private String nomLocalidad;
 
 	@OracleField(value = "COD_PROVINCIA", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codProvincia;
+	private Long codProvincia;
 
 	@OracleField(value = "NOM_PROVINCIA", typeName = "VARCHAR2", length = 50)
 	private String nomProvincia;

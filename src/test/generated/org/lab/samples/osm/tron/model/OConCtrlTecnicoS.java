@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +22,7 @@ import org.lab.samples.osm.tron.model.OConCtrlTecnicoExtTrn;
 public class OConCtrlTecnicoS {
 
 	@OracleField(value = "COD_ERROR_CT", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codErrorCt;
+	private Long codErrorCt;
 
 	@OracleField(value = "NOM_ERROR_CT", typeName = "VARCHAR2", length = 2000)
 	private String nomErrorCt;
@@ -40,12 +40,12 @@ public class OConCtrlTecnicoS {
 	private String nomTipNivelCt;
 
 	@OracleField(value = "NUM_PASO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPaso;
+	private Long numPaso;
 
 	private OConCtrlTecnicoExtTrn ext;
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCob;
+	private Long codCob;
 
 	@OracleField(value = "COD_USR_AUTORIZA", typeName = "VARCHAR2", length = 8)
 	private String codUsrAutoriza;
@@ -60,7 +60,7 @@ public class OConCtrlTecnicoS {
 	private String obsAutoriza;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleField(value = "MCA_RAZONES", typeName = "VARCHAR2", length = 1)
 	private String mcaRazones;

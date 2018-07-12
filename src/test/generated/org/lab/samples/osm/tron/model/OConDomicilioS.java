@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,7 +33,7 @@ public class OConDomicilioS {
 	private String codInt;
 
 	@OracleField(value = "SEC_DIR", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secDir;
+	private Long secDir;
 
 	@OracleField(value = "TIP_CLAS_DIR", typeName = "VARCHAR2", length = 1)
 	private String tipClasDir;

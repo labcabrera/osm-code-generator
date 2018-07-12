@@ -505,8 +505,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCia",
           "oracleType" : true
@@ -520,8 +520,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codModalidad",
           "oracleType" : true
@@ -595,8 +595,8 @@
         "precision" : 3,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codRamo",
           "oracleType" : true
@@ -640,8 +640,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numContrato",
           "oracleType" : true
@@ -700,8 +700,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codSector",
           "oracleType" : true
@@ -730,8 +730,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codSubsector",
           "oracleType" : true
@@ -790,8 +790,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -801,7 +801,7 @@
       "javaTypeInfo" : {
         "name" : "OEmModalidadS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -874,8 +874,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecuOcu",
           "oracleType" : true
@@ -919,8 +919,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -949,8 +949,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codListaOcu",
           "oracleType" : true
@@ -964,8 +964,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numOcu",
           "oracleType" : true
@@ -979,8 +979,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -1035,7 +1035,7 @@
       "javaTypeInfo" : {
         "name" : "OConCaracterOcuS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -1065,8 +1065,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codOcurrencia",
           "oracleType" : true
@@ -1095,8 +1095,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -1110,8 +1110,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -1125,8 +1125,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numOcu",
           "oracleType" : true
@@ -1215,8 +1215,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCap",
           "oracleType" : true
@@ -1230,8 +1230,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impOcu",
           "oracleType" : true
@@ -1260,8 +1260,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -1271,7 +1271,7 @@
       "javaTypeInfo" : {
         "name" : "OConOcurrenciaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -1303,8 +1303,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -1348,8 +1348,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -1378,8 +1378,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -1449,7 +1449,7 @@
       "javaTypeInfo" : {
         "name" : "OConCaracterS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -1550,8 +1550,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCia",
           "oracleType" : true
@@ -1610,8 +1610,8 @@
         "precision" : 3,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codProducto",
           "oracleType" : true
@@ -1640,8 +1640,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codSector",
           "oracleType" : true
@@ -1730,8 +1730,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "cantRenovaciones",
           "oracleType" : true
@@ -1745,8 +1745,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numObjetosAseg",
           "oracleType" : true
@@ -1865,8 +1865,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codAcuerdo",
           "oracleType" : true
@@ -1895,8 +1895,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codSubsector",
           "oracleType" : true
@@ -1985,8 +1985,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codLocalidadFirma",
           "oracleType" : true
@@ -2015,8 +2015,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codProvinciaFirma",
           "oracleType" : true
@@ -2195,8 +2195,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctTemporalidad",
           "oracleType" : true
@@ -2225,8 +2225,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "indRevaloriza",
           "oracleType" : true
@@ -2240,8 +2240,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctRevaloriza",
           "oracleType" : true
@@ -2375,8 +2375,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "diasCompromiso",
           "oracleType" : true
@@ -2405,8 +2405,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoOrigen",
           "oracleType" : true
@@ -2495,8 +2495,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numApli",
           "oracleType" : true
@@ -2525,8 +2525,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgos",
           "oracleType" : true
@@ -2540,8 +2540,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecuEstr",
           "oracleType" : true
@@ -3001,7 +3001,7 @@
       "javaTypeInfo" : {
         "name" : "OConDatosPolS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -3059,8 +3059,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSpto",
           "oracleType" : true
@@ -3074,8 +3074,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoPublico",
           "oracleType" : true
@@ -3089,8 +3089,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codAcuerdo",
           "oracleType" : true
@@ -3224,8 +3224,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codLocalidadFirma",
           "oracleType" : true
@@ -3254,8 +3254,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codProvinciaFirma",
           "oracleType" : true
@@ -3314,8 +3314,8 @@
         "precision" : 3,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codSpto",
           "oracleType" : true
@@ -3689,8 +3689,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodos",
           "oracleType" : true
@@ -3734,8 +3734,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRenovaciones",
           "oracleType" : true
@@ -3749,8 +3749,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecuGrupo",
           "oracleType" : true
@@ -3764,8 +3764,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numImpresion",
           "oracleType" : true
@@ -3779,8 +3779,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctTemporalidad",
           "oracleType" : true
@@ -3809,8 +3809,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "valCuotaIni",
           "oracleType" : true
@@ -3914,8 +3914,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codProdComercial",
           "oracleType" : true
@@ -4004,8 +4004,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impSpto",
           "oracleType" : true
@@ -4034,8 +4034,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoOrigen",
           "oracleType" : true
@@ -4109,8 +4109,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numDiasComprProp",
           "oracleType" : true
@@ -4139,8 +4139,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCia",
           "oracleType" : true
@@ -4409,8 +4409,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numApli",
           "oracleType" : true
@@ -4424,8 +4424,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numApliAnul",
           "oracleType" : true
@@ -4439,8 +4439,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numMvtoEm",
           "oracleType" : true
@@ -4499,8 +4499,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoAnul",
           "oracleType" : true
@@ -4514,8 +4514,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoApli",
           "oracleType" : true
@@ -4529,8 +4529,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoApliAnul",
           "oracleType" : true
@@ -4544,8 +4544,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoApliPublico",
           "oracleType" : true
@@ -4769,8 +4769,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numOrden",
           "oracleType" : true
@@ -4870,7 +4870,7 @@
       "javaTypeInfo" : {
         "name" : "OConDatosSptoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -4943,8 +4943,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "indRevaloriza",
           "oracleType" : true
@@ -4958,8 +4958,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctRevaloriza",
           "oracleType" : true
@@ -5033,8 +5033,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "mesBaseRevaloriza",
           "oracleType" : true
@@ -5048,8 +5048,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "anioBaseRevaloriza",
           "oracleType" : true
@@ -5104,7 +5104,7 @@
       "javaTypeInfo" : {
         "name" : "OConRevalorizaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -5312,8 +5312,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codLocalidad",
           "oracleType" : true
@@ -5342,8 +5342,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codProvincia",
           "oracleType" : true
@@ -5443,7 +5443,7 @@
       "javaTypeInfo" : {
         "name" : "OConDirNacionalS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -5685,8 +5685,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numMvtoAgt",
           "oracleType" : true
@@ -5700,8 +5700,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctAgt",
           "oracleType" : true
@@ -5925,8 +5925,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "valCom",
           "oracleType" : true
@@ -5966,7 +5966,7 @@
       "javaTypeInfo" : {
         "name" : "OConAgenteS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.util.Date", "java.math.BigDecimal" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -6054,8 +6054,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctParticipaCoa",
           "oracleType" : true
@@ -6069,8 +6069,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa1",
           "oracleType" : true
@@ -6084,8 +6084,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa2",
           "oracleType" : true
@@ -6099,8 +6099,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa3",
           "oracleType" : true
@@ -6114,8 +6114,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa4",
           "oracleType" : true
@@ -6170,7 +6170,7 @@
       "javaTypeInfo" : {
         "name" : "OConCoaCedS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -6288,8 +6288,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctParticipaCoa",
           "oracleType" : true
@@ -6303,8 +6303,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa1",
           "oracleType" : true
@@ -6318,8 +6318,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa2",
           "oracleType" : true
@@ -6333,8 +6333,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa3",
           "oracleType" : true
@@ -6348,8 +6348,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctComCoa4",
           "oracleType" : true
@@ -6419,7 +6419,7 @@
       "javaTypeInfo" : {
         "name" : "OConCoaAcepS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -6593,8 +6593,8 @@
         "precision" : 3,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codEco",
           "oracleType" : true
@@ -6608,8 +6608,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impEco",
           "oracleType" : true
@@ -6623,8 +6623,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impEcoAnterior",
           "oracleType" : true
@@ -6668,8 +6668,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrEco1",
           "oracleType" : true
@@ -6683,8 +6683,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -6698,8 +6698,8 @@
         "precision" : 17,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCuotaRecibo",
           "oracleType" : true
@@ -6713,8 +6713,8 @@
         "precision" : 3,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codRamo",
           "oracleType" : true
@@ -6788,8 +6788,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecuEco",
           "oracleType" : true
@@ -6859,7 +6859,7 @@
       "javaTypeInfo" : {
         "name" : "OConConceptoEcoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -6876,8 +6876,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codDes",
           "oracleType" : true
@@ -6906,8 +6906,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impAcumAnual",
           "oracleType" : true
@@ -6921,8 +6921,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impAnual",
           "oracleType" : true
@@ -6936,8 +6936,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impSpto",
           "oracleType" : true
@@ -6951,8 +6951,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impNoConsumido",
           "oracleType" : true
@@ -6981,8 +6981,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -7041,8 +7041,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -7101,8 +7101,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -7116,8 +7116,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codPlanPago",
           "oracleType" : true
@@ -7131,8 +7131,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -7146,8 +7146,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numTasaDes",
           "oracleType" : true
@@ -7157,7 +7157,7 @@
       "javaTypeInfo" : {
         "name" : "OConConceptoDesS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -7187,8 +7187,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codPlanPago",
           "oracleType" : true
@@ -7202,8 +7202,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impTotalPlanPago",
           "oracleType" : true
@@ -7217,8 +7217,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impNetoPlanPago",
           "oracleType" : true
@@ -7262,8 +7262,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codPlanPagoAnt",
           "oracleType" : true
@@ -7307,8 +7307,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaNetaPeriodo",
           "oracleType" : true
@@ -7322,8 +7322,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaConsorPeriodo",
           "oracleType" : true
@@ -7337,8 +7337,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaTotal",
           "oracleType" : true
@@ -7352,8 +7352,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaTotalPeriodo",
           "oracleType" : true
@@ -7393,7 +7393,7 @@
       "javaTypeInfo" : {
         "name" : "OConPlanPagoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -7496,8 +7496,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "capitalReaseguro",
           "oracleType" : true
@@ -7511,8 +7511,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "sumMaxExpuesta",
           "oracleType" : true
@@ -7537,7 +7537,7 @@
       "javaTypeInfo" : {
         "name" : "OConReaseguroS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -7595,8 +7595,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecuValTxt",
           "oracleType" : true
@@ -7670,8 +7670,8 @@
         "precision" : 10,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codTxtInt",
           "oracleType" : true
@@ -7700,8 +7700,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -7715,8 +7715,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -7741,7 +7741,7 @@
       "javaTypeInfo" : {
         "name" : "OConLineaTextoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -7801,8 +7801,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -7816,8 +7816,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -7861,8 +7861,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -7876,8 +7876,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -7932,7 +7932,7 @@
       "javaTypeInfo" : {
         "name" : "OConClausulaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -8033,8 +8033,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCapBajaSiniAcc",
           "oracleType" : true
@@ -8048,8 +8048,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCapBajaSiniLista",
           "oracleType" : true
@@ -8063,8 +8063,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCap",
           "oracleType" : true
@@ -8078,8 +8078,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCapBajaSini",
           "oracleType" : true
@@ -8093,8 +8093,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCapMaxStdad",
           "oracleType" : true
@@ -8108,8 +8108,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCapSpto",
           "oracleType" : true
@@ -8123,8 +8123,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctImpCap",
           "oracleType" : true
@@ -8149,7 +8149,7 @@
       "javaTypeInfo" : {
         "name" : "OConSumaAsegS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -8207,8 +8207,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codFranquicia",
           "oracleType" : true
@@ -8237,8 +8237,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impFranquiciaMax",
           "oracleType" : true
@@ -8252,8 +8252,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impFranquiciaMin",
           "oracleType" : true
@@ -8297,8 +8297,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "valFranquicia",
           "oracleType" : true
@@ -8323,7 +8323,7 @@
       "javaTypeInfo" : {
         "name" : "OConFranquiciaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -8381,8 +8381,8 @@
         "precision" : 3,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codLimite",
           "oracleType" : true
@@ -8422,7 +8422,7 @@
       "javaTypeInfo" : {
         "name" : "OConLimiteS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -8542,8 +8542,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSpto",
           "oracleType" : true
@@ -8602,8 +8602,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -8632,8 +8632,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -8647,8 +8647,8 @@
         "precision" : 10,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codTxtInt",
           "oracleType" : true
@@ -8677,8 +8677,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -8718,7 +8718,7 @@
       "javaTypeInfo" : {
         "name" : "OConTextoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.util.Date", "java.math.BigDecimal" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -8748,8 +8748,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -8808,8 +8808,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -8853,8 +8853,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob1",
           "oracleType" : true
@@ -8868,8 +8868,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob2",
           "oracleType" : true
@@ -8883,8 +8883,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob3",
           "oracleType" : true
@@ -8898,8 +8898,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob4",
           "oracleType" : true
@@ -8913,8 +8913,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob5",
           "oracleType" : true
@@ -8928,8 +8928,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob6",
           "oracleType" : true
@@ -8943,8 +8943,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -8958,8 +8958,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -8988,8 +8988,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codListaOcu",
           "oracleType" : true
@@ -9003,8 +9003,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCobRel",
           "oracleType" : true
@@ -9089,7 +9089,7 @@
       "javaTypeInfo" : {
         "name" : "OConPrestacionS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -9119,8 +9119,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -9179,8 +9179,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -9194,8 +9194,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob1",
           "oracleType" : true
@@ -9239,8 +9239,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "tasaCob",
           "oracleType" : true
@@ -9314,8 +9314,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCap",
           "oracleType" : true
@@ -9329,8 +9329,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrima",
           "oracleType" : true
@@ -9359,8 +9359,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -9539,8 +9539,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -9569,8 +9569,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob2",
           "oracleType" : true
@@ -9584,8 +9584,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codListaOcu",
           "oracleType" : true
@@ -9599,8 +9599,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob3",
           "oracleType" : true
@@ -9614,8 +9614,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob4",
           "oracleType" : true
@@ -9629,8 +9629,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob5",
           "oracleType" : true
@@ -9644,8 +9644,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob6",
           "oracleType" : true
@@ -9659,8 +9659,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCobRel",
           "oracleType" : true
@@ -9715,7 +9715,7 @@
       "javaTypeInfo" : {
         "name" : "OConGarantiaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -9745,8 +9745,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -9805,8 +9805,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -9820,8 +9820,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob1",
           "oracleType" : true
@@ -9865,8 +9865,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "tasaCob",
           "oracleType" : true
@@ -9940,8 +9940,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCap",
           "oracleType" : true
@@ -9955,8 +9955,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrima",
           "oracleType" : true
@@ -9985,8 +9985,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -10180,8 +10180,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -10210,8 +10210,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob2",
           "oracleType" : true
@@ -10225,8 +10225,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codListaOcu",
           "oracleType" : true
@@ -10240,8 +10240,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob3",
           "oracleType" : true
@@ -10255,8 +10255,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob4",
           "oracleType" : true
@@ -10270,8 +10270,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob5",
           "oracleType" : true
@@ -10285,8 +10285,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "atrCob6",
           "oracleType" : true
@@ -10341,7 +10341,7 @@
       "javaTypeInfo" : {
         "name" : "OConCoberturaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -10783,8 +10783,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secMedioContactoPrc",
           "oracleType" : true
@@ -10888,8 +10888,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secDirHabitual",
           "oracleType" : true
@@ -11109,7 +11109,7 @@
       "javaTypeInfo" : {
         "name" : "OConDpersonalesS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -11343,8 +11343,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codLocalidad",
           "oracleType" : true
@@ -11373,8 +11373,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codProvincia",
           "oracleType" : true
@@ -11414,7 +11414,7 @@
       "javaTypeInfo" : {
         "name" : "OConApdoCorreosS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -11476,8 +11476,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secDir",
           "oracleType" : true
@@ -11562,7 +11562,7 @@
       "javaTypeInfo" : {
         "name" : "OConDomicilioS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -11620,8 +11620,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secMedioContacto",
           "oracleType" : true
@@ -11800,8 +11800,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secDir",
           "oracleType" : true
@@ -11811,7 +11811,7 @@
       "javaTypeInfo" : {
         "name" : "OConContactoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -11884,8 +11884,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secMedioPagocob",
           "oracleType" : true
@@ -11899,8 +11899,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secMedioPagocobAlter",
           "oracleType" : true
@@ -12195,7 +12195,7 @@
       "javaTypeInfo" : {
         "name" : "OConMedioPagoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -12283,8 +12283,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secLicencia",
           "oracleType" : true
@@ -12298,8 +12298,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secLicenciaTmp",
           "oracleType" : true
@@ -12474,7 +12474,7 @@
       "javaTypeInfo" : {
         "name" : "OConLicenciaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -12624,8 +12624,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "pctParticipaInterv",
           "oracleType" : true
@@ -12639,8 +12639,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -12669,8 +12669,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -12774,8 +12774,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numRiesgo",
           "oracleType" : true
@@ -12789,8 +12789,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "secLicencia",
           "oracleType" : true
@@ -12830,7 +12830,7 @@
       "javaTypeInfo" : {
         "name" : "OConFiguraPartS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -12860,8 +12860,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codBoniReca",
           "oracleType" : true
@@ -12946,7 +12946,7 @@
       "javaTypeInfo" : {
         "name" : "OConBoniRecaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -13017,8 +13017,8 @@
         "precision" : 4,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codErrorCt",
           "oracleType" : true
@@ -13107,8 +13107,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPaso",
           "oracleType" : true
@@ -13137,8 +13137,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCob",
           "oracleType" : true
@@ -13212,8 +13212,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -13283,7 +13283,7 @@
       "javaTypeInfo" : {
         "name" : "OConCtrlTecnicoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -13341,8 +13341,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaTotal",
           "oracleType" : true
@@ -13356,8 +13356,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaTotalPer",
           "oracleType" : true
@@ -13371,8 +13371,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaNetaPer",
           "oracleType" : true
@@ -13386,8 +13386,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaConsorPer",
           "oracleType" : true
@@ -13412,7 +13412,7 @@
       "javaTypeInfo" : {
         "name" : "OConPrimaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -13442,8 +13442,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numObjetoAsegurado",
           "oracleType" : true
@@ -13472,8 +13472,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaTotal",
           "oracleType" : true
@@ -13487,8 +13487,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaTotalPer",
           "oracleType" : true
@@ -13502,8 +13502,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaNetaPer",
           "oracleType" : true
@@ -13517,8 +13517,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impPrimaConsorPer",
           "oracleType" : true
@@ -13532,8 +13532,8 @@
         "precision" : 9,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codGrpRiesgo",
           "oracleType" : true
@@ -13592,8 +13592,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codModalidad",
           "oracleType" : true
@@ -13622,8 +13622,8 @@
         "precision" : 6,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codModalidadSinonimo",
           "oracleType" : true
@@ -13963,7 +13963,7 @@
       "javaTypeInfo" : {
         "name" : "OConRiesgoS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal", "java.util.Date" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -14098,8 +14098,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "impCesion",
           "oracleType" : true
@@ -14109,7 +14109,7 @@
       "javaTypeInfo" : {
         "name" : "OConCesDerechosS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.util.Date", "java.math.BigDecimal" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -14397,8 +14397,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSecu",
           "oracleType" : true
@@ -14423,7 +14423,7 @@
       "javaTypeInfo" : {
         "name" : "OConNotasOpeS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.util.Date", "java.math.BigDecimal" ],
+        "dependencies" : [ "java.util.Date" ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -14453,8 +14453,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codCia",
           "oracleType" : true
@@ -14468,8 +14468,8 @@
         "precision" : 5,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numApli",
           "oracleType" : true
@@ -14483,8 +14483,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSptoApli",
           "oracleType" : true
@@ -14513,8 +14513,8 @@
         "precision" : 2,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numPeriodo",
           "oracleType" : true
@@ -14528,8 +14528,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "numSpto",
           "oracleType" : true
@@ -14824,7 +14824,7 @@
       "javaTypeInfo" : {
         "name" : "OConPolizaS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -14841,8 +14841,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codError",
           "oracleType" : true
@@ -14912,7 +14912,7 @@
       "javaTypeInfo" : {
         "name" : "OGnrMensajeErrorS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }
@@ -14929,8 +14929,8 @@
         "precision" : 8,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "codAdvert",
           "oracleType" : true
@@ -14955,7 +14955,7 @@
       "javaTypeInfo" : {
         "name" : "OGnrMensajeAdvertS",
         "typePackage" : "org.lab.samples.osm.tron.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }

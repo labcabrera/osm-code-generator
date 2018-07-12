@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -35,25 +35,25 @@ import org.lab.samples.osm.tron.model.OConTextoS;
 public class OConRiesgoS {
 
 	@OracleField(value = "NUM_OBJETO_ASEGURADO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numObjetoAsegurado;
+	private Long numObjetoAsegurado;
 
 	@OracleField(value = "NOM_OBJETO_ASEGURADO", typeName = "VARCHAR2", length = 80)
 	private String nomObjetoAsegurado;
 
 	@OracleField(value = "IMP_PRIMA_TOTAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaTotal;
+	private Long impPrimaTotal;
 
 	@OracleField(value = "IMP_PRIMA_TOTAL_PER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaTotalPer;
+	private Long impPrimaTotalPer;
 
 	@OracleField(value = "IMP_PRIMA_NETA_PER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaNetaPer;
+	private Long impPrimaNetaPer;
 
 	@OracleField(value = "IMP_PRIMA_CONSOR_PER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaConsorPer;
+	private Long impPrimaConsorPer;
 
 	@OracleField(value = "COD_GRP_RIESGO", typeName = "NUMBER", precision = 9, scale = 0)
-	private BigDecimal codGrpRiesgo;
+	private Long codGrpRiesgo;
 
 	@OracleField(value = "FEC_EFEC", typeName = "DATE")
 	private Date fecEfec;
@@ -65,13 +65,13 @@ public class OConRiesgoS {
 	private String mcaPrincipal;
 
 	@OracleField(value = "COD_MODALIDAD", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codModalidad;
+	private Long codModalidad;
 
 	@OracleField(value = "MCA_DESGLOSE", typeName = "VARCHAR2", length = 1)
 	private String mcaDesglose;
 
 	@OracleField(value = "COD_MODALIDAD_SINONIMO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codModalidadSinonimo;
+	private Long codModalidadSinonimo;
 
 	@OracleField(value = "CLAVE_OAS", typeName = "VARCHAR2", length = 30)
 	private String claveOas;

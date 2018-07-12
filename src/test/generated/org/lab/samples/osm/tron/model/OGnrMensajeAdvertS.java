@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +20,7 @@ import org.lab.osm.connector.annotation.OracleStruct;
 public class OGnrMensajeAdvertS {
 
 	@OracleField(value = "COD_ADVERT", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codAdvert;
+	private Long codAdvert;
 
 	@OracleField(value = "TXT_ADVERT", typeName = "VARCHAR2", length = 4000)
 	private String txtAdvert;

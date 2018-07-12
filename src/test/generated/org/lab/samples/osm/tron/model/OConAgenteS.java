@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -67,10 +67,10 @@ public class OConAgenteS {
 	private Date fecValidezAgt;
 
 	@OracleField(value = "NUM_MVTO_AGT", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numMvtoAgt;
+	private Long numMvtoAgt;
 
 	@OracleField(value = "PCT_AGT", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctAgt;
+	private Long pctAgt;
 
 	@OracleField(value = "TIP_COMISION", typeName = "VARCHAR2", length = 3)
 	private String tipComision;
@@ -114,7 +114,7 @@ public class OConAgenteS {
 	private String mcaEm;
 
 	@OracleField(value = "VAL_COM", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal valCom;
+	private Long valCom;
 
 	@OracleField(value = "COD_CLASE_AGT", typeName = "VARCHAR2", length = 2)
 	private String codClaseAgt;

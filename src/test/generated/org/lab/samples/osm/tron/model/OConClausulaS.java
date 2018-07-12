@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,10 +29,10 @@ public class OConClausulaS {
 	private String nomClausula;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleField(value = "NUM_SECU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecu;
+	private Long numSecu;
 
 	@OracleField(value = "MCA_IMP", typeName = "VARCHAR2", length = 1)
 	private String mcaImp;
@@ -41,10 +41,10 @@ public class OConClausulaS {
 	private List<OConLineaTextoS> lineasTextos;
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCob;
+	private Long codCob;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 	@OracleField(value = "NOM_COB", typeName = "VARCHAR2", length = 150)
 	private String nomCob;

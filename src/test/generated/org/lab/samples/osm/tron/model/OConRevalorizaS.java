@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,10 +24,10 @@ public class OConRevalorizaS {
 	private String mcaRevaloriza;
 
 	@OracleField(value = "IND_REVALORIZA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal indRevaloriza;
+	private Long indRevaloriza;
 
 	@OracleField(value = "PCT_REVALORIZA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctRevaloriza;
+	private Long pctRevaloriza;
 
 	@OracleField(value = "TIP_REVALORIZA", typeName = "VARCHAR2", length = 3)
 	private String tipRevaloriza;
@@ -41,10 +41,10 @@ public class OConRevalorizaS {
 	private OConRevalorizaExtTrn ext;
 
 	@OracleField(value = "MES_BASE_REVALORIZA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal mesBaseRevaloriza;
+	private Long mesBaseRevaloriza;
 
 	@OracleField(value = "ANIO_BASE_REVALORIZA", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal anioBaseRevaloriza;
+	private Long anioBaseRevaloriza;
 
 	@OracleField(value = "TIP_REVALORIZA_ESP", typeName = "VARCHAR2", length = 3)
 	private String tipRevalorizaEsp;

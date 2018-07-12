@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,13 +21,13 @@ import org.lab.samples.osm.tron.model.OConConceptoEcoExtTrn;
 public class OConConceptoEcoS {
 
 	@OracleField(value = "COD_ECO", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal codEco;
+	private Long codEco;
 
 	@OracleField(value = "IMP_ECO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impEco;
+	private Long impEco;
 
 	@OracleField(value = "IMP_ECO_ANTERIOR", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impEcoAnterior;
+	private Long impEcoAnterior;
 
 	@OracleField(value = "NOM_ECO", typeName = "VARCHAR2", length = 30)
 	private String nomEco;
@@ -35,16 +35,16 @@ public class OConConceptoEcoS {
 	private OConConceptoEcoExtTrn ext;
 
 	@OracleField(value = "ATR_ECO_1", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal atrEco1;
+	private Long atrEco1;
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCob;
+	private Long codCob;
 
 	@OracleField(value = "COD_CUOTA_RECIBO", typeName = "NUMBER", precision = 17, scale = 0)
-	private BigDecimal codCuotaRecibo;
+	private Long codCuotaRecibo;
 
 	@OracleField(value = "COD_RAMO", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal codRamo;
+	private Long codRamo;
 
 	@OracleField(value = "MCA_CAL_COM", typeName = "VARCHAR2", length = 1)
 	private String mcaCalCom;
@@ -59,7 +59,7 @@ public class OConConceptoEcoS {
 	private String mcaInteres;
 
 	@OracleField(value = "NUM_SECU_ECO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecuEco;
+	private Long numSecuEco;
 
 	@OracleField(value = "TIP_COD_ECO", typeName = "VARCHAR2", length = 3)
 	private String tipCodEco;

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -30,10 +30,10 @@ public class OConReaseguroS {
 	private String mcaReaManual;
 
 	@OracleField(value = "CAPITAL_REASEGURO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal capitalReaseguro;
+	private Long capitalReaseguro;
 
 	@OracleField(value = "SUM_MAX_EXPUESTA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal sumMaxExpuesta;
+	private Long sumMaxExpuesta;
 
 	private OConReaseguroExtTrn ext;
 

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,7 +21,7 @@ import org.lab.samples.osm.tron.model.OConLimiteExtTrn;
 public class OConLimiteS {
 
 	@OracleField(value = "COD_LIMITE", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal codLimite;
+	private Long codLimite;
 
 	@OracleField(value = "NOM_LIMITE", typeName = "VARCHAR2", length = 2000)
 	private String nomLimite;

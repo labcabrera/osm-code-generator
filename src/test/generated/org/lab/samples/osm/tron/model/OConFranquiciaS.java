@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,16 +21,16 @@ import org.lab.samples.osm.tron.model.OConFranquiciaExtTrn;
 public class OConFranquiciaS {
 
 	@OracleField(value = "COD_FRANQUICIA", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codFranquicia;
+	private Long codFranquicia;
 
 	@OracleField(value = "NOM_FRANQUICIA", typeName = "VARCHAR2", length = 150)
 	private String nomFranquicia;
 
 	@OracleField(value = "IMP_FRANQUICIA_MAX", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impFranquiciaMax;
+	private Long impFranquiciaMax;
 
 	@OracleField(value = "IMP_FRANQUICIA_MIN", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impFranquiciaMin;
+	private Long impFranquiciaMin;
 
 	@OracleField(value = "TIP_FRANQUICIA", typeName = "VARCHAR2", length = 3)
 	private String tipFranquicia;
@@ -39,7 +39,7 @@ public class OConFranquiciaS {
 	private String nomValFranquicia;
 
 	@OracleField(value = "VAL_FRANQUICIA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal valFranquicia;
+	private Long valFranquicia;
 
 	private OConFranquiciaExtTrn ext;
 

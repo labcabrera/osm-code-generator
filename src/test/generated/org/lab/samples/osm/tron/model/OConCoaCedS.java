@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,19 +27,19 @@ public class OConCoaCedS {
 	private String nomIntCoa;
 
 	@OracleField(value = "PCT_PARTICIPA_COA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctParticipaCoa;
+	private Long pctParticipaCoa;
 
 	@OracleField(value = "PCT_COM_COA_1", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctComCoa1;
+	private Long pctComCoa1;
 
 	@OracleField(value = "PCT_COM_COA_2", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctComCoa2;
+	private Long pctComCoa2;
 
 	@OracleField(value = "PCT_COM_COA_3", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctComCoa3;
+	private Long pctComCoa3;
 
 	@OracleField(value = "PCT_COM_COA_4", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctComCoa4;
+	private Long pctComCoa4;
 
 	@OracleField(value = "MCA_INH", typeName = "VARCHAR2", length = 1)
 	private String mcaInh;

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,7 +25,7 @@ public class OConDpersonalesS {
 	private String codInt;
 
 	@OracleField(value = "SEC_MEDIO_CONTACTO_PRC", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secMedioContactoPrc;
+	private Long secMedioContactoPrc;
 
 	@OracleField(value = "MCA_FISICO", typeName = "VARCHAR2", length = 1)
 	private String mcaFisico;
@@ -46,7 +46,7 @@ public class OConDpersonalesS {
 	private String nomIdioma;
 
 	@OracleField(value = "SEC_DIR_HABITUAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secDirHabitual;
+	private Long secDirHabitual;
 
 	@OracleField(value = "MCA_REVOCACION", typeName = "VARCHAR2", length = 1)
 	private String mcaRevocacion;

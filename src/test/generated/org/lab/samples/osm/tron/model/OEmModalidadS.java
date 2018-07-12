@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,10 +22,10 @@ import org.lab.samples.osm.tron.model.OEmModalidadExtTrn;
 public class OEmModalidadS {
 
 	@OracleField(value = "COD_CIA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal codCia;
+	private Long codCia;
 
 	@OracleField(value = "COD_MODALIDAD", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codModalidad;
+	private Long codModalidad;
 
 	@OracleField(value = "NOM_MODALIDAD", typeName = "VARCHAR2", length = 30)
 	private String nomModalidad;
@@ -40,7 +40,7 @@ public class OEmModalidadS {
 	private Date fecInh;
 
 	@OracleField(value = "COD_RAMO", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal codRamo;
+	private Long codRamo;
 
 	@OracleField(value = "FEC_VALIDEZ", typeName = "DATE")
 	private Date fecValidez;
@@ -49,7 +49,7 @@ public class OEmModalidadS {
 	private String mcaInh;
 
 	@OracleField(value = "NUM_CONTRATO", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal numContrato;
+	private Long numContrato;
 
 	@OracleField(value = "NOM_CONTRATO", typeName = "VARCHAR2", length = 30)
 	private String nomContrato;
@@ -60,13 +60,13 @@ public class OEmModalidadS {
 	private String nomCia;
 
 	@OracleField(value = "COD_SECTOR", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codSector;
+	private Long codSector;
 
 	@OracleField(value = "NOM_SECTOR", typeName = "VARCHAR2", length = 30)
 	private String nomSector;
 
 	@OracleField(value = "COD_SUBSECTOR", typeName = "NUMBER", precision = 4, scale = 0)
-	private BigDecimal codSubsector;
+	private Long codSubsector;
 
 	@OracleField(value = "NOM_SUBSECTOR", typeName = "VARCHAR2", length = 30)
 	private String nomSubsector;
@@ -78,6 +78,6 @@ public class OEmModalidadS {
 	private String nomPrgValida;
 
 	@OracleField(value = "NUM_SECU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecu;
+	private Long numSecu;
 
 }

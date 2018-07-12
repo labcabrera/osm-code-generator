@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,13 +22,13 @@ import org.lab.samples.osm.tron.model.OConDatosSptoExtTrn;
 public class OConDatosSptoS {
 
 	@OracleField(value = "NUM_SPTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSpto;
+	private Long numSpto;
 
 	@OracleField(value = "NUM_SPTO_PUBLICO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoPublico;
+	private Long numSptoPublico;
 
 	@OracleField(value = "COD_ACUERDO", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codAcuerdo;
+	private Long codAcuerdo;
 
 	@OracleField(value = "NOM_ACUERDO", typeName = "VARCHAR2", length = 30)
 	private String nomAcuerdo;
@@ -55,13 +55,13 @@ public class OConDatosSptoS {
 	private String nomEstadoPoliza;
 
 	@OracleField(value = "COD_LOCALIDAD_FIRMA", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codLocalidadFirma;
+	private Long codLocalidadFirma;
 
 	@OracleField(value = "NOM_LOCALIDAD_FIRMA", typeName = "VARCHAR2", length = 150)
 	private String nomLocalidadFirma;
 
 	@OracleField(value = "COD_PROVINCIA_FIRMA", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal codProvinciaFirma;
+	private Long codProvinciaFirma;
 
 	@OracleField(value = "NOM_PROVINCIA_FIRMA", typeName = "VARCHAR2", length = 50)
 	private String nomProvinciaFirma;
@@ -73,7 +73,7 @@ public class OConDatosSptoS {
 	private String nomMotivoSpto;
 
 	@OracleField(value = "COD_SPTO", typeName = "NUMBER", precision = 3, scale = 0)
-	private BigDecimal codSpto;
+	private Long codSpto;
 
 	@OracleField(value = "NOM_SPTO", typeName = "VARCHAR2", length = 30)
 	private String nomSpto;
@@ -148,7 +148,7 @@ public class OConDatosSptoS {
 	private String mcaReaRiesgo;
 
 	@OracleField(value = "NUM_PERIODOS", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodos;
+	private Long numPeriodos;
 
 	@OracleField(value = "NUM_POLIZA_ANT", typeName = "VARCHAR2", length = 15)
 	private String numPolizaAnt;
@@ -157,22 +157,22 @@ public class OConDatosSptoS {
 	private String numPolizaGrupo;
 
 	@OracleField(value = "NUM_RENOVACIONES", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numRenovaciones;
+	private Long numRenovaciones;
 
 	@OracleField(value = "NUM_SECU_GRUPO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecuGrupo;
+	private Long numSecuGrupo;
 
 	@OracleField(value = "NUM_IMPRESION", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numImpresion;
+	private Long numImpresion;
 
 	@OracleField(value = "PCT_TEMPORALIDAD", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctTemporalidad;
+	private Long pctTemporalidad;
 
 	@OracleField(value = "TIP_CUOTA_INI", typeName = "VARCHAR2", length = 3)
 	private String tipCuotaIni;
 
 	@OracleField(value = "VAL_CUOTA_INI", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal valCuotaIni;
+	private Long valCuotaIni;
 
 	@OracleField(value = "TIP_DURACION", typeName = "VARCHAR2", length = 3)
 	private String tipDuracion;
@@ -193,7 +193,7 @@ public class OConDatosSptoS {
 	private String nomTipSpto;
 
 	@OracleField(value = "COD_PROD_COMERCIAL", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal codProdComercial;
+	private Long codProdComercial;
 
 	@OracleField(value = "NOM_PROD_COMERCIAL", typeName = "VARCHAR2", length = 30)
 	private String nomProdComercial;
@@ -211,13 +211,13 @@ public class OConDatosSptoS {
 	private String mcaCondPart;
 
 	@OracleField(value = "IMP_SPTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impSpto;
+	private Long impSpto;
 
 	@OracleField(value = "NUM_POLIZA_ORIGEN", typeName = "VARCHAR2", length = 15)
 	private String numPolizaOrigen;
 
 	@OracleField(value = "NUM_SPTO_ORIGEN", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoOrigen;
+	private Long numSptoOrigen;
 
 	@OracleField(value = "TIP_MVTO_EM", typeName = "VARCHAR2", length = 3)
 	private String tipMvtoEm;
@@ -232,12 +232,12 @@ public class OConDatosSptoS {
 	private Date fecCompromiso;
 
 	@OracleField(value = "NUM_DIAS_COMPR_PROP", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numDiasComprProp;
+	private Long numDiasComprProp;
 
 	private OConDatosSptoExtTrn ext;
 
 	@OracleField(value = "COD_CIA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal codCia;
+	private Long codCia;
 
 	@OracleField(value = "COD_ENVIO", typeName = "VARCHAR2", length = 2)
 	private String codEnvio;
@@ -291,13 +291,13 @@ public class OConDatosSptoS {
 	private String nomTipNegocio;
 
 	@OracleField(value = "NUM_APLI", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal numApli;
+	private Long numApli;
 
 	@OracleField(value = "NUM_APLI_ANUL", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal numApliAnul;
+	private Long numApliAnul;
 
 	@OracleField(value = "NUM_MVTO_EM", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numMvtoEm;
+	private Long numMvtoEm;
 
 	@OracleField(value = "NUM_POLIZA", typeName = "VARCHAR2", length = 15)
 	private String numPoliza;
@@ -309,16 +309,16 @@ public class OConDatosSptoS {
 	private String numPolizaSgte;
 
 	@OracleField(value = "NUM_SPTO_ANUL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoAnul;
+	private Long numSptoAnul;
 
 	@OracleField(value = "NUM_SPTO_APLI", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoApli;
+	private Long numSptoApli;
 
 	@OracleField(value = "NUM_SPTO_APLI_ANUL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoApliAnul;
+	private Long numSptoApliAnul;
 
 	@OracleField(value = "NUM_SPTO_APLI_PUBLICO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSptoApliPublico;
+	private Long numSptoApliPublico;
 
 	@OracleField(value = "TIP_RESULT_CT", typeName = "VARCHAR2", length = 3)
 	private String tipResultCt;
@@ -363,7 +363,7 @@ public class OConDatosSptoS {
 	private String mcaVisible;
 
 	@OracleField(value = "NUM_ORDEN", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numOrden;
+	private Long numOrden;
 
 	@OracleField(value = "MCA_RVA_PRIMA", typeName = "VARCHAR2", length = 1)
 	private String mcaRvaPrima;

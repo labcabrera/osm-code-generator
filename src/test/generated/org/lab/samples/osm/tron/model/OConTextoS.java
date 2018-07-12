@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -42,7 +42,7 @@ public class OConTextoS {
 	private String valTxt;
 
 	@OracleField(value = "NUM_SPTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSpto;
+	private Long numSpto;
 
 	@OracleField(value = "NOM_TERCERO", typeName = "VARCHAR2", length = 150)
 	private String nomTercero;
@@ -54,22 +54,22 @@ public class OConTextoS {
 	private String ape2Tercero;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleCollection("O_CON_LINEA_TEXTO_T")
 	private List<OConLineaTextoS> lineas;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 	@OracleField(value = "COD_TXT_INT", typeName = "NUMBER", precision = 10, scale = 0)
-	private BigDecimal codTxtInt;
+	private Long codTxtInt;
 
 	@OracleField(value = "COD_USR", typeName = "VARCHAR2", length = 8)
 	private String codUsr;
 
 	@OracleField(value = "COD_COB", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codCob;
+	private Long codCob;
 
 	@OracleField(value = "COD_CAMPO", typeName = "VARCHAR2", length = 30)
 	private String codCampo;

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +20,7 @@ import org.lab.osm.connector.annotation.OracleStruct;
 public class OGnrMensajeErrorS {
 
 	@OracleField(value = "COD_ERROR", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codError;
+	private Long codError;
 
 	@OracleField(value = "TXT_ERROR", typeName = "VARCHAR2", length = 200)
 	private String txtError;

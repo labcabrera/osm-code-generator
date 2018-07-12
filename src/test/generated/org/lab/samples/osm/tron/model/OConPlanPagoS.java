@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,13 +23,13 @@ import org.lab.samples.osm.tron.model.OConConceptoDesS;
 public class OConPlanPagoS {
 
 	@OracleField(value = "COD_PLAN_PAGO", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal codPlanPago;
+	private Long codPlanPago;
 
 	@OracleField(value = "IMP_TOTAL_PLAN_PAGO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impTotalPlanPago;
+	private Long impTotalPlanPago;
 
 	@OracleField(value = "IMP_NETO_PLAN_PAGO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impNetoPlanPago;
+	private Long impNetoPlanPago;
 
 	@OracleField(value = "MCA_RECARGO", typeName = "VARCHAR2", length = 1)
 	private String mcaRecargo;
@@ -38,7 +38,7 @@ public class OConPlanPagoS {
 	private String nomPlanPago;
 
 	@OracleField(value = "COD_PLAN_PAGO_ANT", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal codPlanPagoAnt;
+	private Long codPlanPagoAnt;
 
 	@OracleField(value = "MCA_PLAN_PAGO_PARA_SPTO", typeName = "VARCHAR2", length = 1)
 	private String mcaPlanPagoParaSpto;
@@ -47,16 +47,16 @@ public class OConPlanPagoS {
 	private String nomPlanPagoAnt;
 
 	@OracleField(value = "IMP_PRIMA_NETA_PERIODO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaNetaPeriodo;
+	private Long impPrimaNetaPeriodo;
 
 	@OracleField(value = "IMP_PRIMA_CONSOR_PERIODO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaConsorPeriodo;
+	private Long impPrimaConsorPeriodo;
 
 	@OracleField(value = "IMP_PRIMA_TOTAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaTotal;
+	private Long impPrimaTotal;
 
 	@OracleField(value = "IMP_PRIMA_TOTAL_PERIODO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaTotalPeriodo;
+	private Long impPrimaTotalPeriodo;
 
 	@OracleField(value = "MCA_PRINCIPAL", typeName = "VARCHAR2", length = 1)
 	private String mcaPrincipal;

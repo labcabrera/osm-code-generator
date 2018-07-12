@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,10 +28,10 @@ public class OConLicenciaS {
 	private String codIntTmp;
 
 	@OracleField(value = "SEC_LICENCIA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secLicencia;
+	private Long secLicencia;
 
 	@OracleField(value = "SEC_LICENCIA_TMP", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secLicenciaTmp;
+	private Long secLicenciaTmp;
 
 	@OracleField(value = "MCA_INH", typeName = "VARCHAR2", length = 1)
 	private String mcaInh;

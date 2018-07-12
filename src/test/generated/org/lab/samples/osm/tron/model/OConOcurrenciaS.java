@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,19 +23,19 @@ import org.lab.samples.osm.tron.model.OConCaracterOcuS;
 public class OConOcurrenciaS {
 
 	@OracleField(value = "COD_OCURRENCIA", typeName = "NUMBER", precision = 8, scale = 0)
-	private BigDecimal codOcurrencia;
+	private Long codOcurrencia;
 
 	@OracleField(value = "NOM_OCURRENCIA", typeName = "VARCHAR2", length = 30)
 	private String nomOcurrencia;
 
 	@OracleField(value = "NUM_SECU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecu;
+	private Long numSecu;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleField(value = "NUM_OCU", typeName = "NUMBER", precision = 5, scale = 0)
-	private BigDecimal numOcu;
+	private Long numOcu;
 
 	@OracleCollection("O_CON_CARACTER_OCU_T")
 	private List<OConCaracterOcuS> listaCaracteristicas;
@@ -53,15 +53,15 @@ public class OConOcurrenciaS {
 	private String atrOcu4;
 
 	@OracleField(value = "IMP_CAP", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impCap;
+	private Long impCap;
 
 	@OracleField(value = "IMP_OCU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impOcu;
+	private Long impOcu;
 
 	@OracleField(value = "MCA_INH", typeName = "VARCHAR2", length = 1)
 	private String mcaInh;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 }

@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -52,16 +52,16 @@ public class OConFiguraPartS {
 	private String codDocum;
 
 	@OracleField(value = "PCT_PARTICIPA_INTERV", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal pctParticipaInterv;
+	private Long pctParticipaInterv;
 
 	@OracleField(value = "NUM_SECU", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal numSecu;
+	private Long numSecu;
 
 	@OracleField(value = "MCA_PRINCIPAL", typeName = "VARCHAR2", length = 1)
 	private String mcaPrincipal;
 
 	@OracleField(value = "NUM_PERIODO", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal numPeriodo;
+	private Long numPeriodo;
 
 	@OracleCollection("O_CON_DPERSONALES_T")
 	private List<OConDpersonalesS> datosPersonales;
@@ -82,10 +82,10 @@ public class OConFiguraPartS {
 	private String mcaInh;
 
 	@OracleField(value = "NUM_RIESGO", typeName = "NUMBER", precision = 6, scale = 0)
-	private BigDecimal numRiesgo;
+	private Long numRiesgo;
 
 	@OracleField(value = "SEC_LICENCIA", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secLicencia;
+	private Long secLicencia;
 
 	@OracleCollection("O_CON_LICENCIA_T")
 	private List<OConLicenciaS> licencia;

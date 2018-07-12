@@ -1,6 +1,6 @@
 package org.lab.samples.osm.tron.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,16 +21,16 @@ import org.lab.samples.osm.tron.model.OConPrimaExtTrn;
 public class OConPrimaS {
 
 	@OracleField(value = "IMP_PRIMA_TOTAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaTotal;
+	private Long impPrimaTotal;
 
 	@OracleField(value = "IMP_PRIMA_TOTAL_PER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaTotalPer;
+	private Long impPrimaTotalPer;
 
 	@OracleField(value = "IMP_PRIMA_NETA_PER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaNetaPer;
+	private Long impPrimaNetaPer;
 
 	@OracleField(value = "IMP_PRIMA_CONSOR_PER", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal impPrimaConsorPer;
+	private Long impPrimaConsorPer;
 
 	private OConPrimaExtTrn ext;
 

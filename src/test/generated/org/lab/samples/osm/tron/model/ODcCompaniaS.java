@@ -1,7 +1,7 @@
 package org.lab.samples.osm.tron.model;
 
+import java.lang.Long;
 import java.lang.Object;
-import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,7 +21,7 @@ import org.lab.osm.connector.annotation.OracleStruct;
 public class ODcCompaniaS {
 
 	@OracleField(value = "COD_CIA", typeName = "NUMBER", precision = 2, scale = 0)
-	private BigDecimal codCia;
+	private Long codCia;
 
 	@OracleField(value = "NOM_CIA", typeName = "VARCHAR2", length = 30)
 	private String nomCia;
@@ -30,13 +30,13 @@ public class ODcCompaniaS {
 	private String codInt;
 
 	@OracleField(value = "SEC_DIR", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secDir;
+	private Long secDir;
 
 	@OracleField(value = "DIR_COMPLETO", typeName = "VARCHAR2", length = 2000)
 	private String dirCompleto;
 
 	@OracleField(value = "SEC_MEDIO_CONTACTO", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal secMedioContacto;
+	private Long secMedioContacto;
 
 	@OracleField(value = "CONTACTO_COMPLETO", typeName = "VARCHAR2", length = 200)
 	private String contactoCompleto;
@@ -69,16 +69,16 @@ public class ODcCompaniaS {
 	private String nomTipEstrCtSini;
 
 	@OracleField(value = "LNG_TXT", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal lngTxt;
+	private Long lngTxt;
 
 	@OracleField(value = "NOM_ESTR_COM", typeName = "VARCHAR2", length = 30)
 	private String nomEstrCom;
 
 	@OracleField(value = "COD_ESTR_COM", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal codEstrCom;
+	private Long codEstrCom;
 
 	@OracleField(value = "COD_ESTR_TRAM", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal codEstrTram;
+	private Long codEstrTram;
 
 	@OracleField(value = "NOM_ESTR_TRAM", typeName = "VARCHAR2", length = 30)
 	private String nomEstrTram;
