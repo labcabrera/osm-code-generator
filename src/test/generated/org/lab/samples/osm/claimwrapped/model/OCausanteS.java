@@ -1,6 +1,6 @@
 package org.lab.samples.osm.claimwrapped.model;
 
-import java.math.BigDecimal;
+import java.lang.Long;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -68,6 +68,6 @@ public class OCausanteS {
 	private String codCia;
 
 	@OracleField(value = "OBS_GENERAL", typeName = "NUMBER", precision = 0, scale = 0)
-	private BigDecimal obsGeneral;
+	private Long obsGeneral;
 
 }

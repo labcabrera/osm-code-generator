@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ExecutorCodeWriter {
 
 	public void write(StoredProcedureInfo spInfo, OutputStream out, CodeGenerationOptions options) {
-		log.info("Generating {} source", spInfo.getJavaExecutorInfo().getCompleteName());
+		log.info("Generating {} source file", spInfo.getJavaExecutorInfo().getCompleteName());
 
 		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
 			JavaTypeInfo executorInfo = spInfo.getJavaExecutorInfo();

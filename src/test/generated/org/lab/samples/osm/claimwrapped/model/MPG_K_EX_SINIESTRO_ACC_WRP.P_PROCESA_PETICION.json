@@ -12,6 +12,7 @@
     "argumentName" : "P_O_SIN_ACC_IN_S",
     "dataType" : "OBJECT",
     "typeName" : "O_SIN_ACC_IN_S",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OSinAccInS",
@@ -28,6 +29,7 @@
     "argumentName" : "P_O_SIN_ACC_OUT_S",
     "dataType" : "OBJECT",
     "typeName" : "O_SIN_ACC_OUT_S",
+    "typeOwner" : "MPD_LD",
     "simpleObjectTypeName" : null,
     "javaTypeInfo" : {
       "name" : "OSinAccOutS",
@@ -1087,8 +1089,8 @@
         "precision" : 0,
         "scale" : 0,
         "javaInfo" : {
-          "name" : "BigDecimal",
-          "typePackage" : "java.math",
+          "name" : "Long",
+          "typePackage" : "java.lang",
           "dependencies" : [ ],
           "normalizedFieldName" : "obsGeneral",
           "oracleType" : true
@@ -1098,7 +1100,7 @@
       "javaTypeInfo" : {
         "name" : "OCausanteS",
         "typePackage" : "org.lab.samples.osm.claimwrapped.model",
-        "dependencies" : [ "java.math.BigDecimal" ],
+        "dependencies" : [ ],
         "normalizedFieldName" : null,
         "oracleType" : false
       }

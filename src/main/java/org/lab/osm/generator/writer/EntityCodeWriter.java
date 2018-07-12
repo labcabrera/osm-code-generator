@@ -14,13 +14,17 @@ import java.util.Set;
 
 import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
-import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
+import org.lab.osm.generator.model.TypeInfo;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class EntityCodeWriter {
 
 	public void write(StoredProcedureInfo spInfo, TypeInfo entityType, OutputStream out,
 		CodeGenerationOptions options) {
+		log.debug("Generating {} source file", entityType.getJavaTypeInfo().getCompleteName());
 
 		EntityFieldCollector collector = new EntityFieldCollector();
 		List<String> fields = new ArrayList<>();
