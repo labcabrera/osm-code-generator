@@ -2,6 +2,7 @@ package org.lab.samples.osm.tron.contract.test;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Map;
 
@@ -27,11 +28,22 @@ public class ContractTest {
 
 	@Test
 	public void test() throws Exception {
-		LocalDate localDate = LocalDate.now().minusDays(300);
+		Object[] args = buildSearchRequestParameters();
+
+		Map<String, Object> result = executor.execute(args);
+		Assert.assertNotNull(result);
+
+		String json = objectMapper.writeValueAsString(result);
+		System.out.println("---");
+		System.out.println(json);
+		System.out.println("---");
+	}
+
+	protected Object[] buildSearchRequestParameters() {
+		LocalDate localDate = LocalDate.parse("2017-01-25", DateTimeFormatter.ISO_LOCAL_DATE);
 		Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
 		Object[] args = new Object[100];
-
 		args[0] = 41L; // p_cod_cia => 41,
 		args[1] = "11"; // p_origen_consulta => 11,
 		args[2] = "0731600002399"; // p_num_poliza => '0731600002399',
@@ -69,14 +81,7 @@ public class ContractTest {
 		args[34] = "NSE_CENTRAL_S"; // p_cod_rol => 'NSE_CENTRAL_S',
 		args[35] = "NSECENT"; // p_cod_usr => 'NSECENT',
 		args[36] = "N"; // p_mca_segregar => 'N',
-
-		Map<String, Object> result = executor.execute(args);
-		Assert.assertNotNull(result);
-
-		String json = objectMapper.writeValueAsString(result);
-		System.out.println("---");
-		System.out.println(json);
-		System.out.println("---");
+		return args;
 	}
 
 }
