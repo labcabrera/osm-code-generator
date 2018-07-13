@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lab.osm.connector.exception.OsmMappingException;
+import org.lab.osm.generator.exception.OsmGeneratorException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -20,7 +20,7 @@ public class JavaTypeInfo {
 	private String name;
 	private String typePackage;
 	private final List<String> dependencies;
-	
+
 	private String normalizedFieldName;
 	private boolean isOracleType;
 
@@ -38,7 +38,7 @@ public class JavaTypeInfo {
 	@JsonIgnore
 	public String getCompleteName() {
 		if (!isDefined()) {
-			throw new OsmMappingException("Undefined java inforamtion: " + this);
+			throw new OsmGeneratorException("Undefined java inforamtion: " + this);
 		}
 		return typePackage + "." + name;
 	}

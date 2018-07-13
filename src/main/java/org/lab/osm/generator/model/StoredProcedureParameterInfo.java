@@ -1,6 +1,6 @@
 package org.lab.osm.generator.model;
 
-import org.lab.osm.connector.exception.OsmConnectorException;
+import org.lab.osm.generator.exception.OsmGeneratorException;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +29,7 @@ public class StoredProcedureParameterInfo {
 			case "IN/OUT":
 				return Mode.IN_OUT;
 			default:
-				throw new OsmConnectorException("Invalid parameter mode '" + value + "'");
+				throw new OsmGeneratorException("Invalid parameter mode '" + value + "'");
 			}
 		}
 	}

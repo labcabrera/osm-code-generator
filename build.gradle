@@ -10,13 +10,13 @@ buildscript {
     commonsIoVersion       = '2.6'
     lombokVersion          = '1.16.22'
     junitVersion           = '4.12'
-    osmConnectorVersion    = '0.0.1-SNAPSHOT'
-    mvnProxy = "http://nexus:8080/nexus/content/groups/public/"
+    osmConnectorVersion    = '1.1.0-SNAPSHOT'
+    useProxy = false
   }
   repositories {
-    if(mvnProxy != null) {
+    if(useProxy) {
       mavenLocal()
-      maven { url mvnProxy }
+      maven { url "$System.env.MVN_PROXY" }
     } else {
       mavenCentral()
       maven { url "http://repo.spring.io/plugins-release/" }
@@ -33,9 +33,9 @@ version = version
 sourceCompatibility = 1.8
 
 repositories {
-  if(mvnProxy != null) {
+  if(useProxy) {
     mavenLocal()
-    maven { url mvnProxy }
+    maven { url "$System.env.MVN_PROXY" }
   } else {
     mavenCentral()
     maven { url "http://repo.spring.io/plugins-release/" }
@@ -52,7 +52,8 @@ dependencies {
   compile("org.slf4j:slf4j-api:${slf4jVersion}")
   compile("ch.qos.logback:logback-classic:${lobackVersion}")
   compile("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
-  compileOnly("org.projectlombok:lombok:${lombokVersion}")
+  
+  compile("org.projectlombok:lombok:${lombokVersion}")
 
   testCompile("org.lab.osm:osm-connector:${osmConnectorVersion}")
   testCompile("junit:junit:${junitVersion}")
@@ -66,4 +67,8 @@ sourceSets {
       srcDir 'src/test/generated'
     }
   }
+}
+
+tasks.withType(Test) {
+  enabled = false
 }
