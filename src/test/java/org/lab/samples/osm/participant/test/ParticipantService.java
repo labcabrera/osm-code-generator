@@ -10,6 +10,7 @@ import org.lab.samples.osm.participant.executor.DlGnlParFUpdExecutor;
 import org.lab.samples.osm.participant.model.OAmdGnlParS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @SuppressWarnings("unchecked")
@@ -40,16 +41,19 @@ public class ParticipantService {
 		return list.isEmpty() ? null : list.iterator().next();
 	}
 
+	@Transactional
 	public OAmdGnlParS insert(OAmdGnlParS entity) {
 		Map<String, Object> map = participantInsertExecutor.execute(entity, "TEST");
 		return (OAmdGnlParS) map.entrySet().iterator().next().getValue();
 	}
 
+	@Transactional
 	public OAmdGnlParS update(OAmdGnlParS entity) {
 		Map<String, Object> map = participantUpdateExecutor.execute(entity, "TEST");
 		return (OAmdGnlParS) map.entrySet().iterator().next().getValue();
 	}
 
+	@Transactional
 	public OAmdGnlParS delete(OAmdGnlParS entity) {
 		Map<String, Object> map = participantDeleteExecutor.execute(entity);
 		return (OAmdGnlParS) map.entrySet().iterator().next().getValue();

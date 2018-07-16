@@ -4,12 +4,12 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.Map;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lab.samples.osm.tron.contract.executor.LnEmConsultaPolizaTrnPObtenerPolizaFechaOverload1Executor;
+import org.lab.samples.osm.tron.model.OConPolizaS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ContractTest {
 
 	@Autowired
-	private LnEmConsultaPolizaTrnPObtenerPolizaFechaOverload1Executor executor;
+	private ContractSearchService searchService;
 
 	@Autowired
 	private ObjectMapper objectMapper;
@@ -30,10 +30,11 @@ public class ContractTest {
 	public void test() throws Exception {
 		Object[] args = buildSearchRequestParameters();
 
-		Map<String, Object> result = executor.execute(args);
-		Assert.assertNotNull(result);
+		List<OConPolizaS> contracts = searchService.search(args);
+		Assert.assertNotNull(contracts);
+		Assert.assertFalse(contracts.isEmpty());
 
-		String json = objectMapper.writeValueAsString(result);
+		String json = objectMapper.writeValueAsString(contracts);
 		System.out.println("---");
 		System.out.println(json);
 		System.out.println("---");

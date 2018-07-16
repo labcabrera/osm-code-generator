@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -23,6 +24,11 @@ public abstract class TronBaseConfiguration {
 		dataSource.setUser("TRON_APP");
 		dataSource.setPassword("TRON_APP");
 		return dataSource;
+	}
+
+	@Bean
+	DataSourceTransactionManager transactionManager(DataSource dataSource) {
+		return new DataSourceTransactionManager(dataSource);
 	}
 
 	@Bean

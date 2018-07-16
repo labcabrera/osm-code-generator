@@ -7,6 +7,8 @@ import javax.sql.DataSource;
 import org.lab.osm.connector.EnableOsmConnector;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -14,6 +16,7 @@ import oracle.jdbc.pool.OracleDataSource;
 
 //@formatter:off
 @Configuration
+@EnableTransactionManagement
 @EnableOsmConnector(
 	modelPackages = "org.lab.samples.osm.participant.model",
 	executorPackages = "org.lab.samples.osm.participant.executor",
@@ -29,6 +32,11 @@ public class ParticipantTestConfiguration {
 		dataSource.setUser("MPD_LD");
 		dataSource.setPassword("MPD_LD");
 		return dataSource;
+	}
+
+	@Bean
+	DataSourceTransactionManager transactionManager(DataSource dataSource) {
+		return new DataSourceTransactionManager(dataSource);
 	}
 
 	@Bean
