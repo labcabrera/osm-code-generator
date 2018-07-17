@@ -33,6 +33,8 @@ import oracle.jdbc.OracleDriver;
 public class CodeGenerator {
 
 	public void execute(CodeGenerationRequest request) {
+		long t0 = System.currentTimeMillis();
+
 		String objectName = request.getObjectName();
 		String procedureName = request.getProcedureName();
 		String owner = StringUtils.isBlank(request.getOwner()) ? request.getUser() : request.getOwner();
@@ -62,7 +64,7 @@ public class CodeGenerator {
 		log.info("Starting OSM code generation");
 		procedures.forEach(x -> export(x, request.getOptions()));
 
-		log.info("Generated code");
+		log.info("Generated code ({} ms)", System.currentTimeMillis() - t0);
 	}
 
 	private void executeJavaAdapter(StoredProcedureInfo spInfo, CodeGenerationOptions options) {

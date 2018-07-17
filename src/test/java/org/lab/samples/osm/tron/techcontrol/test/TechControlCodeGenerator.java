@@ -1,16 +1,14 @@
 package org.lab.samples.osm.tron.techcontrol.test;
 
-import org.junit.Test;
 import org.lab.osm.generator.CodeGenerator;
 import org.lab.osm.generator.model.CodeGenerationRequest;
 import org.lab.samples.osm.tron.TronTestUtils;
 
-public class TechControlCodeGeneratorTest {
+public class TechControlCodeGenerator {
 
-	private CodeGenerator codeGenerator = new CodeGenerator();
+	public static void main(String[] args) {
+		CodeGenerator codeGenerator = new CodeGenerator();
 
-	@Test
-	public void test() {
 		CodeGenerationRequest request = new TronTestUtils().baseRequest();
 		request.setOwner("TRON_LN");
 		request.setObjectName("LN_EM_CTRL_TECNICO_TRN");

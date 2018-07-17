@@ -11,13 +11,15 @@ buildscript {
     lombokVersion          = '1.16.22'
     junitVersion           = '4.12'
     osmConnectorVersion    = '1.1.0-SNAPSHOT'
-    useProxy = false
+    
+    // mvnProxy = "http://nexus:8080/nexus/content/groups/public/"
+    mvnProxy = "$System.env.MVN_PROXY"
   }
   repositories {
-    print "$System.env.MVN_PROXY"
-    if(useProxy) {
+    print ">> " + mvnProxy
+    if(mvnProxy != null) {
       mavenLocal()
-      maven { url "$System.env.MVN_PROXY" }
+      maven { url mvnProxy }
     } else {
       mavenCentral()
       maven { url "http://repo.spring.io/plugins-release/" }
@@ -34,9 +36,9 @@ version = version
 sourceCompatibility = 1.8
 
 repositories {
-  if(useProxy) {
+  if(mvnProxy != null) {
     mavenLocal()
-    maven { url "$System.env.MVN_PROXY" }
+    maven { url mvnProxy }
   } else {
     mavenCentral()
     maven { url "http://repo.spring.io/plugins-release/" }

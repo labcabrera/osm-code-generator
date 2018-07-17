@@ -1,10 +1,13 @@
 package org.lab.samples.osm.claim.test;
 
+import java.io.IOException;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.junit.Assume;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.lab.osm.generator.OsmCodeGeneratorTestUtils;
 import org.lab.samples.osm.claim.model.TRSiniestroAcc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -18,7 +21,9 @@ public class ClaimTest {
 	private ClaimService service;
 
 	@Test
-	public void test() {
+	public void test() throws IOException {
+		Assume.assumeTrue(OsmCodeGeneratorTestUtils.checkHost("vles044273-011", 1521));
+
 		TRSiniestroAcc request = buildRequest();
 		Map<String, Object> result = service.execute(request);
 

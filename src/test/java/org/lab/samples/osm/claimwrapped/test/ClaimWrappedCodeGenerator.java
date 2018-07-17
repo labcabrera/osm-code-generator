@@ -1,16 +1,14 @@
 package org.lab.samples.osm.claimwrapped.test;
 
-import org.junit.Test;
 import org.lab.osm.generator.CodeGenerator;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.CodeGenerationRequest;
 
-public class ClaimWrappedCodeGeneratorTest {
+public class ClaimWrappedCodeGenerator {
 
-	private CodeGenerator codeGenerator = new CodeGenerator();
+	public static void main(String[] args) {
+		CodeGenerator codeGenerator = new CodeGenerator();
 
-	@Test
-	public void testClaimWrapper() {
 		CodeGenerationRequest request = new CodeGenerationRequest();
 		request.setJdbcUrl("jdbc:oracle:thin:@vles044273-011:1521:OBRDVL");
 		request.setUser("MPD_LD");
