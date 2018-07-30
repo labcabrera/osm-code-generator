@@ -38,7 +38,7 @@ public class ClaimWrappedTest {
 		request.setFecOcurrencia(Calendar.getInstance().getTime());
 		request.setHoraOcurrencia("00:00");
 
-		request.setDescripcion(new ArrayList<>());
+		request.setDescripcion(new ArrayList<ODescripcionS>());
 		request.getDescripcion().add(ODescripcionS.builder().descripcion("Desc 01").build());
 		request.getDescripcion().add(ODescripcionS.builder().descripcion("Desc 02").build());
 

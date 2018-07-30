@@ -10,6 +10,7 @@ import java.util.List;
 import org.lab.osm.generator.exception.OsmGeneratorException;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
+import org.lab.osm.generator.utils.OsmUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -54,9 +55,11 @@ public class StoredProcedureParameterReader {
 		String query = sb.toString();
 		log.debug("Stored procedure parameter read query:\n{}", query);
 
-		try (PreparedStatement ps = connection.prepareStatement(query)) {
+		PreparedStatement ps = null;
+		try {
+			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
-			List<StoredProcedureParameterInfo> params = new ArrayList<>();
+			List<StoredProcedureParameterInfo> params = new ArrayList<StoredProcedureParameterInfo>();
 			while (rs.next()) {
 
 				String typeName = rs.getString("type_name");
@@ -87,6 +90,9 @@ public class StoredProcedureParameterReader {
 		}
 		catch (SQLException ex) {
 			throw new OsmGeneratorException("Stored procedure parameter read error", ex);
+		}
+		finally {
+			OsmUtils.closeQuietly(ps);
 		}
 	}
 

@@ -5,10 +5,9 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lab.osm.generator.exception.OsmExportException;
-import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
-import org.springframework.util.Assert;
+import org.lab.osm.generator.model.TypeInfo;
 
 import lombok.NonNull;
 
@@ -36,32 +35,35 @@ public class EntityFieldCollector {
 		}
 	}
 
-	private void writeCollection(StoredProcedureInfo spInfo, TypeInfo typeInfo, TypeColumnInfo i,
-		List<String> fields, Set<String> dependencies) {
+	private void writeCollection(StoredProcedureInfo spInfo, TypeInfo typeInfo, TypeColumnInfo i, List<String> fields,
+		Set<String> dependencies) {
 
 		String fieldName = i.getJavaInfo().getNormalizedFieldName();
-		Assert.notNull(fieldName, "Missing fieldName for type " + i.getTypeName());
+		if (fieldName == null) {
+			throw new RuntimeException("Missing fieldName for type " + i.getTypeName());
+		}
 
 		dependencies.add("java.util.List");
 		dependencies.add("org.lab.osm.connector.annotation.OracleCollection");
 
-		TypeInfo tmp = spInfo.getTypeRegistry().findType(i.getTypeName())
-			.orElseThrow(() -> new OsmExportException("Missing collection type " + i.getTypeName()));
+		TypeInfo tmp = spInfo.getTypeRegistry().findType(i.getTypeName());
+		if (tmp == null) {
+			throw new OsmExportException("Missing collection type " + i.getTypeName());
+		}
 
 		String genericType = null;
 		String collectionTypeName = tmp.getTypeName();
 
-		// TODO map simple types
-		switch (tmp.getCollectionTypeOf()) {
-		case "VARCHAR2":
+		if ("VARCHAR2".equals(tmp.getCollectionTypeOf())) {
 			genericType = "String";
-			break;
-		default:
-			TypeInfo base = spInfo.getTypeRegistry().findType(tmp.getCollectionTypeOf())
-				.orElseThrow(() -> new OsmExportException("Unsupported collection type " + collectionTypeName));
+		}
+		else {
+			TypeInfo base = spInfo.getTypeRegistry().findType(tmp.getCollectionTypeOf());
+			if (base == null) {
+				throw new OsmExportException("Unsupported collection type " + collectionTypeName);
+			}
 			genericType = base.getJavaTypeInfo().getName();
 			dependencies.add(base.getJavaTypeInfo().getCompleteName());
-			break;
 		}
 
 		StringBuilder sb = new StringBuilder();
@@ -73,12 +75,10 @@ public class EntityFieldCollector {
 	}
 
 	private void writeField(TypeColumnInfo columnInfo, List<String> fields, Set<String> dependencies) {
-
 		StringBuilder sb = new StringBuilder();
-		switch (columnInfo.getTypeName()) {
-		case "VARCHAR2":
-		case "NUMBER":
-		case "DATE":
+		String typeName = columnInfo.getTypeName();
+
+		if ("VARCHAR2".equals(typeName) || "NUMBER".equals(typeName) || "DATE".equals(typeName)) {
 			dependencies.add("org.lab.osm.connector.annotation.OracleField");
 			sb.append("\t@OracleField(value = \"");
 			sb.append(columnInfo.getName());
@@ -104,10 +104,8 @@ public class EntityFieldCollector {
 			}
 			sb.append(")");
 			sb.append("\n");
-			break;
-		default:
-			break;
 		}
+
 		sb.append("\tprivate ");
 		sb.append(columnInfo.getJavaInfo().getName());
 		sb.append(" ");
@@ -119,7 +117,7 @@ public class EntityFieldCollector {
 
 	private boolean isCollection(StoredProcedureInfo spInfo, TypeColumnInfo typeInfo) {
 		String typeName = typeInfo.getTypeName();
-		TypeInfo tmp = spInfo.getTypeRegistry().findType(typeName).orElseGet(() -> null);
+		TypeInfo tmp = spInfo.getTypeRegistry().findType(typeName);
 		if (tmp != null && tmp.getCollectionTypeOf() != null) {
 			return true;
 		}

@@ -16,6 +16,7 @@ import org.lab.osm.generator.exception.OsmExportException;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.TypeInfo;
+import org.lab.osm.generator.utils.OsmUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,8 +28,8 @@ public class EntityCodeWriter {
 		log.debug("Generating {} source file", entityType.getJavaTypeInfo().getCompleteName());
 
 		EntityFieldCollector collector = new EntityFieldCollector();
-		List<String> fields = new ArrayList<>();
-		Set<String> dependencies = new HashSet<>();
+		List<String> fields = new ArrayList<String>();
+		Set<String> dependencies = new HashSet<String>();
 		collector.collect(spInfo, entityType, fields, dependencies);
 
 		dependencies.add("org.lab.osm.connector.annotation.OracleStruct");
@@ -40,7 +41,9 @@ public class EntityCodeWriter {
 			dependencies.add("lombok.AllArgsConstructor");
 		}
 
-		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
+		BufferedWriter writer = null;
+		try {
+			writer = new BufferedWriter(new OutputStreamWriter(out));
 			writer.write("package ");
 			writer.write(entityType.getJavaTypeInfo().getTypePackage());
 			writer.write(";\n\n");
@@ -54,6 +57,9 @@ public class EntityCodeWriter {
 		}
 		catch (Exception ex) {
 			throw new OsmExportException(ex);
+		}
+		finally {
+			OsmUtils.closeQuietly(writer);
 		}
 	}
 
@@ -82,17 +88,13 @@ public class EntityCodeWriter {
 	}
 
 	private void writeDependencies(Set<String> dependencies, Writer writer) throws IOException {
-		List<String> sorted = new ArrayList<>(dependencies);
+		List<String> sorted = new ArrayList<String>(dependencies);
 		Collections.sort(sorted);
 		for (String dependency : sorted) {
-			switch (dependency) {
-			case "java.lang.String":
-				break;
-			default:
+			if (!String.class.getName().equals(dependency)) {
 				writer.write("import ");
 				writer.write(dependency);
 				writer.write(";\n");
-				break;
 			}
 		}
 		writer.write("\n");

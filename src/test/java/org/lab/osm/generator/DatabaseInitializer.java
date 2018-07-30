@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.junit.Test;
+import org.lab.osm.generator.utils.OsmUtils;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.EncodedResource;
@@ -18,7 +19,9 @@ public class DatabaseInitializer {
 	@Test
 	public void execute() throws SQLException {
 		DataSource dataSource = dataSource();
-		try (Connection connection = dataSource.getConnection()) {
+		Connection connection = null;
+		try {
+			connection = dataSource.getConnection();
 			Resource resource = new ClassPathResource("oracle-schema.sql");
 			EncodedResource encodedResource = new EncodedResource(resource);
 			ScriptUtils.executeSqlScript( //@formatter:off
@@ -31,6 +34,9 @@ public class DatabaseInitializer {
 				ScriptUtils.DEFAULT_BLOCK_COMMENT_START_DELIMITER,
 				ScriptUtils.DEFAULT_BLOCK_COMMENT_END_DELIMITER
 				); //@formatter:on
+		}
+		finally {
+			OsmUtils.closeQuietly(connection);
 		}
 	}
 

@@ -67,31 +67,28 @@ public class JavaOracleTypeInfoAdapter implements JavaCodeGeneratorAdapter<TypeI
 		javaInfo.setNormalizedFieldName(fieldNameNormalizer.apply(columnInfo.getName()));
 		javaInfo.setOracleType(true);
 
-		switch (columnInfo.getTypeName()) {
-		case "VARCHAR2":
+		if ("VARCHAR2".equals(columnInfo.getTypeName())) {
 			javaInfo.setName("String");
 			javaInfo.setTypePackage("java.lang");
-			break;
-		case "DATE":
+		}
+		else if ("DATE".equals(columnInfo.getTypeName())) {
 			javaInfo.setName("Date");
 			javaInfo.setTypePackage("java.util");
 			typeInfo.getJavaTypeInfo().addDependency("java.util.Date");
-			break;
-		case "NUMBER":
-			resolveNumberType(spInfo, typeInfo, columnInfo, javaInfo);
-			break;
-		default:
-			resolveJavaType(spInfo, typeInfo, columnInfo, javaInfo);
-			break;
 		}
-
+		else if ("NUMBER".equals(columnInfo.getTypeName())) {
+			resolveNumberType(spInfo, typeInfo, columnInfo, javaInfo);
+		}
+		else {
+			resolveJavaType(spInfo, typeInfo, columnInfo, javaInfo);
+		}
 		columnInfo.setJavaInfo(javaInfo);
 	}
 
 	private void resolveJavaType(StoredProcedureInfo storedProcedureInfo, TypeInfo typeInfo, TypeColumnInfo columnInfo,
 		JavaTypeInfo javaInfo) {
 		String typeName = columnInfo.getTypeName();
-		TypeInfo resolved = storedProcedureInfo.getTypeRegistry().findType(typeName).orElseGet(() -> null);
+		TypeInfo resolved = storedProcedureInfo.getTypeRegistry().findType(typeName);
 		if (resolved != null) {
 			javaInfo.setName(resolved.getJavaTypeInfo().getName());
 			javaInfo.setTypePackage(resolved.getJavaTypeInfo().getTypePackage());

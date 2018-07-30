@@ -25,12 +25,12 @@ public class JavaTypeInfo {
 	private boolean isOracleType;
 
 	public JavaTypeInfo() {
-		dependencies = new ArrayList<>();
+		dependencies = new ArrayList<String>();
 		isOracleType = false;
 	}
 
 	public void addDependency(String dependency) {
-		if (dependencies.stream().filter(x -> dependency.equals(x)).count() == 0) {
+		if (!dependencies.contains(dependency)) {
 			dependencies.add(dependency);
 		}
 	}

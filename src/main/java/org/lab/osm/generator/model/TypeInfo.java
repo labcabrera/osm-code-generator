@@ -18,7 +18,7 @@ public class TypeInfo {
 	private JavaTypeInfo javaTypeInfo;
 
 	public TypeInfo() {
-		columns = new ArrayList<>();
+		columns = new ArrayList<TypeColumnInfo>();
 		javaTypeInfo = new JavaTypeInfo();
 	}
 

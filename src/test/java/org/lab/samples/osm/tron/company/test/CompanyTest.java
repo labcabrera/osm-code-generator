@@ -31,7 +31,7 @@ public class CompanyTest {
 		company.setNomCia("Test Company");
 		company.setCodIdioma("ES");
 
-		List<ODcCompaniaS> companies = new ArrayList<>();
+		List<ODcCompaniaS> companies = new ArrayList<ODcCompaniaS>();
 		companies.add(company);
 
 		Map<String, Object> result = executor.execute(commonData, companies);

@@ -10,6 +10,7 @@ import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.TypeColumnInfo;
 import org.lab.osm.generator.model.TypeInfo;
+import org.lab.osm.generator.utils.OsmUtils;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -25,16 +26,12 @@ public class TypeReader {
 
 	public void read(@NonNull Connection connection, @NonNull StoredProcedureInfo spInfo) {
 		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
-			switch (i.getDataType()) {
-			case "OBJECT":
+			if ("OBJECT".equals(i.getDataType())) {
 				String typeName = i.getTypeName();
 				if (!spInfo.getTypeRegistry().isDefined(typeName)) {
 					TypeInfo typeInfo = read(connection, spInfo, typeName);
 					spInfo.getTypeRegistry().registerType(typeInfo);
 				}
-				break;
-			default:
-				break;
 			}
 		}
 	}
@@ -79,7 +76,9 @@ public class TypeReader {
 		result.setSynonymName(effectiveName.equals(typeName) ? null : typeName);
 		result.getColumns().clear();
 
-		try (PreparedStatement ps = connection.prepareStatement(query)) {
+		PreparedStatement ps = null;
+		try {
+			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				TypeColumnInfo columnInfo = new TypeColumnInfo();
@@ -97,6 +96,9 @@ public class TypeReader {
 		catch (SQLException ex) {
 			throw new OsmModelReadException("Error reading type " + effectiveName, ex);
 		}
+		finally {
+			OsmUtils.closeQuietly(ps);
+		}
 	}
 
 	private TypeInfo readTypeAsCollection(@NonNull Connection connection, StoredProcedureInfo spInfo,
@@ -112,17 +114,19 @@ public class TypeReader {
 
 		TypeInfo result = null;
 
-		try (PreparedStatement ps = connection.prepareStatement(sb.toString())) {
+		PreparedStatement ps = null;
+		try {
+			ps = connection.prepareStatement(sb.toString());
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				final String collectionTypeName = rs.getString("elem_type_name");
-				switch (collectionTypeName) {
-				case "VARCHAR2":
+				if ("VARCHAR2".equals(collectionTypeName)) {
 					result = new TypeInfo();
 					result.setTypeName(typeName);
 					result.setCollectionTypeOf(collectionTypeName);
 					return result;
-				default:
+				}
+				else {
 					// Non-primitive collection
 					TypeInfo tmp = read(connection, spInfo, collectionTypeName);
 					if (!spInfo.getTypeRegistry().isDefined(collectionTypeName)) {
@@ -139,6 +143,9 @@ public class TypeReader {
 		catch (SQLException ex) {
 			throw new OsmModelReadException("Error reading type " + typeName, ex);
 		}
+		finally {
+			OsmUtils.closeQuietly(ps);
+		}
 	}
 
 	private void resolveType(@NonNull Connection connection, StoredProcedureInfo storedProcedureInfo,
@@ -153,14 +160,10 @@ public class TypeReader {
 	}
 
 	private boolean isOracleSimpleType(String typeName) {
-		switch (typeName) {
-		case "VARCHAR2":
-		case "NUMBER":
-		case "DATE":
+		if ("VARCHAR2".equals(typeName) || "NUMBER".equals(typeName) || "DATE".equals(typeName)) {
 			return true;
-		default:
-			return false;
 		}
+		return false;
 	}
 
 }

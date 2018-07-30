@@ -33,7 +33,7 @@ apply plugin: 'maven'
 
 group = 'org.lab.osm'
 version = version
-sourceCompatibility = 1.8
+sourceCompatibility = 1.6
 
 repositories {
   if(mvnProxy != null) {
@@ -46,8 +46,6 @@ repositories {
 }
 
 dependencies {
-  compile("org.springframework:spring-context:${springVersion}")
-  compile("org.springframework:spring-jdbc:${springVersion}")
   compile("org.apache.commons:commons-lang3:${commonsLang3Version}")
   compile("org.reflections:reflections:${reflectionsVersion}")
   compile("commons-io:commons-io:${commonsIoVersion}")

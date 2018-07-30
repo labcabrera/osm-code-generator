@@ -22,6 +22,7 @@ import org.lab.osm.generator.model.TypeInfo;
 import org.lab.osm.generator.reader.StoredProcedureParameterReader;
 import org.lab.osm.generator.reader.StoredProcedureReader;
 import org.lab.osm.generator.reader.TypeReader;
+import org.lab.osm.generator.utils.OsmUtils;
 import org.lab.osm.generator.writer.EntityCodeWriter;
 import org.lab.osm.generator.writer.ExecutorCodeWriter;
 import org.lab.osm.generator.writer.StoredProcedureInfoWriter;
@@ -44,25 +45,40 @@ public class CodeGenerator {
 		TypeReader typeReader = new TypeReader();
 
 		List<StoredProcedureInfo> procedures;
-		try (Connection connection = openConnection(request)) {
+		Connection connection = null;
+		try {
+			connection = openConnection(request);
 			procedures = storedProcedureReader.read(connection, objectName, procedureName, owner, request.getOptions());
-
 			if (log.isDebugEnabled()) {
-				procedures.stream().forEach(sp -> log.debug(sp.toString()));
+				for (StoredProcedureInfo i : procedures) {
+					log.debug(i.toString());
+				}
 				log.debug("Readed {} procedures", procedures.size());
 			}
 
-			procedures.forEach(x -> paramReader.read(connection, x));
-			procedures.forEach(x -> typeReader.read(connection, x));
+			for (StoredProcedureInfo i : procedures) {
+				paramReader.read(connection, i);
+			}
+			for (StoredProcedureInfo i : procedures) {
+				typeReader.read(connection, i);
+			}
 		}
 		catch (SQLException ex) {
 			throw new OsmModelReadException(ex);
 		}
+		finally {
+			OsmUtils.closeQuietly(connection);
+		}
+
 		log.info("Closed connection. Executing java types adapter");
-		procedures.forEach(x -> executeJavaAdapter(x, request.getOptions()));
+		for (StoredProcedureInfo i : procedures) {
+			executeJavaAdapter(i, request.getOptions());
+		}
 
 		log.info("Starting OSM code generation");
-		procedures.forEach(x -> export(x, request.getOptions()));
+		for (StoredProcedureInfo i : procedures) {
+			export(i, request.getOptions());
+		}
 
 		log.info("Generated code ({} ms)", System.currentTimeMillis() - t0);
 	}
@@ -73,7 +89,9 @@ public class CodeGenerator {
 		StoredProcedureParameterAdapter parameterAdapter = new StoredProcedureParameterAdapter();
 
 		storedProcedureAdapter.process(spInfo, options);
-		spInfo.getTypeRegistry().getTypes().stream().forEach(x -> javaOracleTypeAdapter.process(x, options));
+		for (TypeInfo i : spInfo.getTypeRegistry().getTypes()) {
+			javaOracleTypeAdapter.process(i, options);
+		}
 		parameterAdapter.process(spInfo, options);
 	}
 
@@ -94,8 +112,13 @@ public class CodeGenerator {
 			options.getCleanTargetFolders());
 		// Json model
 		File jsonFile = new File(parent, spInfo.getObjectName() + "." + spInfo.getProcedureName() + ".json");
-		try (FileOutputStream out = new FileOutputStream(jsonFile)) {
+		FileOutputStream out = null;
+		try {
+			out = new FileOutputStream(jsonFile);
 			jsonWriter.write(spInfo, out);
+		}
+		finally {
+			OsmUtils.closeQuietly(out);
 		}
 		// Java entity classes
 		boolean override = options.getOverrideModelFiles() != null && options.getOverrideModelFiles();
@@ -104,8 +127,13 @@ public class CodeGenerator {
 			if (typeInfo.getCollectionTypeOf() == null) {
 				File javaFile = new File(parent, typeInfo.getJavaTypeInfo().getName() + ".java");
 				if (!javaFile.exists() || override) {
-					try (FileOutputStream out = new FileOutputStream(javaFile)) {
-						classWriter.write(spInfo, typeInfo, out, options);
+					FileOutputStream jout = null;
+					try {
+						jout = new FileOutputStream(javaFile);
+						classWriter.write(spInfo, typeInfo, jout, options);
+					}
+					finally {
+						OsmUtils.closeQuietly(jout);
 					}
 				}
 			}
@@ -117,8 +145,13 @@ public class CodeGenerator {
 		File parent = resolveFolder(options.getExecutorBaseFolder(), options.getExecutorPackage(),
 			options.getCleanTargetFolders());
 		File executorInterface = new File(parent, spInfo.getJavaExecutorInfo().getName() + ".java");
-		try (FileOutputStream out = new FileOutputStream(executorInterface)) {
+		FileOutputStream out = null;
+		try {
+			out = new FileOutputStream(executorInterface);
 			executorCodeWriter.write(spInfo, out, options);
+		}
+		finally {
+			OsmUtils.closeQuietly(out);
 		}
 	}
 

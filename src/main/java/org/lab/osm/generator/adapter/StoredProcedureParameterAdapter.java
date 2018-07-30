@@ -14,12 +14,15 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 	@Override
 	public void process(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
 		log.debug("Processing parameters");
-		spInfo.getParameters().forEach(x -> log.debug("- {}", x));
-
+		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
+			log.debug("- {}", i);
+		}
 		while (mergeTableParameters(spInfo, options)) {
 			log.debug("Loading parameters");
 		}
-		spInfo.getParameters().forEach(x -> readJavaType(spInfo, x));
+		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
+			readJavaType(spInfo, i);
+		}
 	}
 
 	private boolean mergeTableParameters(StoredProcedureInfo spInfo, CodeGenerationOptions options) {
@@ -68,7 +71,7 @@ public class StoredProcedureParameterAdapter implements JavaCodeGeneratorAdapter
 		}
 		if (typeName != null) {
 
-			TypeInfo typeInfo = spInfo.getTypeRegistry().findType(typeName).orElseGet(() -> null);
+			TypeInfo typeInfo = spInfo.getTypeRegistry().findType(typeName);
 			if (typeInfo != null) {
 				String name = typeInfo.getJavaTypeInfo().getName();
 				String javaPackage = typeInfo.getJavaTypeInfo().getTypePackage();

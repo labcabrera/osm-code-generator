@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import org.lab.osm.generator.exception.OsmModelReadException;
 
@@ -18,16 +17,26 @@ public class TypeRegistry {
 	private final Map<String, String> synonyms;
 
 	public TypeRegistry() {
-		types = new ArrayList<>();
-		synonyms = new HashMap<>();
+		types = new ArrayList<TypeInfo>();
+		synonyms = new HashMap<String, String>();
 	}
 
-	public Optional<TypeInfo> findType(@NonNull String typeName) {
-		return types.stream().filter(x -> typeName.equals(x.getTypeName())).findFirst();
+	public TypeInfo findType(@NonNull String typeName) {
+		for (TypeInfo i : types) {
+			if (typeName.equals(i.getTypeName())) {
+				return i;
+			}
+		}
+		return null;
 	}
 
 	public boolean isDefined(@NonNull String typeName) {
-		return types.stream().filter(x -> typeName.equals(x.getTypeName())).count() > 0;
+		for (TypeInfo i : types) {
+			if (typeName.equals(i.getTypeName())) {
+				return true;
+			}
+		}
+		return false;
 
 	}
 

@@ -21,14 +21,16 @@ public class StoredProcedureParameterInfo {
 		 * @return
 		 */
 		public static Mode parse(String value) {
-			switch (value) {
-			case "IN":
+			if ("IN".equals(value)) {
 				return Mode.IN;
-			case "OUT":
+			}
+			else if ("OUT".equals(value)) {
 				return Mode.OUT;
-			case "IN/OUT":
+			}
+			else if ("IN/OUT".equals(value)) {
 				return Mode.IN_OUT;
-			default:
+			}
+			else {
 				throw new OsmGeneratorException("Invalid parameter mode '" + value + "'");
 			}
 		}

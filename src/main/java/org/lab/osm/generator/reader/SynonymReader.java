@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.lab.osm.generator.model.TypeRegistry;
+import org.lab.osm.generator.utils.OsmUtils;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -31,13 +32,18 @@ public class SynonymReader {
 		log.debug("Synonym read query:\n{}", query);
 
 		String result = null;
-		try (PreparedStatement ps = connection.prepareStatement(query)) {
+		PreparedStatement ps = null;
+		try {
+			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				result = rs.getString("table_name");
 				log.debug("Detected synonym {}: {}", objectName, result);
 				break;
 			}
+		}
+		finally {
+			OsmUtils.closeQuietly(ps);
 		}
 		typeRegistry.getSynonyms().put(objectName, result);
 		return result;

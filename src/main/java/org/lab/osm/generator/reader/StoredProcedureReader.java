@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.lab.osm.generator.model.CodeGenerationOptions;
 import org.lab.osm.generator.model.StoredProcedureInfo;
+import org.lab.osm.generator.utils.OsmUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -52,9 +53,11 @@ public class StoredProcedureReader {
 		String query = sb.toString();
 		log.debug("Stored procedure read query:\n{}", query);
 
-		try (PreparedStatement ps = connection.prepareStatement(query)) {
+		PreparedStatement ps = null;
+		try {
+			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
-			List<StoredProcedureInfo> results = new ArrayList<>();
+			List<StoredProcedureInfo> results = new ArrayList<StoredProcedureInfo>();
 			while (rs.next()) {
 				StoredProcedureInfo item = new StoredProcedureInfo();
 				item.setObjectId(rs.getLong("object_id"));
@@ -69,6 +72,9 @@ public class StoredProcedureReader {
 				results.add(item);
 			}
 			return results;
+		}
+		finally {
+			OsmUtils.closeQuietly(ps);
 		}
 	}
 

@@ -17,6 +17,7 @@ import org.lab.osm.generator.model.JavaTypeInfo;
 import org.lab.osm.generator.model.StoredProcedureInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo;
 import org.lab.osm.generator.model.StoredProcedureParameterInfo.Mode;
+import org.lab.osm.generator.utils.OsmUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -26,7 +27,9 @@ public class ExecutorCodeWriter {
 	public void write(StoredProcedureInfo spInfo, OutputStream out, CodeGenerationOptions options) {
 		log.info("Generating {} source file", spInfo.getJavaExecutorInfo().getCompleteName());
 
-		try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))) {
+		BufferedWriter writer = null;
+		try {
+			writer = new BufferedWriter(new OutputStreamWriter(out));
 			JavaTypeInfo executorInfo = spInfo.getJavaExecutorInfo();
 
 			writer.write("package " + executorInfo.getTypePackage() + ";\n");
@@ -57,22 +60,23 @@ public class ExecutorCodeWriter {
 		catch (Exception ex) {
 			throw new OsmExportException(ex);
 		}
+		finally {
+			OsmUtils.closeQuietly(writer);
+		}
 	}
 
 	private void writeDependencies(StoredProcedureInfo spInfo, BufferedWriter writer) throws IOException {
-		Set<String> resolved = new HashSet<>();
+		Set<String> resolved = new HashSet<String>();
 
 		// Note: only output parameters required import
-		//@formatter:off
-		spInfo.getParameters().stream()
-			.filter(x -> x.getMode() != Mode.IN && x.getJavaTypeInfo() != null && x.getJavaTypeInfo().isDefined())
-			.forEach(x -> {
-				String dependency = x.getJavaTypeInfo().getCompleteName();
+		for (StoredProcedureParameterInfo i : spInfo.getParameters()) {
+			if (i.getMode() != Mode.IN && i.getJavaTypeInfo() != null && i.getJavaTypeInfo().isDefined()) {
+				String dependency = i.getJavaTypeInfo().getCompleteName();
 				if (!resolved.contains(dependency)) {
 					resolved.add(dependency);
 				}
-			});
-		//@formatter:on
+			}
+		}
 		for (String dependency : resolved) {
 			writer.write("import " + dependency + ";\n");
 		}
@@ -129,27 +133,27 @@ public class ExecutorCodeWriter {
 
 	private void writeParameterType(StoredProcedureInfo spInfo, StoredProcedureParameterInfo paramInfo, Writer writer)
 		throws IOException {
-		switch (paramInfo.getDataType()) {
-		case "NUMERIC":
-		case "DATE":
+		String dataType = paramInfo.getDataType();
+		if ("NUMERIC".equals(dataType) || "DATE".equals(dataType)) {
 			writer.write("\t\t\ttype = Types." + paramInfo.getDataType() + ",\n");
-			break;
-		case "VARCHAR2":
+
+		}
+		else if ("VARCHAR2".equals(dataType)) {
 			writer.write("\t\t\ttype = Types.NVARCHAR,\n");
-			break;
-		case "NUMBER":
+		}
+		else if ("NUMBER".equals(dataType)) {
 			writer.write("\t\t\ttype = Types.NUMERIC,\n");
-			break;
-		case "PL/SQL BOOLEAN":
+		}
+		else if ("PL/SQL BOOLEAN".equals(dataType)) {
 			writer.write("\t\t\ttype = Types.BOOLEAN,\n");
-			break;
-		case "OBJECT":
+		}
+		else if ("OBJECT".equals(dataType)) {
 			writer.write("\t\t\ttype = Types.STRUCT,\n");
-			break;
-		case "TABLE":
+		}
+		else if ("TABLE".equals(dataType)) {
 			writer.write("\t\t\ttype = Types.ARRAY,\n");
-			break;
-		default:
+		}
+		else {
 			throw new OsmExportException("Unmapped dataType " + paramInfo.getDataType());
 		}
 	}
